@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -19,51 +20,52 @@ namespace rels
             InitializeComponent();
         }
 
-        private Stack<string> nexts = new Stack<string>();
-
         private Queue<string> q = new Queue<string>();
 
-        private async void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            //nexts.Push("Alexei Nikolaevich, Tsarevich of Russia");
+            Observable.Interval(TimeSpan.FromSeconds(5)).Subscribe(x => { ProcessPerson(); });
             q.Enqueue("Alexei Nikolaevich, Tsarevich of Russia");
+            q.Enqueue("Elizabeth II");
+            q.Enqueue("Margrethe II");
+            q.Enqueue("Carl XVI Gustaf");
+            q.Enqueue("Harald V");
+        }
+
+        private async void ProcessPerson()
+        {
             HtmlWeb web = new HtmlWeb();
-            while (q.Count > 0)
+            var page = await web.LoadFromWebAsync("https://en.wikipedia.org/wiki/" + q.Dequeue());
+            var rows = page.DocumentNode.SelectNodes("//table[@class='infobox vcard']/tbody/tr");
+            var fathers = rows?.Where(r => Filter(r, "Father"));
+            if (fathers != null)
             {
-               
-                var page = await web.LoadFromWebAsync("https://en.wikipedia.org/wiki/" + q.Dequeue());
-                var rows = page.DocumentNode.SelectNodes("//table[@class='infobox vcard']/tbody/tr");
-                var fathers = rows?.Where(r => Filter(r, "Father"));
-                if (fathers != null)
-                {
-                    fathers.Select(r => Map(r))
-                        .Where(r => r != null).ToList()
-                        .ForEach(t =>
+                fathers.Select(r => Map(r))
+                    .Where(r => r != null).ToList()
+                    .ForEach(t =>
+                    {
+                        richTextBox1.AppendText(t.Attributes["title"].Value + string.Format(" - {0}", q.Count) + "\r\n");
+                        if (!string.IsNullOrEmpty(t.Attributes["title"].Value))
                         {
-                            richTextBox1.AppendText(t.Attributes["title"].Value + string.Format(" - {0}", q.Count) + "\r\n");
-                            if (!string.IsNullOrEmpty(t.Attributes["title"].Value))
-                            {
-                                //nexts.Push(t.Attributes["title"].Value);
-                                q.Enqueue(t.Attributes["title"].Value);
-                            }
-                        });
-                }
-                var mothers = rows?.Where(r => Filter(r, "Mother"));
-                if (mothers != null)
-                {
-                    mothers.Select(r => Map(r))
-                        .Where(r => r != null).ToList()
-                        .ForEach(t =>
+                            //nexts.Push(t.Attributes["title"].Value);
+                            q.Enqueue(t.Attributes["title"].Value);
+                        }
+                    });
+            }
+            var mothers = rows?.Where(r => Filter(r, "Mother"));
+            if (mothers != null)
+            {
+                mothers.Select(r => Map(r))
+                    .Where(r => r != null).ToList()
+                    .ForEach(t =>
+                    {
+                        richTextBox1.AppendText(t.Attributes["title"].Value + string.Format(" - {0}", q.Count) + "\r\n");
+                        if (!string.IsNullOrEmpty(t.Attributes["title"].Value))
                         {
-                            richTextBox1.AppendText(t.Attributes["title"].Value + string.Format(" - {0}", q.Count) + "\r\n");
-                            if (!string.IsNullOrEmpty(t.Attributes["title"].Value))
-                            {
-                                //nexts.Push(t.Attributes["title"].Value);
-                                q.Enqueue(t.Attributes["title"].Value);
-                            }
-                        });
-                }
-                Thread.Sleep(2000);
+                            //nexts.Push(t.Attributes["title"].Value);
+                            q.Enqueue(t.Attributes["title"].Value);
+                        }
+                    });
             }
         }
 
