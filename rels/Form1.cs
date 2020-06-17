@@ -24,32 +24,40 @@ namespace rels
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            nexts.Push("Alexandra Feodorovna (Alix of Hesse)");
+            nexts.Push("Alexei Nikolaevich, Tsarevich of Russia");
             HtmlWeb web = new HtmlWeb();
             while (nexts.Count > 0)
             {
                 var page = await web.LoadFromWebAsync("https://en.wikipedia.org/wiki/" + nexts.Pop());
                 var rows = page.DocumentNode.SelectNodes("//table[@class='infobox vcard']/tbody/tr");
-                rows.Where(r => Filter(r, "Father")).Select(r => Map(r))
-                    .Where(r => r != null).ToList()
-                    .ForEach(t =>
-                    {
-                        richTextBox1.AppendText(t.Attributes["title"].Value + string.Format("{0}", nexts.Count) + "\r\n");
-                        if (!string.IsNullOrEmpty(t.Attributes["title"].Value))
+                var fathers = rows?.Where(r => Filter(r, "Father"));
+                if (fathers != null)
+                {
+                    fathers.Select(r => Map(r))
+                        .Where(r => r != null).ToList()
+                        .ForEach(t =>
                         {
-                            nexts.Push(t.Attributes["title"].Value);
-                        }
-                    });
-                rows.Where(r => Filter(r, "Mother")).Select(r => Map(r))
-                    .Where(r => r != null).ToList()
-                    .ForEach(t =>
-                    {
-                        richTextBox1.AppendText(t.Attributes["title"].Value + string.Format("{0}", nexts.Count) + "\r\n");
-                        if (!string.IsNullOrEmpty(t.Attributes["title"].Value))
+                            richTextBox1.AppendText(t.Attributes["title"].Value + string.Format("{0}", nexts.Count) + "\r\n");
+                            if (!string.IsNullOrEmpty(t.Attributes["title"].Value))
+                            {
+                                nexts.Push(t.Attributes["title"].Value);
+                            }
+                        });
+                }
+                var mothers = rows?.Where(r => Filter(r, "Mother"));
+                if (mothers != null)
+                {
+                    mothers.Select(r => Map(r))
+                        .Where(r => r != null).ToList()
+                        .ForEach(t =>
                         {
-                            nexts.Push(t.Attributes["title"].Value);
-                        }
-                    });
+                            richTextBox1.AppendText(t.Attributes["title"].Value + string.Format("{0}", nexts.Count) + "\r\n");
+                            if (!string.IsNullOrEmpty(t.Attributes["title"].Value))
+                            {
+                                nexts.Push(t.Attributes["title"].Value);
+                            }
+                        });
+                }
             }
         }
 
