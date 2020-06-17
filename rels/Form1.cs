@@ -51,7 +51,7 @@ namespace rels
                     }
                     if (v.Key.Equals("Born") || v.Key.Equals("Died"))
                     {
-                        richTextBox1.AppendText(string.Format("\t{0}:\t{1}\r\n", v.Key, v.Value));
+                        richTextBox1.AppendText(string.Format("\t{0}:\t\t{1}\r\n", v.Key, v.Value));
                     }
                 });
             }
