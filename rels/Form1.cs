@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,17 +19,19 @@ namespace rels
             InitializeComponent();
         }
 
-        private string next = "Alexandra Feodorovna (Alix of Hesse)";
-
         private Stack<string> nexts = new Stack<string>();
+
+        private Queue<string> q = new Queue<string>();
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            nexts.Push("Alexei Nikolaevich, Tsarevich of Russia");
+            //nexts.Push("Alexei Nikolaevich, Tsarevich of Russia");
+            q.Enqueue("Alexei Nikolaevich, Tsarevich of Russia");
             HtmlWeb web = new HtmlWeb();
-            while (nexts.Count > 0)
+            while (q.Count > 0)
             {
-                var page = await web.LoadFromWebAsync("https://en.wikipedia.org/wiki/" + nexts.Pop());
+               
+                var page = await web.LoadFromWebAsync("https://en.wikipedia.org/wiki/" + q.Dequeue());
                 var rows = page.DocumentNode.SelectNodes("//table[@class='infobox vcard']/tbody/tr");
                 var fathers = rows?.Where(r => Filter(r, "Father"));
                 if (fathers != null)
@@ -37,10 +40,11 @@ namespace rels
                         .Where(r => r != null).ToList()
                         .ForEach(t =>
                         {
-                            richTextBox1.AppendText(t.Attributes["title"].Value + string.Format("{0}", nexts.Count) + "\r\n");
+                            richTextBox1.AppendText(t.Attributes["title"].Value + string.Format(" - {0}", q.Count) + "\r\n");
                             if (!string.IsNullOrEmpty(t.Attributes["title"].Value))
                             {
-                                nexts.Push(t.Attributes["title"].Value);
+                                //nexts.Push(t.Attributes["title"].Value);
+                                q.Enqueue(t.Attributes["title"].Value);
                             }
                         });
                 }
@@ -51,13 +55,15 @@ namespace rels
                         .Where(r => r != null).ToList()
                         .ForEach(t =>
                         {
-                            richTextBox1.AppendText(t.Attributes["title"].Value + string.Format("{0}", nexts.Count) + "\r\n");
+                            richTextBox1.AppendText(t.Attributes["title"].Value + string.Format(" - {0}", q.Count) + "\r\n");
                             if (!string.IsNullOrEmpty(t.Attributes["title"].Value))
                             {
-                                nexts.Push(t.Attributes["title"].Value);
+                                //nexts.Push(t.Attributes["title"].Value);
+                                q.Enqueue(t.Attributes["title"].Value);
                             }
                         });
                 }
+                Thread.Sleep(2000);
             }
         }
 
