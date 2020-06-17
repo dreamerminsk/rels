@@ -24,7 +24,7 @@ namespace rels
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Observable.Interval(TimeSpan.FromSeconds(3)).Subscribe(x => { ProcessPerson(); });
+            Observable.Interval(TimeSpan.FromSeconds(3)).Subscribe(x => ProcessPerson());
             q.Enqueue("Alexei Nikolaevich, Tsarevich of Russia");
             q.Enqueue("Elizabeth II");
             q.Enqueue("Margrethe II");
