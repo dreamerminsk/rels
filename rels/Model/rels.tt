@@ -41,7 +41,7 @@
 		Custom tool must be set to TextTemplatingFileGenerator, not TextTemplatingFilePreprocessor or any other value.
 	*/
 
-	NamespaceName = "Model";
+	NamespaceName = "rels.Model";
 
 	LoadSQLiteMetadata(@"C:\Data", "rels.sqlite");
 //	LoadSQLiteMetadata(string connectionString);

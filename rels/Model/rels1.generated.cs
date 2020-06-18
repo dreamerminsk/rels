@@ -12,7 +12,7 @@ using System;
 using LinqToDB;
 using LinqToDB.Mapping;
 
-namespace Model
+namespace rels.Model
 {
 	/// <summary>
 	/// Database       : rels

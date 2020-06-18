@@ -1,6 +1,7 @@
 ﻿using HtmlAgilityPack;
 using LinqToDB;
-using Model;
+using LinqToDB.Common;
+using rels.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,32 +38,39 @@ namespace rels
             //UpdateQueue();
             using (var db = new RelsDB())
             {
+                var sp = db.DataProvider.GetSchemaProvider();
+                var dbSchema = sp.GetSchema(db);
+                if (!dbSchema.Tables.Any(t => t.TableName == "People"))
+                {
+                    db.CreateTable<Person>();
+                }
             }
         }
 
         private async void ProcessPerson()
         {
+            if (q.IsNullOrEmpty()) return;
             var title = q.Dequeue();
             if (!string.IsNullOrEmpty(title))
             {
-                AppendText(string.Format("{0}\r\n", title));
-                var infoBox = await Wiki.GetInfoBoxAsync(title);
-                infoBox.ToList().ForEach(v =>
+                var p = await Wiki.GetPersonAsync(title);
+                using (var db = new RelsDB())
                 {
-                    if (v.Key.Equals("Father") || v.Key.Equals("Mother"))
-                    {
-                        AppendText(string.Format("\t{0}:\t{1}\r\n", v.Key, v.Value));
-                        if (!processed.Contains(v.Value))
-                        {
-                            q.Enqueue(v.Value);
-                        }
-                        UpdateQueue();
-                    }
-                    if (v.Key.Equals("Born") || v.Key.Equals("Died"))
-                    {
-                        AppendText(string.Format("\t{0}:\t\t{1}\r\n", v.Key, v.Value));
-                    }
-                });
+                    int res = await db.InsertAsync(p);
+                }
+                AppendText(string.Format("{0}\r\n", p.Name));
+                AppendText(string.Format("  rus: {0}\r\n", p.RusName));
+                AppendText(string.Format("\tFather:\t{0}\r\n",p.Father));
+                AppendText(string.Format("\tMother:\t{0}\r\n", p.Mother));
+                if (!processed.Contains(p.Father))
+                {
+                    q.Enqueue(p.Father);
+                }
+                if (!processed.Contains(p.Mother))
+                {
+                    q.Enqueue(p.Mother);
+                }
+                UpdateQueue();
             }
         }
 

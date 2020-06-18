@@ -12,7 +12,17 @@ namespace rels.Model
     {
         [PrimaryKey, Identity]
         public int ID { get; set; }
+
         [Column(Name="Name"), NotNull]
         public string Name { get; set; }
+
+        [Column(Name = "RusName")]
+        public string RusName { get; set; }
+
+        [Column(Name = "Father")]
+        public string Father { get; set; }
+
+        [Column(Name = "Mother")]
+        public string Mother { get; set; }
     }
 }

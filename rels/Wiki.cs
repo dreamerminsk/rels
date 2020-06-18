@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using rels.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,32 @@ namespace rels
                     });
 
             return infoBox;
+        }
+
+        public static async Task<Person> GetPersonAsync(string title)
+        {
+            var p = new Person();
+            var page = await web.LoadFromWebAsync("https://en.wikipedia.org/wiki/" + title);
+
+            p.Name = page.DocumentNode.SelectSingleNode("//h1[@class='firstHeading']")?.InnerText.Trim();
+
+            p.RusName = page.DocumentNode.SelectSingleNode("//li[@class='interlanguage-link interwiki-ru']/a[@title]")?
+                .Attributes["title"]?.Value?.Trim();
+
+            var rows = page.DocumentNode.SelectNodes("//table[@class='infobox vcard']/tbody/tr");
+            rows?.Where(r => Filter(r, "Father"))?.Select(r => ToRef(r))?.Where(r => r != null)?.ToList()
+                    .ForEach(t =>
+                    {
+                        p.Father = t.Attributes["title"]?.Value;
+                    });
+
+            rows?.Where(r => Filter(r, "Mother"))?.Select(r => ToRef(r))?.Where(r => r != null)?.ToList()
+                    .ForEach(t =>
+                    {
+                        p.Mother = t.Attributes["title"]?.Value;
+                    });
+
+            return p;
         }
 
         private static HtmlNode ToRef(HtmlNode node)
