@@ -1,4 +1,6 @@
 ﻿using HtmlAgilityPack;
+using LinqToDB;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,8 +34,10 @@ namespace rels
             q.Enqueue("Margrethe II");
             q.Enqueue("Carl XVI Gustaf");
             q.Enqueue("Harald V");
-            listBox1.DataSource = q.ToList();
-
+            //UpdateQueue();
+            using (var db = new RelsDB())
+            {
+            }
         }
 
         private async void ProcessPerson()
@@ -69,17 +73,21 @@ namespace rels
 
         private void UpdateQueue()
         {
-            var si = listBox1.SelectedIndex;
-            listBox1.BeginUpdate();
-            listBox1.DataSource = q.ToList();
-            listBox1.SelectedIndex = si;
-            listBox1.EndUpdate();
-            SetTitle("QUEUE / " + q.Count + " /");
+            listBox1.Invoke(new Action(() =>
+            {
+                var si = listBox1.SelectedIndex;
+                listBox1.BeginUpdate();
+                listBox1.DataSource = q.ToList();
+                listBox1.SelectedIndex = si;
+                listBox1.EndUpdate();
+                SetTitle("QUEUE / " + q.Count + " /");
+            }));
+
         }
 
         private void SetTitle(string text)
         {
-            Form1.ActiveForm.Invoke(new Action(() => { Form1.ActiveForm.Text = text; }));
+            this.Invoke(new Action(() => { this.Text = text; }));
         }
     }
 }
