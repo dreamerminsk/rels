@@ -30,7 +30,7 @@ namespace rels
             p.ID = int.Parse(wikiDataId.Substring(1));
             p.WikiDataID = wikiDataId;
             p.Name = labels["en"]?["value"]?.ToString();
-            p.Name = p.Name.IsNullOrEmpty() ? p.Name: "en:???";
+            p.Name = p.Name.IsNullOrEmpty() ? "en:???" : p.Name;
             p.RusName = labels["ru"]?["value"]?.ToString();
             p.DateOfBirth = claims["P569"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["time"].ToString();
             p.DateOfDeath = claims["P570"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["time"].ToString();
