@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using LinqToDB.Common;
 using Newtonsoft.Json.Linq;
 using rels.Model;
 using System;
@@ -29,6 +30,7 @@ namespace rels
             p.ID = int.Parse(wikiDataId.Substring(1));
             p.WikiDataID = wikiDataId;
             p.Name = labels["en"]?["value"]?.ToString();
+            p.Name = p.Name.IsNullOrEmpty() ? p.Name: "en:???";
             p.RusName = labels["ru"]?["value"]?.ToString();
             p.DateOfBirth = claims["P569"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["time"].ToString();
             p.DateOfDeath = claims["P570"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["time"].ToString();
