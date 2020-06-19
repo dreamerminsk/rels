@@ -30,11 +30,6 @@ namespace rels
         private void Form1_Load(object sender, EventArgs e)
         {
             Observable.Interval(TimeSpan.FromSeconds(3)).Subscribe(x => ProcessPerson());
-            q.Enqueue("Alexei Nikolaevich, Tsarevich of Russia");
-            q.Enqueue("Elizabeth II");
-            q.Enqueue("Margrethe II");
-            q.Enqueue("Carl XVI Gustaf");
-            q.Enqueue("Harald V");
             //UpdateQueue();
             using (var db = new RelsDB())
             {
@@ -44,6 +39,19 @@ namespace rels
                 {
                     db.CreateTable<Person>();
                 }
+                else
+                {
+                    var people = db.GetTable<Person>();
+                    people.Where(p => (p.Father == null) || (p.Mother == null))
+                        .OrderBy(x => Guid.NewGuid())
+                        //.Take(16)
+                        .ToList().ForEach(p => q.Enqueue(p.Name));
+                }
+                q.Enqueue("Alexei Nikolaevich, Tsarevich of Russia");
+                q.Enqueue("Elizabeth II");
+                q.Enqueue("Margrethe II");
+                q.Enqueue("Carl XVI Gustaf");
+                q.Enqueue("Harald V");
             }
         }
 
@@ -59,8 +67,8 @@ namespace rels
                     int res = await db.InsertAsync(p);
                 }
                 AppendText(string.Format("{0}\r\n", p.Name));
-                AppendText(string.Format("  rus: {0}\r\n", p.RusName));
-                AppendText(string.Format("\tFather:\t{0}\r\n",p.Father));
+                AppendText(string.Format("  {0}\r\n", p.RusName));
+                AppendText(string.Format("\tFather:\t{0}\r\n", p.Father));
                 AppendText(string.Format("\tMother:\t{0}\r\n", p.Mother));
                 if (!processed.Contains(p.Father))
                 {
