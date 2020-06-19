@@ -45,10 +45,17 @@ namespace rels
                     people.Where(p => (p.Father == null) || (p.Mother == null))
                         .OrderBy(x => Guid.NewGuid())
                         //.Take(16)
-                        .ToList().ForEach(p => q.Enqueue(p.Name));
+                        .ToList().ForEach(p => q.Enqueue(p.WikiDataID));
                 }
                 q.Enqueue("Q680304");
                 q.Enqueue("Q743509");
+                q.Enqueue("Q154045");
+                q.Enqueue("Q57529");
+                q.Enqueue("Q51068");
+                q.Enqueue("Q6482148");
+                q.Enqueue("Q4381410");
+                q.Enqueue("Q6079141");
+                q.Enqueue("Q185152");
             }
         }
 
@@ -65,6 +72,8 @@ namespace rels
                 }
                 AppendText(string.Format("{0}\r\n", p.Name));
                 AppendText(string.Format("  {0}\r\n", p.RusName));
+                AppendText(string.Format("\tDate Of Birth:\t{0}\r\n", p.DateOfBirth));
+                AppendText(string.Format("\tDate Of Death:\t{0}\r\n", p.DateOfDeath));
                 AppendText(string.Format("\tFather:\t{0}\r\n", p.Father));
                 AppendText(string.Format("\tMother:\t{0}\r\n", p.Mother));
                 if (!processed.Contains(p.Father))

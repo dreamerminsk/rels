@@ -22,6 +22,12 @@ namespace rels.Model
         [Column(Name = "RusName")]
         public string RusName { get; set; }
 
+        [Column(Name="DateOfBirth")]
+        public string DateOfBirth { get; set; }
+
+        [Column(Name = "DateOfDeath")]
+        public string DateOfDeath { get; set; }
+
         [Column(Name = "Father")]
         public string Father { get; set; }
 
