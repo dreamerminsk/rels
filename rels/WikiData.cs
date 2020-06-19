@@ -10,7 +10,7 @@ namespace rels
 {
     public class WikiData
     {
-        private static string DATA_REF = "https://www.wikidata.org/wiki/Special:EntityData/{0}";
+        private static string DATA_REF = "https://www.wikidata.org/wiki/Special:EntityData/{0}.json";
 
         private static HtmlWeb web = new HtmlWeb();
 
