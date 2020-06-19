@@ -7,13 +7,16 @@ using System.Threading.Tasks;
 
 namespace rels.Model
 {
-    [Table(Name="People")]
+    [Table(Name = "People")]
     public class Person
     {
-        [PrimaryKey, Identity]
+        [Column(Name = "ID", IsPrimaryKey = true, IsIdentity = true)]
         public int ID { get; set; }
 
-        [Column(Name="Name"), NotNull]
+        [Column(Name="WikiDataID")]
+        public string WikiDataID { get; set; }
+
+        [Column(Name = "Name"), NotNull]
         public string Name { get; set; }
 
         [Column(Name = "RusName")]

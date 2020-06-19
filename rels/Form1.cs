@@ -47,11 +47,8 @@ namespace rels
                         //.Take(16)
                         .ToList().ForEach(p => q.Enqueue(p.Name));
                 }
-                q.Enqueue("Alexei Nikolaevich, Tsarevich of Russia");
-                q.Enqueue("Elizabeth II");
-                q.Enqueue("Margrethe II");
-                q.Enqueue("Carl XVI Gustaf");
-                q.Enqueue("Harald V");
+                q.Enqueue("Q680304");
+                q.Enqueue("Q743509");
             }
         }
 
@@ -61,7 +58,7 @@ namespace rels
             var title = q.Dequeue();
             if (!string.IsNullOrEmpty(title))
             {
-                var p = await Wiki.GetPersonAsync(title);
+                var p = await WikiData.GetPersonAsync(title);
                 using (var db = new RelsDB())
                 {
                     int res = await db.InsertAsync(p);
