@@ -30,31 +30,38 @@ namespace rels
             {
                 Init.CREATE_SQL.ForEach(async sql => await db.ExecuteAsync(sql));
 
+                People.Insert("Q12900494");
+                People.Insert("Q37076");
+                People.Insert("Q37088");
+                People.Insert("Q157099");
+                People.Insert("Q7996");
+                People.Insert("Q94941");
+                People.Insert("Q298263");
+                People.Insert("Q680304");
+                People.Insert("Q743509");
+                People.Insert("Q154045");
+                People.Insert("Q57529");
+                People.Insert("Q51068");
+                People.Insert("Q6482148");
+                People.Insert("Q4381410");
+                People.Insert("Q6079141");
+                People.Insert("Q185152");
+                People.Insert("Q165096");
+                People.Insert("Q212897");
+                People.Insert("Q37142");
+
                 var people = db.GetTable<Person>();
-                people.Where(p => (p.Father == null) && (p.Mother == null))
+                people.Where(p => (p.Name == "???"))
                     .OrderBy(x => Guid.NewGuid())
                     .ToList().ForEach(p => q2.Add(p.WikiDataID));
 
-                q2.Add("Q7996");
-                q2.Add("Q298263");
-                q2.Add("Q680304");
-                q2.Add("Q743509");
-                q2.Add("Q154045");
-                q2.Add("Q57529");
-                q2.Add("Q51068");
-                q2.Add("Q6482148");
-                q2.Add("Q4381410");
-                q2.Add("Q6079141");
-                q2.Add("Q185152");
-                q2.Add("Q165096");
-                q2.Add("Q212897");
-                q2.Add("Q37142");
+
             }
         }
 
         private async void ProcessPerson()
         {
-            if (q2.IsNullOrEmpty()) return;
+            if (q2.IsNullOrEmpty()) { ReloadQueue(); return; }
             var title = q2[0];
             q2.RemoveAt(0);
             UpdateQueue();
@@ -90,14 +97,29 @@ namespace rels
                 AppendText(string.Format("\tMother:\t{0}\r\n", p.Mother));
                 if (!People.IsExists(p.Father))
                 {
-                    q2.Add(p.Father);
-                    //UpdateQueue();
+                    if (!p.Father.IsNullOrEmpty())
+                    {
+                        People.Insert(p.Father);
+                    }
                 }
                 if (!People.IsExists(p.Mother))
                 {
-                    q2.Add(p.Mother);
-                    //UpdateQueue();
+                    if (!p.Mother.IsNullOrEmpty())
+                    {
+                        People.Insert(p.Mother);
+                    }
                 }
+            }
+        }
+
+        private void ReloadQueue()
+        {
+            using (var db = new RelsDB())
+            {
+                var people = db.GetTable<Person>();
+                people.Where(p => (p.Name == "???"))
+                    .OrderBy(x => Guid.NewGuid())
+                    .ToList().ForEach(p => q2.Add(p.WikiDataID));
             }
         }
 
