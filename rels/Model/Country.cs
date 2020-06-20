@@ -8,7 +8,7 @@ namespace rels.Model
     {
         private string _name = "en: ???????";
 
-        [Column(Name = "ID", IsPrimaryKey = true, IsIdentity = true)]
+        [PrimaryKey, Identity]
         public int ID { get; set; }
 
         [Column(Name = "WikiDataID")]

@@ -1,5 +1,6 @@
 ﻿using LinqToDB;
 using LinqToDB.Common;
+using LinqToDB.Data;
 using rels.Model;
 using System;
 using System.Collections.Generic;
@@ -17,70 +18,71 @@ namespace rels
             InitializeComponent();
         }
 
-        public Queue<string> q = new Queue<string>();
+        //public Queue<string> q = new Queue<string>();
 
-        private List<string> countriesQueue = new List<string>();
+        public List<string> q2 = new List<string>();
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            listBox1.DataSource = q2;
             Observable.Interval(TimeSpan.FromSeconds(3)).Subscribe(x => ProcessPerson());
-            //UpdateQueue();
             using (var db = new RelsDB())
             {
-                var sp = db.DataProvider.GetSchemaProvider();
-                var dbSchema = sp.GetSchema(db);
-                if (!dbSchema.Tables.Any(t => t.TableName == "Countries"))
-                {
-                    db.CreateTable<Country>();
-                }
-                if (!dbSchema.Tables.Any(t => t.TableName == "People"))
-                {
-                    db.CreateTable<Person>();
-                }
-                else
-                {
-                    var people = db.GetTable<Person>();
-                    people.Where(p => (p.Father == null) && (p.Mother == null))
-                        .OrderBy(x => Guid.NewGuid())
-                        .Take(32)
-                        .ToList().ForEach(p => q.Enqueue(p.WikiDataID));
-                }
-                q.Enqueue("Q298263");
-                q.Enqueue("Q680304");
-                q.Enqueue("Q743509");
-                q.Enqueue("Q154045");
-                q.Enqueue("Q57529");
-                q.Enqueue("Q51068");
-                q.Enqueue("Q6482148");
-                q.Enqueue("Q4381410");
-                q.Enqueue("Q6079141");
-                q.Enqueue("Q185152");
+                Init.CREATE_SQL.ForEach(async sql => await db.ExecuteAsync(sql));
+
+                var people = db.GetTable<Person>();
+                people.Where(p => (p.Father == null) && (p.Mother == null))
+                    .OrderBy(x => Guid.NewGuid())
+                    .ToList().ForEach(p => q2.Add(p.WikiDataID));
+
+                q2.Add("Q7996");
+                q2.Add("Q298263");
+                q2.Add("Q680304");
+                q2.Add("Q743509");
+                q2.Add("Q154045");
+                q2.Add("Q57529");
+                q2.Add("Q51068");
+                q2.Add("Q6482148");
+                q2.Add("Q4381410");
+                q2.Add("Q6079141");
+                q2.Add("Q185152");
+                q2.Add("Q165096");
+                q2.Add("Q212897");
+                q2.Add("Q37142");
             }
         }
 
         private async void ProcessPerson()
         {
-            if (q.IsNullOrEmpty()) return;
-            var title = q.Dequeue();
+            if (q2.IsNullOrEmpty()) return;
+            var title = q2[0];
+            q2.RemoveAt(0);
             UpdateQueue();
             if (!string.IsNullOrEmpty(title))
             {
                 var p = await WikiData.GetPersonAsync(title);
                 using (var db = new RelsDB())
                 {
-                    int res = await db.InsertAsync(p);
+                    try
+                    {
+                        int res = await db.InsertAsync(p);
+                    }
+                    catch (Exception e)
+                    {
+                        //MessageBox.Show(e.Message, e.GetType().Name);
+                    }
                 }
                 AppendText(string.Format("{0}\r\n{1}\r\n", new string('-', 64), p.Name));
                 AppendText(string.Format("  {0}\r\n", p.RusName));
                 if (Countries.IsExists(p.Country))
                 {
-                    AppendText(string.Format("\tCountry:\t{0} - {1}\r\n", p.Country, Countries.GetByWikiDataId(p.Country).Name));
+                    AppendText(string.Format("\tCountry:\t{0} - {1}\r\n", p.Country, Countries.GetByWikiDataId(p.Country)?.Name));
                 }
-                else
+                else if (!p.Country.IsNullOrEmpty())
                 {
                     var c = await WikiData.GetCountryAsync(p.Country);
-                    Countries.Insert(c);
-                    AppendText(string.Format("\tCountry:\t{0} - {1}\r\n", p.Country, Countries.GetByWikiDataId(p.Country).Name));
+                    await Countries.InsertAsync(c);
+                    AppendText(string.Format("\tCountry:\t{0} - {1}\r\n", p.Country, Countries.GetByWikiDataId(p.Country)?.Name));
                 }
                 AppendText(string.Format("\tDate Of Birth:\t{0}\r\n", p.DateOfBirth));
                 AppendText(string.Format("\tDate Of Death:\t{0}\r\n", p.DateOfDeath));
@@ -88,12 +90,12 @@ namespace rels
                 AppendText(string.Format("\tMother:\t{0}\r\n", p.Mother));
                 if (!People.IsExists(p.Father))
                 {
-                    q.Enqueue(p.Father);
+                    q2.Add(p.Father);
                     //UpdateQueue();
                 }
                 if (!People.IsExists(p.Mother))
                 {
-                    q.Enqueue(p.Mother);
+                    q2.Add(p.Mother);
                     //UpdateQueue();
                 }
             }
@@ -118,7 +120,10 @@ namespace rels
         {
             if (listBox1.InvokeRequired)
             {
-                UpdateListBox();
+                listBox1.Invoke(new Action(() =>
+                {
+                    UpdateListBox();
+                }));
             }
             else
             {
@@ -130,10 +135,11 @@ namespace rels
         {
             var si = listBox1.SelectedIndex;
             listBox1.BeginUpdate();
-            listBox1.DataSource = q.ToList();
+            listBox1.DataSource = q2;
             listBox1.SelectedIndex = si;
             listBox1.EndUpdate();
-            SetTitle("QUEUE / " + q.Count + " /");
+            //listBox1.Update();
+            SetTitle("QUEUE / " + q2.Count + " /");
         }
 
         private void SetTitle(string text)

@@ -1,5 +1,6 @@
 ﻿using LinqToDB;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace rels.Model
 {
@@ -24,11 +25,11 @@ namespace rels.Model
             }
         }
 
-        public static int Insert(Country c)
+        public static async Task<int> InsertAsync(Country c)
         {
             using (var db = new RelsDB())
             {
-                return db.Insert(c);
+                return await db.InsertAsync(c);
             }
         }
 
