@@ -130,6 +130,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Countries.cs" />
+    <Compile Include="Model\Country.cs" />
+    <Compile Include="Model\People.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\rels1.generated.cs">
       <AutoGen>True</AutoGen>

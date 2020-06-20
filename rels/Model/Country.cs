@@ -3,8 +3,8 @@ using LinqToDB.Mapping;
 
 namespace rels.Model
 {
-    [Table(Name = "People")]
-    public class Person
+    [Table(Name = "Countries")]
+    public class Country
     {
         private string _name = "en: ???????";
 
@@ -20,19 +20,5 @@ namespace rels.Model
         [Column(Name = "RusName")]
         public string RusName { get; set; } = "ru:???????";
 
-        [Column(Name = "Country")]
-        public string Country { get; set; } = "???????";
-
-        [Column(Name = "DateOfBirth")]
-        public string DateOfBirth { get; set; }
-
-        [Column(Name = "DateOfDeath")]
-        public string DateOfDeath { get; set; }
-
-        [Column(Name = "Father")]
-        public string Father { get; set; }
-
-        [Column(Name = "Mother")]
-        public string Mother { get; set; }
     }
 }

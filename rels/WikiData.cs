@@ -1,12 +1,7 @@
-﻿using HtmlAgilityPack;
-using LinqToDB.Common;
+﻿using LinqToDB.Common;
 using Newtonsoft.Json.Linq;
 using rels.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,8 +10,6 @@ namespace rels
     public class WikiData
     {
         private static string DATA_REF = "https://www.wikidata.org/wiki/Special:EntityData/{0}.json";
-
-        private static HtmlWeb web = new HtmlWeb();
 
         static readonly HttpClient client = new HttpClient();
 
@@ -37,6 +30,21 @@ namespace rels
             p.Father = claims["P22"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["id"].ToString();
             p.Mother = claims["P25"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["id"].ToString();
             return p;
+        }
+
+        public static async Task<Country> GetCountryAsync(string wikiDataId)
+        {
+            var c = new Country();
+            if (wikiDataId.IsNullOrEmpty()) return c;
+            var page = await GetStringAsync(string.Format(DATA_REF, wikiDataId));
+            var doc = JObject.Parse(page);
+            var claims = doc["entities"]?[wikiDataId]?["claims"];
+            var labels = doc["entities"]?[wikiDataId]?["labels"];
+            c.ID = int.Parse(wikiDataId.Substring(1));
+            c.WikiDataID = wikiDataId;
+            c.Name = labels["en"]?["value"]?.ToString();
+            c.RusName = labels["ru"]?["value"]?.ToString();
+            return c;
         }
 
         static async Task<string> GetStringAsync(string url)
