@@ -24,7 +24,7 @@ namespace rels
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            listBox1.DataSource = q2;
+            //listBox1.DataSource = q2;
             Observable.Interval(TimeSpan.FromSeconds(3)).Subscribe(x => ProcessPerson());
             using (var db = new RelsDB())
             {
@@ -138,7 +138,7 @@ namespace rels
             listBox1.DataSource = q2;
             listBox1.SelectedIndex = si;
             listBox1.EndUpdate();
-            //listBox1.Update();
+            listBox1.Update();
             SetTitle("QUEUE / " + q2.Count + " /");
         }
 
