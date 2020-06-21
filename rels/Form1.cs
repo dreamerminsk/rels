@@ -187,7 +187,6 @@ namespace rels
             listBox1.BeginUpdate();
             listBox1.Items.Clear();
             q2.ForEach(q => listBox1.Items.Add(q));
-            listBox1.Items.Add(q2);
             listBox1.SelectedIndex = si;
             listBox1.EndUpdate();
             SetTitle("QUEUE / " + q2.Count + " /");

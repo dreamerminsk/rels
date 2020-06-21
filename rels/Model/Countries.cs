@@ -29,7 +29,14 @@ namespace rels.Model
         {
             using (var db = new RelsDB())
             {
-                return await db.InsertAsync(c);
+                try
+                {
+                    return await db.InsertAsync(c);
+                }
+                catch
+                {
+                    return -1;
+                }
             }
         }
 
