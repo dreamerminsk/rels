@@ -38,5 +38,12 @@ namespace rels.Model
             }
         }
 
+        public static int Update(Person p)
+        {
+            using (var db = new RelsDB())
+            {
+                return db.Update(p); ;
+            }
+        }
     }
 }

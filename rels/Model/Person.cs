@@ -1,5 +1,6 @@
 ﻿using LinqToDB.Common;
 using LinqToDB.Mapping;
+using System.Collections.Generic;
 
 namespace rels.Model
 {
@@ -34,5 +35,11 @@ namespace rels.Model
 
         [Column(Name = "Mother")]
         public string Mother { get; set; }
+
+        public List<string> Siblings { get; set; }
+
+        public List<string> Spouse { get; set; }
+
+        public List<string> Children { get; set; }
     }
 }

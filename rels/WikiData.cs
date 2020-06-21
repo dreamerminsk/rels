@@ -1,6 +1,7 @@
 ﻿using LinqToDB.Common;
 using Newtonsoft.Json.Linq;
 using rels.Model;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,13 +25,59 @@ namespace rels
             p.WikiDataID = wikiDataId;
             p.Name = labels["en"]?["value"]?.ToString();
             p.RusName = labels["ru"]?["value"]?.ToString();
-            p.Country = claims["P27"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["id"].ToString();
-            p.DateOfBirth = claims["P569"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["time"].ToString();
-            p.DateOfDeath = claims["P570"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["time"].ToString();
-            p.Father = claims["P22"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["id"].ToString();
-            p.Mother = claims["P25"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["id"].ToString();
+            p.Country = claims["P27"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["id"]?.ToString();
+            p.DateOfBirth = claims["P569"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["time"]?.ToString();
+            p.DateOfDeath = claims["P570"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["time"]?.ToString();
+            p.Father = claims["P22"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["id"]?.ToString();
+            p.Mother = claims["P25"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["id"]?.ToString();
+            p.Siblings = ParseSiblings(claims);
+            p.Spouse = ParseSpouse(claims);
+            p.Children = ParseChildren(claims);
             return p;
         }
+
+        private static List<string> ParseSiblings(JToken claims)
+        {
+            var ss = new List<string>();
+            var siblings = claims["P3373"];
+            if (siblings?.HasValues ?? false)
+            {
+                foreach (var sibling in siblings)
+                {
+                    ss.Add(sibling["mainsnak"]?["datavalue"]?["value"]?["id"]?.ToString());
+                }
+            }
+            return ss;
+        }
+
+        private static List<string> ParseSpouse(JToken claims)
+        {
+            var ss = new List<string>();
+            var spouses = claims["P26"];
+            if (spouses?.HasValues ?? false)
+            {
+                foreach (var spouse in spouses)
+                {
+                    ss.Add(spouse["mainsnak"]?["datavalue"]?["value"]?["id"]?.ToString());
+                }
+            }
+            return ss;
+        }
+
+        private static List<string> ParseChildren(JToken claims)
+        {
+            var ss = new List<string>();
+            var children = claims["P40"];
+            if (children?.HasValues ?? false)
+            {
+                foreach (var child in children)
+                {
+                    ss.Add(child["mainsnak"]?["datavalue"]?["value"]?["id"]?.ToString());
+                }
+            }
+            return ss;
+        }
+
 
         public static async Task<Country> GetCountryAsync(string wikiDataId)
         {
