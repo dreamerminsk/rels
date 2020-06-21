@@ -49,6 +49,10 @@ namespace rels
                 People.Insert("Q165096");
                 People.Insert("Q212897");
                 People.Insert("Q37142");
+                People.Insert("Q557896");
+                People.Insert("Q49765");
+                People.Insert("Q53448");
+                People.Insert("Q174964");
 
                 var people = db.GetTable<Person>();
                 people.Where(p => (p.Name == "???"))
