@@ -21,6 +21,15 @@ namespace rels
             var doc = JObject.Parse(page);
             var claims = doc["entities"]?[wikiDataId]?["claims"];
             var labels = doc["entities"]?[wikiDataId]?["labels"];
+            //if (claims == null)
+            //{
+            //    claims = doc["entities"]?[doc["entities"]?.First]?["claims"];
+            //    labels = doc["entities"]?[doc["entities"]?.First]?["labels"];
+            //}
+            if (claims == null)
+            {
+                return p;
+            }
             p.ID = int.Parse(wikiDataId.Substring(1));
             p.WikiDataID = wikiDataId;
             p.Name = labels["en"]?["value"]?.ToString();

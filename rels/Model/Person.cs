@@ -22,7 +22,7 @@ namespace rels.Model
         public string RusName { get; set; } = "ru:???????";
 
         [Column(Name = "Country")]
-        public string Country { get; set; } = "???????";
+        public string Country { get; set; }
 
         [Column(Name = "DateOfBirth")]
         public string DateOfBirth { get; set; }
@@ -36,10 +36,10 @@ namespace rels.Model
         [Column(Name = "Mother")]
         public string Mother { get; set; }
 
-        public List<string> Siblings { get; set; }
+        public List<string> Siblings { get; set; } = new List<string>();
 
-        public List<string> Spouse { get; set; }
+        public List<string> Spouse { get; set; } = new List<string>();
 
-        public List<string> Children { get; set; }
+        public List<string> Children { get; set; } = new List<string>();
     }
 }
