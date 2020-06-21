@@ -49,7 +49,6 @@
             // 
             // listBox1
             // 
-            this.listBox1.DataSource = this.form1BindingSource;
             this.listBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;

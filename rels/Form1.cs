@@ -161,10 +161,11 @@ namespace rels
         {
             var si = listBox1.SelectedIndex;
             listBox1.BeginUpdate();
-            listBox1.DataSource = q2;
+            listBox1.Items.Clear();
+            q2.ForEach(q => listBox1.Items.Add(q));
+            listBox1.Items.Add(q2);
             listBox1.SelectedIndex = si;
             listBox1.EndUpdate();
-            listBox1.Update();
             SetTitle("QUEUE / " + q2.Count + " /");
         }
 
