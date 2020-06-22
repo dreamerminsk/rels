@@ -21,6 +21,8 @@ namespace rels.Model
         [Column(Name = "RusName")]
         public string RusName { get; set; } = "ru:???????";
 
+        public string Description { get; set; }
+
         [Column(Name = "Country")]
         public string Country { get; set; }
 

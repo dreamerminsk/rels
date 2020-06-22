@@ -21,6 +21,7 @@ namespace rels
             var doc = JObject.Parse(page);
             var claims = doc["entities"]?[wikiDataId]?["claims"];
             var labels = doc["entities"]?[wikiDataId]?["labels"];
+            var descriptions = doc["entities"]?[wikiDataId]?["descriptions"];
             //if (claims == null)
             //{
             //    claims = doc["entities"]?[doc["entities"]?.First]?["claims"];
@@ -34,6 +35,8 @@ namespace rels
             p.WikiDataID = wikiDataId;
             p.Name = labels["en"]?["value"]?.ToString();
             p.RusName = labels["ru"]?["value"]?.ToString();
+            p.Description += descriptions["en"]?["value"]?.ToString();
+            p.Description += "\r\n" + descriptions["ru"]?["value"]?.ToString();
             p.Country = claims["P27"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["id"]?.ToString();
             p.DateOfBirth = claims["P569"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["time"]?.ToString();
             p.DateOfDeath = claims["P570"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["time"]?.ToString();

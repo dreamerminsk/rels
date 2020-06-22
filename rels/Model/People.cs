@@ -1,5 +1,8 @@
 ﻿using LinqToDB;
+using LinqToDB.Common;
+using System;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace rels.Model
 {
@@ -42,7 +45,37 @@ namespace rels.Model
         {
             using (var db = new RelsDB())
             {
-                return db.Update(p); ;
+                try
+                {
+                    var ps = db.GetTable<Person>();
+                    var res = ps.Where(item => item.WikiDataID.Equals(p.WikiDataID))
+                         .Set(item => item.Name, p.Name)
+                         .Set(item => item.RusName, p.RusName)
+                         .Set(item => item.Country, p.Country)
+                         .Set(item => item.DateOfBirth, p.DateOfBirth)
+                         .Set(item => item.DateOfDeath, p.DateOfDeath)
+                         .Set(item => item.Father, p.Father)
+                         .Set(item => item.Mother, p.Mother)
+                         .Update();
+                    if (!p.Siblings.IsNullOrEmpty())
+                    {
+                        p.Siblings.ForEach(s => People.Insert(s));
+                    }
+                    if (!p.Spouse.IsNullOrEmpty())
+                    {
+                        p.Spouse.ForEach(s => People.Insert(s));
+                    }
+                    if (!p.Children.IsNullOrEmpty())
+                    {
+                        p.Children.ForEach(s => People.Insert(s));
+                    }
+                    return res;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, e.GetType().Name);
+                    return -1;
+                }
             }
         }
     }

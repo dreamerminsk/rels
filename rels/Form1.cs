@@ -30,6 +30,24 @@ namespace rels
             {
                 Init.CREATE_SQL.ForEach(async sql => await db.ExecuteAsync(sql));
 
+                People.Insert("Q202266");
+                People.Insert("Q357200");
+                People.Insert("Q379718");
+                People.Insert("Q497773");
+                People.Insert("Q7990");
+                People.Insert("Q54049");
+                People.Insert("Q54051");
+                People.Insert("Q53435");
+                People.Insert("Q9961");
+                People.Insert("Q8462");
+                People.Insert("Q720");
+                People.Insert("Q294945");
+                People.Insert("Q260783");
+                People.Insert("Q299428");
+                People.Insert("Q271527");
+                People.Insert("Q269265");
+                People.Insert("Q335658");
+                People.Insert("Q297086");
                 People.Insert("Q12900494");
                 People.Insert("Q37076");
                 People.Insert("Q37088");
@@ -72,40 +90,10 @@ namespace rels
             if (!string.IsNullOrEmpty(title))
             {
                 var p = await WikiData.GetPersonAsync(title);
-                using (var db = new RelsDB())
-                {
-                    try
-                    {
-                        var ps = db.GetTable<Person>();
-                        var res = ps.Where(item => item.WikiDataID.Equals(p.WikiDataID))
-                             .Set(item => item.Name, p.Name)
-                             .Set(item => item.RusName, p.RusName)
-                             .Set(item => item.Country, p.Country)
-                             .Set(item => item.DateOfBirth, p.DateOfBirth)
-                             .Set(item => item.DateOfDeath, p.DateOfDeath)
-                             .Set(item => item.Father, p.Father)
-                             .Set(item => item.Mother, p.Mother)
-                             .Update();
-                        if (!p.Siblings.IsNullOrEmpty())
-                        {
-                            p.Siblings.ForEach(s => People.Insert(s));
-                        }
-                        if (!p.Spouse.IsNullOrEmpty())
-                        {
-                            p.Spouse.ForEach(s => People.Insert(s));
-                        }
-                        if (!p.Children.IsNullOrEmpty())
-                        {
-                            p.Children.ForEach(s => People.Insert(s));
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show(e.Message, e.GetType().Name);
-                    }
-                }
-                AppendText(string.Format("{0}\r\n{1}\r\n", new string('-', 64), p.Name));
+                People.Update(p);
+                AppendText(string.Format("{0}\r\n{1}\r\n{2}\r\n", new string('-', 64), p.WikiDataID, p.Name));
                 AppendText(string.Format("  {0}\r\n", p.RusName));
+                AppendText(string.Format("{0}\r\n", p.Description));
                 if (Countries.IsExists(p.Country))
                 {
                     AppendText(string.Format("\tCountry:\t{0} - {1}\r\n", p.Country, Countries.GetByWikiDataId(p.Country)?.Name));

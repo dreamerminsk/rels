@@ -18,6 +18,7 @@ namespace rels.Model
 	          'Mother'    TEXT,
 	          PRIMARY KEY('ID')
             );",
+
             @"CREATE TABLE IF NOT EXISTS 'Countries' (
 	          'ID'    INTEGER NOT NULL UNIQUE,
 	          'WikiDataID'    TEXT NOT NULL UNIQUE,
