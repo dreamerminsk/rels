@@ -30,12 +30,10 @@
         {
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.columnName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,40 +60,8 @@
             this.panel1.Size = new System.Drawing.Size(393, 692);
             this.panel1.TabIndex = 2;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 31);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Centuries";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(99, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 31);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Countries";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(193, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 31);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // listView1
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnName,
-            this.columnValue});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
@@ -111,16 +77,34 @@
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView1_ColumnClick);
             // 
-            // columnName
+            // button3
             // 
-            this.columnName.Text = "Name";
-            this.columnName.Width = 200;
+            this.button3.Location = new System.Drawing.Point(193, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 31);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // columnValue
+            // button2
             // 
-            this.columnValue.Text = "Value";
-            this.columnValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnValue.Width = 100;
+            this.button2.Location = new System.Drawing.Point(99, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(88, 31);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Countries";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 31);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Centuries";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -149,8 +133,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ColumnHeader columnName;
-        private System.Windows.Forms.ColumnHeader columnValue;
     }
 }
 

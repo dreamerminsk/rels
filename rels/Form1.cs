@@ -27,6 +27,8 @@ namespace rels
         {
             //listBox1.DataSource = q2;
             Observable.Interval(TimeSpan.FromSeconds(3)).Subscribe(x => ProcessPerson());
+            Observable.Interval(TimeSpan.FromSeconds(16)).Subscribe(x=> UpdateStats());
+            button1.PerformClick();
             using (var db = new RelsDB())
             {
                 Init.CREATE_SQL.ForEach(async sql => await db.ExecuteAsync(sql));
@@ -99,10 +101,8 @@ namespace rels
                 people.Where(p => (p.Name == "???"))
                     .OrderBy(x => Guid.NewGuid())
                     .ToList().ForEach(p => q2.Add(p.WikiDataID));
-
-
             }
-        }
+        }        
 
         private async void ProcessPerson()
         {
@@ -114,23 +114,25 @@ namespace rels
             {
                 var p = await WikiData.GetPersonAsync(title);
                 People.Update(p);
-                AppendText(string.Format("{0}\r\n{1}\r\n{2}\r\n", new string('-', 64), p.WikiDataID, p.Name));
-                AppendText(string.Format("  {0}\r\n", p.RusName));
-                AppendText(string.Format("{0}\r\n", p.Description));
+                string desc = "";
+                desc = string.Format("{0}\r\n{1}\r\n{2}\r\n", new string('-', 64), p.WikiDataID, p.Name);
+                desc += string.Format("  {0}\r\n", p.RusName);
+                desc += string.Format("{0}\r\n", p.Description);
                 if (Countries.IsExists(p.Country))
                 {
-                    AppendText(string.Format("\tCountry:\t{0} - {1}\r\n", p.Country, Countries.GetByWikiDataId(p.Country)?.Name));
+                    desc += (string.Format("\tCountry:\t{0} - {1}\r\n", p.Country, Countries.GetByWikiDataId(p.Country)?.Name));
                 }
                 else if (!p.Country.IsNullOrEmpty())
                 {
                     var c = await WikiData.GetCountryAsync(p.Country);
                     await Countries.InsertAsync(c);
-                    AppendText(string.Format("\tCountry:\t{0} - {1}\r\n", p.Country, Countries.GetByWikiDataId(p.Country)?.Name));
+                    desc += (string.Format("\tCountry:\t{0} - {1}\r\n", p.Country, Countries.GetByWikiDataId(p.Country)?.Name));
                 }
-                AppendText(string.Format("\tDate Of Birth:\t{0}\r\n", p.DateOfBirth));
-                AppendText(string.Format("\tDate Of Death:\t{0}\r\n", p.DateOfDeath));
-                AppendText(string.Format("\tFather:\t{0}\r\n", p.Father));
-                AppendText(string.Format("\tMother:\t{0}\r\n", p.Mother));
+                desc += (string.Format("\tDate Of Birth:\t{0}\r\n", p.DateOfBirth));
+                desc += (string.Format("\tDate Of Death:\t{0}\r\n", p.DateOfDeath));
+                desc += (string.Format("\tFather:\t{0}\r\n", p.Father));
+                desc += (string.Format("\tMother:\t{0}\r\n", p.Mother));
+                AppendText(desc);
                 p.Siblings.ForEach(s => AppendText(string.Format("\tSibling:\t{0}\r\n", s)));
                 p.Spouse.ForEach(s => AppendText(string.Format("\tSpouse:\t{0}\r\n", s)));
                 p.Children.ForEach(s => AppendText(string.Format("\tChild:\t{0}\r\n", s)));
@@ -193,58 +195,140 @@ namespace rels
         {
             using (var db = new RelsDB())
             {
-                Clear();
                 var ps = db.GetTable<Person>();
+
                 var bs = ps.GroupBy(p => p.DateOfBirth.Substring(0, 3));
-                bs.ForEachAsync(g => AddItem(g.Key, g.Count()));
+                var births = new Dictionary<string, int>();
+                bs.ForEachAsync(g => births.Add(g.Key ?? "UNKNOWN", g.Count()));
+
+                var ds = ps.GroupBy(p => p.DateOfDeath.Substring(0, 3));
+                var deaths = new Dictionary<string, int>();
+                ds.ForEachAsync(g => deaths.Add(g.Key ?? "UNKNOWN", g.Count()));
+
+                UpdateCents(births, deaths);
             }
         }
 
-        private void Clear()
+        private void UpdateCents(Dictionary<string, int> births, Dictionary<string, int> deaths)
         {
             if (listView1.InvokeRequired)
             {
-                listView1.Invoke(new Action(() => { listView1.Items.Clear(); }));
+                listView1.Invoke(new Action(() => { SetCents(births, deaths); }));
             }
             else
             {
-                listView1.Items.Clear();
+                SetCents(births, deaths);
             }
         }
 
-        private void AddItem(string name, int value)
+        private void SetCents(Dictionary<string, int> births, Dictionary<string, int> deaths)
         {
-            if (listView1.InvokeRequired)
+            listView1.BeginUpdate();
+
+            listView1.Items.Clear();
+            listView1.Columns.Clear();
+
+            listView1.Columns.Add("Century", 100, HorizontalAlignment.Right);
+            listView1.Columns.Add("Births", 100, HorizontalAlignment.Right);
+            listView1.Columns.Add("Deaths", 100, HorizontalAlignment.Right);
+
+            births.ToList().ForEach(b =>
             {
-                listView1.Invoke(new Action(() => { var li = listView1.Items.Add(name); li.SubItems.Add(value.ToString()); }));
-            }
-            else
+                var li = listView1.Items.Add(b.Key);
+                li.Tag = b.Key;
+                li.SubItems.Add(b.Value.ToString());
+            });
+
+            deaths.ToList().ForEach(d =>
             {
-                var li = listView1.Items.Add(name); li.SubItems.Add(value.ToString());
-            }
+                var lis = listView1.Items.Cast<ListViewItem>()
+               .Where(x => (x.Text == d.Key))
+               .FirstOrDefault();
+                if (lis == null)
+                {
+                    var li = listView1.Items.Add(d.Key);
+                    li.SubItems.Add("0");
+                    li.SubItems.Add(d.Value.ToString());
+                }
+                else
+                {
+                    lis.SubItems.Add(d.Value.ToString());
+                }
+            });
+
+            listView1.EndUpdate();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             using (var db = new RelsDB())
             {
-                Clear();
                 var ps = db.GetTable<Person>();
-                var cs = db.GetTable<Country>();
                 var bs = ps.GroupBy(p => p.Country);
-                bs.ForEachAsync(g => AddItem(Countries.GetByWikiDataId(g.Key)?.Name, g.Count()));
+                var cs = new Dictionary<string, int>();
+                bs.ForEachAsync(g => cs.Add(Countries.GetByWikiDataId(g.Key)?.Name ?? "UNKNOWN", g.Count()));
+                UpdateCountries(cs);
             }
+        }
+
+        private void UpdateCountries(Dictionary<string, int> countries)
+        {
+            if (listView1.InvokeRequired)
+            {
+                listView1.Invoke(new Action(() => { SetCountries(countries); }));
+            }
+            else
+            {
+                SetCountries(countries);
+            }
+        }
+
+        private void SetCountries(Dictionary<string, int> countries)
+        {
+            listView1.BeginUpdate();
+
+            listView1.Items.Clear();
+            listView1.Columns.Clear();
+
+            listView1.Columns.Add("Country", 250, HorizontalAlignment.Left);
+            listView1.Columns.Add("Count", 100, HorizontalAlignment.Right);
+
+            countries.ToList().ForEach(c =>
+            {
+                var li = listView1.Items.Add(c.Key);
+                li.SubItems.Add(c.Value.ToString());
+            });
+
+            listView1.EndUpdate();
         }
 
         private void listView1_ColumnClick(object sender, ColumnClickEventArgs e)
         {
             ListViewItemComparer sorter = new ListViewItemComparer(e.Column);
-            if (e.Column == 1)
+            if (e.Column > 0)
             {
                 sorter.Numeric = true;
             }
             listView1.ListViewItemSorter = sorter;
             listView1.Sort();
+        }
+
+        private void UpdateStats()
+        {
+            if (listView1.Columns.Count > 0)
+            {
+                if (listView1.Columns[0].Text == "Century")
+                {
+                    button1.PerformClick();
+                }
+                else
+                {
+                    button2.PerformClick();
+                }
+            } else
+            {
+                button1.PerformClick();
+            }
         }
     }
 }
