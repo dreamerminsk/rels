@@ -30,6 +30,8 @@ namespace rels
             {
                 Init.CREATE_SQL.ForEach(async sql => await db.ExecuteAsync(sql));
 
+                People.Insert("Q8423");
+                People.Insert("Q37085");
                 People.Insert("Q202266");
                 People.Insert("Q357200");
                 People.Insert("Q379718");
@@ -40,15 +42,21 @@ namespace rels
                 People.Insert("Q53435");
                 People.Insert("Q9961");
                 People.Insert("Q8462");
+                People.Insert("Q208463");
                 People.Insert("Q720");
+                People.Insert("Q12591");
+                People.Insert("Q156328");
+                People.Insert("Q627980");
                 People.Insert("Q294945");
                 People.Insert("Q260783");
                 People.Insert("Q299428");
                 People.Insert("Q271527");
                 People.Insert("Q269265");
+                People.Insert("Q212671");
                 People.Insert("Q335658");
                 People.Insert("Q297086");
                 People.Insert("Q12900494");
+                People.Insert("Q371319");
                 People.Insert("Q37076");
                 People.Insert("Q37088");
                 People.Insert("Q157099");
@@ -68,9 +76,12 @@ namespace rels
                 People.Insert("Q212897");
                 People.Insert("Q37142");
                 People.Insert("Q557896");
+                People.Insert("Q560157");
                 People.Insert("Q49765");
                 People.Insert("Q53448");
+                People.Insert("Q110892");
                 People.Insert("Q174964");
+                People.Insert("Q214559");
 
                 var people = db.GetTable<Person>();
                 people.Where(p => (p.Name == "???"))
@@ -86,7 +97,7 @@ namespace rels
             if (q2.IsNullOrEmpty()) { ReloadQueue(); return; }
             var title = q2[0];
             q2.RemoveAt(0);
-            UpdateQueue();
+            SetTitle(string.Format("QUEUE /{0}/", q2.Count));
             if (!string.IsNullOrEmpty(title))
             {
                 var p = await WikiData.GetPersonAsync(title);
@@ -154,32 +165,6 @@ namespace rels
             }
         }
 
-        private void UpdateQueue()
-        {
-            if (listBox1.InvokeRequired)
-            {
-                listBox1.Invoke(new Action(() =>
-                {
-                    UpdateListBox();
-                }));
-            }
-            else
-            {
-                UpdateListBox();
-            }
-        }
-
-        private void UpdateListBox()
-        {
-            var si = listBox1.SelectedIndex;
-            listBox1.BeginUpdate();
-            listBox1.Items.Clear();
-            q2.ForEach(q => listBox1.Items.Add(q));
-            listBox1.SelectedIndex = si;
-            listBox1.EndUpdate();
-            SetTitle("QUEUE / " + q2.Count + " /");
-        }
-
         private void SetTitle(string text)
         {
             if (this.InvokeRequired)
@@ -189,6 +174,41 @@ namespace rels
             else
             {
                 this.Text = text;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (var db = new RelsDB())
+            {
+                Clear();
+                var ps = db.GetTable<Person>();
+                var bs = ps.GroupBy(p => p.DateOfBirth.Substring(0, 3));
+                bs.ForEachAsync(g => AddItem(g.Key, g.Count()));
+            }
+        }
+
+        private void Clear()
+        {
+            if (listView1.InvokeRequired)
+            {
+                listView1.Invoke(new Action(() => { listView1.Items.Clear(); }));
+            }
+            else
+            {
+                listView1.Items.Clear();
+            }
+        }
+
+        private void AddItem(string name, int value)
+        {
+            if (listView1.InvokeRequired)
+            {
+                listView1.Invoke(new Action(() => { var li = listView1.Items.Add(name); li.SubItems.Add(value.ToString()); }));
+            }
+            else
+            {
+                var li = listView1.Items.Add(name); li.SubItems.Add(value.ToString());
             }
         }
     }

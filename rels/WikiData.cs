@@ -27,16 +27,28 @@ namespace rels
             //    claims = doc["entities"]?[doc["entities"]?.First]?["claims"];
             //    labels = doc["entities"]?[doc["entities"]?.First]?["labels"];
             //}
+
+            p.ID = int.Parse(wikiDataId.Substring(1));
+            p.WikiDataID = wikiDataId;
+
+            if (labels == null)
+            {
+                return p;
+            }
+            p.Name = labels["en"]?["value"]?.ToString();
+            if (p.Name == null)
+            {
+                p.Name = labels.Children().ToString();
+            }
+            p.RusName = labels["ru"]?["value"]?.ToString();
+            p.Description += descriptions["en"]?["value"]?.ToString();
+            p.Description += "\r\n" + descriptions["ru"]?["value"]?.ToString();
+
             if (claims == null)
             {
                 return p;
             }
-            p.ID = int.Parse(wikiDataId.Substring(1));
-            p.WikiDataID = wikiDataId;
-            p.Name = labels["en"]?["value"]?.ToString();
-            p.RusName = labels["ru"]?["value"]?.ToString();
-            p.Description += descriptions["en"]?["value"]?.ToString();
-            p.Description += "\r\n" + descriptions["ru"]?["value"]?.ToString();
+
             p.Country = claims["P27"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["id"]?.ToString();
             p.DateOfBirth = claims["P569"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["time"]?.ToString();
             p.DateOfDeath = claims["P570"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["time"]?.ToString();
