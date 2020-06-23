@@ -18,7 +18,7 @@ namespace rels.Model
         public string Name { get { return _name; } set { if (!value.IsNullOrEmpty()) _name = value; } }
 
         [Column(Name = "RusName")]
-        public string RusName { get; set; } = "ru:???????";
+        public string RusName { get; set; } = "ru: ???????";
 
     }
 }

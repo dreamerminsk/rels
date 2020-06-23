@@ -57,9 +57,9 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(913, 0);
+            this.panel1.Location = new System.Drawing.Point(807, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(287, 692);
+            this.panel1.Size = new System.Drawing.Size(393, 692);
             this.panel1.TabIndex = 2;
             // 
             // button1
@@ -80,6 +80,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Countries";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -103,15 +104,17 @@
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.listView1.ShowItemToolTips = true;
-            this.listView1.Size = new System.Drawing.Size(287, 652);
+            this.listView1.Size = new System.Drawing.Size(393, 652);
             this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView1_ColumnClick);
             // 
             // columnName
             // 
             this.columnName.Text = "Name";
+            this.columnName.Width = 200;
             // 
             // columnValue
             // 
