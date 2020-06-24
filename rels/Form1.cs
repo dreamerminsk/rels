@@ -6,6 +6,7 @@ using rels.UI;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Windows.Forms;
@@ -25,9 +26,8 @@ namespace rels
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //listBox1.DataSource = q2;
             Observable.Interval(TimeSpan.FromSeconds(3)).Subscribe(x => ProcessPerson());
-            Observable.Interval(TimeSpan.FromSeconds(16)).Subscribe(x=> UpdateStats());
+            Observable.Interval(TimeSpan.FromSeconds(32)).Subscribe(x => UpdateStats());
             button1.PerformClick();
             using (var db = new RelsDB())
             {
@@ -37,16 +37,19 @@ namespace rels
                 People.Insert("Q37085");
                 People.Insert("Q202266");
                 People.Insert("Q317997");
+                People.Insert("Q316221");
                 People.Insert("Q357200");
                 People.Insert("Q379718");
                 People.Insert("Q497773");
                 People.Insert("Q7990");
+                People.Insert("Q44228");
                 People.Insert("Q54049");
                 People.Insert("Q54051");
                 People.Insert("Q53435");
                 People.Insert("Q9961");
                 People.Insert("Q8462");
                 People.Insert("Q208463");
+                People.Insert("Q1660081");
                 People.Insert("Q720");
                 People.Insert("Q12591");
                 People.Insert("Q156328");
@@ -61,6 +64,7 @@ namespace rels
                 People.Insert("Q171977");
                 People.Insert("Q243122");
                 People.Insert("Q335658");
+                People.Insert("Q309946");
                 People.Insert("Q297086");
                 People.Insert("Q12900494");
                 People.Insert("Q200188");
@@ -68,41 +72,54 @@ namespace rels
                 People.Insert("Q37076");
                 People.Insert("Q37088");
                 People.Insert("Q157099");
+                People.Insert("Q144565");
                 People.Insert("Q7996");
                 People.Insert("Q94941");
+                People.Insert("Q335273");
+                People.Insert("Q21932460");
                 People.Insert("Q298263");
                 People.Insert("Q680304");
                 People.Insert("Q312938");
                 People.Insert("Q151826");
                 People.Insert("Q743509");
+                People.Insert("Q313298");
                 People.Insert("Q154045");
                 People.Insert("Q57529");
                 People.Insert("Q51068");
                 People.Insert("Q6482148");
                 People.Insert("Q105105");
+                People.Insert("Q293626");
+                People.Insert("Q2635189");
                 People.Insert("Q4381410");
+                People.Insert("Q315191");
                 People.Insert("Q6079141");
                 People.Insert("Q185152");
+                People.Insert("Q1284160");
+                People.Insert("Q1385871");
                 People.Insert("Q165096");
+                People.Insert("Q284750");
                 People.Insert("Q212897");
                 People.Insert("Q349440");
                 People.Insert("Q37142");
                 People.Insert("Q557896");
                 People.Insert("Q560157");
                 People.Insert("Q49765");
+                People.Insert("Q379239");
                 People.Insert("Q53448");
                 People.Insert("Q110892");
                 People.Insert("Q471885");
                 People.Insert("Q174964");
                 People.Insert("Q214559");
                 People.Insert("Q320229");
+                People.Insert("Q333603");
 
+                Random rnd = new Random(DateTime.Now.Millisecond);
                 var people = db.GetTable<Person>();
-                people.Where(p => (p.Name == "???"))
-                    .OrderBy(x => Guid.NewGuid())
-                    .ToList().ForEach(p => q2.Add(p.WikiDataID));
+                var listOf = people.Where(p => (p.Name == "???")).ToList();
+                listOf.Sort((x, y) => rnd.Next(-1, 1));
+                listOf.ForEach(p => q2.Add(p.WikiDataID));
             }
-        }        
+        }
 
         private async void ProcessPerson()
         {
@@ -225,18 +242,39 @@ namespace rels
         {
             listView1.BeginUpdate();
 
-            listView1.Items.Clear();
-            listView1.Columns.Clear();
+            if (listView1.Columns.Count != 3)
+            {
+                listView1.Items.Clear();
+                listView1.Columns.Clear();
 
-            listView1.Columns.Add("Century", 100, HorizontalAlignment.Right);
-            listView1.Columns.Add("Births", 100, HorizontalAlignment.Right);
-            listView1.Columns.Add("Deaths", 100, HorizontalAlignment.Right);
+                listView1.Columns.Add("Century", 100, HorizontalAlignment.Right);
+                listView1.Columns.Add("Births", 100, HorizontalAlignment.Right);
+                listView1.Columns.Add("Deaths", 100, HorizontalAlignment.Right);
+            }
 
             births.ToList().ForEach(b =>
             {
-                var li = listView1.Items.Add(b.Key);
-                li.Tag = b.Key;
-                li.SubItems.Add(b.Value.ToString());
+                var lis = listView1.Items.Cast<ListViewItem>()
+               .Where(x => (x.Text == b.Key))
+               .FirstOrDefault();
+                if (lis == null)
+                {
+                    var li = listView1.Items.Add(b.Key);
+                    li.SubItems.Add(b.Value.ToString());
+                    li.SubItems.Add("0");
+                }
+                else
+                {
+                    if (lis.SubItems[1].Text.Equals(b.Value.ToString()))
+                    {
+                        lis.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        lis.BackColor = Color.Aqua;
+                        lis.SubItems[1].Text = b.Value.ToString();
+                    }
+                }
             });
 
             deaths.ToList().ForEach(d =>
@@ -252,7 +290,16 @@ namespace rels
                 }
                 else
                 {
-                    lis.SubItems.Add(d.Value.ToString());
+                    if (lis.SubItems[2].Text.Equals(d.Value.ToString()))
+                    {
+                        //lis.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        lis.BackColor = Color.Aqua;
+                        lis.SubItems[2].Text = d.Value.ToString();
+                    }
+                    lis.SubItems[2].Text = d.Value.ToString();
                 }
             });
 
@@ -287,16 +334,37 @@ namespace rels
         {
             listView1.BeginUpdate();
 
-            listView1.Items.Clear();
-            listView1.Columns.Clear();
+            if (listView1.Columns.Count != 2)
+            {
+                listView1.Items.Clear();
+                listView1.Columns.Clear();
 
-            listView1.Columns.Add("Country", 250, HorizontalAlignment.Left);
-            listView1.Columns.Add("Count", 100, HorizontalAlignment.Right);
+                listView1.Columns.Add("Country", 250, HorizontalAlignment.Left);
+                listView1.Columns.Add("Count", 100, HorizontalAlignment.Right);
+            }
 
             countries.ToList().ForEach(c =>
             {
-                var li = listView1.Items.Add(c.Key);
-                li.SubItems.Add(c.Value.ToString());
+                var lis = listView1.Items.Cast<ListViewItem>()
+               .Where(x => (x.Text == c.Key))
+               .FirstOrDefault();
+                if (lis == null)
+                {
+                    var li = listView1.Items.Add(c.Key);
+                    li.SubItems.Add(c.Value.ToString());
+                }
+                else
+                {
+                    if (lis.SubItems[1].Text.Equals(c.Value.ToString()))
+                    {
+                        lis.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        lis.BackColor = Color.Aqua;
+                        lis.SubItems[1].Text = c.Value.ToString();
+                    }
+                }
             });
 
             listView1.EndUpdate();
@@ -325,7 +393,8 @@ namespace rels
                 {
                     button2.PerformClick();
                 }
-            } else
+            }
+            else
             {
                 button1.PerformClick();
             }
