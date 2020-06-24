@@ -86,10 +86,12 @@ namespace rels
                 People.Insert("Q154045");
                 People.Insert("Q57529");
                 People.Insert("Q51068");
+                People.Insert("Q2658842");
                 People.Insert("Q6482148");
                 People.Insert("Q105105");
                 People.Insert("Q293626");
                 People.Insert("Q2635189");
+                People.Insert("Q4459448");
                 People.Insert("Q4381410");
                 People.Insert("Q315191");
                 People.Insert("Q6079141");
@@ -115,8 +117,7 @@ namespace rels
 
                 Random rnd = new Random(DateTime.Now.Millisecond);
                 var people = db.GetTable<Person>();
-                var listOf = people.Where(p => (p.Name == "???")).ToList();
-                listOf.Sort((x, y) => rnd.Next(-1, 1));
+                var listOf = people.Where(p => (p.Name == "???")).OrderBy(p => Guid.NewGuid()).ToList();
                 listOf.ForEach(p => q2.Add(p.WikiDataID));
             }
         }
@@ -150,6 +151,7 @@ namespace rels
                 desc += (string.Format("\tFather:\t{0}\r\n", p.Father));
                 desc += (string.Format("\tMother:\t{0}\r\n", p.Mother));
                 AppendText(desc);
+                AppendPerson(p);
                 p.Siblings.ForEach(s => AppendText(string.Format("\tSibling:\t{0}\r\n", s)));
                 p.Spouse.ForEach(s => AppendText(string.Format("\tSpouse:\t{0}\r\n", s)));
                 p.Children.ForEach(s => AppendText(string.Format("\tChild:\t{0}\r\n", s)));
@@ -179,6 +181,32 @@ namespace rels
                     .OrderBy(x => Guid.NewGuid())
                     .ToList().ForEach(p => q2.Add(p.WikiDataID));
             }
+        }
+
+        private void AppendPerson(Person p)
+        {
+            if (peopleView.InvokeRequired)
+            {
+                peopleView.Invoke(new Action(() =>
+                {
+                    SetPerson(p);
+                }));
+            }
+            else
+            {
+                SetPerson(p);
+            }
+        }
+
+        private void SetPerson(Person p)
+        {
+            peopleView.BeginUpdate();
+            var item = peopleView.Items.Insert(0, p.WikiDataID);
+            item.SubItems.Add(p.Name);
+            item.SubItems.Add(p.RusName);
+            item.SubItems.Add(p.DateOfBirth?.Substring(0, 11));
+            item.SubItems.Add(p.DateOfDeath?.Substring(0, 11));
+            peopleView.EndUpdate();
         }
 
         private void AppendText(string text)
