@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace rels
+namespace rels.Wiki
 {
     public class WikiData
     {
@@ -49,6 +49,7 @@ namespace rels
                 return p;
             }
 
+            p.ImageFile = claims["P18"]?[0]?["mainsnak"]?["datavalue"]?["value"]?.ToString();
             p.Country = claims["P27"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["id"]?.ToString();
             p.DateOfBirth = claims["P569"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["time"]?.ToString();
             p.DateOfDeath = claims["P570"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["time"]?.ToString();

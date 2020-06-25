@@ -3,6 +3,7 @@ using LinqToDB.Common;
 using LinqToDB.Data;
 using rels.Model;
 using rels.UI;
+using rels.Wiki;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -150,11 +151,7 @@ namespace rels
                 desc += (string.Format("\tDate Of Death:\t{0}\r\n", p.DateOfDeath));
                 desc += (string.Format("\tFather:\t{0}\r\n", p.Father));
                 desc += (string.Format("\tMother:\t{0}\r\n", p.Mother));
-                AppendText(desc);
                 AppendPerson(p);
-                p.Siblings.ForEach(s => AppendText(string.Format("\tSibling:\t{0}\r\n", s)));
-                p.Spouse.ForEach(s => AppendText(string.Format("\tSpouse:\t{0}\r\n", s)));
-                p.Children.ForEach(s => AppendText(string.Format("\tChild:\t{0}\r\n", s)));
                 if (!People.IsExists(p.Father))
                 {
                     if (!p.Father.IsNullOrEmpty())
@@ -198,8 +195,11 @@ namespace rels
             }
         }
 
-        private void SetPerson(Person p)
+        private async void SetPerson(Person p)
         {
+            nameLabel.Text = p.Name;
+            pictureBox1.Image = await WikiMedia.GetMediaAsync(p.ImageFile);
+
             peopleView.BeginUpdate();
             var item = peopleView.Items.Insert(0, p.WikiDataID);
             item.SubItems.Add(p.Name);
@@ -207,21 +207,6 @@ namespace rels
             item.SubItems.Add(p.DateOfBirth?.Substring(0, 11));
             item.SubItems.Add(p.DateOfDeath?.Substring(0, 11));
             peopleView.EndUpdate();
-        }
-
-        private void AppendText(string text)
-        {
-            if (richTextBox1.InvokeRequired)
-            {
-                richTextBox1.Invoke(new Action(() =>
-                {
-                    richTextBox1.AppendText(text);
-                }));
-            }
-            else
-            {
-                richTextBox1.AppendText(text);
-            }
         }
 
         private void SetTitle(string text)
@@ -275,9 +260,9 @@ namespace rels
                 listView1.Items.Clear();
                 listView1.Columns.Clear();
 
-                listView1.Columns.Add("Century", 100, HorizontalAlignment.Right);
-                listView1.Columns.Add("Births", 100, HorizontalAlignment.Right);
-                listView1.Columns.Add("Deaths", 100, HorizontalAlignment.Right);
+                listView1.Columns.Add("Century", 80, HorizontalAlignment.Right);
+                listView1.Columns.Add("Births", 80, HorizontalAlignment.Right);
+                listView1.Columns.Add("Deaths", 80, HorizontalAlignment.Right);
             }
 
             births.ToList().ForEach(b =>
@@ -367,8 +352,8 @@ namespace rels
                 listView1.Items.Clear();
                 listView1.Columns.Clear();
 
-                listView1.Columns.Add("Country", 250, HorizontalAlignment.Left);
-                listView1.Columns.Add("Count", 100, HorizontalAlignment.Right);
+                listView1.Columns.Add("Country", 200, HorizontalAlignment.Left);
+                listView1.Columns.Add("Count", 80, HorizontalAlignment.Right);
             }
 
             countries.ToList().ForEach(c =>

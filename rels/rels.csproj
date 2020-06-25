@@ -144,8 +144,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\ListViewItemComparer.cs" />
-    <Compile Include="Wiki.cs" />
-    <Compile Include="WikiData.cs" />
+    <Compile Include="Wiki\Wiki.cs" />
+    <Compile Include="Wiki\WikiData.cs" />
+    <Compile Include="Wiki\WikiMedia.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
