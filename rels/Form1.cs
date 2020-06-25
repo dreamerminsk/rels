@@ -25,11 +25,13 @@ namespace rels
 
         public List<string> q2 = new List<string>();
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
             Observable.Interval(TimeSpan.FromSeconds(3)).Subscribe(x => ProcessPerson());
             Observable.Interval(TimeSpan.FromSeconds(32)).Subscribe(x => UpdateStats());
             button1.PerformClick();
+            nameFlag.Image = await WikiFlags.GetEnglishAsync().ConfigureAwait(true);
+            rusNameFlag.Image = await WikiFlags.GetRussianAsync().ConfigureAwait(true);
             using (var db = new RelsDB())
             {
                 Init.CREATE_SQL.ForEach(async sql => await db.ExecuteAsync(sql));
@@ -195,11 +197,8 @@ namespace rels
             }
         }
 
-        private async void SetPerson(Person p)
+        private void SetPerson(Person p)
         {
-            nameLabel.Text = p.Name;
-            pictureBox1.Image = await WikiMedia.GetMediaAsync(p.ImageFile);
-
             peopleView.BeginUpdate();
             var item = peopleView.Items.Insert(0, p.WikiDataID);
             item.SubItems.Add(p.Name);
@@ -410,6 +409,20 @@ namespace rels
             else
             {
                 button1.PerformClick();
+            }
+        }
+
+        private async void peopleView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (peopleView.SelectedItems.Count > 0)
+            {
+                var wikiDataID = peopleView.SelectedItems[0].Text;
+                var p = People.GetByWikiDataID(wikiDataID);
+                nameLabel.Text = p.Name;
+                nameFlag.Left = nameLabel.Left + nameLabel.Width + 4;
+                rusNameLabel.Text = p.RusName;
+                rusNameFlag.Left = rusNameLabel.Left + rusNameLabel.Width + 4;
+                pictureBox1.Image = await WikiMedia.GetMediaAsync(p.ImageFile).ConfigureAwait(true);
             }
         }
     }

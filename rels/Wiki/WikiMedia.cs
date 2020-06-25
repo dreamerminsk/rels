@@ -21,7 +21,7 @@ namespace rels.Wiki
             var rows = page.DocumentNode.SelectSingleNode("//div[@class='fullMedia']/p/a");
             if (rows != null)
             {
-                return await GetImageAsync(rows.Attributes["href"].Value);
+                return await GetImageAsync(rows.Attributes["href"]?.Value);
             }
             return null;
         }

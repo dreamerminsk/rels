@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using rels.Model;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -110,10 +111,11 @@ namespace rels.Wiki
             if (wikiDataId.IsNullOrEmpty()) return c;
             var page = await GetStringAsync(string.Format(DATA_REF, wikiDataId));
             var doc = JObject.Parse(page);
-            var claims = doc["entities"]?[wikiDataId]?["claims"];
-            var labels = doc["entities"]?[wikiDataId]?["labels"];
-            c.ID = int.Parse(wikiDataId.Substring(1));
-            c.WikiDataID = wikiDataId;
+            JProperty entities = (JProperty)doc["entities"].Children().First();
+            var claims = entities?.Value?["claims"];
+            var labels = entities?.Value?["labels"];
+            c.ID = int.Parse(entities?.Name?.Substring(1));
+            c.WikiDataID = entities?.Name;
             c.Name = labels["en"]?["value"]?.ToString();
             c.RusName = labels["ru"]?["value"]?.ToString();
             return c;

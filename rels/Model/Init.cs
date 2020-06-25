@@ -6,7 +6,7 @@ namespace rels.Model
     {
 
         public static readonly List<string> CREATE_SQL = new List<string>() {
-			@"CREATE TABLE 'People' (
+            @"CREATE TABLE IF NOT EXISTS 'People' (
 	            'ID'    INTEGER NOT NULL UNIQUE,
 	            'WikiDataID'    TEXT NOT NULL UNIQUE,
 	            'Name'  TEXT NOT NULL,

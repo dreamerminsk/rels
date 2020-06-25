@@ -18,6 +18,15 @@ namespace rels.Model
             }
         }
 
+        public static Person GetByWikiDataID(string wikiDataId)
+        {
+            using (var db = new RelsDB())
+            {
+                var people = db.GetTable<Person>();
+                return people.Where(p => p.WikiDataID.Equals(wikiDataId)).SingleOrDefault();
+            }
+        }
+
         public static int Insert(string wdid)
         {
             using (var db = new RelsDB())
@@ -26,7 +35,7 @@ namespace rels.Model
                 {
                     return db.Insert(new Person() { ID = WikiDataID.ToInt(wdid), WikiDataID = wdid, Name = "???" });
                 }
-                catch
+                catch(Exception e)
                 {
                     return -1;
                 }
@@ -51,6 +60,7 @@ namespace rels.Model
                     var res = ps.Where(item => item.WikiDataID.Equals(p.WikiDataID))
                          .Set(item => item.Name, p.Name)
                          .Set(item => item.RusName, p.RusName)
+                         .Set(item => item.ImageFile, p.ImageFile)
                          .Set(item => item.Country, p.Country)
                          .Set(item => item.DateOfBirth, p.DateOfBirth)
                          .Set(item => item.DateOfDeath, p.DateOfDeath)

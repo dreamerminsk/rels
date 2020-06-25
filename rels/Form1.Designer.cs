@@ -42,9 +42,12 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.infoPage = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.nameLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.rusNameLabel = new System.Windows.Forms.Label();
+            this.nameFlag = new System.Windows.Forms.Label();
+            this.rusNameFlag = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -136,6 +139,7 @@
             this.peopleView.TabIndex = 3;
             this.peopleView.UseCompatibleStateImageBehavior = false;
             this.peopleView.View = System.Windows.Forms.View.Details;
+            this.peopleView.SelectedIndexChanged += new System.EventHandler(this.peopleView_SelectedIndexChanged);
             // 
             // wikiDataHeader
             // 
@@ -199,6 +203,9 @@
             // 
             // infoPage
             // 
+            this.infoPage.Controls.Add(this.rusNameFlag);
+            this.infoPage.Controls.Add(this.nameFlag);
+            this.infoPage.Controls.Add(this.rusNameLabel);
             this.infoPage.Controls.Add(this.pictureBox1);
             this.infoPage.Controls.Add(this.nameLabel);
             this.infoPage.Location = new System.Drawing.Point(4, 4);
@@ -209,36 +216,70 @@
             this.infoPage.Text = "info";
             this.infoPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // pictureBox1
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(664, 264);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(186, 252);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // nameLabel
             // 
             this.nameLabel.AutoEllipsis = true;
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.Location = new System.Drawing.Point(131, 6);
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.nameLabel.Location = new System.Drawing.Point(198, 3);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(139, 19);
+            this.nameLabel.Size = new System.Drawing.Size(49, 20);
             this.nameLabel.TabIndex = 0;
-            this.nameLabel.Text = "tttttttttttttttttttttttttt";
+            this.nameLabel.Text = "name";
+            this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox1
+            // tabPage2
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(119, 159);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.tabPage2.Location = new System.Drawing.Point(4, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(664, 268);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // rusNameLabel
+            // 
+            this.rusNameLabel.AutoEllipsis = true;
+            this.rusNameLabel.AutoSize = true;
+            this.rusNameLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rusNameLabel.Location = new System.Drawing.Point(199, 29);
+            this.rusNameLabel.Name = "rusNameLabel";
+            this.rusNameLabel.Size = new System.Drawing.Size(61, 17);
+            this.rusNameLabel.TabIndex = 2;
+            this.rusNameLabel.Text = "rusName";
+            // 
+            // nameFlag
+            // 
+            this.nameFlag.AutoSize = true;
+            this.nameFlag.Location = new System.Drawing.Point(253, 6);
+            this.nameFlag.Name = "nameFlag";
+            this.nameFlag.Size = new System.Drawing.Size(24, 17);
+            this.nameFlag.TabIndex = 3;
+            this.nameFlag.Text = "    ";
+            // 
+            // rusNameFlag
+            // 
+            this.rusNameFlag.AutoSize = true;
+            this.rusNameFlag.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rusNameFlag.Location = new System.Drawing.Point(266, 29);
+            this.rusNameFlag.Name = "rusNameFlag";
+            this.rusNameFlag.Size = new System.Drawing.Size(24, 17);
+            this.rusNameFlag.TabIndex = 4;
+            this.rusNameFlag.Text = "    ";
             // 
             // Form1
             // 
@@ -285,6 +326,9 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label rusNameLabel;
+        private System.Windows.Forms.Label nameFlag;
+        private System.Windows.Forms.Label rusNameFlag;
     }
 }
 
