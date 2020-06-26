@@ -7,7 +7,7 @@ namespace rels.Model
     [Table(Name = "People")]
     public class Person
     {
-        private string _name = "en: ???????";
+        private string _name = "???";
 
         [PrimaryKey, Identity]
         public int ID { get; set; }
@@ -22,8 +22,9 @@ namespace rels.Model
         public string Name { get { return _name; } set { if (!value.IsNullOrEmpty()) _name = value; } }
 
         [Column(Name = "RusName")]
-        public string RusName { get; set; } = "ru: ???????";
+        public string RusName { get; set; } = "???";
 
+        [Column(Name="Description")]
         public string Description { get; set; }
 
         [Column(Name = "Country")]

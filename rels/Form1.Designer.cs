@@ -42,12 +42,13 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.infoPage = new System.Windows.Forms.TabPage();
+            this.rusNameFlag = new System.Windows.Forms.Label();
+            this.nameFlag = new System.Windows.Forms.Label();
+            this.rusNameLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.rusNameLabel = new System.Windows.Forms.Label();
-            this.nameFlag = new System.Windows.Forms.Label();
-            this.rusNameFlag = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -203,6 +204,7 @@
             // 
             // infoPage
             // 
+            this.infoPage.Controls.Add(this.richTextBox1);
             this.infoPage.Controls.Add(this.rusNameFlag);
             this.infoPage.Controls.Add(this.nameFlag);
             this.infoPage.Controls.Add(this.rusNameLabel);
@@ -215,6 +217,35 @@
             this.infoPage.TabIndex = 0;
             this.infoPage.Text = "info";
             this.infoPage.UseVisualStyleBackColor = true;
+            // 
+            // rusNameFlag
+            // 
+            this.rusNameFlag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rusNameFlag.Location = new System.Drawing.Point(266, 29);
+            this.rusNameFlag.Margin = new System.Windows.Forms.Padding(0);
+            this.rusNameFlag.Name = "rusNameFlag";
+            this.rusNameFlag.Size = new System.Drawing.Size(24, 17);
+            this.rusNameFlag.TabIndex = 4;
+            // 
+            // nameFlag
+            // 
+            this.nameFlag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nameFlag.Location = new System.Drawing.Point(253, 6);
+            this.nameFlag.Margin = new System.Windows.Forms.Padding(0);
+            this.nameFlag.Name = "nameFlag";
+            this.nameFlag.Size = new System.Drawing.Size(24, 17);
+            this.nameFlag.TabIndex = 3;
+            // 
+            // rusNameLabel
+            // 
+            this.rusNameLabel.AutoEllipsis = true;
+            this.rusNameLabel.AutoSize = true;
+            this.rusNameLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rusNameLabel.Location = new System.Drawing.Point(199, 29);
+            this.rusNameLabel.Name = "rusNameLabel";
+            this.rusNameLabel.Size = new System.Drawing.Size(61, 17);
+            this.rusNameLabel.TabIndex = 2;
+            this.rusNameLabel.Text = "rusName";
             // 
             // pictureBox1
             // 
@@ -251,35 +282,15 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // rusNameLabel
+            // richTextBox1
             // 
-            this.rusNameLabel.AutoEllipsis = true;
-            this.rusNameLabel.AutoSize = true;
-            this.rusNameLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rusNameLabel.Location = new System.Drawing.Point(199, 29);
-            this.rusNameLabel.Name = "rusNameLabel";
-            this.rusNameLabel.Size = new System.Drawing.Size(61, 17);
-            this.rusNameLabel.TabIndex = 2;
-            this.rusNameLabel.Text = "rusName";
-            // 
-            // nameFlag
-            // 
-            this.nameFlag.AutoSize = true;
-            this.nameFlag.Location = new System.Drawing.Point(253, 6);
-            this.nameFlag.Name = "nameFlag";
-            this.nameFlag.Size = new System.Drawing.Size(24, 17);
-            this.nameFlag.TabIndex = 3;
-            this.nameFlag.Text = "    ";
-            // 
-            // rusNameFlag
-            // 
-            this.rusNameFlag.AutoSize = true;
-            this.rusNameFlag.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rusNameFlag.Location = new System.Drawing.Point(266, 29);
-            this.rusNameFlag.Name = "rusNameFlag";
-            this.rusNameFlag.Size = new System.Drawing.Size(24, 17);
-            this.rusNameFlag.TabIndex = 4;
-            this.rusNameFlag.Text = "    ";
+            this.richTextBox1.Location = new System.Drawing.Point(199, 50);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBox1.Size = new System.Drawing.Size(459, 81);
+            this.richTextBox1.TabIndex = 5;
+            this.richTextBox1.Text = "";
             // 
             // Form1
             // 
@@ -329,6 +340,7 @@
         private System.Windows.Forms.Label rusNameLabel;
         private System.Windows.Forms.Label nameFlag;
         private System.Windows.Forms.Label rusNameFlag;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 

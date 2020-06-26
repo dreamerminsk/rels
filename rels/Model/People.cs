@@ -66,6 +66,7 @@ namespace rels.Model
                          .Set(item => item.DateOfDeath, p.DateOfDeath)
                          .Set(item => item.Father, p.Father)
                          .Set(item => item.Mother, p.Mother)
+                         .Set(item=> item.Description, p.Description)
                          .Update();
                     if (!p.Siblings.IsNullOrEmpty())
                     {

@@ -17,6 +17,7 @@ namespace rels.Model
 	            'DateOfDeath'   TEXT,
 	            'Father'    TEXT,
 	            'Mother'    TEXT,
+                'Description'	TEXT,
 	         PRIMARY KEY('ID')
             );",
 

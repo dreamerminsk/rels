@@ -10,6 +10,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reactive.Linq;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace rels
@@ -30,8 +31,12 @@ namespace rels
             Observable.Interval(TimeSpan.FromSeconds(3)).Subscribe(x => ProcessPerson());
             Observable.Interval(TimeSpan.FromSeconds(32)).Subscribe(x => UpdateStats());
             button1.PerformClick();
-            nameFlag.Image = await WikiFlags.GetEnglishAsync().ConfigureAwait(true);
-            rusNameFlag.Image = await WikiFlags.GetRussianAsync().ConfigureAwait(true);
+            nameFlag.Image = await WikiFlags.GetEnglishAsync(18).ConfigureAwait(true);
+            nameFlag.Width = nameFlag.Image.Width + 2;
+            nameFlag.Height = nameFlag.Image.Height + 2;
+            rusNameFlag.Image = await WikiFlags.GetRussianAsync(18).ConfigureAwait(true);
+            rusNameFlag.Width = rusNameFlag.Image.Width + 2;
+            rusNameFlag.Height = rusNameFlag.Image.Height + 2;
             using (var db = new RelsDB())
             {
                 Init.CREATE_SQL.ForEach(async sql => await db.ExecuteAsync(sql));
@@ -280,11 +285,13 @@ namespace rels
                     if (lis.SubItems[1].Text.Equals(b.Value.ToString()))
                     {
                         lis.BackColor = Color.White;
+                        lis.SubItems[1].Font = new Font(lis.SubItems[1].Font, FontStyle.Regular);
                     }
                     else
                     {
                         lis.BackColor = Color.Aqua;
                         lis.SubItems[1].Text = b.Value.ToString();
+                        lis.SubItems[1].Font = new Font(lis.SubItems[1].Font, FontStyle.Bold);
                     }
                 }
             });
@@ -305,11 +312,13 @@ namespace rels
                     if (lis.SubItems[2].Text.Equals(d.Value.ToString()))
                     {
                         //lis.BackColor = Color.White;
+                        lis.SubItems[2].Font = new Font(lis.SubItems[2].Font, FontStyle.Regular);
                     }
                     else
                     {
                         lis.BackColor = Color.Aqua;
                         lis.SubItems[2].Text = d.Value.ToString();
+                        lis.SubItems[2].Font = new Font(lis.SubItems[2].Font, FontStyle.Bold);
                     }
                     lis.SubItems[2].Text = d.Value.ToString();
                 }
@@ -423,6 +432,7 @@ namespace rels
                 rusNameLabel.Text = p.RusName;
                 rusNameFlag.Left = rusNameLabel.Left + rusNameLabel.Width + 4;
                 pictureBox1.Image = await WikiMedia.GetMediaAsync(p.ImageFile).ConfigureAwait(true);
+                richTextBox1.Text = p.Description;
             }
         }
     }
