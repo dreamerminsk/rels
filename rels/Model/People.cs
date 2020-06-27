@@ -35,7 +35,7 @@ namespace rels.Model
                 {
                     return db.Insert(new Person() { ID = WikiDataID.ToInt(wdid), WikiDataID = wdid, Name = "???" });
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     return -1;
                 }
@@ -66,7 +66,7 @@ namespace rels.Model
                          .Set(item => item.DateOfDeath, p.DateOfDeath)
                          .Set(item => item.Father, p.Father)
                          .Set(item => item.Mother, p.Mother)
-                         .Set(item=> item.Description, p.Description)
+                         .Set(item => item.Description, p.Description)
                          .Update();
                     if (!p.Siblings.IsNullOrEmpty())
                     {

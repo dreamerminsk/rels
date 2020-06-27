@@ -37,9 +37,11 @@ namespace rels.Wiki
                 return p;
             }
             p.Name = labels["en"]?["value"]?.ToString();
-            if (p.Name == null)
+            if (p.Name.IsNullOrEmpty() || p.Name.Equals("???"))
             {
-                p.Name = labels.Children().ToString();
+                JProperty f = (JProperty)labels.Children().First();
+                JObject v = (JObject)f.Value;
+                p.Name = string.Format("{0}: {1}", f.Name, v.Value<string>("value"));
             }
             p.RusName = labels["ru"]?["value"]?.ToString();
             p.Description += descriptions["en"]?["value"]?.ToString();

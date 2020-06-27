@@ -24,7 +24,7 @@ namespace rels.Model
         [Column(Name = "RusName")]
         public string RusName { get; set; } = "???";
 
-        [Column(Name="Description")]
+        [Column(Name = "Description")]
         public string Description { get; set; }
 
         [Column(Name = "Country")]
