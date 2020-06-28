@@ -42,13 +42,15 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.infoPage = new System.Windows.Forms.TabPage();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.rusNameFlag = new System.Windows.Forms.Label();
             this.nameFlag = new System.Windows.Forms.Label();
             this.rusNameLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nameLabel = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.ancestorsPage = new System.Windows.Forms.TabPage();
+            this.descendantsPage = new System.Windows.Forms.TabPage();
+            this.ancestorsView = new System.Windows.Forms.TreeView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -57,6 +59,7 @@
             this.tabControl1.SuspendLayout();
             this.infoPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ancestorsPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -192,7 +195,8 @@
             // 
             this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.tabControl1.Controls.Add(this.infoPage);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.ancestorsPage);
+            this.tabControl1.Controls.Add(this.descendantsPage);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Multiline = true;
@@ -217,6 +221,17 @@
             this.infoPage.TabIndex = 0;
             this.infoPage.Text = "info";
             this.infoPage.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Location = new System.Drawing.Point(199, 50);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBox1.Size = new System.Drawing.Size(459, 81);
+            this.richTextBox1.TabIndex = 5;
+            this.richTextBox1.Text = "";
             // 
             // rusNameFlag
             // 
@@ -272,25 +287,39 @@
             this.nameLabel.Text = "name";
             this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tabPage2
+            // ancestorsPage
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(664, 268);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.ancestorsPage.Controls.Add(this.ancestorsView);
+            this.ancestorsPage.Location = new System.Drawing.Point(4, 4);
+            this.ancestorsPage.Name = "ancestorsPage";
+            this.ancestorsPage.Padding = new System.Windows.Forms.Padding(3);
+            this.ancestorsPage.Size = new System.Drawing.Size(664, 264);
+            this.ancestorsPage.TabIndex = 1;
+            this.ancestorsPage.Text = "ancestors";
+            this.ancestorsPage.ToolTipText = "ancestors";
+            this.ancestorsPage.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // descendantsPage
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(199, 50);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBox1.Size = new System.Drawing.Size(459, 81);
-            this.richTextBox1.TabIndex = 5;
-            this.richTextBox1.Text = "";
+            this.descendantsPage.Location = new System.Drawing.Point(4, 4);
+            this.descendantsPage.Name = "descendantsPage";
+            this.descendantsPage.Padding = new System.Windows.Forms.Padding(3);
+            this.descendantsPage.Size = new System.Drawing.Size(664, 264);
+            this.descendantsPage.TabIndex = 2;
+            this.descendantsPage.Text = "descendants";
+            this.descendantsPage.ToolTipText = "descendants";
+            this.descendantsPage.UseVisualStyleBackColor = true;
+            // 
+            // ancestorsView
+            // 
+            this.ancestorsView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ancestorsView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ancestorsView.FullRowSelect = true;
+            this.ancestorsView.Location = new System.Drawing.Point(3, 3);
+            this.ancestorsView.Name = "ancestorsView";
+            this.ancestorsView.Size = new System.Drawing.Size(658, 258);
+            this.ancestorsView.TabIndex = 0;
+            this.ancestorsView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.ancestorsView_AfterSelect);
             // 
             // Form1
             // 
@@ -315,6 +344,7 @@
             this.infoPage.ResumeLayout(false);
             this.infoPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ancestorsPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -334,13 +364,15 @@
         private System.Windows.Forms.ColumnHeader deathHeader;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage infoPage;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage ancestorsPage;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label rusNameLabel;
         private System.Windows.Forms.Label nameFlag;
         private System.Windows.Forms.Label rusNameFlag;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TabPage descendantsPage;
+        private System.Windows.Forms.TreeView ancestorsView;
     }
 }
 

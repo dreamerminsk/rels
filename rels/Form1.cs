@@ -27,7 +27,7 @@ namespace rels
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            Observable.Interval(TimeSpan.FromSeconds(3)).Subscribe(x => ProcessPerson());
+            Observable.Interval(TimeSpan.FromSeconds(2)).Subscribe(x => ProcessPerson());
             Observable.Interval(TimeSpan.FromSeconds(32)).Subscribe(x => UpdateStats());
             button1.PerformClick();
             nameFlag.Image = await WikiFlags.GetEnglishAsync(18).ConfigureAwait(true);
@@ -40,7 +40,8 @@ namespace rels
             {
                 Init.CREATE_SQL.ForEach(async sql => await db.ExecuteAsync(sql));
 
-                People.Insert("Q743509");//Aiko
+                //People.Insert("Q638650");
+                //People.Insert("Q743509");//Aiko
                 //People.Insert("Q154045");//Alexei
                 //People.Insert("Q8423");
                 //People.Insert("Q37085");
@@ -434,7 +435,32 @@ namespace rels
                 rusNameFlag.Left = rusNameLabel.Left + rusNameLabel.Width + 4;
                 pictureBox1.Image = await WikiMedia.GetMediaAsync(p.ImageFile).ConfigureAwait(true);
                 richTextBox1.Text = p.Description;
+                ancestorsView.Nodes.Clear();
+                var pNode = ancestorsView.Nodes.Add(p.Name);
+                pNode.Tag = wikiDataID;
             }
+        }
+
+        private void ancestorsView_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            if (ancestorsView.SelectedNode == null) return;
+            if (ancestorsView.SelectedNode.Nodes.Count > 0) return;
+            var p = People.GetByWikiDataID((string)ancestorsView.SelectedNode.Tag);
+            if (p.Father != null)
+            {
+                var fNode = ancestorsView.SelectedNode.Nodes.Add("f. " + p.Father);
+                fNode.Tag = p.Father;
+                var f = People.GetByWikiDataID(p.Father);
+                fNode.Text = "f. " + f.Name + " (" + p.Father + ")";
+            }
+            if (p.Mother != null)
+            {
+                var mNode = ancestorsView.SelectedNode.Nodes.Add("m. " + p.Mother);
+                mNode.Tag = p.Mother;
+                var m = People.GetByWikiDataID(p.Mother);
+                mNode.Text = "m. " + m.Name + " (" + p.Mother + ")";
+            }
+            ancestorsView.SelectedNode.ExpandAll();
         }
     }
 }
