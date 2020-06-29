@@ -22,7 +22,7 @@ namespace rels.Wiki
             var doc = JObject.Parse(page);
             JObject entities = (JObject)doc["entities"];
             JProperty entity = (JProperty)entities.First;
-            
+
             p.WikiDataID = entity?.Name ?? wikiDataId;
             p.ID = int.Parse(wikiDataId.Substring(1));
             if (entity == null) return p;
