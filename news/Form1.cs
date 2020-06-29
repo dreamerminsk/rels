@@ -26,7 +26,7 @@ namespace news
                 if (spanTitle != null)
                 {
                     richTextBox1.AppendText(HttpUtility.HtmlDecode(spanTitle.InnerText) + "\r\n");
-                }                
+                }
                 richTextBox1.AppendText(newsEntry.InnerHtml + "\r\n" + new string('-', 100) + "\r\n");
             });
         }

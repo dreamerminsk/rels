@@ -1,4 +1,6 @@
-﻿namespace rels.Model
+﻿using System;
+
+namespace rels.Model
 {
     public class WikiDataID
     {
@@ -10,7 +12,14 @@
 
         public static int ToInt(string wikiDataID)
         {
-            return int.Parse(wikiDataID.Substring(1));
+            try
+            {
+                return int.Parse(wikiDataID?.Substring(1));
+            }
+            catch (Exception e)
+            {
+                return -1;
+            }
         }
 
     }

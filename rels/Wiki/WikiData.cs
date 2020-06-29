@@ -20,17 +20,16 @@ namespace rels.Wiki
             var p = new Person();
             var page = await GetStringAsync(string.Format(DATA_REF, wikiDataId));
             var doc = JObject.Parse(page);
-            var claims = doc["entities"]?[wikiDataId]?["claims"];
-            var labels = doc["entities"]?[wikiDataId]?["labels"];
-            var descriptions = doc["entities"]?[wikiDataId]?["descriptions"];
-            //if (claims == null)
-            //{
-            //    claims = doc["entities"]?[doc["entities"]?.First]?["claims"];
-            //    labels = doc["entities"]?[doc["entities"]?.First]?["labels"];
-            //}
-
+            JObject entities = (JObject)doc["entities"];
+            JProperty entity = (JProperty)entities.First;
+            
+            p.WikiDataID = entity?.Name ?? wikiDataId;
             p.ID = int.Parse(wikiDataId.Substring(1));
-            p.WikiDataID = wikiDataId;
+            if (entity == null) return p;
+
+            var claims = entity.Value["claims"];
+            var labels = entity.Value["labels"];
+            var descriptions = entity.Value["descriptions"];
 
             if (labels == null)
             {
@@ -39,9 +38,12 @@ namespace rels.Wiki
             p.Name = labels["en"]?["value"]?.ToString();
             if (p.Name.IsNullOrEmpty() || p.Name.Equals("???"))
             {
-                JProperty f = (JProperty)labels.Children().First();
-                JObject v = (JObject)f.Value;
-                p.Name = string.Format("{0}: {1}", f.Name, v.Value<string>("value"));
+                if (labels.Children().Count() > 0)
+                {
+                    JProperty f = (JProperty)labels.Children().First();
+                    JObject v = (JObject)f?.Value;
+                    p.Name = string.Format("{0}: {1}", f.Name, v.Value<string>("value"));
+                }
             }
             p.RusName = labels["ru"]?["value"]?.ToString();
             p.Description += descriptions["en"]?["value"]?.ToString();

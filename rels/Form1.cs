@@ -27,8 +27,8 @@ namespace rels
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            Observable.Interval(TimeSpan.FromSeconds(2)).Subscribe(x => ProcessPerson());
-            Observable.Interval(TimeSpan.FromSeconds(32)).Subscribe(x => UpdateStats());
+            Observable.Interval(TimeSpan.FromSeconds(4)).Subscribe(x => ProcessPerson());
+            Observable.Interval(TimeSpan.FromSeconds(16)).Subscribe(x => UpdateStats());
             button1.PerformClick();
             nameFlag.Image = await WikiFlags.GetEnglishAsync(18).ConfigureAwait(true);
             nameFlag.Width = nameFlag.Image.Width + 2;
@@ -446,19 +446,19 @@ namespace rels
             if (ancestorsView.SelectedNode == null) return;
             if (ancestorsView.SelectedNode.Nodes.Count > 0) return;
             var p = People.GetByWikiDataID((string)ancestorsView.SelectedNode.Tag);
-            if (p.Father != null)
+            if (p?.Father != null)
             {
-                var fNode = ancestorsView.SelectedNode.Nodes.Add("f. " + p.Father);
-                fNode.Tag = p.Father;
-                var f = People.GetByWikiDataID(p.Father);
-                fNode.Text = "f. " + f.Name + " (" + p.Father + ")";
+                var fNode = ancestorsView.SelectedNode.Nodes.Add("f. " + p?.Father);
+                fNode.Tag = p?.Father;
+                var f = People.GetByWikiDataID(p?.Father);
+                fNode.Text = "f. " + f?.Name + " (" + p?.Father + ")";
             }
-            if (p.Mother != null)
+            if (p?.Mother != null)
             {
-                var mNode = ancestorsView.SelectedNode.Nodes.Add("m. " + p.Mother);
-                mNode.Tag = p.Mother;
-                var m = People.GetByWikiDataID(p.Mother);
-                mNode.Text = "m. " + m.Name + " (" + p.Mother + ")";
+                var mNode = ancestorsView.SelectedNode.Nodes.Add("m. " + p?.Mother);
+                mNode.Tag = p?.Mother;
+                var m = People.GetByWikiDataID(p?.Mother);
+                mNode.Text = "m. " + m?.Name + " (" + p?.Mother + ")";
             }
             ancestorsView.SelectedNode.ExpandAll();
         }
