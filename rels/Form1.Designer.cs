@@ -49,8 +49,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.ancestorsPage = new System.Windows.Forms.TabPage();
-            this.descendantsPage = new System.Windows.Forms.TabPage();
             this.ancestorsView = new System.Windows.Forms.TreeView();
+            this.descendantsPage = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -94,7 +94,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(150, 3);
+            this.button3.Location = new System.Drawing.Point(155, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(59, 26);
             this.button3.TabIndex = 2;
@@ -105,7 +105,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(77, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 26);
+            this.button2.Size = new System.Drawing.Size(72, 26);
             this.button2.TabIndex = 1;
             this.button2.Text = "Countries";
             this.button2.UseVisualStyleBackColor = true;
@@ -293,22 +293,11 @@
             this.ancestorsPage.Location = new System.Drawing.Point(4, 4);
             this.ancestorsPage.Name = "ancestorsPage";
             this.ancestorsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ancestorsPage.Size = new System.Drawing.Size(664, 264);
+            this.ancestorsPage.Size = new System.Drawing.Size(664, 268);
             this.ancestorsPage.TabIndex = 1;
             this.ancestorsPage.Text = "ancestors";
             this.ancestorsPage.ToolTipText = "ancestors";
             this.ancestorsPage.UseVisualStyleBackColor = true;
-            // 
-            // descendantsPage
-            // 
-            this.descendantsPage.Location = new System.Drawing.Point(4, 4);
-            this.descendantsPage.Name = "descendantsPage";
-            this.descendantsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.descendantsPage.Size = new System.Drawing.Size(664, 264);
-            this.descendantsPage.TabIndex = 2;
-            this.descendantsPage.Text = "descendants";
-            this.descendantsPage.ToolTipText = "descendants";
-            this.descendantsPage.UseVisualStyleBackColor = true;
             // 
             // ancestorsView
             // 
@@ -317,9 +306,20 @@
             this.ancestorsView.FullRowSelect = true;
             this.ancestorsView.Location = new System.Drawing.Point(3, 3);
             this.ancestorsView.Name = "ancestorsView";
-            this.ancestorsView.Size = new System.Drawing.Size(658, 258);
+            this.ancestorsView.Size = new System.Drawing.Size(658, 262);
             this.ancestorsView.TabIndex = 0;
             this.ancestorsView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.ancestorsView_AfterSelect);
+            // 
+            // descendantsPage
+            // 
+            this.descendantsPage.Location = new System.Drawing.Point(4, 4);
+            this.descendantsPage.Name = "descendantsPage";
+            this.descendantsPage.Padding = new System.Windows.Forms.Padding(3);
+            this.descendantsPage.Size = new System.Drawing.Size(664, 268);
+            this.descendantsPage.TabIndex = 2;
+            this.descendantsPage.Text = "descendants";
+            this.descendantsPage.ToolTipText = "descendants";
+            this.descendantsPage.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

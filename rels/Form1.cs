@@ -127,7 +127,7 @@ namespace rels
 
                 Random rnd = new Random(DateTime.Now.Millisecond);
                 var people = db.GetTable<Person>();
-                var listOf = people.Where(p => (p.Name == "???")).OrderBy(p => Guid.NewGuid()).ToList();
+                var listOf = people.Where(p => p.Labels.Count == 0).OrderBy(p => Guid.NewGuid()).ToList();
                 listOf.ForEach(p => q2.Add(p.WikiDataID));
             }
         }
@@ -143,8 +143,8 @@ namespace rels
                 var p = await WikiData.GetPersonAsync(title);
                 People.Update(p);
                 string desc = "";
-                desc = string.Format("{0}\r\n{1}\r\n{2}\r\n", new string('-', 64), p.WikiDataID, p.Name);
-                desc += string.Format("  {0}\r\n", p.RusName);
+                desc = string.Format("{0}\r\n{1}\r\n{2}\r\n", new string('-', 64), p.WikiDataID, p.Labels.Find(l => l.Language.StartsWith("en")));
+                desc += string.Format("  {0}\r\n", p.Labels.Find(l => l.Language.StartsWith("ru")));
                 desc += string.Format("{0}\r\n", p.Description);
                 if (Countries.IsExists(p.Country))
                 {
@@ -183,7 +183,7 @@ namespace rels
             using (var db = new RelsDB())
             {
                 var people = db.GetTable<Person>();
-                people.Where(p => (p.Name == "???"))
+                people.Where(p => p.Labels.Count == 0)
                     .OrderBy(x => Guid.NewGuid())
                     .ToList().ForEach(p => q2.Add(p.WikiDataID));
             }
@@ -208,10 +208,10 @@ namespace rels
         {
             peopleView.BeginUpdate();
             var item = peopleView.Items.Insert(0, p.WikiDataID);
-            item.SubItems.Add(p.Name);
-            item.SubItems.Add(p.RusName);
-            item.SubItems.Add(p.DateOfBirth?.Substring(0, 11));
-            item.SubItems.Add(p.DateOfDeath?.Substring(0, 11));
+            item.SubItems.Add(p?.Labels?.Find(l => l.Language.StartsWith("en"))?.Value ?? "No Label defined");
+            item.SubItems.Add(p?.Labels?.Find(l => l.Language.StartsWith("ru"))?.Value ?? "No Label defined");
+            item.SubItems.Add(p?.DateOfBirth?.Substring(0, 11));
+            item.SubItems.Add(p?.DateOfDeath?.Substring(0, 11));
             peopleView.EndUpdate();
         }
 
@@ -429,14 +429,16 @@ namespace rels
             {
                 var wikiDataID = peopleView.SelectedItems[0].Text;
                 var p = People.GetByWikiDataID(wikiDataID);
-                nameLabel.Text = p.Name;
+                nameLabel.Text = p?.Labels?.Find(l => l.Language.StartsWith("en"))?.Value
+                    ?? p?.Labels?.First()?.Value;
                 nameFlag.Left = nameLabel.Left + nameLabel.Width + 4;
-                rusNameLabel.Text = p.RusName;
+                rusNameLabel.Text = p?.Labels?.Where(l => l.Language == "ru")?.FirstOrDefault()?.Value;
                 rusNameFlag.Left = rusNameLabel.Left + rusNameLabel.Width + 4;
                 pictureBox1.Image = await WikiMedia.GetMediaAsync(p.ImageFile).ConfigureAwait(true);
                 richTextBox1.Text = p.Description;
                 ancestorsView.Nodes.Clear();
-                var pNode = ancestorsView.Nodes.Add(p.Name);
+                var pNode = ancestorsView.Nodes.Add(p?.Labels?.Find(l => l.Language.StartsWith("en"))?.Value
+                    ?? p?.Labels?.First()?.Value);
                 pNode.Tag = wikiDataID;
             }
         }
@@ -451,14 +453,16 @@ namespace rels
                 var fNode = ancestorsView.SelectedNode.Nodes.Add("f. " + p?.Father);
                 fNode.Tag = p?.Father;
                 var f = People.GetByWikiDataID(p?.Father);
-                fNode.Text = "f. " + f?.Name + " (" + p?.Father + ")";
+                fNode.Text = "f. " + (f?.Labels?.Find(l => l.Language.StartsWith("en"))?.Value
+                    ?? f?.Labels?.First()?.Value) + " (" + p?.Father + ")";
             }
             if (p?.Mother != null)
             {
                 var mNode = ancestorsView.SelectedNode.Nodes.Add("m. " + p?.Mother);
                 mNode.Tag = p?.Mother;
                 var m = People.GetByWikiDataID(p?.Mother);
-                mNode.Text = "m. " + m?.Name + " (" + p?.Mother + ")";
+                mNode.Text = "m. " + (m?.Labels?.Find(l => l.Language.StartsWith("en"))?.Value
+                    ?? m?.Labels?.First()?.Value) + " (" + p?.Mother + ")";
             }
             ancestorsView.SelectedNode.ExpandAll();
         }

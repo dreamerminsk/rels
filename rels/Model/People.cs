@@ -23,7 +23,12 @@ namespace rels.Model
             using (var db = new RelsDB())
             {
                 var people = db.GetTable<Person>();
-                return people.Where(p => p.WikiDataID.Equals(wikiDataId)).SingleOrDefault();
+                var person = people.Where(p => p.WikiDataID.Equals(wikiDataId)).First();
+                if (person != null)
+                {
+                    person.Labels = Labels.GetLabels(person.WikiDataID);
+                }
+                return person;
             }
         }
 
@@ -33,7 +38,7 @@ namespace rels.Model
             {
                 try
                 {
-                    return db.Insert(new Person() { ID = WikiDataID.ToInt(wdid), WikiDataID = wdid, Name = "???" });
+                    return db.Insert(new Person() { ID = WikiDataID.ToInt(wdid), WikiDataID = wdid });
                 }
                 catch (Exception e)
                 {
@@ -58,8 +63,6 @@ namespace rels.Model
                 {
                     var ps = db.GetTable<Person>();
                     var res = ps.Where(item => item.WikiDataID.Equals(p.WikiDataID))
-                         .Set(item => item.Name, p.Name)
-                         .Set(item => item.RusName, p.RusName)
                          .Set(item => item.ImageFile, p.ImageFile)
                          .Set(item => item.Country, p.Country)
                          .Set(item => item.DateOfBirth, p.DateOfBirth)
@@ -68,6 +71,10 @@ namespace rels.Model
                          .Set(item => item.Mother, p.Mother)
                          .Set(item => item.Description, p.Description)
                          .Update();
+                    if (!p.Labels.IsNullOrEmpty())
+                    {
+                        p.Labels.ForEach(l => Labels.Insert(l));
+                    }
                     if (!p.Siblings.IsNullOrEmpty())
                     {
                         p.Siblings.ForEach(s => People.Insert(s));

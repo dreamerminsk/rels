@@ -48,11 +48,6 @@ namespace rels.Wiki
             var p = new Person();
             var page = await web.LoadFromWebAsync("https://en.wikipedia.org/wiki/" + title);
 
-            p.Name = page.DocumentNode.SelectSingleNode("//h1[@class='firstHeading']")?.InnerText.Trim();
-
-            p.RusName = page.DocumentNode.SelectSingleNode("//li[@class='interlanguage-link interwiki-ru']/a[@title]")?
-                .Attributes["title"]?.Value?.Trim();
-
             var rows = page.DocumentNode.SelectNodes("//table[@class='infobox vcard']/tbody/tr");
             rows?.Where(r => Filter(r, "Father"))?.Select(r => ToRef(r))?.Where(r => r != null)?.ToList()
                     .ForEach(t =>

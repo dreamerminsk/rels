@@ -35,17 +35,14 @@ namespace rels.Wiki
             {
                 return p;
             }
-            p.Name = labels["en"]?["value"]?.ToString();
-            if (p.Name.IsNullOrEmpty() || p.Name.Equals("???"))
+
+            p.Labels = labels.Values().Select(t => new Model.Label()
             {
-                if (labels.Children().Count() > 0)
-                {
-                    JProperty f = (JProperty)labels.Children().First();
-                    JObject v = (JObject)f?.Value;
-                    p.Name = string.Format("{0}: {1}", f.Name, v.Value<string>("value"));
-                }
-            }
-            p.RusName = labels["ru"]?["value"]?.ToString();
+                WikiDataID = wikiDataId,
+                Language = t.Value<string>("language"),
+                Value = t.Value<string>("value")
+            }).ToList();
+
             p.Description += descriptions["en"]?["value"]?.ToString();
             p.Description += "\r\n" + descriptions["ru"]?["value"]?.ToString();
 

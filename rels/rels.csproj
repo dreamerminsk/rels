@@ -151,6 +151,8 @@
     <Compile Include="Model\Countries.cs" />
     <Compile Include="Model\Country.cs" />
     <Compile Include="Model\Init.cs" />
+    <Compile Include="Model\Label.cs" />
+    <Compile Include="Model\Labels.cs" />
     <Compile Include="Model\People.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\rels1.generated.cs">

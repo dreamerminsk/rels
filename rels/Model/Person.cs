@@ -1,5 +1,4 @@
-﻿using LinqToDB.Common;
-using LinqToDB.Mapping;
+﻿using LinqToDB.Mapping;
 using System.Collections.Generic;
 
 namespace rels.Model
@@ -7,7 +6,6 @@ namespace rels.Model
     [Table(Name = "People")]
     public class Person
     {
-        private string _name = "???";
 
         [PrimaryKey, Identity]
         public int ID { get; set; }
@@ -18,11 +16,10 @@ namespace rels.Model
         [Column(Name = "ImageFile")]
         public string ImageFile { get; set; }
 
-        [Column(Name = "Name"), NotNull]
-        public string Name { get { return _name; } set { if (!value.IsNullOrEmpty()) _name = value; } }
-
-        [Column(Name = "RusName")]
-        public string RusName { get; set; } = "???";
+        [Association(
+            ThisKey = nameof(WikiDataID),
+            OtherKey = nameof(Label.WikiDataID))]
+        public List<Label> Labels { get; set; } = new List<Label>();
 
         [Column(Name = "Description")]
         public string Description { get; set; }
