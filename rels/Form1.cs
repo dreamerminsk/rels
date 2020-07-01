@@ -33,9 +33,6 @@ namespace rels
             nameFlag.Image = await WikiFlags.GetEnglishAsync(18).ConfigureAwait(true);
             nameFlag.Width = nameFlag.Image.Width + 2;
             nameFlag.Height = nameFlag.Image.Height + 2;
-            rusNameFlag.Image = await WikiFlags.GetRussianAsync(18).ConfigureAwait(true);
-            rusNameFlag.Width = rusNameFlag.Image.Width + 2;
-            rusNameFlag.Height = rusNameFlag.Image.Height + 2;
             using (var db = new RelsDB())
             {
                 Init.CREATE_SQL.ForEach(async sql => await db.ExecuteAsync(sql));
@@ -432,8 +429,9 @@ namespace rels
                 nameLabel.Text = p?.Labels?.Find(l => l.Language.StartsWith("en"))?.Value
                     ?? p?.Labels?.First()?.Value;
                 nameFlag.Left = nameLabel.Left + nameLabel.Width + 4;
-                rusNameLabel.Text = p?.Labels?.Where(l => l.Language == "ru")?.FirstOrDefault()?.Value;
-                rusNameFlag.Left = rusNameLabel.Left + rusNameLabel.Width + 4;
+                altNamesBox.Items.Clear();
+                p.Labels.ForEach(l => altNamesBox.Items.Add(l.Language + ": \t" + l.Value));
+                altNamesBox.SelectedIndex = 0;
                 pictureBox1.Image = await WikiMedia.GetMediaAsync(p.ImageFile).ConfigureAwait(true);
                 richTextBox1.Text = p.Description;
                 ancestorsView.Nodes.Clear();
@@ -453,16 +451,35 @@ namespace rels
                 var fNode = ancestorsView.SelectedNode.Nodes.Add("f. " + p?.Father);
                 fNode.Tag = p?.Father;
                 var f = People.GetByWikiDataID(p?.Father);
-                fNode.Text = "f. " + (f?.Labels?.Find(l => l.Language.StartsWith("en"))?.Value
-                    ?? f?.Labels?.First()?.Value) + " (" + p?.Father + ")";
+                if (f != null && !f.Labels.IsNullOrEmpty())
+                {
+                    fNode.Text = string.Format("f. {0} {1}",
+                        f.Labels?.Find(l => l.Language.StartsWith("en"))?.Value
+                        ?? f.Labels?.First()?.Value,
+                        p?.Father);
+                }
+                else
+                {
+                    fNode.Text = "f. " + "(" + p?.Father + ")";
+                }
+
             }
             if (p?.Mother != null)
             {
                 var mNode = ancestorsView.SelectedNode.Nodes.Add("m. " + p?.Mother);
                 mNode.Tag = p?.Mother;
                 var m = People.GetByWikiDataID(p?.Mother);
-                mNode.Text = "m. " + (m?.Labels?.Find(l => l.Language.StartsWith("en"))?.Value
-                    ?? m?.Labels?.First()?.Value) + " (" + p?.Mother + ")";
+                if (m != null && !m.Labels.IsNullOrEmpty())
+                {
+                    mNode.Text = string.Format("m. {0} {1}",
+                        m.Labels?.Find(l => l.Language.StartsWith("en"))?.Value
+                        ?? m.Labels?.First()?.Value,
+                        p?.Mother);
+                }
+                else
+                {
+                    mNode.Text = "m. " + "(" + p?.Mother + ")";
+                }
             }
             ancestorsView.SelectedNode.ExpandAll();
         }

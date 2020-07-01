@@ -23,7 +23,7 @@ namespace rels.Model
             using (var db = new RelsDB())
             {
                 var people = db.GetTable<Person>();
-                var person = people.Where(p => p.WikiDataID.Equals(wikiDataId)).First();
+                var person = people.Where(p => p.WikiDataID.Equals(wikiDataId))?.First();
                 if (person != null)
                 {
                     person.Labels = Labels.GetLabels(person.WikiDataID);

@@ -2,14 +2,13 @@
 
 namespace rels.Model
 {
-    public static class Init
-    {
+	public static class Init
+	{
 
-        public static readonly List<string> CREATE_SQL = new List<string>() {
-            @"CREATE TABLE IF NOT EXISTS 'People' (
+		public static readonly List<string> CREATE_SQL = new List<string>() {
+			@"CREATE TABLE IF NOT EXISTS 'People' (
 	            'ID'    INTEGER NOT NULL UNIQUE,
 	            'WikiDataID'    TEXT NOT NULL UNIQUE,
-	            'Name'  TEXT NOT NULL,
                 'ImageFile'	TEXT,
 				'Country'   TEXT,
 	            'DateOfBirth'   TEXT,
@@ -20,7 +19,7 @@ namespace rels.Model
 	         PRIMARY KEY('ID')
             );",
 
-            @"CREATE TABLE IF NOT EXISTS 'Countries' (
+			@"CREATE TABLE IF NOT EXISTS 'Countries' (
 	          'ID'    INTEGER NOT NULL UNIQUE,
 	          'WikiDataID'    TEXT NOT NULL UNIQUE,
 	          'Name'  TEXT NOT NULL,
@@ -28,7 +27,7 @@ namespace rels.Model
 	          PRIMARY KEY('ID')
             )",
 
-            @"CREATE TABLE IF NOT EXISTS 'Labels' (
+			@"CREATE TABLE IF NOT EXISTS 'Labels' (
 	           'ID'    INTEGER NOT NULL UNIQUE,
 	           'WikiDataID'    TEXT NOT NULL UNIQUE,
 	           'Language'  TEXT,
@@ -36,11 +35,11 @@ namespace rels.Model
 	           PRIMARY KEY('ID' AUTOINCREMENT)
             );",
 
-            @"CREATE UNIQUE INDEX IF NOT EXISTS 'LabelsIDX' ON 'Labels' (
+			@"CREATE UNIQUE INDEX IF NOT EXISTS 'LabelsIDX' ON 'Labels' (
 	           'WikiDataID'    ASC,
 	           'Language'  ASC
             );",
-        };
+		};
 
-    }
+	}
 }

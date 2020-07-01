@@ -43,14 +43,13 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.infoPage = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.rusNameFlag = new System.Windows.Forms.Label();
             this.nameFlag = new System.Windows.Forms.Label();
-            this.rusNameLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.ancestorsPage = new System.Windows.Forms.TabPage();
             this.ancestorsView = new System.Windows.Forms.TreeView();
             this.descendantsPage = new System.Windows.Forms.TabPage();
+            this.altNamesBox = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -208,10 +207,9 @@
             // 
             // infoPage
             // 
+            this.infoPage.Controls.Add(this.altNamesBox);
             this.infoPage.Controls.Add(this.richTextBox1);
-            this.infoPage.Controls.Add(this.rusNameFlag);
             this.infoPage.Controls.Add(this.nameFlag);
-            this.infoPage.Controls.Add(this.rusNameLabel);
             this.infoPage.Controls.Add(this.pictureBox1);
             this.infoPage.Controls.Add(this.nameLabel);
             this.infoPage.Location = new System.Drawing.Point(4, 4);
@@ -225,22 +223,13 @@
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(199, 50);
+            this.richTextBox1.Location = new System.Drawing.Point(198, 60);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.richTextBox1.Size = new System.Drawing.Size(459, 81);
             this.richTextBox1.TabIndex = 5;
             this.richTextBox1.Text = "";
-            // 
-            // rusNameFlag
-            // 
-            this.rusNameFlag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rusNameFlag.Location = new System.Drawing.Point(266, 29);
-            this.rusNameFlag.Margin = new System.Windows.Forms.Padding(0);
-            this.rusNameFlag.Name = "rusNameFlag";
-            this.rusNameFlag.Size = new System.Drawing.Size(24, 17);
-            this.rusNameFlag.TabIndex = 4;
             // 
             // nameFlag
             // 
@@ -250,17 +239,6 @@
             this.nameFlag.Name = "nameFlag";
             this.nameFlag.Size = new System.Drawing.Size(24, 17);
             this.nameFlag.TabIndex = 3;
-            // 
-            // rusNameLabel
-            // 
-            this.rusNameLabel.AutoEllipsis = true;
-            this.rusNameLabel.AutoSize = true;
-            this.rusNameLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rusNameLabel.Location = new System.Drawing.Point(199, 29);
-            this.rusNameLabel.Name = "rusNameLabel";
-            this.rusNameLabel.Size = new System.Drawing.Size(61, 17);
-            this.rusNameLabel.TabIndex = 2;
-            this.rusNameLabel.Text = "rusName";
             // 
             // pictureBox1
             // 
@@ -321,6 +299,18 @@
             this.descendantsPage.ToolTipText = "descendants";
             this.descendantsPage.UseVisualStyleBackColor = true;
             // 
+            // altNamesBox
+            // 
+            this.altNamesBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.altNamesBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.altNamesBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.altNamesBox.FormattingEnabled = true;
+            this.altNamesBox.Location = new System.Drawing.Point(198, 29);
+            this.altNamesBox.Name = "altNamesBox";
+            this.altNamesBox.Size = new System.Drawing.Size(460, 25);
+            this.altNamesBox.Sorted = true;
+            this.altNamesBox.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -367,12 +357,11 @@
         private System.Windows.Forms.TabPage ancestorsPage;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label rusNameLabel;
         private System.Windows.Forms.Label nameFlag;
-        private System.Windows.Forms.Label rusNameFlag;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TabPage descendantsPage;
         private System.Windows.Forms.TreeView ancestorsView;
+        private System.Windows.Forms.ComboBox altNamesBox;
     }
 }
 
