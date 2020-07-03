@@ -138,7 +138,7 @@ namespace rels
             if (!string.IsNullOrEmpty(title))
             {
                 var p = await WikiData.GetPersonAsync(title);
-                People.Update(p);
+                await People.UpdateAsync(p);
                 string desc = "";
                 desc = string.Format("{0}\r\n{1}\r\n{2}\r\n", new string('-', 64), p.WikiDataID, p.Labels.Find(l => l.Language.StartsWith("en")));
                 desc += string.Format("  {0}\r\n", p.Labels.Find(l => l.Language.StartsWith("ru")));
@@ -158,18 +158,18 @@ namespace rels
                 desc += (string.Format("\tFather:\t{0}\r\n", p.Father));
                 desc += (string.Format("\tMother:\t{0}\r\n", p.Mother));
                 AppendPerson(p);
-                if (!People.IsExists(p.Father))
+                if (!await People.IsExistsAsync(p.Father))
                 {
                     if (!p.Father.IsNullOrEmpty())
                     {
-                        People.Insert(p.Father);
+                        await People.InsertAsync(p.Father);
                     }
                 }
-                if (!People.IsExists(p.Mother))
+                if (!await People.IsExistsAsync(p.Mother))
                 {
                     if (!p.Mother.IsNullOrEmpty())
                     {
-                        People.Insert(p.Mother);
+                        await People.InsertAsync(p.Mother);
                     }
                 }
             }
@@ -425,7 +425,7 @@ namespace rels
             if (peopleView.SelectedItems.Count > 0)
             {
                 var wikiDataID = peopleView.SelectedItems[0].Text;
-                var p = People.GetByWikiDataID(wikiDataID);
+                var p = await People.GetByWikiDataIDAsync(wikiDataID);
                 nameLabel.Text = p?.Labels?.Find(l => l.Language.StartsWith("en"))?.Value
                     ?? p?.Labels?.First()?.Value;
                 nameFlag.Left = nameLabel.Left + nameLabel.Width + 4;
@@ -441,16 +441,16 @@ namespace rels
             }
         }
 
-        private void ancestorsView_AfterSelect(object sender, TreeViewEventArgs e)
+        private async void ancestorsView_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (ancestorsView.SelectedNode == null) return;
             if (ancestorsView.SelectedNode.Nodes.Count > 0) return;
-            var p = People.GetByWikiDataID((string)ancestorsView.SelectedNode.Tag);
+            var p = await People.GetByWikiDataIDAsync((string)ancestorsView.SelectedNode.Tag);
             if (p?.Father != null)
             {
                 var fNode = ancestorsView.SelectedNode.Nodes.Add("f. " + p?.Father);
                 fNode.Tag = p?.Father;
-                var f = People.GetByWikiDataID(p?.Father);
+                var f = await People.GetByWikiDataIDAsync(p?.Father);
                 if (f != null && !f.Labels.IsNullOrEmpty())
                 {
                     fNode.Text = string.Format("f. {0} {1}",
@@ -468,7 +468,7 @@ namespace rels
             {
                 var mNode = ancestorsView.SelectedNode.Nodes.Add("m. " + p?.Mother);
                 mNode.Tag = p?.Mother;
-                var m = People.GetByWikiDataID(p?.Mother);
+                var m = await People.GetByWikiDataIDAsync(p?.Mother);
                 if (m != null && !m.Labels.IsNullOrEmpty())
                 {
                     mNode.Text = string.Format("m. {0} {1}",

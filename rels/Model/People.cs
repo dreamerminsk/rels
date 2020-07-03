@@ -2,6 +2,7 @@
 using LinqToDB.Common;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace rels.Model
@@ -9,21 +10,21 @@ namespace rels.Model
     public class People
     {
 
-        public static bool IsExists(string wikiDataId)
+        public static async Task<bool> IsExistsAsync(string wikiDataId)
         {
             using (var db = new RelsDB())
             {
                 var people = db.GetTable<Person>();
-                return people.Any(p => p.WikiDataID.Equals(wikiDataId));
+                return await people.AnyAsync(p => p.WikiDataID.Equals(wikiDataId));
             }
         }
 
-        public static Person GetByWikiDataID(string wikiDataId)
+        public static async Task<Person> GetByWikiDataIDAsync(string wikiDataId)
         {
             using (var db = new RelsDB())
             {
                 var people = db.GetTable<Person>();
-                var person = people.Where(p => p.WikiDataID.Equals(wikiDataId))?.First();
+                var person = await people.Where(p => p.WikiDataID.Equals(wikiDataId))?.FirstOrDefaultAsync();
                 if (person != null)
                 {
                     person.Labels = Labels.GetLabels(person.WikiDataID);
@@ -32,13 +33,13 @@ namespace rels.Model
             }
         }
 
-        public static int Insert(string wdid)
+        public static async Task<int> InsertAsync(string wdid)
         {
             using (var db = new RelsDB())
             {
                 try
                 {
-                    return db.Insert(new Person() { ID = WikiDataID.ToInt(wdid), WikiDataID = wdid });
+                    return await db.InsertAsync(new Person() { ID = WikiDataID.ToInt(wdid), WikiDataID = wdid });
                 }
                 catch (Exception e)
                 {
@@ -47,22 +48,22 @@ namespace rels.Model
             }
         }
 
-        public static int Insert(Person p)
+        public static async Task<int> InsertAsync(Person p)
         {
             using (var db = new RelsDB())
             {
-                return db.Insert(p); ;
+                return await db.InsertAsync(p); ;
             }
         }
 
-        public static int Update(Person p)
+        public static async Task<int> UpdateAsync(Person p)
         {
             using (var db = new RelsDB())
             {
                 try
                 {
                     var ps = db.GetTable<Person>();
-                    var res = ps.Where(item => item.WikiDataID.Equals(p.WikiDataID))
+                    var res = await ps.Where(item => item.WikiDataID.Equals(p.WikiDataID))
                          .Set(item => item.ImageFile, p.ImageFile)
                          .Set(item => item.Country, p.Country)
                          .Set(item => item.DateOfBirth, p.DateOfBirth)
@@ -70,28 +71,28 @@ namespace rels.Model
                          .Set(item => item.Father, p.Father)
                          .Set(item => item.Mother, p.Mother)
                          .Set(item => item.Description, p.Description)
-                         .Update();
+                         .UpdateAsync();
                     if (!p.Labels.IsNullOrEmpty())
                     {
-                        p.Labels.ForEach(l => Labels.Insert(l));
+                        p.Labels.ForEach(async l => await Labels.InsertAsync(l));
                     }
                     if (!p.Siblings.IsNullOrEmpty())
                     {
-                        p.Siblings.ForEach(s => People.Insert(s));
+                        p.Siblings.ForEach(async s => await InsertAsync(s));
                     }
                     if (!p.Spouse.IsNullOrEmpty())
                     {
-                        p.Spouse.ForEach(s => People.Insert(s));
+                        p.Spouse.ForEach(async s => await InsertAsync(s));
                     }
                     if (!p.Children.IsNullOrEmpty())
                     {
-                        p.Children.ForEach(s => People.Insert(s));
+                        p.Children.ForEach(async s => await InsertAsync(s));
                     }
                     return res;
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message, e.GetType().Name);
+                    MessageBox.Show("UPDATE /" + p.ID + "/\r\n" + e.Message, e.GetType().Name);
                     return -1;
                 }
             }

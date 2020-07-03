@@ -26,13 +26,13 @@ namespace rels.Model
             }
         }
 
-        public static int Insert(Label label)
+        public static async System.Threading.Tasks.Task<int> InsertAsync(Label label)
         {
             using (var db = new RelsDB())
             {
                 try
                 {
-                    return db.Insert(label);
+                    return await db.InsertAsync(label);
                 }
                 catch (Exception e)
                 {
