@@ -21,9 +21,7 @@ namespace rels
             InitializeComponent();
         }
 
-        //public Queue<string> q = new Queue<string>();
-
-        public List<string> q2 = new List<string>();
+        public List<string> q = new List<string>();
 
         private async void Form1_Load(object sender, EventArgs e)
         {
@@ -40,16 +38,16 @@ namespace rels
                 Random rnd = new Random(DateTime.Now.Millisecond);
                 var people = db.GetTable<Person>();
                 var listOf = people.Where(p => p.Labels.Count == 0).OrderBy(p => Guid.NewGuid()).ToList();
-                listOf.ForEach(p => q2.Add(p.WikiDataID));
+                listOf.ForEach(p => q.Add(p.WikiDataID));
             }
         }
 
         private async void ProcessPerson()
         {
-            if (q2.IsNullOrEmpty()) { ReloadQueue(); return; }
-            var title = q2[0];
-            q2.RemoveAt(0);
-            SetTitle(string.Format("QUEUE /{0}/", q2.Count));
+            if (q.IsNullOrEmpty()) { ReloadQueue(); return; }
+            var title = q[0];
+            q.RemoveAt(0);
+            SetTitle(string.Format("QUEUE /{0}/", q.Count));
             if (!string.IsNullOrEmpty(title))
             {
                 var p = await WikiData.GetPersonAsync(title);
@@ -88,7 +86,7 @@ namespace rels
                 var people = db.GetTable<Person>();
                 people.Where(p => p.Labels.Count == 0)
                     .OrderBy(x => Guid.NewGuid())
-                    .ToList().ForEach(p => q2.Add(p.WikiDataID));
+                    .ToList().ForEach(p => q.Add(p.WikiDataID));
             }
         }
 
