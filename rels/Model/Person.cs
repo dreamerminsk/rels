@@ -21,8 +21,10 @@ namespace rels.Model
             OtherKey = nameof(Label.WikiDataID))]
         public List<Label> Labels { get; set; } = new List<Label>();
 
-        [Column(Name = "Description")]
-        public string Description { get; set; }
+        [Association(
+            ThisKey = nameof(WikiDataID),
+            OtherKey = nameof(Description.WikiDataID))]
+        public List<Description> Descriptions { get; set; } = new List<Description>();
 
         [Column(Name = "Country")]
         public string Country { get; set; }

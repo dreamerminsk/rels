@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Reactive.Linq;
+using System.Threading.Tasks;
 
 namespace rels.Model
 {
@@ -26,7 +27,7 @@ namespace rels.Model
             }
         }
 
-        public static async System.Threading.Tasks.Task<int> InsertAsync(Label label)
+        public static async Task<int> InsertAsync(Label label)
         {
             using (var db = new RelsDB())
             {

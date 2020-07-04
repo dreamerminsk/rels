@@ -43,8 +43,12 @@ namespace rels.Wiki
                 Value = t.Value<string>("value")
             }).ToList();
 
-            p.Description += descriptions["en"]?["value"]?.ToString();
-            p.Description += "\r\n" + descriptions["ru"]?["value"]?.ToString();
+            p.Descriptions = descriptions.Values().Select(t => new Description()
+            {
+                WikiDataID = wikiDataId,
+                Language = t.Value<string>("language"),
+                Value = t.Value<string>("value")
+            }).ToList();
 
             if (claims == null)
             {

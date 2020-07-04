@@ -139,24 +139,15 @@ namespace rels
             {
                 var p = await WikiData.GetPersonAsync(title);
                 await People.UpdateAsync(p);
-                string desc = "";
-                desc = string.Format("{0}\r\n{1}\r\n{2}\r\n", new string('-', 64), p.WikiDataID, p.Labels.Find(l => l.Language.StartsWith("en")));
-                desc += string.Format("  {0}\r\n", p.Labels.Find(l => l.Language.StartsWith("ru")));
-                desc += string.Format("{0}\r\n", p.Description);
                 if (Countries.IsExists(p.Country))
                 {
-                    desc += (string.Format("\tCountry:\t{0} - {1}\r\n", p.Country, Countries.GetByWikiDataId(p.Country)?.Name));
+
                 }
                 else if (!p.Country.IsNullOrEmpty())
                 {
                     var c = await WikiData.GetCountryAsync(p.Country);
                     await Countries.InsertAsync(c);
-                    desc += (string.Format("\tCountry:\t{0} - {1}\r\n", p.Country, Countries.GetByWikiDataId(p.Country)?.Name));
                 }
-                desc += (string.Format("\tDate Of Birth:\t{0}\r\n", p.DateOfBirth));
-                desc += (string.Format("\tDate Of Death:\t{0}\r\n", p.DateOfDeath));
-                desc += (string.Format("\tFather:\t{0}\r\n", p.Father));
-                desc += (string.Format("\tMother:\t{0}\r\n", p.Mother));
                 AppendPerson(p);
                 if (!await People.IsExistsAsync(p.Father))
                 {
@@ -433,7 +424,7 @@ namespace rels
                 p.Labels.ForEach(l => altNamesBox.Items.Add(l.Language + ": \t" + l.Value));
                 altNamesBox.SelectedIndex = 0;
                 pictureBox1.Image = await WikiMedia.GetMediaAsync(p.ImageFile).ConfigureAwait(true);
-                richTextBox1.Text = p.Description;
+                //richTextBox1.Text = p.Description;
                 ancestorsView.Nodes.Clear();
                 var pNode = ancestorsView.Nodes.Add(p?.Labels?.Find(l => l.Language.StartsWith("en"))?.Value
                     ?? p?.Labels?.First()?.Value);

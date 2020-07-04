@@ -28,6 +28,7 @@ namespace rels.Model
                 if (person != null)
                 {
                     person.Labels = Labels.GetLabels(person.WikiDataID);
+                    person.Descriptions = Descriptions.GetDescriptions(person.WikiDataID);
                 }
                 return person;
             }
@@ -70,11 +71,15 @@ namespace rels.Model
                          .Set(item => item.DateOfDeath, p.DateOfDeath)
                          .Set(item => item.Father, p.Father)
                          .Set(item => item.Mother, p.Mother)
-                         .Set(item => item.Description, p.Description)
                          .UpdateAsync();
                     if (!p.Labels.IsNullOrEmpty())
                     {
                         p.Labels.ForEach(async l => await Labels.InsertAsync(l));
+                    }
+                    if (!p.Descriptions.IsNullOrEmpty())
+                    {
+                        var count = Descriptions.Insert(p.Descriptions);
+                        //MessageBox.Show(p.Descriptions.Count.ToString() + "\r\n" + count.ToString());
                     }
                     if (!p.Siblings.IsNullOrEmpty())
                     {
