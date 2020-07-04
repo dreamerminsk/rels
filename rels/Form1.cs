@@ -424,7 +424,7 @@ namespace rels
                 p.Labels.ForEach(l => altNamesBox.Items.Add(l.Language + ": \t" + l.Value));
                 altNamesBox.SelectedIndex = 0;
                 pictureBox1.Image = await WikiMedia.GetMediaAsync(p.ImageFile).ConfigureAwait(true);
-                //richTextBox1.Text = p.Description;
+                richTextBox1.Text = p?.Descriptions?.Where(d => d.Language.StartsWith("en"))?.FirstOrDefault()?.Value;
                 ancestorsView.Nodes.Clear();
                 var pNode = ancestorsView.Nodes.Add(p?.Labels?.Find(l => l.Language.StartsWith("en"))?.Value
                     ?? p?.Labels?.First()?.Value);
@@ -473,6 +473,19 @@ namespace rels
                 }
             }
             ancestorsView.SelectedNode.ExpandAll();
+        }
+
+        private void altNamesBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string altName = (string)altNamesBox.SelectedItem;
+            if (!altName.IsNullOrEmpty())
+            {
+                var parts = altName.Split(':');
+                if (parts.Length > 1)
+                {
+                    //richTextBox1.Text = p?.Descriptions?.Where(d => d.Language.StartsWith(parts[0]))?.FirstOrDefault()?.Value;
+                }
+            }
         }
     }
 }

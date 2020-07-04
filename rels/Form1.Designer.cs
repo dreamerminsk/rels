@@ -42,6 +42,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.infoPage = new System.Windows.Forms.TabPage();
+            this.altNamesBox = new System.Windows.Forms.ComboBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.nameFlag = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -49,7 +50,6 @@
             this.ancestorsPage = new System.Windows.Forms.TabPage();
             this.ancestorsView = new System.Windows.Forms.TreeView();
             this.descendantsPage = new System.Windows.Forms.TabPage();
-            this.altNamesBox = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -220,6 +220,19 @@
             this.infoPage.Text = "info";
             this.infoPage.UseVisualStyleBackColor = true;
             // 
+            // altNamesBox
+            // 
+            this.altNamesBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.altNamesBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.altNamesBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.altNamesBox.FormattingEnabled = true;
+            this.altNamesBox.Location = new System.Drawing.Point(198, 29);
+            this.altNamesBox.Name = "altNamesBox";
+            this.altNamesBox.Size = new System.Drawing.Size(460, 25);
+            this.altNamesBox.Sorted = true;
+            this.altNamesBox.TabIndex = 6;
+            this.altNamesBox.SelectedIndexChanged += new System.EventHandler(this.altNamesBox_SelectedIndexChanged);
+            // 
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -298,18 +311,6 @@
             this.descendantsPage.Text = "descendants";
             this.descendantsPage.ToolTipText = "descendants";
             this.descendantsPage.UseVisualStyleBackColor = true;
-            // 
-            // altNamesBox
-            // 
-            this.altNamesBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.altNamesBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.altNamesBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.altNamesBox.FormattingEnabled = true;
-            this.altNamesBox.Location = new System.Drawing.Point(198, 29);
-            this.altNamesBox.Name = "altNamesBox";
-            this.altNamesBox.Size = new System.Drawing.Size(460, 25);
-            this.altNamesBox.Sorted = true;
-            this.altNamesBox.TabIndex = 6;
             // 
             // Form1
             // 
