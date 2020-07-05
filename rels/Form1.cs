@@ -1,9 +1,9 @@
 ﻿using LinqToDB;
 using LinqToDB.Common;
-using LinqToDB.Data;
 using rels.Model;
 using rels.UI;
 using rels.Wiki;
+using rels.Workers;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,6 +16,9 @@ namespace rels
 {
     public partial class Form1 : Form
     {
+
+        private Updater updater = new Updater();
+
         public Form1()
         {
             InitializeComponent();
@@ -25,107 +28,12 @@ namespace rels
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            Observable.Interval(TimeSpan.FromSeconds(4)).Subscribe(x => ProcessPerson());
             Observable.Interval(TimeSpan.FromSeconds(16)).Subscribe(x => UpdateStats());
             button1.PerformClick();
+            updater.Start();
             nameFlag.Image = await WikiFlags.GetEnglishAsync(18).ConfigureAwait(true);
             nameFlag.Width = nameFlag.Image.Width + 2;
             nameFlag.Height = nameFlag.Image.Height + 2;
-            using (var db = new RelsDB())
-            {
-                Init.CREATE_SQL.ForEach(async sql => await db.ExecuteAsync(sql));
-
-                Random rnd = new Random(DateTime.Now.Millisecond);
-                var people = db.GetTable<Person>();
-                var listOf = people.Where(p => p.Labels.Count == 0).OrderBy(p => Guid.NewGuid()).ToList();
-                listOf.ForEach(p => q.Add(p.WikiDataID));
-            }
-        }
-
-        private async void ProcessPerson()
-        {
-            if (q.IsNullOrEmpty()) { ReloadQueue(); return; }
-            var title = q[0];
-            q.RemoveAt(0);
-            SetTitle(string.Format("QUEUE /{0}/", q.Count));
-            if (!string.IsNullOrEmpty(title))
-            {
-                var p = await WikiData.GetPersonAsync(title);
-                await People.UpdateAsync(p);
-                if (Countries.IsExists(p.Country))
-                {
-
-                }
-                else if (!p.Country.IsNullOrEmpty())
-                {
-                    var c = await WikiData.GetCountryAsync(p.Country);
-                    await Countries.InsertAsync(c);
-                }
-                AppendPerson(p);
-                if (!await People.IsExistsAsync(p.Father))
-                {
-                    if (!p.Father.IsNullOrEmpty())
-                    {
-                        await People.InsertAsync(p.Father);
-                    }
-                }
-                if (!await People.IsExistsAsync(p.Mother))
-                {
-                    if (!p.Mother.IsNullOrEmpty())
-                    {
-                        await People.InsertAsync(p.Mother);
-                    }
-                }
-            }
-        }
-
-        private void ReloadQueue()
-        {
-            using (var db = new RelsDB())
-            {
-                var people = db.GetTable<Person>();
-                people.Where(p => p.Labels.Count == 0)
-                    .OrderBy(x => Guid.NewGuid())
-                    .ToList().ForEach(p => q.Add(p.WikiDataID));
-            }
-        }
-
-        private void AppendPerson(Person p)
-        {
-            if (peopleView.InvokeRequired)
-            {
-                peopleView.Invoke(new Action(() =>
-                {
-                    SetPerson(p);
-                }));
-            }
-            else
-            {
-                SetPerson(p);
-            }
-        }
-
-        private void SetPerson(Person p)
-        {
-            peopleView.BeginUpdate();
-            var item = peopleView.Items.Insert(0, p.WikiDataID);
-            item.SubItems.Add(p?.Labels?.Find(l => l.Language.StartsWith("en"))?.Value ?? "No Label defined");
-            item.SubItems.Add(p?.Labels?.Find(l => l.Language.StartsWith("ru"))?.Value ?? "No Label defined");
-            item.SubItems.Add(p?.DateOfBirth?.Substring(0, 11));
-            item.SubItems.Add(p?.DateOfDeath?.Substring(0, 11));
-            peopleView.EndUpdate();
-        }
-
-        private void SetTitle(string text)
-        {
-            if (this.InvokeRequired)
-            {
-                this.Invoke(new Action(() => { this.Text = text; }));
-            }
-            else
-            {
-                this.Text = text;
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -324,25 +232,9 @@ namespace rels
             }
         }
 
-        private async void peopleView_SelectedIndexChanged(object sender, EventArgs e)
+        private void peopleView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (peopleView.SelectedItems.Count > 0)
-            {
-                var wikiDataID = peopleView.SelectedItems[0].Text;
-                var p = await People.GetByWikiDataIDAsync(wikiDataID);
-                nameLabel.Text = p?.Labels?.Find(l => l.Language.StartsWith("en"))?.Value
-                    ?? p?.Labels?.First()?.Value;
-                nameFlag.Left = nameLabel.Left + nameLabel.Width + 4;
-                altNamesBox.Items.Clear();
-                p.Labels.ForEach(l => altNamesBox.Items.Add(l.Language + ": \t" + l.Value));
-                altNamesBox.SelectedIndex = 0;
-                pictureBox1.Image = await WikiMedia.GetMediaAsync(p.ImageFile).ConfigureAwait(true);
-                richTextBox1.Text = p?.Descriptions?.Where(d => d.Language.StartsWith("en"))?.FirstOrDefault()?.Value;
-                ancestorsView.Nodes.Clear();
-                var pNode = ancestorsView.Nodes.Add(p?.Labels?.Find(l => l.Language.StartsWith("en"))?.Value
-                    ?? p?.Labels?.First()?.Value);
-                pNode.Tag = wikiDataID;
-            }
+
         }
 
         private async void ancestorsView_AfterSelect(object sender, TreeViewEventArgs e)

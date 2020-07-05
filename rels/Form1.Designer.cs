@@ -33,12 +33,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.peopleView = new System.Windows.Forms.ListView();
-            this.wikiDataHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.nameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.rusHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.birthHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.deathHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.infoPage = new System.Windows.Forms.TabPage();
@@ -53,7 +47,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.infoPage.SuspendLayout();
@@ -120,57 +113,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // peopleView
-            // 
-            this.peopleView.BackColor = System.Drawing.SystemColors.Window;
-            this.peopleView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.wikiDataHeader,
-            this.nameHeader,
-            this.rusHeader,
-            this.birthHeader,
-            this.deathHeader});
-            this.peopleView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.peopleView.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.peopleView.FullRowSelect = true;
-            this.peopleView.GridLines = true;
-            this.peopleView.HideSelection = false;
-            this.peopleView.Location = new System.Drawing.Point(0, 0);
-            this.peopleView.MultiSelect = false;
-            this.peopleView.Name = "peopleView";
-            this.peopleView.ShowItemToolTips = true;
-            this.peopleView.Size = new System.Drawing.Size(672, 290);
-            this.peopleView.TabIndex = 3;
-            this.peopleView.UseCompatibleStateImageBehavior = false;
-            this.peopleView.View = System.Windows.Forms.View.Details;
-            this.peopleView.SelectedIndexChanged += new System.EventHandler(this.peopleView_SelectedIndexChanged);
-            // 
-            // wikiDataHeader
-            // 
-            this.wikiDataHeader.Text = "WikiDataID";
-            this.wikiDataHeader.Width = 85;
-            // 
-            // nameHeader
-            // 
-            this.nameHeader.Text = "Name";
-            this.nameHeader.Width = 180;
-            // 
-            // rusHeader
-            // 
-            this.rusHeader.Text = "Имя";
-            this.rusHeader.Width = 180;
-            // 
-            // birthHeader
-            // 
-            this.birthHeader.Text = "Birth";
-            this.birthHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.birthHeader.Width = 100;
-            // 
-            // deathHeader
-            // 
-            this.deathHeader.Text = "Death";
-            this.deathHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.deathHeader.Width = 100;
-            // 
             // splitContainer1
             // 
             this.splitContainer1.BackColor = System.Drawing.SystemColors.Window;
@@ -182,10 +124,6 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.tabControl1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.peopleView);
             this.splitContainer1.Size = new System.Drawing.Size(672, 588);
             this.splitContainer1.SplitterDistance = 294;
             this.splitContainer1.TabIndex = 4;
@@ -328,7 +266,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -346,13 +283,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView peopleView;
-        private System.Windows.Forms.ColumnHeader wikiDataHeader;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.ColumnHeader nameHeader;
-        private System.Windows.Forms.ColumnHeader rusHeader;
-        private System.Windows.Forms.ColumnHeader birthHeader;
-        private System.Windows.Forms.ColumnHeader deathHeader;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage infoPage;
         private System.Windows.Forms.TabPage ancestorsPage;

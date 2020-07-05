@@ -162,6 +162,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rels.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\RelsDB.cs" />
     <Compile Include="Model\WikiDataID.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,6 +173,7 @@
     <Compile Include="UI\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Workers\Updater.cs" />
     <Compile Include="Wiki\Wiki.cs" />
     <Compile Include="Wiki\WikiData.cs" />
     <Compile Include="Wiki\WikiFlags.cs" />
