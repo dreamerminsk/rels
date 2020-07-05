@@ -21,9 +21,7 @@ namespace rels
             InitializeComponent();
         }
 
-        //public Queue<string> q = new Queue<string>();
-
-        public List<string> q2 = new List<string>();
+        public List<string> q = new List<string>();
 
         private async void Form1_Load(object sender, EventArgs e)
         {
@@ -37,104 +35,19 @@ namespace rels
             {
                 Init.CREATE_SQL.ForEach(async sql => await db.ExecuteAsync(sql));
 
-                //People.Insert("Q638650");
-                //People.Insert("Q743509");//Aiko
-                //People.Insert("Q154045");//Alexei
-                //People.Insert("Q8423");
-                //People.Insert("Q37085");
-                //People.Insert("Q202266");
-                //People.Insert("Q317997");
-                //People.Insert("Q316221");
-                //People.Insert("Q357200");
-                //People.Insert("Q379718");
-                //People.Insert("Q497773");
-                //People.Insert("Q7990");
-                //People.Insert("Q44228");
-                //People.Insert("Q54049");
-                //People.Insert("Q54051");
-                //People.Insert("Q53435");
-                //People.Insert("Q9961");
-                //People.Insert("Q8462");
-                //People.Insert("Q208463");
-                //People.Insert("Q1660081");
-                //People.Insert("Q720");
-                //People.Insert("Q12591");
-                //People.Insert("Q156328");
-                //People.Insert("Q627980");
-                //People.Insert("Q294945");
-                //People.Insert("Q233224");
-                //People.Insert("Q260783");
-                //People.Insert("Q299428");
-                //People.Insert("Q271527");
-                //People.Insert("Q269265");
-                //People.Insert("Q212671");
-                //People.Insert("Q171977");
-                //People.Insert("Q243122");
-                //People.Insert("Q335658");
-                //People.Insert("Q309946");
-                //People.Insert("Q297086");
-                //People.Insert("Q12900494");
-                //People.Insert("Q200188");
-                //People.Insert("Q371319");
-                //People.Insert("Q37076");
-                //People.Insert("Q37088");
-                //People.Insert("Q157099");
-                //People.Insert("Q144565");
-                //People.Insert("Q7996");
-                //People.Insert("Q94941");
-                //People.Insert("Q335273");
-                //People.Insert("Q21932460");
-                //People.Insert("Q298263");
-                //People.Insert("Q680304");
-                //People.Insert("Q312938");
-                //People.Insert("Q151826");
-                //People.Insert("Q743509");
-                //People.Insert("Q313298");
-                //People.Insert("Q154045");
-                //People.Insert("Q57529");
-                //People.Insert("Q51068");
-                //People.Insert("Q2658842");
-                //People.Insert("Q6482148");
-                //People.Insert("Q105105");
-                //People.Insert("Q293626");
-                //People.Insert("Q2635189");
-                //People.Insert("Q4459448");
-                //People.Insert("Q4381410");
-                //People.Insert("Q315191");
-                //People.Insert("Q6079141");
-                //People.Insert("Q185152");
-                //People.Insert("Q1284160");
-                //People.Insert("Q1385871");
-                //People.Insert("Q165096");
-                //People.Insert("Q284750");
-                //People.Insert("Q212897");
-                //People.Insert("Q349440");
-                //People.Insert("Q37142");
-                //People.Insert("Q557896");
-                //People.Insert("Q560157");
-                //People.Insert("Q49765");
-                //People.Insert("Q379239");
-                //People.Insert("Q53448");
-                //People.Insert("Q110892");
-                //People.Insert("Q471885");
-                //People.Insert("Q174964");
-                //People.Insert("Q214559");
-                //People.Insert("Q320229");
-                //People.Insert("Q333603");
-
                 Random rnd = new Random(DateTime.Now.Millisecond);
                 var people = db.GetTable<Person>();
                 var listOf = people.Where(p => p.Labels.Count == 0).OrderBy(p => Guid.NewGuid()).ToList();
-                listOf.ForEach(p => q2.Add(p.WikiDataID));
+                listOf.ForEach(p => q.Add(p.WikiDataID));
             }
         }
 
         private async void ProcessPerson()
         {
-            if (q2.IsNullOrEmpty()) { ReloadQueue(); return; }
-            var title = q2[0];
-            q2.RemoveAt(0);
-            SetTitle(string.Format("QUEUE /{0}/", q2.Count));
+            if (q.IsNullOrEmpty()) { ReloadQueue(); return; }
+            var title = q[0];
+            q.RemoveAt(0);
+            SetTitle(string.Format("QUEUE /{0}/", q.Count));
             if (!string.IsNullOrEmpty(title))
             {
                 var p = await WikiData.GetPersonAsync(title);
@@ -173,7 +86,7 @@ namespace rels
                 var people = db.GetTable<Person>();
                 people.Where(p => p.Labels.Count == 0)
                     .OrderBy(x => Guid.NewGuid())
-                    .ToList().ForEach(p => q2.Add(p.WikiDataID));
+                    .ToList().ForEach(p => q.Add(p.WikiDataID));
             }
         }
 
