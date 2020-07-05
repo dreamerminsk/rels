@@ -36,7 +36,7 @@ namespace rels.Workers
             {
                 if (Interlocked.CompareExchange(ref isRunning, 1, 0) == 1) { return; }
                 var now = DateTime.Now;
-                MessageBox.Show(now.Subtract(started).TotalSeconds.ToString());
+                MessageBox.Show(Thread.CurrentThread.ManagedThreadId.ToString() + "\r\n" + now.Subtract(started).TotalSeconds.ToString());
                 started = now;
                 string title = null;
                 if (!q.TryDequeue(out title)) { ReloadQueue(); return; }

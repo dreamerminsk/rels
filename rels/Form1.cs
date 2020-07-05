@@ -10,6 +10,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reactive.Linq;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace rels
@@ -68,6 +69,7 @@ namespace rels
 
         private void SetCents(Dictionary<string, int> births, Dictionary<string, int> deaths)
         {
+            this.Text = Thread.CurrentThread.ManagedThreadId + "";
             listView1.BeginUpdate();
 
             if (listView1.Columns.Count != 3)
