@@ -27,7 +27,7 @@ namespace rels.Workers
 
         public void Start()
         {
-            Observable.Interval(TimeSpan.FromSeconds(10)).Subscribe(x => ProcessPerson());
+            Observable.Interval(TimeSpan.FromSeconds(1)).Subscribe(x => ProcessPerson());
         }
 
         private async void ProcessPerson()
@@ -36,13 +36,15 @@ namespace rels.Workers
             {
                 if (Interlocked.CompareExchange(ref isRunning, 1, 0) == 1) { return; }
                 var now = DateTime.Now;
-                MessageBox.Show(Thread.CurrentThread.ManagedThreadId.ToString() + "\r\n" + now.Subtract(started).TotalSeconds.ToString());
+                if (now.Subtract(started).TotalSeconds < 8)
+                {
+                    return;
+                }
                 started = now;
                 string title = null;
                 if (!q.TryDequeue(out title)) { ReloadQueue(); return; }
                 if (string.IsNullOrEmpty(title)) { return; }
                 var p = await WikiData.GetPersonAsync(title);
-                MessageBox.Show(p.WikiDataID);
                 await People.UpdateAsync(p);
                 if (Countries.IsExists(p.Country))
                 {
