@@ -1,6 +1,4 @@
 ﻿using LinqToDB.Data;
-using System;
-using System.Windows.Forms;
 
 namespace rels.Model
 {
@@ -14,7 +12,6 @@ namespace rels.Model
             if (!isInit)
             {
                 isInit = true;
-                MessageBox.Show("INIT " + DateTime.Now);
                 Init.CREATE_SQL.ForEach(async sql => await this.ExecuteAsync(sql));
             }
         }
