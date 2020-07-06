@@ -43,10 +43,27 @@ namespace rels.UI
             if (!node.Text.StartsWith("Q")) return;
             var p = await People.GetByWikiDataIDAsync(node.Text).ConfigureAwait(true);
             treeView1.BeginUpdate();
-            var labelNode = node.Nodes.Add("Labels");
-            p.Labels.ForEach(l => labelNode.Nodes.Add(string.Format("{0}: {1}", l.Language, l.Value)));
-            node.Nodes.Add(p.DateOfBirth);
-            node.Nodes.Add(p.DateOfDeath);
+            if (!p.Labels.IsNullOrEmpty())
+            {
+                var labelNode = node.Nodes.Add("Labels");
+                p.Labels.ForEach(l => labelNode.Nodes.Add(string.Format("{0}: {1}", l.Language, l.Value)));
+            }
+            if (!p.DateOfBirth.IsNullOrEmpty())
+            {
+                node.Nodes.Add(string.Format("b. {0}", p.DateOfBirth.Substring(0, 11)));
+            }
+            if (!p.DateOfDeath.IsNullOrEmpty())
+            {
+                node.Nodes.Add(string.Format("d. {0}", p.DateOfDeath.Substring(0, 11)));
+            }
+            if (p.Father!=null)
+            {
+                node.Nodes.Add(p.Father);
+            }
+            if (p.Mother != null)
+            {
+                node.Nodes.Add(p.Mother);
+            }
             treeView1.EndUpdate();
             node.ExpandAll();
         }

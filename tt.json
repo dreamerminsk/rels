@@ -1,620 +1,519 @@
 {
 	"entities": {
-		"Q134309": {
-			"pageid": 136055,
+		"Q8058": {
+			"pageid": 9335,
 			"ns": 0,
-			"title": "Q134309",
-			"lastrevid": 1202104065,
-			"modified": "2020-06-08T10:29:55Z",
+			"title": "Q8058",
+			"lastrevid": 1216648618,
+			"modified": "2020-06-26T01:07:45Z",
 			"type": "item",
-			"id": "Q134309",
+			"id": "Q8058",
 			"labels": {
-				"zh-hans": {
-					"language": "zh-hans",
-					"value": "\u67e5\u7406\u4e5d\u4e16"
-				},
-				"zh-hant": {
-					"language": "zh-hant",
-					"value": "\u67e5\u7406\u4e5d\u4e16"
-				},
-				"zh-hk": {
-					"language": "zh-hk",
-					"value": "\u67e5\u7406\u4e5d\u4e16"
-				},
-				"zh-cn": {
-					"language": "zh-cn",
-					"value": "\u67e5\u7406\u4e5d\u4e16"
-				},
-				"zh-sg": {
-					"language": "zh-sg",
-					"value": "\u67e5\u7406\u4e5d\u4e16"
-				},
-				"zh-tw": {
-					"language": "zh-tw",
-					"value": "\u67e5\u7406\u4e5d\u4e16"
-				},
-				"eu": {
-					"language": "eu",
-					"value": "Karlos IX.a Frantziakoa"
-				},
-				"pl": {
-					"language": "pl",
-					"value": "Karol IX Walezjusz"
-				},
-				"bs": {
-					"language": "bs",
-					"value": "Karlo IX, kralj Francuske"
-				},
-				"es": {
-					"language": "es",
-					"value": "Carlos IX de Francia"
-				},
-				"oc": {
-					"language": "oc",
-					"value": "Carles IX de Fran\u00e7a"
-				},
-				"ms": {
-					"language": "ms",
-					"value": "Charles IX dari Perancis"
-				},
-				"hu": {
-					"language": "hu",
-					"value": "IX. K\u00e1roly francia kir\u00e1ly"
-				},
-				"et": {
-					"language": "et",
-					"value": "Charles IX"
-				},
-				"br": {
-					"language": "br",
-					"value": "Charlez IX"
-				},
-				"el": {
-					"language": "el",
-					"value": "\u039a\u03ac\u03c1\u03bf\u03bb\u03bf\u03c2 \u0398\u0384 \u03c4\u03b7\u03c2 \u0393\u03b1\u03bb\u03bb\u03af\u03b1\u03c2"
-				},
-				"sv": {
-					"language": "sv",
-					"value": "Karl IX av Frankrike"
-				},
-				"nl": {
-					"language": "nl",
-					"value": "Karel IX van Frankrijk"
-				},
-				"ar": {
-					"language": "ar",
-					"value": "\u0634\u0627\u0631\u0644 \u0627\u0644\u062a\u0627\u0633\u0639 \u0645\u0644\u0643 \u0641\u0631\u0646\u0633\u0627"
-				},
-				"pt": {
-					"language": "pt",
-					"value": "Carlos IX de Fran\u00e7a"
-				},
-				"is": {
-					"language": "is",
-					"value": "Karl 9. Frakkakonungur"
-				},
-				"eo": {
-					"language": "eo",
-					"value": "Karlo la 9-a"
-				},
-				"ru": {
-					"language": "ru",
-					"value": "\u041a\u0430\u0440\u043b IX"
-				},
-				"sr-el": {
-					"language": "sr-el",
-					"value": "\u0160arl IX Valoa"
-				},
-				"sr-ec": {
-					"language": "sr-ec",
-					"value": "\u0428\u0430\u0440\u043b IX \u0412\u0430\u043b\u043e\u0430"
-				},
-				"mk": {
-					"language": "mk",
-					"value": "\u0428\u0430\u0440\u043b IX"
-				},
-				"fi": {
-					"language": "fi",
-					"value": "Kaarle IX"
-				},
-				"uk": {
-					"language": "uk",
-					"value": "\u041a\u0430\u0440\u043b IX \u0412\u0430\u043b\u0443\u0430"
-				},
-				"az": {
-					"language": "az",
-					"value": "IX Karl"
-				},
-				"hr": {
-					"language": "hr",
-					"value": "Karlo IX., kralj Francuske"
-				},
-				"an": {
-					"language": "an",
-					"value": "Carlos IX de Francia"
-				},
-				"da": {
-					"language": "da",
-					"value": "Karl 9. af Frankrig"
-				},
-				"he": {
-					"language": "he",
-					"value": "\u05e9\u05d0\u05e8\u05dc \u05d4\u05ea\u05e9\u05d9\u05e2\u05d9, \u05de\u05dc\u05da \u05e6\u05e8\u05e4\u05ea"
-				},
-				"ko": {
-					"language": "ko",
-					"value": "\uc0e4\ub97c 9\uc138"
-				},
-				"be": {
-					"language": "be",
-					"value": "\u041a\u0430\u0440\u043b IX \u0412\u0430\u043b\u0443\u0430"
-				},
 				"fr": {
 					"language": "fr",
-					"value": "Charles IX"
-				},
-				"yo": {
-					"language": "yo",
-					"value": "Charles 9k il\u1eb9\u0300 Fr\u00e1ns\u00ec"
-				},
-				"it": {
-					"language": "it",
-					"value": "Carlo IX di Francia"
-				},
-				"de": {
-					"language": "de",
-					"value": "Karl IX."
-				},
-				"id": {
-					"language": "id",
-					"value": "Charles IX dari Perancis"
-				},
-				"ja": {
-					"language": "ja",
-					"value": "\u30b7\u30e3\u30eb\u30eb9\u4e16"
-				},
-				"vi": {
-					"language": "vi",
-					"value": "Charles IX c\u1ee7a Ph\u00e1p"
+					"value": "Louis XI de France"
 				},
 				"en": {
 					"language": "en",
-					"value": "Charles IX of France"
-				},
-				"scn": {
-					"language": "scn",
-					"value": "Carlu IX di Francia"
-				},
-				"sk": {
-					"language": "sk",
-					"value": "Karol IX."
-				},
-				"ro": {
-					"language": "ro",
-					"value": "Carol al IX-lea al Fran\u021bei"
-				},
-				"th": {
-					"language": "th",
-					"value": "\u0e1e\u0e23\u0e30\u0e40\u0e08\u0e49\u0e32\u0e0a\u0e32\u0e23\u0e4c\u0e25\u0e17\u0e35\u0e48 9 \u0e41\u0e2b\u0e48\u0e07\u0e1d\u0e23\u0e31\u0e48\u0e07\u0e40\u0e28\u0e2a"
-				},
-				"ca": {
-					"language": "ca",
-					"value": "Carles IX de Fran\u00e7a"
-				},
-				"la": {
-					"language": "la",
-					"value": "Carolus IX"
-				},
-				"cy": {
-					"language": "cy",
-					"value": "Siarl IX, brenin Ffrainc"
-				},
-				"sl": {
-					"language": "sl",
-					"value": "Karel IX. Francoski"
-				},
-				"cs": {
-					"language": "cs",
-					"value": "Karel IX. Francouzsk\u00fd"
-				},
-				"mr": {
-					"language": "mr",
-					"value": "\u0928\u0935\u0935\u093e \u0936\u093e\u0930\u094d\u0932"
-				},
-				"fa": {
-					"language": "fa",
-					"value": "\u0634\u0627\u0631\u0644 \u0646\u0647\u0645"
-				},
-				"bg": {
-					"language": "bg",
-					"value": "\u0428\u0430\u0440\u043b IX"
-				},
-				"ka": {
-					"language": "ka",
-					"value": "\u10e8\u10d0\u10e0\u10da IX"
-				},
-				"lt": {
-					"language": "lt",
-					"value": "Karolis IX Maksimilijonas"
-				},
-				"sr": {
-					"language": "sr",
-					"value": "\u0428\u0430\u0440\u043b IX \u0412\u0430\u043b\u043e\u0430"
-				},
-				"sh": {
-					"language": "sh",
-					"value": "Charles IX od Francuske"
-				},
-				"zh": {
-					"language": "zh",
-					"value": "\u67e5\u7406\u4e5d\u4e16"
-				},
-				"pt-br": {
-					"language": "pt-br",
-					"value": "Carlos IX da Fran\u00e7a"
+					"value": "Louis XI of France"
 				},
 				"nb": {
 					"language": "nb",
-					"value": "Karl IX av Frankrike"
+					"value": "Ludvig XI av Frankrike"
 				},
-				"hy": {
-					"language": "hy",
-					"value": "\u0547\u0561\u057c\u056c IX"
-				},
-				"tr": {
-					"language": "tr",
-					"value": "IX. Charles"
-				},
-				"de-ch": {
-					"language": "de-ch",
-					"value": "Karl IX."
-				},
-				"en-ca": {
-					"language": "en-ca",
-					"value": "Charles IX of France"
-				},
-				"en-gb": {
-					"language": "en-gb",
-					"value": "Charles IX of France"
-				},
-				"sco": {
-					"language": "sco",
-					"value": "Charles IX o Fraunce"
-				},
-				"lb": {
-					"language": "lb",
-					"value": "Charles IX. vu Frankr\u00e4ich"
-				},
-				"nan": {
-					"language": "nan",
-					"value": "Charles 9-s\u00e8"
-				},
-				"yue": {
-					"language": "yue",
-					"value": "\u67e5\u7406\u4e5d\u4e16"
-				},
-				"azb": {
-					"language": "azb",
-					"value": "\u062f\u0648\u0652\u06a9\u0648\u0632\u0648\u0646\u062c\u0648 \u0634\u0627\u0631\u0644"
-				},
-				"io": {
-					"language": "io",
-					"value": "Charles la 9ma di Francia"
-				}
-			},
-			"descriptions": {
-				"pt-br": {
-					"language": "pt-br",
-					"value": "Rei da Fran\u00e7a"
+				"ca": {
+					"language": "ca",
+					"value": "Llu\u00eds XI de Fran\u00e7a"
 				},
 				"de": {
 					"language": "de",
-					"value": "K\u00f6nig von Frankreich (1560\u20131574)"
+					"value": "Ludwig XI."
 				},
-				"pl": {
-					"language": "pl",
-					"value": "kr\u00f3l Francji"
+				"an": {
+					"language": "an",
+					"value": "Lo\u00eds XI de Francia"
 				},
-				"fr": {
-					"language": "fr",
-					"value": "roi de France (1560-1574)"
+				"ar": {
+					"language": "ar",
+					"value": "\u0644\u0648\u064a\u0633 \u0627\u0644\u062d\u0627\u062f\u064a \u0639\u0634\u0631 \u0645\u0644\u0643 \u0641\u0631\u0646\u0633\u0627"
 				},
-				"tr": {
-					"language": "tr",
-					"value": "IX. Charles"
+				"be": {
+					"language": "be",
+					"value": "\u041b\u044e\u0434\u043e\u0432\u0456\u043a XI"
 				},
-				"ru": {
-					"language": "ru",
-					"value": "\u043a\u043e\u0440\u043e\u043b\u044c \u0424\u0440\u0430\u043d\u0446\u0438\u0438 \u0432 1560\u20141574 \u0433\u043e\u0434\u0430\u0445"
+				"bg": {
+					"language": "bg",
+					"value": "\u041b\u0443\u0438 XI"
 				},
-				"en": {
-					"language": "en",
-					"value": "King of France"
+				"br": {
+					"language": "br",
+					"value": "Loeiz XI"
 				},
-				"it": {
-					"language": "it",
-					"value": "sovrano francese della dinastia dei Valois"
+				"bs": {
+					"language": "bs",
+					"value": "Luj XI, kralj Francuske"
+				},
+				"cs": {
+					"language": "cs",
+					"value": "Ludv\u00edk XI."
+				},
+				"cy": {
+					"language": "cy",
+					"value": "Louis XI, brenin Ffrainc"
+				},
+				"da": {
+					"language": "da",
+					"value": "Ludvig 11. af Frankrig"
+				},
+				"el": {
+					"language": "el",
+					"value": "\u039b\u03bf\u03c5\u03b4\u03bf\u03b2\u03af\u03ba\u03bf\u03c2 \u0399\u0391\u0384 \u03c4\u03b7\u03c2 \u0393\u03b1\u03bb\u03bb\u03af\u03b1\u03c2"
+				},
+				"en-ca": {
+					"language": "en-ca",
+					"value": "Louis XI of France"
+				},
+				"en-gb": {
+					"language": "en-gb",
+					"value": "Louis XI of France"
+				},
+				"eo": {
+					"language": "eo",
+					"value": "Ludoviko la 11-a"
 				},
 				"es": {
 					"language": "es",
-					"value": "Rey de Francia de 1560 a 1574"
+					"value": "Luis XI"
+				},
+				"et": {
+					"language": "et",
+					"value": "Louis XI"
+				},
+				"eu": {
+					"language": "eu",
+					"value": "Luis XI.a Frantziakoa"
+				},
+				"fa": {
+					"language": "fa",
+					"value": "\u0644\u0648\u06cc\u06cc \u06cc\u0627\u0632\u062f\u0647\u0645"
+				},
+				"fi": {
+					"language": "fi",
+					"value": "Ludvig XI"
+				},
+				"fy": {
+					"language": "fy",
+					"value": "Loadewyk XI fan Frankryk"
+				},
+				"gl": {
+					"language": "gl",
+					"value": "Lu\u00eds XI de Francia"
+				},
+				"he": {
+					"language": "he",
+					"value": "\u05dc\u05d5\u05d0\u05d9 \u05d4\u05d0\u05d7\u05d3 \u05e2\u05e9\u05e8, \u05de\u05dc\u05da \u05e6\u05e8\u05e4\u05ea"
+				},
+				"hr": {
+					"language": "hr",
+					"value": "Luj XI., kralj Francuske"
+				},
+				"hu": {
+					"language": "hu",
+					"value": "XI. Lajos francia kir\u00e1ly"
+				},
+				"io": {
+					"language": "io",
+					"value": "Louis 11ma"
+				},
+				"it": {
+					"language": "it",
+					"value": "Luigi XI di Francia"
+				},
+				"ja": {
+					"language": "ja",
+					"value": "\u30eb\u30a411\u4e16"
+				},
+				"ka": {
+					"language": "ka",
+					"value": "\u10da\u10e3\u10d8 XI"
+				},
+				"ko": {
+					"language": "ko",
+					"value": "\ub8e8\uc774 11\uc138"
+				},
+				"la": {
+					"language": "la",
+					"value": "Ludovicus XI"
+				},
+				"lt": {
+					"language": "lt",
+					"value": "Liudvikas XI"
+				},
+				"mk": {
+					"language": "mk",
+					"value": "\u041b\u0443\u0458 XI"
+				},
+				"mr": {
+					"language": "mr",
+					"value": "\u0905\u0915\u0930\u093e\u0935\u093e \u0932\u0941\u0908, \u092b\u094d\u0930\u093e\u0928\u094d\u0938"
+				},
+				"nl": {
+					"language": "nl",
+					"value": "Lodewijk XI van Frankrijk"
+				},
+				"nn": {
+					"language": "nn",
+					"value": "Ludvig XI av Frankrike"
+				},
+				"oc": {
+					"language": "oc",
+					"value": "Lo\u00eds XI de Fran\u00e7a"
+				},
+				"pl": {
+					"language": "pl",
+					"value": "Ludwik XI"
 				},
 				"pt": {
 					"language": "pt",
-					"value": "Rei da Fran\u00e7a"
+					"value": "Lu\u00eds XI de Fran\u00e7a"
+				},
+				"pt-br": {
+					"language": "pt-br",
+					"value": "Lu\u00eds XI de Fran\u00e7a"
+				},
+				"ro": {
+					"language": "ro",
+					"value": "Ludovic al XI-lea al Fran\u021bei"
+				},
+				"ru": {
+					"language": "ru",
+					"value": "\u041b\u044e\u0434\u043e\u0432\u0438\u043a XI"
+				},
+				"scn": {
+					"language": "scn",
+					"value": "Luiggi XI"
+				},
+				"sk": {
+					"language": "sk",
+					"value": "\u013dudov\u00edt XI."
+				},
+				"sr": {
+					"language": "sr",
+					"value": "\u041b\u0443\u0458 XI"
+				},
+				"sv": {
+					"language": "sv",
+					"value": "Ludvig XI av Frankrike"
+				},
+				"th": {
+					"language": "th",
+					"value": "\u0e1e\u0e23\u0e30\u0e40\u0e08\u0e49\u0e32\u0e2b\u0e25\u0e38\u0e22\u0e2a\u0e4c\u0e17\u0e35\u0e48 11 \u0e41\u0e2b\u0e48\u0e07\u0e1d\u0e23\u0e31\u0e48\u0e07\u0e40\u0e28\u0e2a"
+				},
+				"tl": {
+					"language": "tl",
+					"value": "Louis XI ng Pransya"
+				},
+				"uk": {
+					"language": "uk",
+					"value": "\u041b\u044e\u0434\u043e\u0432\u0438\u043a XI"
+				},
+				"vi": {
+					"language": "vi",
+					"value": "Louis XI c\u1ee7a Ph\u00e1p"
+				},
+				"yo": {
+					"language": "yo",
+					"value": "Louis 11k il\u1eb9\u0300 Fr\u00e1ns\u00ec"
+				},
+				"zh": {
+					"language": "zh",
+					"value": "\u8def\u6613\u5341\u4e00"
+				},
+				"de-ch": {
+					"language": "de-ch",
+					"value": "Ludwig XI."
+				},
+				"id": {
+					"language": "id",
+					"value": "Louis XI dari Perancis"
+				},
+				"mg": {
+					"language": "mg",
+					"value": "Louis XI"
+				},
+				"sh": {
+					"language": "sh",
+					"value": "Luj XI."
+				},
+				"tr": {
+					"language": "tr",
+					"value": "XI. Louis"
+				},
+				"hy": {
+					"language": "hy",
+					"value": "\u053c\u0575\u0578\u0582\u0564\u0578\u057e\u056b\u056f\u0578\u057d XI"
+				},
+				"sl": {
+					"language": "sl",
+					"value": "Ludvik XI. Francoski"
+				},
+				"lv": {
+					"language": "lv",
+					"value": "Luijs XI"
+				},
+				"sco": {
+					"language": "sco",
+					"value": "Louis XI o Fraunce"
+				},
+				"nan": {
+					"language": "nan",
+					"value": "Louis 11-s\u00e8"
+				},
+				"is": {
+					"language": "is",
+					"value": "Lo\u00f0v\u00edk 11. Frakkakonungur"
+				},
+				"azb": {
+					"language": "azb",
+					"value": "\u0627\u0648\u0652\u0646\u200c\u0628\u06cc\u0631\u06cc\u0646\u062c\u06cc \u0644\u0648\u06cc\u06cc"
+				},
+				"ast": {
+					"language": "ast",
+					"value": "Lluis XI de Francia"
+				},
+				"wuu": {
+					"language": "wuu",
+					"value": "\u8def\u6613\u5341\u4e00"
+				},
+				"be-tarask": {
+					"language": "be-tarask",
+					"value": "\u041b\u044e\u0434\u043e\u0432\u0456\u043a \u0425\u0406"
+				},
+				"zh-tw": {
+					"language": "zh-tw",
+					"value": "\u8def\u6613\u5341\u4e00"
+				},
+				"nrm": {
+					"language": "nrm",
+					"value": "Louis XI de Fraunce"
+				},
+				"uz": {
+					"language": "uz",
+					"value": "Lyudovik XI"
+				},
+				"be-x-old": {
+					"language": "be-x-old",
+					"value": "\u041b\u044e\u0434\u043e\u0432\u0456\u043a \u0425\u0406"
+				},
+				"no": {
+					"language": "no",
+					"value": "Ludvig XI av Frankrike"
+				},
+				"simple": {
+					"language": "simple",
+					"value": "Louis XI of France"
+				},
+				"zh-min-nan": {
+					"language": "zh-min-nan",
+					"value": "Louis 11-s\u00e8"
+				}
+			},
+			"descriptions": {
+				"fr": {
+					"language": "fr",
+					"value": "roi de France de 1461 \u00e0 1483"
+				},
+				"en": {
+					"language": "en",
+					"value": "king of France from 1461 to 1483"
+				},
+				"nb": {
+					"language": "nb",
+					"value": "konge"
+				},
+				"ca": {
+					"language": "ca",
+					"value": "Rei de Fran\u00e7a (1423-1483)"
+				},
+				"es": {
+					"language": "es",
+					"value": "rey de Francia"
+				},
+				"de": {
+					"language": "de",
+					"value": "K\u00f6nig von Frankreich"
+				},
+				"it": {
+					"language": "it",
+					"value": "re di Francia"
+				},
+				"tr": {
+					"language": "tr",
+					"value": "XI. Louis"
+				},
+				"fa": {
+					"language": "fa",
+					"value": "\u06a9\u0634\u06cc\u0634 \u0641\u0631\u0627\u0646\u0633\u0648\u06cc"
+				},
+				"lv": {
+					"language": "lv",
+					"value": "Francijas karalis no 1461. l\u012bdz 1483. gadam"
+				},
+				"nl": {
+					"language": "nl",
+					"value": "Frans koning (1423-1483)"
+				},
+				"he": {
+					"language": "he",
+					"value": "\u05e4\u05d5\u05dc\u05d9\u05d8\u05d9\u05e7\u05d0\u05d9 \u05e6\u05e8\u05e4\u05ea\u05d9"
+				},
+				"el": {
+					"language": "el",
+					"value": "\u03b2\u03b1\u03c3\u03b9\u03bb\u03b9\u03ac\u03c2 \u03c4\u03b7\u03c2 \u0393\u03b1\u03bb\u03bb\u03af\u03b1\u03c2 (1461-1483)"
+				},
+				"ru": {
+					"language": "ru",
+					"value": "\u043a\u043e\u0440\u043e\u043b\u044c \u0424\u0440\u0430\u043d\u0446\u0438\u0438 \u0432 1461\u20141483 \u0433\u043e\u0434\u0430\u0445 \u0438\u0437 \u0434\u0438\u043d\u0430\u0441\u0442\u0438\u0438 \u0412\u0430\u043b\u0443\u0430"
+				},
+				"ar": {
+					"language": "ar",
+					"value": "\u0633\u064a\u0627\u0633\u064a \u0641\u0631\u0646\u0633\u064a"
 				},
 				"cs": {
 					"language": "cs",
 					"value": "francouzsk\u00fd kr\u00e1l"
 				},
-				"sv": {
-					"language": "sv",
-					"value": "kung av Frankrike fr\u00e5n 1560 till 1574"
+				"hu": {
+					"language": "hu",
+					"value": "Franciaorsz\u00e1g kir\u00e1lya"
 				},
 				"ast": {
 					"language": "ast",
-					"value": "soberanu franc\u00e9s (1550\u20131574)"
+					"value": "pol\u00edticu franc\u00e9s (1423\u20131483)"
 				},
-				"nl": {
-					"language": "nl",
-					"value": "Frans soeverein (1550-1574)"
+				"sv": {
+					"language": "sv",
+					"value": "fransk politiker"
 				},
-				"nb": {
-					"language": "nb",
-					"value": "konge av Frankrike"
+				"pt": {
+					"language": "pt",
+					"value": "Rei da Fran\u00e7a"
 				},
-				"fa": {
-					"language": "fa",
-					"value": "\u067e\u0627\u062f\u0634\u0627\u0647 \u0641\u0631\u0627\u0646\u0633\u0647"
+				"zh-tw": {
+					"language": "zh-tw",
+					"value": "\u570b\u738b"
 				},
-				"el": {
-					"language": "el",
-					"value": "\u0392\u03b1\u03c3\u03b9\u03bb\u03b9\u03ac\u03c2 \u03c4\u03b7\u03c2 \u0393\u03b1\u03bb\u03bb\u03af\u03b1\u03c2"
+				"gl": {
+					"language": "gl",
+					"value": "pol\u00edtico franc\u00e9s"
+				},
+				"eu": {
+					"language": "eu",
+					"value": "politikari frantziarra"
+				},
+				"pl": {
+					"language": "pl",
+					"value": "Kr\u00f3l Francji"
 				}
 			},
 			"aliases": {
-				"eu": [
+				"fr": [
 					{
-						"language": "eu",
-						"value": "Frantziako Charles IX.a"
+						"language": "fr",
+						"value": "Louis le Prudent"
 					},
 					{
-						"language": "eu",
-						"value": "Frantziako Karlos IX.a"
+						"language": "fr",
+						"value": "L'universelle aragne"
 					},
 					{
-						"language": "eu",
-						"value": "Charles IX.a Frantziakoa"
-					}
-				],
-				"pl": [
-					{
-						"language": "pl",
-						"value": "Karol IX"
-					}
-				],
-				"bs": [
-					{
-						"language": "bs",
-						"value": "Karlo IX Francuski"
-					}
-				],
-				"es": [
-					{
-						"language": "es",
-						"value": "Carlos IX"
-					}
-				],
-				"el": [
-					{
-						"language": "el",
-						"value": "\u039a\u03ac\u03c1\u03bf\u03bb\u03bf\u03c2 \u0398' \u03c4\u03b7\u03c2 \u0393\u03b1\u03bb\u03bb\u03af\u03b1\u03c2"
-					}
-				],
-				"sv": [
-					{
-						"language": "sv",
-						"value": "Karl 09 av Frankrike"
-					}
-				],
-				"ar": [
-					{
-						"language": "ar",
-						"value": "\u0634\u0627\u0631\u0644 \u0627\u0644\u062a\u0627\u0633\u0639"
-					}
-				],
-				"pt": [
-					{
-						"language": "pt",
-						"value": "Carlos IX"
-					}
-				],
-				"ru": [
-					{
-						"language": "ru",
-						"value": "\u041a\u0430\u0440\u043b IX \u0412\u0430\u043b\u0443\u0430"
-					},
-					{
-						"language": "ru",
-						"value": "\u0428\u0430\u0440\u043b\u044c IX"
-					},
-					{
-						"language": "ru",
-						"value": "\u041a\u0430\u0440\u043b IX \u0424\u0440\u0430\u043d\u0446\u0443\u0437\u0441\u043a\u0438\u0439"
-					}
-				],
-				"sr": [
-					{
-						"language": "sr",
-						"value": "\u0428\u0430\u0440\u043b IX \u043e\u0434 \u0424\u0440\u0430\u043d\u0446\u0443\u0441\u043a\u0435"
-					},
-					{
-						"language": "sr",
-						"value": "Charles IX de France"
-					},
-					{
-						"language": "sr",
-						"value": "\u0428\u0430\u0440\u043b \u0414\u0435\u0432\u0435\u0442\u0438"
-					},
-					{
-						"language": "sr",
-						"value": "\u0428\u0430\u0440\u043b IX"
-					}
-				],
-				"uk": [
-					{
-						"language": "uk",
-						"value": "\u041a\u0430\u0440\u043b IX"
-					},
-					{
-						"language": "uk",
-						"value": "\u041a\u0430\u0440\u043b IX \u0424\u0440\u0430\u043d\u0446\u0443\u0437\u044c\u043a\u0438\u0439"
-					}
-				],
-				"he": [
-					{
-						"language": "he",
-						"value": "\u05e9\u05d0\u05e8\u05dc \u05d4\u05ea\u05e9\u05d9\u05e2\u05d9 \u05de\u05dc\u05da \u05e6\u05e8\u05e4\u05ea"
-					},
-					{
-						"language": "he",
-						"value": "\u05e9\u05d0\u05e8\u05dc \u05d4\u05ea\u05e9\u05d9\u05e2\u05d9"
-					}
-				],
-				"ko": [
-					{
-						"language": "ko",
-						"value": "\ud504\ub791\uc2a4\uc758 \uc0e4\ub97c 9\uc138"
-					}
-				],
-				"be": [
-					{
-						"language": "be",
-						"value": "\u041a\u0430\u0440\u043b IX, \u043a\u0430\u0440\u043e\u043b\u044c \u0424\u0440\u0430\u043d\u0446\u044b\u0456"
-					}
-				],
-				"yo": [
-					{
-						"language": "yo",
-						"value": "Charles IX of France"
-					},
-					{
-						"language": "yo",
-						"value": "Charles IX il\u1eb9\u0300 Fr\u00e1ns\u00ec"
-					}
-				],
-				"id": [
-					{
-						"language": "id",
-						"value": "Charles IX"
-					},
-					{
-						"language": "id",
-						"value": "Charles IX Valois"
-					}
-				],
-				"ro": [
-					{
-						"language": "ro",
-						"value": "Carol al ix-lea al fran\u0163ei"
-					}
-				],
-				"th": [
-					{
-						"language": "th",
-						"value": "Charles IX of France"
-					},
-					{
-						"language": "th",
-						"value": "\u0e1e\u0e23\u0e30\u0e40\u0e08\u0e49\u0e32\u0e0a\u0e32\u0e25\u0e2a\u0e4c\u0e17\u0e35\u0e48 9 \u0e41\u0e2b\u0e48\u0e07\u0e1d\u0e23\u0e31\u0e48\u0e07\u0e40\u0e28\u0e2a"
-					},
-					{
-						"language": "th",
-						"value": "\u0e1e\u0e23\u0e30\u0e40\u0e08\u0e49\u0e32\u0e0a\u0e32\u0e23\u0e4c\u0e25\u0e2a\u0e4c\u0e17\u0e35\u0e48 9 \u0e41\u0e2b\u0e48\u0e07\u0e1d\u0e23\u0e31\u0e48\u0e07\u0e40\u0e28\u0e2a"
+						"language": "fr",
+						"value": "Louis XI"
 					}
 				],
 				"ca": [
 					{
 						"language": "ca",
-						"value": "Carles III d'Orleans"
+						"value": "Llu\u00eds el Prudent"
 					},
 					{
 						"language": "ca",
-						"value": "Carles IX"
+						"value": "L'aranya universal"
 					}
 				],
-				"cy": [
+				"pl": [
 					{
-						"language": "cy",
-						"value": "Siarl IX o Ffrainc"
-					}
-				],
-				"cs": [
-					{
-						"language": "cs",
-						"value": "Karel IX."
-					}
-				],
-				"mr": [
-					{
-						"language": "mr",
-						"value": "\u091a\u093e\u0930\u094d\u0932\u094d\u0938 \u0928\u0935\u0935\u093e"
-					},
-					{
-						"language": "mr",
-						"value": "\u091a\u093e\u0930\u094d\u0932\u094d\u0938-\u092e\u0945\u0915\u094d\u0938\u093f\u092e\u093f\u0932\u093f\u092f\u0947\u0902"
-					},
-					{
-						"language": "mr",
-						"value": "\u0928\u0935\u0935\u093e \u091a\u093e\u0930\u094d\u0932\u094d\u0938"
-					}
-				],
-				"ka": [
-					{
-						"language": "ka",
-						"value": "\u10d9\u10d0\u10e0\u10da\u10dd\u10e1 IX"
-					}
-				],
-				"pt-br": [
-					{
-						"language": "pt-br",
-						"value": "Carlos Maximiliano"
+						"language": "pl",
+						"value": "Ludwik XI Walezjusz"
 					}
 				],
 				"en": [
 					{
 						"language": "en",
-						"value": "Charles IX"
+						"value": "King Louis XI"
 					},
 					{
 						"language": "en",
-						"value": "Charles IX King of France"
-					}
-				],
-				"it": [
-					{
-						"language": "it",
-						"value": "Carlo IX di Valois"
+						"value": "Louis the Prudent"
 					},
 					{
-						"language": "it",
-						"value": "Carlo Massimiliano di Francia"
+						"language": "en",
+						"value": "Louis XI"
+					},
+					{
+						"language": "en",
+						"value": "King of France Louis XI"
 					}
 				],
-				"nl": [
+				"el": [
 					{
-						"language": "nl",
-						"value": "Charles IX"
+						"language": "el",
+						"value": "\u039b\u03bf\u03c5\u03b4\u03bf\u03b2\u03af\u03ba\u03bf\u03c2 \u0399\u0391\u0384 \u03bf \u03a3\u03c5\u03bd\u03b5\u03c4\u03cc\u03c2"
 					}
 				],
-				"da": [
+				"es": [
 					{
-						"language": "da",
-						"value": "Karl IX"
+						"language": "es",
+						"value": "rey de Francia Louis XI"
 					}
 				]
 			},
 			"claims": {
+				"P735": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P735",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 2897866,
+									"id": "Q2897866"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"qualifiers": {
+							"P7338": [
+								{
+									"snaktype": "value",
+									"property": "P7338",
+									"hash": "e33905fe634518acf7dc4cb7b42aa0958c96e356",
+									"datavalue": {
+										"value": "XI",
+										"type": "string"
+									},
+									"datatype": "string"
+								}
+							]
+						},
+						"qualifiers-order": [ "P7338" ],
+						"id": "Q8058$700728df-4fbe-229d-e689-85cbba08382d",
+						"rank": "normal"
+					}
+				],
 				"P21": [
 					{
 						"mainsnak": {
@@ -631,7 +530,7 @@
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "q134309$7EE0266A-CF2F-4B54-B0B9-2104AF84B3C8",
+						"id": "q8058$AFCC058B-F855-41BB-A7F8-95DDAD93E7A7",
 						"rank": "normal",
 						"references": [
 							{
@@ -653,12 +552,10 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P143"
-								]
+								"snaks-order": [ "P143" ]
 							},
 							{
-								"hash": "274565d7568c32a4ecb6b04d940e94ee9bcb90b8",
+								"hash": "abc9457dcf728dd069b8ed5b2e1a86035cf2b679",
 								"snaks": {
 									"P248": [
 										{
@@ -681,7 +578,7 @@
 											"property": "P813",
 											"datavalue": {
 												"value": {
-													"time": "+2014-04-26T00:00:00Z",
+													"time": "+2014-04-09T00:00:00Z",
 													"timezone": 0,
 													"before": 0,
 													"after": 0,
@@ -694,33 +591,7 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248",
-									"P813"
-								]
-							},
-							{
-								"hash": "e6596ed0d2b81634d4a2b94f1bd23a5d26a198cf",
-								"snaks": {
-									"P248": [
-										{
-											"snaktype": "value",
-											"property": "P248",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 75653886,
-													"id": "Q75653886"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									]
-								},
-								"snaks-order": [
-									"P248"
-								]
+								"snaks-order": [ "P248", "P813" ]
 							}
 						]
 					}
@@ -733,15 +604,15 @@
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 132545,
-									"id": "Q132545"
+									"numeric-id": 133372,
+									"id": "Q133372"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "q134309$92137684-5493-418A-A70B-1355B475BD40",
+						"id": "q8058$31304273-5D19-4EF6-9594-C393D0DEFF14",
 						"rank": "normal",
 						"references": [
 							{
@@ -763,9 +634,7 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248"
-								]
+								"snaks-order": [ "P248" ]
 							}
 						]
 					}
@@ -778,15 +647,15 @@
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 131552,
-									"id": "Q131552"
+									"numeric-id": 231453,
+									"id": "Q231453"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "q134309$A45C6CF0-9072-43F9-A1EB-20B140F0EAEF",
+						"id": "q8058$11012EBC-6E91-47AC-95DC-79C0A6E2DC31",
 						"rank": "normal",
 						"references": [
 							{
@@ -808,9 +677,7 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248"
-								]
+								"snaks-order": [ "P248" ]
 							}
 						]
 					}
@@ -823,8 +690,8 @@
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 164512,
-									"id": "Q164512"
+									"numeric-id": 254085,
+									"id": "Q254085"
 								},
 								"type": "wikibase-entityid"
 							},
@@ -836,10 +703,10 @@
 								{
 									"snaktype": "value",
 									"property": "P580",
-									"hash": "410dac35d69b03ded26584f1af4596d11c22bb0a",
+									"hash": "dea8e251f9cb9064160dab87982a42bcf9798dd7",
 									"datavalue": {
 										"value": {
-											"time": "+1570-11-26T00:00:00Z",
+											"time": "+1436-06-24T00:00:00Z",
 											"timezone": 0,
 											"before": 0,
 											"after": 0,
@@ -855,10 +722,10 @@
 								{
 									"snaktype": "value",
 									"property": "P582",
-									"hash": "272738bf3e7d6ac4178d12adf9dfd888bc5c175e",
+									"hash": "ee9d27936f92dbe98b9b27ec3550b8f4e131cccc",
 									"datavalue": {
 										"value": {
-											"time": "+1574-05-30T00:00:00Z",
+											"time": "+1445-08-16T00:00:00Z",
 											"timezone": 0,
 											"before": 0,
 											"after": 0,
@@ -871,11 +738,8 @@
 								}
 							]
 						},
-						"qualifiers-order": [
-							"P580",
-							"P582"
-						],
-						"id": "q134309$F9FA86D2-850A-4D3E-AB8A-EB4468194089",
+						"qualifiers-order": [ "P580", "P582" ],
+						"id": "q8058$5C9E1131-5577-446F-AC93-4FC1DA0E7C66",
 						"rank": "normal"
 					},
 					{
@@ -885,15 +749,56 @@
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 96075236,
-									"id": "Q96075236"
+									"numeric-id": 231559,
+									"id": "Q231559"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "Q134309$C1746ABB-5944-48BE-B311-03FE61CD45BC",
+						"qualifiers": {
+							"P580": [
+								{
+									"snaktype": "value",
+									"property": "P580",
+									"hash": "638b8f8a2316fcacd7b3875afc0780a470897cfe",
+									"datavalue": {
+										"value": {
+											"time": "+1451-03-09T00:00:00Z",
+											"timezone": 0,
+											"before": 0,
+											"after": 0,
+											"precision": 11,
+											"calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+										},
+										"type": "time"
+									},
+									"datatype": "time"
+								}
+							],
+							"P582": [
+								{
+									"snaktype": "value",
+									"property": "P582",
+									"hash": "6d3e2527ff733a94e1bbffe27f22bf81f12388cb",
+									"datavalue": {
+										"value": {
+											"time": "+1483-08-30T00:00:00Z",
+											"timezone": 0,
+											"before": 0,
+											"after": 0,
+											"precision": 11,
+											"calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+										},
+										"type": "time"
+									},
+									"datatype": "time"
+								}
+							]
+						},
+						"qualifiers-order": [ "P580", "P582" ],
+						"id": "q8058$4392D8A7-8F98-4384-91D6-BEE4FE21CA48",
 						"rank": "normal",
 						"references": [
 							{
@@ -915,9 +820,7 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248"
-								]
+								"snaks-order": [ "P248" ]
 							}
 						]
 					}
@@ -930,15 +833,15 @@
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 463082,
-									"id": "Q463082"
+									"numeric-id": 232801,
+									"id": "Q232801"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "q134309$F8B9B883-E014-463A-A2CE-E3E570F99346",
+						"id": "q8058$191B6BF2-38B2-4D92-BF16-794D237DF621",
 						"rank": "normal"
 					},
 					{
@@ -948,35 +851,277 @@
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 1066613,
-									"id": "Q1066613"
+									"numeric-id": 236220,
+									"id": "Q236220"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "q134309$958B9291-3BC9-4F6E-BA8E-B9233B9DBD72",
-						"rank": "normal"
-					}
-				],
-				"P119": [
+						"id": "q8058$7BE141EA-42EA-42F3-8D58-E1C0DCA63EAA",
+						"rank": "normal",
+						"references": [
+							{
+								"hash": "e6596ed0d2b81634d4a2b94f1bd23a5d26a198cf",
+								"snaks": {
+									"P248": [
+										{
+											"snaktype": "value",
+											"property": "P248",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 75653886,
+													"id": "Q75653886"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									]
+								},
+								"snaks-order": [ "P248" ]
+							}
+						]
+					},
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P119",
+							"property": "P40",
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 184407,
-									"id": "Q184407"
+									"numeric-id": 134452,
+									"id": "Q134452"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "q134309$FE1A8D64-20BE-48A3-9302-6D7464171F8D",
+						"id": "q8058$74E516C1-7CF0-4964-B73C-FB0CB34AF857",
+						"rank": "normal",
+						"references": [
+							{
+								"hash": "e6596ed0d2b81634d4a2b94f1bd23a5d26a198cf",
+								"snaks": {
+									"P248": [
+										{
+											"snaktype": "value",
+											"property": "P248",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 75653886,
+													"id": "Q75653886"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									]
+								},
+								"snaks-order": [ "P248" ]
+							}
+						]
+					},
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P40",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 75385004,
+									"id": "Q75385004"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"qualifiers": {
+							"P2241": [
+								{
+									"snaktype": "value",
+									"property": "P2241",
+									"hash": "ac4e418f00f8a1f58bdcd52eb1f85c5c1a08976b",
+									"datavalue": {
+										"value": {
+											"entity-type": "item",
+											"numeric-id": 29998666,
+											"id": "Q29998666"
+										},
+										"type": "wikibase-entityid"
+									},
+									"datatype": "wikibase-item"
+								}
+							]
+						},
+						"qualifiers-order": [ "P2241" ],
+						"id": "Q8058$EC8DBE92-21E1-4227-95E5-A96EBB42C077",
+						"rank": "deprecated",
+						"references": [
+							{
+								"hash": "3913844e06e055e8cd81608f22bad0e604d89d2d",
+								"snaks": {
+									"P248": [
+										{
+											"snaktype": "value",
+											"property": "P248",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 21401824,
+													"id": "Q21401824"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									]
+								},
+								"snaks-order": [ "P248" ]
+							}
+						]
+					},
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P40",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 75385006,
+									"id": "Q75385006"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"qualifiers": {
+							"P2241": [
+								{
+									"snaktype": "value",
+									"property": "P2241",
+									"hash": "ac4e418f00f8a1f58bdcd52eb1f85c5c1a08976b",
+									"datavalue": {
+										"value": {
+											"entity-type": "item",
+											"numeric-id": 29998666,
+											"id": "Q29998666"
+										},
+										"type": "wikibase-entityid"
+									},
+									"datatype": "wikibase-item"
+								}
+							]
+						},
+						"qualifiers-order": [ "P2241" ],
+						"id": "Q8058$7DF59725-D4EE-4DC4-B3F8-BA15ACC15298",
+						"rank": "deprecated",
+						"references": [
+							{
+								"hash": "3913844e06e055e8cd81608f22bad0e604d89d2d",
+								"snaks": {
+									"P248": [
+										{
+											"snaktype": "value",
+											"property": "P248",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 21401824,
+													"id": "Q21401824"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									]
+								},
+								"snaks-order": [ "P248" ]
+							}
+						]
+					},
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P40",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 75385008,
+									"id": "Q75385008"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"qualifiers": {
+							"P2241": [
+								{
+									"snaktype": "value",
+									"property": "P2241",
+									"hash": "ac4e418f00f8a1f58bdcd52eb1f85c5c1a08976b",
+									"datavalue": {
+										"value": {
+											"entity-type": "item",
+											"numeric-id": 29998666,
+											"id": "Q29998666"
+										},
+										"type": "wikibase-entityid"
+									},
+									"datatype": "wikibase-item"
+								}
+							]
+						},
+						"qualifiers-order": [ "P2241" ],
+						"id": "Q8058$B9F26799-59F0-412A-B255-C92A76D1F21B",
+						"rank": "deprecated",
+						"references": [
+							{
+								"hash": "3913844e06e055e8cd81608f22bad0e604d89d2d",
+								"snaks": {
+									"P248": [
+										{
+											"snaktype": "value",
+											"property": "P248",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 21401824,
+													"id": "Q21401824"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									]
+								},
+								"snaks-order": [ "P248" ]
+							}
+						]
+					},
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P40",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 60835574,
+									"id": "Q60835574"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"id": "Q8058$83334514-40fa-5299-7edc-26a6e4607f3e",
 						"rank": "normal"
 					}
 				],
@@ -988,15 +1133,15 @@
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 185075,
-									"id": "Q185075"
+									"numeric-id": 132404,
+									"id": "Q132404"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "q134309$8C4A3A41-E5D0-43CA-ADA7-72E334DB2903",
+						"id": "q8058$C1921250-5D1E-423D-8EA5-E9CAA45BA728",
 						"rank": "normal",
 						"references": [
 							{
@@ -1018,9 +1163,28 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P143"
-								]
+								"snaks-order": [ "P143" ]
+							},
+							{
+								"hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+								"snaks": {
+									"P143": [
+										{
+											"snaktype": "value",
+											"property": "P143",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 48183,
+													"id": "Q48183"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									]
+								},
+								"snaks-order": [ "P143" ]
 							}
 						]
 					}
@@ -1031,17 +1195,17 @@
 							"snaktype": "value",
 							"property": "P373",
 							"datavalue": {
-								"value": "Charles IX of France",
+								"value": "Louis XI of France",
 								"type": "string"
 							},
 							"datatype": "string"
 						},
 						"type": "statement",
-						"id": "q134309$142EF927-7104-4F66-B80F-982CDBCFB70B",
+						"id": "q8058$4350A4C7-5A11-4774-8FD3-9002E765EF8E",
 						"rank": "normal",
 						"references": [
 							{
-								"hash": "288ab581e7d2d02995a26dfa8b091d96e78457fc",
+								"hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
 								"snaks": {
 									"P143": [
 										{
@@ -1050,8 +1214,8 @@
 											"datavalue": {
 												"value": {
 													"entity-type": "item",
-													"numeric-id": 206855,
-													"id": "Q206855"
+													"numeric-id": 48183,
+													"id": "Q48183"
 												},
 												"type": "wikibase-entityid"
 											},
@@ -1059,9 +1223,7 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P143"
-								]
+								"snaks-order": [ "P143" ]
 							}
 						]
 					}
@@ -1072,13 +1234,13 @@
 							"snaktype": "value",
 							"property": "P244",
 							"datavalue": {
-								"value": "n85048544",
+								"value": "n79115386",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "q134309$0D85D933-026B-455B-ABB0-D49EC268FB81",
+						"id": "q8058$7AF87BE1-2A95-4E3B-AD76-FF6F79F0F86E",
 						"rank": "normal",
 						"references": [
 							{
@@ -1100,9 +1262,7 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P143"
-								]
+								"snaks-order": [ "P143" ]
 							}
 						]
 					}
@@ -1113,13 +1273,13 @@
 							"snaktype": "value",
 							"property": "P214",
 							"datavalue": {
-								"value": "88890900",
+								"value": "262252890",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "q134309$F2B0B9C8-1E42-4E66-807F-F30F728D1967",
+						"id": "q8058$604D9A99-00F3-42F0-8F95-E58CFD96428F",
 						"rank": "normal",
 						"references": [
 							{
@@ -1141,9 +1301,7 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P143"
-								]
+								"snaks-order": [ "P143" ]
 							}
 						]
 					}
@@ -1154,13 +1312,13 @@
 							"snaktype": "value",
 							"property": "P227",
 							"datavalue": {
-								"value": "118720880",
+								"value": "118574930",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "q134309$6E541A6F-9E58-417D-88D2-4395DE47D49A",
+						"id": "q8058$270050FC-F606-4791-86AB-107340BDE572",
 						"rank": "normal",
 						"references": [
 							{
@@ -1182,9 +1340,7 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P143"
-								]
+								"snaks-order": [ "P143" ]
 							}
 						]
 					}
@@ -1195,13 +1351,13 @@
 							"snaktype": "value",
 							"property": "P213",
 							"datavalue": {
-								"value": "0000 0001 2142 8995",
+								"value": "0000 0001 2134 8813",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "q134309$C568FAC7-5FAB-419D-B273-30615BE780DB",
+						"id": "q8058$1AF8AA66-18C2-4A19-BE6D-427A8FAB6873",
 						"rank": "normal",
 						"references": [
 							{
@@ -1223,11 +1379,23 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248"
-								]
+								"snaks-order": [ "P248" ]
 							}
 						]
+					},
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P213",
+							"datavalue": {
+								"value": "0000 0003 8177 4851",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$4630744D-4DA5-48F3-8D40-98D08016FAD5",
+						"rank": "normal"
 					}
 				],
 				"P20": [
@@ -1238,15 +1406,35 @@
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 193819,
-									"id": "Q193819"
+									"numeric-id": 638089,
+									"id": "Q638089"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "q134309$039C1A64-F2CD-439B-A02F-71BA7EF7712C",
+						"id": "q8058$426D443E-EA6A-49F2-8E24-67A3FB4B0982",
+						"rank": "normal"
+					}
+				],
+				"P27": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P27",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 142,
+									"id": "Q142"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"id": "q8058$316CCCAA-C396-4006-970C-148FE46D7826",
 						"rank": "normal",
 						"references": [
 							{
@@ -1268,31 +1456,9 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P143"
-								]
+								"snaks-order": [ "P143" ]
 							}
 						]
-					}
-				],
-				"P509": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P509",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 12204,
-									"id": "Q12204"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"id": "q134309$864E74EC-0F2F-4531-BD3D-528CA1BBB2EE",
-						"rank": "normal"
 					}
 				],
 				"P569": [
@@ -1302,7 +1468,7 @@
 							"property": "P569",
 							"datavalue": {
 								"value": {
-									"time": "+1550-06-27T00:00:00Z",
+									"time": "+1423-07-03T00:00:00Z",
 									"timezone": 0,
 									"before": 0,
 									"after": 0,
@@ -1314,207 +1480,7 @@
 							"datatype": "time"
 						},
 						"type": "statement",
-						"id": "Q134309$DA1590D0-AD87-4BCB-B068-7FDC7CEE71FE",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "021f0b0d966441ed23c3f0d6cfda7e7eb58c6f9d",
-								"snaks": {
-									"P248": [
-										{
-											"snaktype": "value",
-											"property": "P248",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 13550863,
-													"id": "Q13550863"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									],
-									"P691": [
-										{
-											"snaktype": "value",
-											"property": "P691",
-											"datavalue": {
-												"value": "js20020117017",
-												"type": "string"
-											},
-											"datatype": "external-id"
-										}
-									],
-									"P813": [
-										{
-											"snaktype": "value",
-											"property": "P813",
-											"datavalue": {
-												"value": {
-													"time": "+2019-11-23T00:00:00Z",
-													"timezone": 0,
-													"before": 0,
-													"after": 0,
-													"precision": 11,
-													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-												},
-												"type": "time"
-											},
-											"datatype": "time"
-										}
-									]
-								},
-								"snaks-order": [
-									"P248",
-									"P691",
-									"P813"
-								]
-							}
-						]
-					}
-				],
-				"P570": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P570",
-							"datavalue": {
-								"value": {
-									"time": "+1574-05-30T00:00:00Z",
-									"timezone": 0,
-									"before": 0,
-									"after": 0,
-									"precision": 11,
-									"calendarmodel": "http://www.wikidata.org/entity/Q1985786"
-								},
-								"type": "time"
-							},
-							"datatype": "time"
-						},
-						"type": "statement",
-						"id": "Q134309$806B7BD8-99F3-45F2-B3CA-82E11E2DA02F",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "021f0b0d966441ed23c3f0d6cfda7e7eb58c6f9d",
-								"snaks": {
-									"P248": [
-										{
-											"snaktype": "value",
-											"property": "P248",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 13550863,
-													"id": "Q13550863"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									],
-									"P691": [
-										{
-											"snaktype": "value",
-											"property": "P691",
-											"datavalue": {
-												"value": "js20020117017",
-												"type": "string"
-											},
-											"datatype": "external-id"
-										}
-									],
-									"P813": [
-										{
-											"snaktype": "value",
-											"property": "P813",
-											"datavalue": {
-												"value": {
-													"time": "+2019-11-23T00:00:00Z",
-													"timezone": 0,
-													"before": 0,
-													"after": 0,
-													"precision": 11,
-													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-												},
-												"type": "time"
-											},
-											"datatype": "time"
-										}
-									]
-								},
-								"snaks-order": [
-									"P248",
-									"P691",
-									"P813"
-								]
-							}
-						]
-					}
-				],
-				"P31": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P31",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 5,
-									"id": "Q5"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"id": "Q134309$0679EBAF-F2E4-42C0-8AFB-C7D06AE8A8C8",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "288ab581e7d2d02995a26dfa8b091d96e78457fc",
-								"snaks": {
-									"P143": [
-										{
-											"snaktype": "value",
-											"property": "P143",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 206855,
-													"id": "Q206855"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									]
-								},
-								"snaks-order": [
-									"P143"
-								]
-							}
-						]
-					}
-				],
-				"P166": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P166",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 15117228,
-									"id": "Q15117228"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"id": "Q134309$6BD761B7-92C2-46A3-83E9-68CECA278A36",
+						"id": "q8058$BCDB6AE7-7539-4011-9C43-084F165DBA53",
 						"rank": "normal",
 						"references": [
 							{
@@ -1536,48 +1502,85 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P143"
-								]
+								"snaks-order": [ "P143" ]
+							},
+							{
+								"hash": "2bafab13a85a51119a450b7896db88c066a78eee",
+								"snaks": {
+									"P248": [
+										{
+											"snaktype": "value",
+											"property": "P248",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 36578,
+													"id": "Q36578"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									],
+									"P227": [
+										{
+											"snaktype": "value",
+											"property": "P227",
+											"datavalue": {
+												"value": "118574930",
+												"type": "string"
+											},
+											"datatype": "external-id"
+										}
+									],
+									"P813": [
+										{
+											"snaktype": "value",
+											"property": "P813",
+											"datavalue": {
+												"value": {
+													"time": "+2015-10-16T00:00:00Z",
+													"timezone": 0,
+													"before": 0,
+													"after": 0,
+													"precision": 11,
+													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+												},
+												"type": "time"
+											},
+											"datatype": "time"
+										}
+									]
+								},
+								"snaks-order": [ "P248", "P227", "P813" ]
 							}
 						]
-					},
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P166",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 367484,
-									"id": "Q367484"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"id": "Q134309$74E4E94A-20D2-472F-8833-4A56B22D294A",
-						"rank": "normal"
 					}
 				],
-				"P906": [
+				"P570": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P906",
+							"property": "P570",
 							"datavalue": {
-								"value": "207592",
-								"type": "string"
+								"value": {
+									"time": "+1483-08-30T00:00:00Z",
+									"timezone": 0,
+									"before": 0,
+									"after": 0,
+									"precision": 11,
+									"calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+								},
+								"type": "time"
 							},
-							"datatype": "external-id"
+							"datatype": "time"
 						},
 						"type": "statement",
-						"id": "Q134309$EFD537BD-BD00-4343-B7F9-0989C05E2555",
+						"id": "q8058$FD1FC941-8780-4BE6-9151-8415D8FA9F1E",
 						"rank": "normal",
 						"references": [
 							{
-								"hash": "7ff7e09a1fc4fa8024101709a0d36efbcc535e13",
+								"hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
 								"snaks": {
 									"P143": [
 										{
@@ -1586,8 +1589,8 @@
 											"datavalue": {
 												"value": {
 													"entity-type": "item",
-													"numeric-id": 877583,
-													"id": "Q877583"
+													"numeric-id": 328,
+													"id": "Q328"
 												},
 												"type": "wikibase-entityid"
 											},
@@ -1595,9 +1598,100 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P143"
-								]
+								"snaks-order": [ "P143" ]
+							},
+							{
+								"hash": "2bafab13a85a51119a450b7896db88c066a78eee",
+								"snaks": {
+									"P248": [
+										{
+											"snaktype": "value",
+											"property": "P248",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 36578,
+													"id": "Q36578"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									],
+									"P227": [
+										{
+											"snaktype": "value",
+											"property": "P227",
+											"datavalue": {
+												"value": "118574930",
+												"type": "string"
+											},
+											"datatype": "external-id"
+										}
+									],
+									"P813": [
+										{
+											"snaktype": "value",
+											"property": "P813",
+											"datavalue": {
+												"value": {
+													"time": "+2015-10-16T00:00:00Z",
+													"timezone": 0,
+													"before": 0,
+													"after": 0,
+													"precision": 11,
+													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+												},
+												"type": "time"
+											},
+											"datatype": "time"
+										}
+									]
+								},
+								"snaks-order": [ "P248", "P227", "P813" ]
+							}
+						]
+					}
+				],
+				"P31": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P31",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 5,
+									"id": "Q5"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"id": "Q8058$93049C3D-ED32-4A52-86A1-4AF0DBE548B0",
+						"rank": "normal",
+						"references": [
+							{
+								"hash": "288ab581e7d2d02995a26dfa8b091d96e78457fc",
+								"snaks": {
+									"P143": [
+										{
+											"snaktype": "value",
+											"property": "P143",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 206855,
+													"id": "Q206855"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									]
+								},
+								"snaks-order": [ "P143" ]
 							}
 						]
 					}
@@ -1608,13 +1702,218 @@
 							"snaktype": "value",
 							"property": "P18",
 							"datavalue": {
-								"value": "Bemberg Fondation Toulouse - Portrait de Charles IX - Fran\u00e7ois Clouet - Inv.1012.jpg",
+								"value": "Louis XI (1423-1483).jpg",
 								"type": "string"
 							},
 							"datatype": "commonsMedia"
 						},
 						"type": "statement",
-						"id": "Q134309$EC8A2D57-29EE-4710-891B-E1C283E0F24F",
+						"id": "Q8058$2D00D60B-0DAD-44D3-B5B4-D1C50DF4E3AB",
+						"rank": "normal"
+					}
+				],
+				"P269": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P269",
+							"datavalue": {
+								"value": "029459435",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$88AB6197-8FCC-4AE4-A1DD-F6460C3BC205",
+						"rank": "normal"
+					}
+				],
+				"P1017": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P1017",
+							"datavalue": {
+								"value": "ADV10170708",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$E0A54BEB-9BD8-4B54-B921-811CC664907A",
+						"rank": "normal"
+					}
+				],
+				"P268": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P268",
+							"datavalue": {
+								"value": "121082243",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$A5CADA78-44D8-4268-A18A-4EC24CA01E94",
+						"rank": "normal"
+					}
+				],
+				"P245": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P245",
+							"datavalue": {
+								"value": "500354831",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$AC2301EB-935A-4F08-94E3-9DD98A7D09AC",
+						"rank": "normal"
+					}
+				],
+				"P949": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P949",
+							"datavalue": {
+								"value": "000086023",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$BA29347E-8A26-4368-B9AD-66A14337E63B",
+						"rank": "normal"
+					}
+				],
+				"P1006": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P1006",
+							"datavalue": {
+								"value": "070684073",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$E6227BD5-9D11-4D48-9785-E3789EEC7B5A",
+						"rank": "normal"
+					}
+				],
+				"P691": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P691",
+							"datavalue": {
+								"value": "jn20000701090",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$273E5AE6-B2B8-424F-A003-C5E4D05DE27F",
+						"rank": "normal"
+					}
+				],
+				"P39": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P39",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 18384454,
+									"id": "Q18384454"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"qualifiers": {
+							"P580": [
+								{
+									"snaktype": "value",
+									"property": "P580",
+									"hash": "db577db280afe8e8e0e116fefaaf811a45ab8fac",
+									"datavalue": {
+										"value": {
+											"time": "+1461-07-31T00:00:00Z",
+											"timezone": 0,
+											"before": 0,
+											"after": 0,
+											"precision": 11,
+											"calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+										},
+										"type": "time"
+									},
+									"datatype": "time"
+								}
+							],
+							"P582": [
+								{
+									"snaktype": "value",
+									"property": "P582",
+									"hash": "5de418107a8b38ef01e3f4c254a9ff1697ec6bc8",
+									"datavalue": {
+										"value": {
+											"time": "+1483-09-08T00:00:00Z",
+											"timezone": 0,
+											"before": 0,
+											"after": 0,
+											"precision": 11,
+											"calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+										},
+										"type": "time"
+									},
+									"datatype": "time"
+								}
+							],
+							"P1366": [
+								{
+									"snaktype": "value",
+									"property": "P1366",
+									"hash": "d63f281e95daebe69bdbc30a764db20751e82555",
+									"datavalue": {
+										"value": {
+											"entity-type": "item",
+											"numeric-id": 134452,
+											"id": "Q134452"
+										},
+										"type": "wikibase-entityid"
+									},
+									"datatype": "wikibase-item"
+								}
+							],
+							"P1365": [
+								{
+									"snaktype": "value",
+									"property": "P1365",
+									"hash": "2e22612e5b4ccd6db9dc5d81807415e84ef94339",
+									"datavalue": {
+										"value": {
+											"entity-type": "item",
+											"numeric-id": 133372,
+											"id": "Q133372"
+										},
+										"type": "wikibase-entityid"
+									},
+									"datatype": "wikibase-item"
+								}
+							]
+						},
+						"qualifiers-order": [ "P580", "P582", "P1366", "P1365" ],
+						"id": "Q8058$3ec704c2-41a9-34ae-1182-5f9aace04727",
 						"rank": "normal"
 					}
 				],
@@ -1624,13 +1923,13 @@
 							"snaktype": "value",
 							"property": "P646",
 							"datavalue": {
-								"value": "/m/0k279",
+								"value": "/m/0j889",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$77A2E541-9B3E-4975-9918-B74FC70FC9F7",
+						"id": "Q8058$A6A77790-3A2B-4BD3-87B1-6B2ADCF97983",
 						"rank": "normal",
 						"references": [
 							{
@@ -1670,151 +1969,9 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248",
-									"P577"
-								]
+								"snaks-order": [ "P248", "P577" ]
 							}
 						]
-					}
-				],
-				"P39": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P39",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 18384454,
-									"id": "Q18384454"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"qualifiers": {
-							"P580": [
-								{
-									"snaktype": "value",
-									"property": "P580",
-									"hash": "af6567638b4c2b725e667e13e24a19e3e31d58d3",
-									"datavalue": {
-										"value": {
-											"time": "+1560-12-15T00:00:00Z",
-											"timezone": 0,
-											"before": 0,
-											"after": 0,
-											"precision": 11,
-											"calendarmodel": "http://www.wikidata.org/entity/Q1985786"
-										},
-										"type": "time"
-									},
-									"datatype": "time"
-								}
-							],
-							"P582": [
-								{
-									"snaktype": "value",
-									"property": "P582",
-									"hash": "9033474bcd8190e3211483d736bcbc22d0eeedcb",
-									"datavalue": {
-										"value": {
-											"time": "+1574-06-09T00:00:00Z",
-											"timezone": 0,
-											"before": 0,
-											"after": 0,
-											"precision": 11,
-											"calendarmodel": "http://www.wikidata.org/entity/Q1985786"
-										},
-										"type": "time"
-									},
-									"datatype": "time"
-								}
-							],
-							"P1365": [
-								{
-									"snaktype": "value",
-									"property": "P1365",
-									"hash": "5bb2658cab718c5a91ac9b2a25f80e3a46565c3a",
-									"datavalue": {
-										"value": {
-											"entity-type": "item",
-											"numeric-id": 132548,
-											"id": "Q132548"
-										},
-										"type": "wikibase-entityid"
-									},
-									"datatype": "wikibase-item"
-								}
-							],
-							"P1366": [
-								{
-									"snaktype": "value",
-									"property": "P1366",
-									"hash": "5a529d7bd7b34c6399751c136b5eded148eb048d",
-									"datavalue": {
-										"value": {
-											"entity-type": "item",
-											"numeric-id": 53448,
-											"id": "Q53448"
-										},
-										"type": "wikibase-entityid"
-									},
-									"datatype": "wikibase-item"
-								}
-							]
-						},
-						"qualifiers-order": [
-							"P580",
-							"P582",
-							"P1365",
-							"P1366"
-						],
-						"id": "Q134309$d36e0d7e-481f-3b85-b37a-1b2839cabb5d",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "352105262bdb1d258091d5fcf82dc7766a21d366",
-								"snaks": {
-									"P248": [
-										{
-											"snaktype": "value",
-											"property": "P248",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 24436660,
-													"id": "Q24436660"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									]
-								},
-								"snaks-order": [
-									"P248"
-								]
-							}
-						]
-					}
-				],
-				"P865": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P865",
-							"datavalue": {
-								"value": "v0465",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$12AA9351-4C65-4870-A3EA-89C9E7A29BA2",
-						"rank": "normal"
 					}
 				],
 				"P53": [
@@ -1833,7 +1990,50 @@
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "Q134309$5FDBB5CC-D816-4F70-8B38-4B0BD849FB4B",
+						"id": "Q8058$BF5DF00C-EEC1-4275-A5EB-1FC3436B2999",
+						"rank": "normal",
+						"references": [
+							{
+								"hash": "d4bd87b862b12d99d26e86472d44f26858dee639",
+								"snaks": {
+									"P143": [
+										{
+											"snaktype": "value",
+											"property": "P143",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 8447,
+													"id": "Q8447"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									]
+								},
+								"snaks-order": [ "P143" ]
+							}
+						]
+					}
+				],
+				"P140": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P140",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 9592,
+									"id": "Q9592"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"id": "Q8058$EE4C74DB-7B46-4C46-AE4D-C3C7F694D1F0",
 						"rank": "normal",
 						"references": [
 							{
@@ -1855,31 +2055,73 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P143"
-								]
+								"snaks-order": [ "P143" ]
+							},
+							{
+								"hash": "14d2400e3b1d36332748dc330276f099eeaa8800",
+								"snaks": {
+									"P143": [
+										{
+											"snaktype": "value",
+											"property": "P143",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 1551807,
+													"id": "Q1551807"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									]
+								},
+								"snaks-order": [ "P143" ]
 							}
 						]
 					}
 				],
-				"P27": [
+				"P509": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P27",
+							"property": "P509",
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 142,
-									"id": "Q142"
+									"numeric-id": 12202,
+									"id": "Q12202"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "Q134309$0CA719C0-D73A-4182-AD44-B180DC0CCD30",
-						"rank": "normal"
+						"id": "Q8058$59DFD645-E50A-4365-ADF5-0778AF1125D7",
+						"rank": "normal",
+						"references": [
+							{
+								"hash": "3bf39867b037e8e494a8389ae8a03bad6825a7fc",
+								"snaks": {
+									"P143": [
+										{
+											"snaktype": "value",
+											"property": "P143",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 191168,
+													"id": "Q191168"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									]
+								},
+								"snaks-order": [ "P143" ]
+							}
+						]
 					}
 				],
 				"P1273": [
@@ -1888,240 +2130,52 @@
 							"snaktype": "value",
 							"property": "P1273",
 							"datavalue": {
-								"value": "a11373957",
+								"value": "a11372631",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$5140B5F8-B505-43C6-BFF5-1A97DB9DF961",
+						"id": "Q8058$0D52FABA-993C-4806-94A4-609B30AB5941",
 						"rank": "normal",
 						"references": [
 							{
-								"hash": "6ab7f9d2a3c80982f051646bd271c144c2ed7cf2",
+								"hash": "e68e814c2890277dcd3c72c7931f78c1efe5d94e",
 								"snaks": {
 									"P854": [
 										{
 											"snaktype": "value",
 											"property": "P854",
 											"datavalue": {
-												"value": "https://viaf.org/viaf/88890900/",
+												"value": "https://viaf.org/viaf/262252890/",
 												"type": "string"
 											},
 											"datatype": "url"
 										}
 									]
 								},
-								"snaks-order": [
-									"P854"
-								]
+								"snaks-order": [ "P854" ]
 							}
 						]
 					}
 				],
-				"P735": [
+				"P106": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P735",
+							"property": "P106",
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 2958359,
-									"id": "Q2958359"
+									"numeric-id": 82955,
+									"id": "Q82955"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"qualifiers": {
-							"P7338": [
-								{
-									"snaktype": "value",
-									"property": "P7338",
-									"hash": "e4320b41539f22b380858c245c35706230fdd9aa",
-									"datavalue": {
-										"value": "IX",
-										"type": "string"
-									},
-									"datatype": "string"
-								}
-							]
-						},
-						"qualifiers-order": [
-							"P7338"
-						],
-						"id": "Q134309$B6309C55-4553-4FE9-B835-EA927BF9081F",
-						"rank": "normal"
-					}
-				],
-				"P1006": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P1006",
-							"datavalue": {
-								"value": "070397341",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$FD9080E6-8C3A-4EDC-99AE-BBD2131A85B3",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "0d0e5ea8d74a9fdf1c2fd8f4bfa3538f77c4b85b",
-								"snaks": {
-									"P248": [
-										{
-											"snaktype": "value",
-											"property": "P248",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 54919,
-													"id": "Q54919"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									],
-									"P813": [
-										{
-											"snaktype": "value",
-											"property": "P813",
-											"datavalue": {
-												"value": {
-													"time": "+2014-12-16T00:00:00Z",
-													"timezone": 0,
-													"before": 0,
-													"after": 0,
-													"precision": 11,
-													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-												},
-												"type": "time"
-											},
-											"datatype": "time"
-										}
-									],
-									"P854": [
-										{
-											"snaktype": "value",
-											"property": "P854",
-											"datavalue": {
-												"value": "http://viaf.org/viaf/88890900",
-												"type": "string"
-											},
-											"datatype": "url"
-										}
-									]
-								},
-								"snaks-order": [
-									"P248",
-									"P813",
-									"P854"
-								]
-							}
-						]
-					}
-				],
-				"P910": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P910",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 16807387,
-									"id": "Q16807387"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"id": "Q134309$FBB296B8-8EF9-4646-B69B-A4C07914CA95",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
-								"snaks": {
-									"P143": [
-										{
-											"snaktype": "value",
-											"property": "P143",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 328,
-													"id": "Q328"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									]
-								},
-								"snaks-order": [
-									"P143"
-								]
-							}
-						]
-					}
-				],
-				"P1802": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P1802",
-							"datavalue": {
-								"value": "2474b0e6-01c3-463f-a2f2-0adca96904d9",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$AFAC935B-FC21-47CA-BD77-01F170DE9A2F",
-						"rank": "normal"
-					}
-				],
-				"P1263": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P1263",
-							"datavalue": {
-								"value": "848/000093569",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$D80B311D-F3C5-4709-883A-EC9ADE0123F4",
-						"rank": "normal"
-					}
-				],
-				"P97": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P97",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 502190,
-									"id": "Q502190"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"id": "Q134309$2aa7306b-41bb-b986-6333-c4f4742268cb",
+						"id": "Q8058$D295D4FE-6927-441F-9D37-FF79E2A0A9AA",
 						"rank": "normal"
 					}
 				],
@@ -2141,7 +2195,7 @@
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "Q134309$410A7005-5C91-48EE-A9DA-87167F7B34DA",
+						"id": "Q8058$FE5C9D4C-B37C-48D2-9E0D-D4101A07E5D0",
 						"rank": "normal"
 					}
 				],
@@ -2151,13 +2205,155 @@
 							"snaktype": "value",
 							"property": "P935",
 							"datavalue": {
-								"value": "Charles IX de France",
+								"value": "Louis XI de France",
 								"type": "string"
 							},
 							"datatype": "string"
 						},
 						"type": "statement",
-						"id": "Q134309$D68D7D11-F320-452B-BD94-D805FE9200A6",
+						"id": "Q8058$9BC176F3-5572-4887-B18B-4F7273D6F119",
+						"rank": "normal"
+					}
+				],
+				"P1816": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P1816",
+							"datavalue": {
+								"value": "mp87412",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$201D8E81-89FD-4C9C-BB7D-FBAA8CF47A77",
+						"rank": "normal"
+					}
+				],
+				"P1871": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P1871",
+							"datavalue": {
+								"value": "cnp00395685",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$76B64554-72B7-46DF-96E7-F0339FFADFD5",
+						"rank": "normal",
+						"references": [
+							{
+								"hash": "2cd3b591566a5413c581c7ee3a0eb13685850adf",
+								"snaks": {
+									"P248": [
+										{
+											"snaktype": "value",
+											"property": "P248",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 60909659,
+													"id": "Q60909659"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									]
+								},
+								"snaks-order": [ "P248" ]
+							}
+						]
+					}
+				],
+				"P1417": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P1417",
+							"datavalue": {
+								"value": "biography/Louis-XI",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$AF808FCD-D2EC-4379-B07E-DDD373377DDF",
+						"rank": "normal",
+						"references": [
+							{
+								"hash": "c1b48834527bc85aca84ba209e3af1eecbbe3461",
+								"snaks": {
+									"P143": [
+										{
+											"snaktype": "value",
+											"property": "P143",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 728945,
+													"id": "Q728945"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									]
+								},
+								"snaks-order": [ "P143" ]
+							}
+						]
+					}
+				],
+				"P2163": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P2163",
+							"datavalue": {
+								"value": "43731",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$444819F1-854E-4F9C-9564-4F3B9D83EE4B",
+						"rank": "normal"
+					}
+				],
+				"P2949": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P2949",
+							"datavalue": {
+								"value": "Valois-276",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$3f6a825c-4880-2fa4-7999-67fba35a4123",
+						"rank": "normal"
+					}
+				],
+				"P1263": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P1263",
+							"datavalue": {
+								"value": "858/000093579",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$FE6F18A1-5F42-4987-8421-2C4AE6B02DA7",
 						"rank": "normal"
 					}
 				],
@@ -2169,71 +2365,16 @@
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 2657718,
-									"id": "Q2657718"
+									"numeric-id": 19219752,
+									"id": "Q19219752"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"qualifiers": {
-							"P478": [
-								{
-									"snaktype": "value",
-									"property": "P478",
-									"hash": "ab49dc08d24a45b6e4ca6b5613d63a1756aa3d7f",
-									"datavalue": {
-										"value": "5",
-										"type": "string"
-									},
-									"datatype": "string"
-								}
-							],
-							"P304": [
-								{
-									"snaktype": "value",
-									"property": "P304",
-									"hash": "6c6fe066f5c00a3e40868144b93325689415346b",
-									"datavalue": {
-										"value": "325",
-										"type": "string"
-									},
-									"datatype": "string"
-								}
-							]
-						},
-						"qualifiers-order": [
-							"P478",
-							"P304"
-						],
-						"id": "Q134309$013CAA21-F0B2-4AD1-B56D-B1B6FCEF4EBB",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "8bc722e6797143f2ba971ee5fedaeb0a331268e6",
-								"snaks": {
-									"P143": [
-										{
-											"snaktype": "value",
-											"property": "P143",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 1975217,
-													"id": "Q1975217"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									]
-								},
-								"snaks-order": [
-									"P143"
-								]
-							}
-						]
+						"id": "Q8058$FAFDFEDF-3B5D-491B-92CF-18AA21B434EB",
+						"rank": "normal"
 					},
 					{
 						"mainsnak": {
@@ -2255,12 +2396,12 @@
 								{
 									"snaktype": "value",
 									"property": "P805",
-									"hash": "aeb8202f3d203db843540895514ba8730cc03935",
+									"hash": "ef0e94cf4b4977c64e6930ed38063ddc77d7fdbe",
 									"datavalue": {
 										"value": {
 											"entity-type": "item",
-											"numeric-id": 24436660,
-											"id": "Q24436660"
+											"numeric-id": 24462549,
+											"id": "Q24462549"
 										},
 										"type": "wikibase-entityid"
 									},
@@ -2268,88 +2409,8 @@
 								}
 							]
 						},
-						"qualifiers-order": [
-							"P805"
-						],
-						"id": "Q134309$FB8DC957-4CDD-4534-8075-6B78BA124417",
-						"rank": "normal"
-					},
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P1343",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 867541,
-									"id": "Q867541"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"qualifiers": {
-							"P805": [
-								{
-									"snaktype": "value",
-									"property": "P805",
-									"hash": "b33b04860a1fa1d5e154bd384304cf5b7d6755b8",
-									"datavalue": {
-										"value": {
-											"entity-type": "item",
-											"numeric-id": 26932990,
-											"id": "Q26932990"
-										},
-										"type": "wikibase-entityid"
-									},
-									"datatype": "wikibase-item"
-								}
-							]
-						},
-						"qualifiers-order": [
-							"P805"
-						],
-						"id": "Q134309$9336D42D-12BE-46DB-B55D-1927273ED51E",
-						"rank": "normal"
-					},
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P1343",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 16082057,
-									"id": "Q16082057"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"qualifiers": {
-							"P805": [
-								{
-									"snaktype": "value",
-									"property": "P805",
-									"hash": "f07aa95d2472a897d242b05980e8da8e74115ea6",
-									"datavalue": {
-										"value": {
-											"entity-type": "item",
-											"numeric-id": 26932992,
-											"id": "Q26932992"
-										},
-										"type": "wikibase-entityid"
-									},
-									"datatype": "wikibase-item"
-								}
-							]
-						},
-						"qualifiers-order": [
-							"P805"
-						],
-						"id": "Q134309$AF961D8F-455F-42C8-8CAF-F4D8E0FCCED2",
+						"qualifiers-order": [ "P805" ],
+						"id": "Q8058$5a30bcf7-4f6c-51bc-f4c4-68ee6576d3ab",
 						"rank": "normal"
 					},
 					{
@@ -2372,30 +2433,30 @@
 								{
 									"snaktype": "value",
 									"property": "P2699",
-									"hash": "4f34e416b64d8e518d44f9c8ad24bf8ae706b9d9",
+									"hash": "a34e7c338618c9c7c67dfe40cd6d36d9bcee4427",
 									"datavalue": {
-										"value": "https://www.obalkyknih.cz/view_auth?auth_id=js20020117017",
+										"value": "https://www.obalkyknih.cz/view_auth?auth_id=jn20000701090",
 										"type": "string"
 									},
 									"datatype": "url"
 								}
 							]
 						},
-						"qualifiers-order": [
-							"P2699"
-						],
-						"id": "Q134309$AA5608E8-CFCF-42D1-886F-24DF47DFEAB1",
+						"qualifiers-order": [ "P2699" ],
+						"id": "Q8058$983795F1-E45D-4A9A-AF68-C732A3E41CEA",
 						"rank": "normal"
-					},
+					}
+				],
+				"P3342": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P1343",
+							"property": "P3342",
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 3181656,
-									"id": "Q3181656"
+									"numeric-id": 3170866,
+									"id": "Q3170866"
 								},
 								"type": "wikibase-entityid"
 							},
@@ -2403,96 +2464,25 @@
 						},
 						"type": "statement",
 						"qualifiers": {
-							"P1932": [
+							"P3831": [
 								{
 									"snaktype": "value",
-									"property": "P1932",
-									"hash": "605b182fee5fe0a3a66dfa5471a0ef04e309c08d",
+									"property": "P3831",
+									"hash": "1e6d7b54ccaac2e8b0c04d18aa308ee167a3f471",
 									"datavalue": {
-										"value": "Charles IX.",
-										"type": "string"
+										"value": {
+											"entity-type": "item",
+											"numeric-id": 21500210,
+											"id": "Q21500210"
+										},
+										"type": "wikibase-entityid"
 									},
-									"datatype": "string"
+									"datatype": "wikibase-item"
 								}
 							]
 						},
-						"qualifiers-order": [
-							"P1932"
-						],
-						"id": "Q134309$be6fd9df-4165-1161-8e25-3312ab2cbf1b",
-						"rank": "normal"
-					}
-				],
-				"P1816": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P1816",
-							"datavalue": {
-								"value": "mp88237",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$5BD4898D-0B9A-4E79-AB0B-56000E8A6FF2",
-						"rank": "normal"
-					}
-				],
-				"P1871": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P1871",
-							"datavalue": {
-								"value": "cnp00965728",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$9C6012F5-7BDE-440A-BAF4-54D74ADAFB79",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "2cd3b591566a5413c581c7ee3a0eb13685850adf",
-								"snaks": {
-									"P248": [
-										{
-											"snaktype": "value",
-											"property": "P248",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 60909659,
-													"id": "Q60909659"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									]
-								},
-								"snaks-order": [
-									"P248"
-								]
-							}
-						]
-					}
-				],
-				"P2949": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P2949",
-							"datavalue": {
-								"value": "De_Valois-180",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$3a228bea-4da0-a802-52c1-a3b462c419ab",
+						"qualifiers-order": [ "P3831" ],
+						"id": "Q8058$d58202de-43c7-7b8a-757d-0bac7f8153d4",
 						"rank": "normal"
 					}
 				],
@@ -2504,15 +2494,15 @@
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 1134100,
-									"id": "Q1134100"
+									"numeric-id": 728786,
+									"id": "Q728786"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "Q134309$AB2C700C-5721-45AD-974A-B3AC2799386A",
+						"id": "Q8058$5DC0C26C-E38E-4C27-A8B8-32CBE2515A6C",
 						"rank": "normal"
 					},
 					{
@@ -2522,15 +2512,15 @@
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 113422,
-									"id": "Q113422"
+									"numeric-id": 3416401,
+									"id": "Q3416401"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "Q134309$17E9C5D4-4054-46E6-9E7F-F496A8122E66",
+						"id": "Q8058$7D9135E4-83BC-42D4-BB4A-AA36D23A099C",
 						"rank": "normal"
 					},
 					{
@@ -2540,15 +2530,51 @@
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 176041,
-									"id": "Q176041"
+									"numeric-id": 2434575,
+									"id": "Q2434575"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "Q134309$BF81E506-C745-440B-8108-0786F5C385F1",
+						"id": "Q8058$2522D855-E8D0-4C31-8EBC-D24144E9D888",
+						"rank": "normal"
+					},
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P3373",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 2961035,
+									"id": "Q2961035"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"id": "Q8058$25BBC7EC-9D98-4503-86F0-E60EA0909D75",
+						"rank": "normal"
+					},
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P3373",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 466261,
+									"id": "Q466261"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"id": "Q8058$097F4A91-706C-49A7-9836-4F7449E69E0B",
 						"rank": "normal",
 						"references": [
 							{
@@ -2570,9 +2596,7 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248"
-								]
+								"snaks-order": [ "P248" ]
 							}
 						]
 					},
@@ -2583,15 +2607,33 @@
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 220845,
-									"id": "Q220845"
+									"numeric-id": 261082,
+									"id": "Q261082"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "Q134309$27AAFFF3-1070-47A8-A285-33F02FCDA6D6",
+						"id": "Q8058$E45D0B81-38DD-4F7D-9A43-793F74325683",
+						"rank": "normal"
+					},
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P3373",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 535028,
+									"id": "Q535028"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"id": "Q8058$DFE678D6-EB39-4B70-B7D3-76A6EAE6B213",
 						"rank": "normal",
 						"references": [
 							{
@@ -2613,9 +2655,7 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248"
-								]
+								"snaks-order": [ "P248" ]
 							}
 						]
 					},
@@ -2626,65 +2666,42 @@
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 242336,
-									"id": "Q242336"
+									"numeric-id": 3292894,
+									"id": "Q3292894"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "Q134309$5A1D8097-92C7-4B36-9851-716D62E8B82E",
-						"rank": "normal"
-					},
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P3373",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 4542229,
-									"id": "Q4542229"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"id": "Q134309$2B57CAF1-3508-42BC-8B50-D883C3412E5B",
-						"rank": "normal"
-					},
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P3373",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 132548,
-									"id": "Q132548"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"id": "Q134309$EBFB9B48-D74E-4E68-9318-0610A9CC8A94",
+						"id": "Q8058$CE8E4357-AF88-453F-9F80-D72DFEC67FC1",
 						"rank": "normal",
 						"references": [
 							{
-								"hash": "e6596ed0d2b81634d4a2b94f1bd23a5d26a198cf",
+								"hash": "c50827510dc7228a86e06574e0b690c0f23cab31",
 								"snaks": {
-									"P248": [
+									"P3452": [
 										{
 											"snaktype": "value",
-											"property": "P248",
+											"property": "P3452",
 											"datavalue": {
 												"value": {
 													"entity-type": "item",
-													"numeric-id": 75653886,
-													"id": "Q75653886"
+													"numeric-id": 231453,
+													"id": "Q231453"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										},
+										{
+											"snaktype": "value",
+											"property": "P3452",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 133372,
+													"id": "Q133372"
 												},
 												"type": "wikibase-entityid"
 											},
@@ -2692,124 +2709,7 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248"
-								]
-							}
-						]
-					},
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P3373",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 1122656,
-									"id": "Q1122656"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"id": "Q134309$C2BD2E02-61BA-43D6-A1D8-FB7877F2FFD8",
-						"rank": "normal"
-					},
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P3373",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 2322001,
-									"id": "Q2322001"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"id": "Q134309$1B155992-8F30-47E8-8114-73FCF5A20201",
-						"rank": "normal"
-					},
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P3373",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 318380,
-									"id": "Q318380"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"id": "Q134309$2E2E4BAA-98AB-40B3-B3EA-3B7DD86F82ED",
-						"rank": "normal"
-					},
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P3373",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 53448,
-									"id": "Q53448"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"id": "Q134309$BD816449-7E28-4039-A50B-7AA0C0BF5CE2",
-						"rank": "normal"
-					},
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P3373",
-							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 96075237,
-									"id": "Q96075237"
-								},
-								"type": "wikibase-entityid"
-							},
-							"datatype": "wikibase-item"
-						},
-						"type": "statement",
-						"id": "Q134309$B527E3DB-05B7-4B14-AACB-064C489EFC9F",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "e6596ed0d2b81634d4a2b94f1bd23a5d26a198cf",
-								"snaks": {
-									"P248": [
-										{
-											"snaktype": "value",
-											"property": "P248",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 75653886,
-													"id": "Q75653886"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									]
-								},
-								"snaks-order": [
-									"P248"
-								]
+								"snaks-order": [ "P3452" ]
 							}
 						]
 					}
@@ -2821,7 +2721,7 @@
 							"property": "P1559",
 							"datavalue": {
 								"value": {
-									"text": "Charles IX",
+									"text": "Louis XI",
 									"language": "fr"
 								},
 								"type": "monolingualtext"
@@ -2829,60 +2729,86 @@
 							"datatype": "monolingualtext"
 						},
 						"type": "statement",
-						"id": "Q134309$89CD6EB2-4BC2-42A7-850C-C40A72644188",
+						"id": "Q8058$A3B60F98-1D73-444C-8174-5678BCB4E8B0",
 						"rank": "normal"
 					}
 				],
-				"P2924": [
+				"P119": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P2924",
-							"datavalue": {
-								"value": "2047354",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$24ACF4E9-D41F-49E7-8BBA-81FE753CAC23",
-						"rank": "normal"
-					}
-				],
-				"P451": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P451",
+							"property": "P119",
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 287279,
-									"id": "Q287279"
+									"numeric-id": 2002393,
+									"id": "Q2002393"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "Q134309$ED5BC4DD-B79A-4BFD-BC52-E6FCAEDF6396",
-						"rank": "normal"
+						"id": "Q8058$d026a7d8-4bae-650d-1908-d0359e0f46bc",
+						"rank": "preferred",
+						"references": [
+							{
+								"hash": "d4bd87b862b12d99d26e86472d44f26858dee639",
+								"snaks": {
+									"P143": [
+										{
+											"snaktype": "value",
+											"property": "P143",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 8447,
+													"id": "Q8447"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									]
+								},
+								"snaks-order": [ "P143" ]
+							}
+						]
 					}
 				],
-				"P4145": [
+				"P345": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P4145",
+							"property": "P345",
 							"datavalue": {
-								"value": "379",
+								"value": "ch0028921",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$5599D372-5C1C-42B2-84AD-FE1F69CC0AEA",
-						"rank": "normal"
+						"qualifiers": {
+							"P2241": [
+								{
+									"snaktype": "value",
+									"property": "P2241",
+									"hash": "b5a95dd10e545d7e57bfcc86e5f3290b6c1231d3",
+									"datavalue": {
+										"value": {
+											"entity-type": "item",
+											"numeric-id": 44374960,
+											"id": "Q44374960"
+										},
+										"type": "wikibase-entityid"
+									},
+									"datatype": "wikibase-item"
+								}
+							]
+						},
+						"qualifiers-order": [ "P2241" ],
+						"id": "Q8058$890db541-4229-8040-91a5-5e686e819048",
+						"rank": "deprecated"
 					}
 				],
 				"P94": [
@@ -2891,13 +2817,13 @@
 							"snaktype": "value",
 							"property": "P94",
 							"datavalue": {
-								"value": "Coat of arms of France 1515-1578.svg",
+								"value": "Royal Coat of Arms of Valois France.svg",
 								"type": "string"
 							},
 							"datatype": "commonsMedia"
 						},
 						"type": "statement",
-						"id": "Q134309$272385cb-4546-bc55-c232-c0424449898a",
+						"id": "Q8058$926286e6-4c17-56b6-3e1e-d3fbde1cf917",
 						"rank": "normal"
 					}
 				],
@@ -2907,406 +2833,29 @@
 							"snaktype": "value",
 							"property": "P4159",
 							"datavalue": {
-								"value": "Charles_IX_of_France_(1)",
+								"value": "Louis_XI_of_France_(1)",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$598C5B5A-CCDC-480D-B4F5-34877F1DB6E1",
+						"id": "Q8058$F9CADDF6-D0F7-4E8E-86B1-85EE159337EF",
 						"rank": "normal"
 					}
 				],
-				"P1417": [
+				"P4491": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P1417",
+							"property": "P4491",
 							"datavalue": {
-								"value": "biography/Charles-IX-king-of-France",
+								"value": "louis_xi_roi_de_france_auteur_du_texte",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$4D74DD16-D4CB-4BFA-8969-1FA6DC8CF442",
-						"rank": "normal"
-					}
-				],
-				"P950": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P950",
-							"datavalue": {
-								"value": "XX1229304",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$18F27D1E-528A-4994-9F70-0D613AE75466",
-						"rank": "normal"
-					}
-				],
-				"P1015": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P1015",
-							"datavalue": {
-								"value": "97023962",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$310C5750-E713-475F-A72C-EBD65CE93F80",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "94df45fae3dc1a67a670f46458d7f7220352a0c3",
-								"snaks": {
-									"P214": [
-										{
-											"snaktype": "value",
-											"property": "P214",
-											"datavalue": {
-												"value": "88890900",
-												"type": "string"
-											},
-											"datatype": "external-id"
-										}
-									],
-									"P813": [
-										{
-											"snaktype": "value",
-											"property": "P813",
-											"datavalue": {
-												"value": {
-													"time": "+2017-10-26T00:00:00Z",
-													"timezone": 0,
-													"before": 0,
-													"after": 0,
-													"precision": 11,
-													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-												},
-												"type": "time"
-											},
-											"datatype": "time"
-										}
-									],
-									"P248": [
-										{
-											"snaktype": "value",
-											"property": "P248",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 54919,
-													"id": "Q54919"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									]
-								},
-								"snaks-order": [
-									"P214",
-									"P813",
-									"P248"
-								]
-							}
-						]
-					}
-				],
-				"P1017": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P1017",
-							"datavalue": {
-								"value": "ADV12115572",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$321BE145-4A1B-4190-92A8-613AF530152F",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "94df45fae3dc1a67a670f46458d7f7220352a0c3",
-								"snaks": {
-									"P214": [
-										{
-											"snaktype": "value",
-											"property": "P214",
-											"datavalue": {
-												"value": "88890900",
-												"type": "string"
-											},
-											"datatype": "external-id"
-										}
-									],
-									"P813": [
-										{
-											"snaktype": "value",
-											"property": "P813",
-											"datavalue": {
-												"value": {
-													"time": "+2017-10-26T00:00:00Z",
-													"timezone": 0,
-													"before": 0,
-													"after": 0,
-													"precision": 11,
-													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-												},
-												"type": "time"
-											},
-											"datatype": "time"
-										}
-									],
-									"P248": [
-										{
-											"snaktype": "value",
-											"property": "P248",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 54919,
-													"id": "Q54919"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									]
-								},
-								"snaks-order": [
-									"P214",
-									"P813",
-									"P248"
-								]
-							}
-						]
-					}
-				],
-				"P1207": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P1207",
-							"datavalue": {
-								"value": "n2002038082",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$4419DD8D-BEA3-4F5B-A74F-F484C4BACC54",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "94df45fae3dc1a67a670f46458d7f7220352a0c3",
-								"snaks": {
-									"P214": [
-										{
-											"snaktype": "value",
-											"property": "P214",
-											"datavalue": {
-												"value": "88890900",
-												"type": "string"
-											},
-											"datatype": "external-id"
-										}
-									],
-									"P813": [
-										{
-											"snaktype": "value",
-											"property": "P813",
-											"datavalue": {
-												"value": {
-													"time": "+2017-10-26T00:00:00Z",
-													"timezone": 0,
-													"before": 0,
-													"after": 0,
-													"precision": 11,
-													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-												},
-												"type": "time"
-											},
-											"datatype": "time"
-										}
-									],
-									"P248": [
-										{
-											"snaktype": "value",
-											"property": "P248",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 54919,
-													"id": "Q54919"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									]
-								},
-								"snaks-order": [
-									"P214",
-									"P813",
-									"P248"
-								]
-							}
-						]
-					}
-				],
-				"P4553": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P4553",
-							"datavalue": {
-								"value": "11433",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$B0396487-95B0-482D-B20F-AA180059E85B",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "154031fdff9fbadaa5f15c8b7e4ae46ca13db45a",
-								"snaks": {
-									"P143": [
-										{
-											"snaktype": "value",
-											"property": "P143",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 28054658,
-													"id": "Q28054658"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									]
-								},
-								"snaks-order": [
-									"P143"
-								]
-							}
-						]
-					}
-				],
-				"P1695": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P1695",
-							"datavalue": {
-								"value": "A24499912",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$569DCA36-DE8E-4B04-AB7D-44FBD4C824CC",
-						"rank": "normal"
-					}
-				],
-				"P245": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P245",
-							"datavalue": {
-								"value": "500241470",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$4CD78E54-FF4C-49AF-BC88-221CC5571196",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "759c18789fdd1bacd5c3b0e332aadf08a8ee7a0a",
-								"snaks": {
-									"P214": [
-										{
-											"snaktype": "value",
-											"property": "P214",
-											"datavalue": {
-												"value": "88890900",
-												"type": "string"
-											},
-											"datatype": "external-id"
-										}
-									],
-									"P813": [
-										{
-											"snaktype": "value",
-											"property": "P813",
-											"datavalue": {
-												"value": {
-													"time": "+2018-01-26T00:00:00Z",
-													"timezone": 0,
-													"before": 0,
-													"after": 0,
-													"precision": 11,
-													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-												},
-												"type": "time"
-											},
-											"datatype": "time"
-										}
-									],
-									"P248": [
-										{
-											"snaktype": "value",
-											"property": "P248",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 54919,
-													"id": "Q54919"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									]
-								},
-								"snaks-order": [
-									"P214",
-									"P813",
-									"P248"
-								]
-							}
-						]
-					}
-				],
-				"P4808": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P4808",
-							"datavalue": {
-								"value": "charles-ix",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$F5568F05-3B2D-4894-BFDD-40056803823D",
+						"id": "Q8058$635843E7-EF9C-4C4A-A473-86170257E461",
 						"rank": "normal"
 					}
 				],
@@ -3316,151 +2865,81 @@
 							"snaktype": "value",
 							"property": "P1296",
 							"datavalue": {
-								"value": "0015067",
+								"value": "0038202",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$7E8731D9-BB2B-4359-8591-5951353516AE",
+						"id": "Q8058$0F8A4EC5-AB87-4BAC-8C39-21FB6FFB2434",
 						"rank": "normal"
 					}
 				],
-				"P2342": [
+				"P3219": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P2342",
+							"property": "P3219",
 							"datavalue": {
-								"value": "46021",
+								"value": "louis-xi",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$A09F333A-4B05-4A00-9BF1-E1591EACACA5",
+						"id": "Q8058$A2D1B51B-6A3C-48E9-B059-826547BA8E83",
 						"rank": "normal"
 					}
 				],
-				"P4081": [
+				"P2924": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P4081",
+							"property": "P2924",
 							"datavalue": {
-								"value": "25975",
+								"value": "2161970",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"qualifiers": {
-							"P1810": [
-								{
-									"snaktype": "value",
-									"property": "P1810",
-									"hash": "a8fba6c31395c93c8f2c804ac38ba3dc7101200f",
-									"datavalue": {
-										"value": "Charles IX, King of France, 1550-1574",
-										"type": "string"
-									},
-									"datatype": "string"
-								}
-							]
-						},
-						"qualifiers-order": [
-							"P1810"
-						],
-						"id": "Q134309$38D722D7-6B03-42F6-98C7-B9040239E588",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "2b6006b148910f6023cfd5e1b2243035954621cd",
-								"snaks": {
-									"P813": [
-										{
-											"snaktype": "value",
-											"property": "P813",
-											"datavalue": {
-												"value": {
-													"time": "+2018-06-02T00:00:00Z",
-													"timezone": 0,
-													"before": 0,
-													"after": 0,
-													"precision": 11,
-													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-												},
-												"type": "time"
-											},
-											"datatype": "time"
-										}
-									]
-								},
-								"snaks-order": [
-									"P813"
-								]
-							}
-						]
+						"id": "Q8058$EAB78E2A-C3D4-40F8-B417-0B930F1BB9B8",
+						"rank": "normal"
 					}
 				],
-				"P106": [
+				"P910": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P106",
+							"property": "P910",
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 2304859,
-									"id": "Q2304859"
+									"numeric-id": 32893147,
+									"id": "Q32893147"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "Q134309$7716453A-8D47-4FE8-942E-34BE08FDBDD3",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "d5847b9b6032aa8b13dae3c2dfd9ed5d114d21b3",
-								"snaks": {
-									"P143": [
-										{
-											"snaktype": "value",
-											"property": "P143",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 11920,
-													"id": "Q11920"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									]
-								},
-								"snaks-order": [
-									"P143"
-								]
-							}
-						]
+						"id": "Q8058$b48d7cbc-4083-e688-3e04-52c0cbe54d07",
+						"rank": "normal"
 					}
 				],
-				"P691": [
+				"P5375": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P691",
+							"property": "P5375",
 							"datavalue": {
-								"value": "js20020117017",
+								"value": "10239",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$0a49cb46-414b-849f-7d20-6b00a1793146",
+						"id": "Q8058$1F91E907-AC23-444C-8FF3-2BD20F2A2649",
 						"rank": "normal"
 					}
 				],
@@ -3470,13 +2949,13 @@
 							"snaktype": "value",
 							"property": "P396",
 							"datavalue": {
-								"value": "IT\\ICCU\\BVEV\\024089",
+								"value": "IT\\ICCU\\UFIV\\117607",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$B3848FF7-B830-43D1-AF2A-A4EF00330D2A",
+						"id": "Q8058$53EC0C32-584D-4281-B687-14988A7E707C",
 						"rank": "normal",
 						"references": [
 							{
@@ -3516,10 +2995,7 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248",
-									"P813"
-								]
+								"snaks-order": [ "P248", "P813" ]
 							}
 						]
 					}
@@ -3530,13 +3006,13 @@
 							"snaktype": "value",
 							"property": "P5492",
 							"datavalue": {
-								"value": "2971",
+								"value": "9186",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$D83DA1FA-EF4C-4C85-B601-0F1ED390D458",
+						"id": "Q8058$7A390A9D-EE86-4B91-988B-B1BD0038B40D",
 						"rank": "normal",
 						"references": [
 							{
@@ -3576,432 +3052,52 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248",
-									"P813"
-								]
+								"snaks-order": [ "P248", "P813" ]
 							}
 						]
 					}
 				],
-				"P268": [
+				"P97": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P268",
-							"datavalue": {
-								"value": "12463140m",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$FA471424-E3A4-4D18-B2CB-1DC55C9B8896",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "e159b8548fdca420eb9aef93f7251d2eebfb0abe",
-								"snaks": {
-									"P248": [
-										{
-											"snaktype": "value",
-											"property": "P248",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 19938912,
-													"id": "Q19938912"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									],
-									"P813": [
-										{
-											"snaktype": "value",
-											"property": "P813",
-											"datavalue": {
-												"value": {
-													"time": "+2015-07-13T00:00:00Z",
-													"timezone": 0,
-													"before": 0,
-													"after": 0,
-													"precision": 11,
-													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-												},
-												"type": "time"
-											},
-											"datatype": "time"
-										}
-									]
-								},
-								"snaks-order": [
-									"P248",
-									"P813"
-								]
-							}
-						]
-					}
-				],
-				"P2163": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P2163",
-							"datavalue": {
-								"value": "148119",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$99470C11-DFF2-4560-946F-6FF3E3F38BCD",
-						"rank": "normal"
-					}
-				],
-				"P4491": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P4491",
-							"datavalue": {
-								"value": "charles_ix_roi_de_france",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$7F5DE19C-9377-4CCC-AA81-EDE4F95DCE54",
-						"rank": "normal"
-					}
-				],
-				"P2977": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P2977",
-							"datavalue": {
-								"value": "Charles9",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$3F363911-5191-4BC2-B980-CFA60223863E",
-						"rank": "normal"
-					}
-				],
-				"P3603": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P3603",
-							"datavalue": {
-								"value": "30478",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$70F90DCD-B371-4B3D-B4E7-3B080749CC68",
-						"rank": "normal"
-					}
-				],
-				"P648": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P648",
-							"datavalue": {
-								"value": "OL336005A",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$DE81E1CF-C7B9-4D34-8BBE-9BDCD53D6727",
-						"rank": "normal"
-					}
-				],
-				"P5587": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P5587",
-							"datavalue": {
-								"value": "64jlmdcq2bnn8kw",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$832EDBF2-D955-4238-A95C-7ECD9F647981",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "755bcad04831aca9332757198fe071d0692b0352",
-								"snaks": {
-									"P248": [
-										{
-											"snaktype": "value",
-											"property": "P248",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 1798125,
-													"id": "Q1798125"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									],
-									"P854": [
-										{
-											"snaktype": "value",
-											"property": "P854",
-											"datavalue": {
-												"value": "https://libris.kb.se/katalogisering/64jlmdcq2bnn8kw",
-												"type": "string"
-											},
-											"datatype": "url"
-										}
-									],
-									"P577": [
-										{
-											"snaktype": "value",
-											"property": "P577",
-											"datavalue": {
-												"value": {
-													"time": "+2012-09-25T00:00:00Z",
-													"timezone": 0,
-													"before": 0,
-													"after": 0,
-													"precision": 11,
-													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-												},
-												"type": "time"
-											},
-											"datatype": "time"
-										}
-									],
-									"P813": [
-										{
-											"snaktype": "value",
-											"property": "P813",
-											"datavalue": {
-												"value": {
-													"time": "+2018-08-24T00:00:00Z",
-													"timezone": 0,
-													"before": 0,
-													"after": 0,
-													"precision": 11,
-													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-												},
-												"type": "time"
-											},
-											"datatype": "time"
-										}
-									]
-								},
-								"snaks-order": [
-									"P248",
-									"P854",
-									"P577",
-									"P813"
-								]
-							}
-						]
-					}
-				],
-				"P269": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P269",
-							"datavalue": {
-								"value": "027311112",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$82AB01F1-0696-4030-A758-CD3575512F39",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "1e9e1e59edad5e0f0aef714ceabe31d639474a26",
-								"snaks": {
-									"P248": [
-										{
-											"snaktype": "value",
-											"property": "P248",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 54919,
-													"id": "Q54919"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									],
-									"P214": [
-										{
-											"snaktype": "value",
-											"property": "P214",
-											"datavalue": {
-												"value": "88890900",
-												"type": "string"
-											},
-											"datatype": "external-id"
-										}
-									],
-									"P813": [
-										{
-											"snaktype": "value",
-											"property": "P813",
-											"datavalue": {
-												"value": {
-													"time": "+2018-10-07T00:00:00Z",
-													"timezone": 0,
-													"before": 0,
-													"after": 0,
-													"precision": 11,
-													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-												},
-												"type": "time"
-											},
-											"datatype": "time"
-										}
-									]
-								},
-								"snaks-order": [
-									"P248",
-									"P214",
-									"P813"
-								]
-							}
-						]
-					}
-				],
-				"P4638": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P4638",
-							"datavalue": {
-								"value": "p10317.htm#i103162",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$ADE05156-9363-4C90-A161-3023128EDD5A",
-						"rank": "normal"
-					}
-				],
-				"P1580": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P1580",
-							"datavalue": {
-								"value": "a1275782",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$3328EC6A-8548-40C1-A17C-61DC110B6C68",
-						"rank": "normal"
-					}
-				],
-				"P6379": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P6379",
+							"property": "P97",
 							"datavalue": {
 								"value": {
 									"entity-type": "item",
-									"numeric-id": 1700481,
-									"id": "Q1700481"
+									"numeric-id": 18384454,
+									"id": "Q18384454"
 								},
 								"type": "wikibase-entityid"
 							},
 							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "Q134309$B36EB776-7A96-40D7-9B85-0B8CF9CCC1F8",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "cd03575129fe7117c4a2237e0cd9429ec0b706f2",
-								"snaks": {
-									"P3452": [
-										{
-											"snaktype": "value",
-											"property": "P3452",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 1700481,
-													"id": "Q1700481"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									],
-									"P4656": [
-										{
-											"snaktype": "value",
-											"property": "P4656",
-											"datavalue": {
-												"value": "https://www.wikidata.org/wiki/Q134309#P3603",
-												"type": "string"
-											},
-											"datatype": "url"
-										},
-										{
-											"snaktype": "value",
-											"property": "P4656",
-											"datavalue": {
-												"value": "https://www.wikidata.org/wiki/Property:P3603#P2302",
-												"type": "string"
-											},
-											"datatype": "url"
-										}
-									]
-								},
-								"snaks-order": [
-									"P3452",
-									"P4656"
-								]
-							}
-						]
+						"id": "Q8058$166cdc84-74fa-458f-8089-a35f184764d6",
+						"rank": "normal"
 					}
 				],
-				"P109": [
+				"P166": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P109",
+							"property": "P166",
 							"datavalue": {
-								"value": "1565 signature of King Charles IX of France.jpg",
-								"type": "string"
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 1347889,
+									"id": "Q1347889"
+								},
+								"type": "wikibase-entityid"
 							},
-							"datatype": "commonsMedia"
+							"datatype": "wikibase-item"
 						},
 						"type": "statement",
-						"id": "Q134309$D1BAFA88-8A2F-4996-AC1E-9579CAA5FEBC",
+						"id": "Q8058$E0175E15-3CFF-4BD8-8BFE-2DD8FF873401",
 						"rank": "normal",
 						"references": [
 							{
-								"hash": "3ec30693f942d6ba34b11b92b376af08f8926962",
+								"hash": "b7d42b5c9f88804b380d6f46e76b9038ed427047",
 								"snaks": {
 									"P143": [
 										{
@@ -4023,19 +3119,184 @@
 											"snaktype": "value",
 											"property": "P4656",
 											"datavalue": {
-												"value": "https://it.wikipedia.org/w/index.php?title=Carlo_IX_di_Francia&oldid=103065449",
+												"value": "https://it.wikipedia.org/w/index.php?title=Luigi_XI_di_Francia&oldid=97962383",
 												"type": "string"
 											},
 											"datatype": "url"
 										}
 									]
 								},
-								"snaks-order": [
-									"P143",
-									"P4656"
-								]
+								"snaks-order": [ "P143", "P4656" ]
 							}
 						]
+					}
+				],
+				"P535": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P535",
+							"datavalue": {
+								"value": "3674",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$259474D8-AE4C-44A8-A7AC-4318D3796CC1",
+						"rank": "normal"
+					}
+				],
+				"P2977": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P2977",
+							"datavalue": {
+								"value": "Louis11",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$3CCD6EB9-1A96-4D00-9241-51A496F179F3",
+						"rank": "normal"
+					}
+				],
+				"P648": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P648",
+							"datavalue": {
+								"value": "OL188083A",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$6B505F65-5141-40D5-80FA-ADBD9DA33826",
+						"rank": "normal"
+					}
+				],
+				"P1830": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P1830",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 2968176,
+									"id": "Q2968176"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"id": "Q8058$739FA5C7-BE87-4D9C-830B-55AD6A6D4609",
+						"rank": "normal"
+					},
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P1830",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 2968487,
+									"id": "Q2968487"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"id": "Q8058$4ED6548F-0429-4275-88DE-BCE0B9DF31A2",
+						"rank": "normal"
+					},
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P1830",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 2969122,
+									"id": "Q2969122"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"id": "Q8058$E4FA85EF-96EA-49D8-90DB-722F2BE7D22A",
+						"rank": "normal"
+					}
+				],
+				"P4638": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P4638",
+							"datavalue": {
+								"value": "p10318.htm#i103179",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$B7A722DE-B777-4509-98B2-5AC57CD62488",
+						"rank": "normal"
+					}
+				],
+				"P4145": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P4145",
+							"datavalue": {
+								"value": "313",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$42F53C9A-C157-48D4-8AF4-2522C6359960",
+						"rank": "normal"
+					}
+				],
+				"P2799": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P2799",
+							"datavalue": {
+								"value": "39281",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$C33BA0EB-D183-4896-B6C8-E186F82FE320",
+						"rank": "normal"
+					}
+				],
+				"P3051": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P3051",
+							"datavalue": {
+								"value": "I3968",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$96614376-6325-467D-8A3C-E1A95310B077",
+						"rank": "normal"
 					}
 				],
 				"P6656": [
@@ -4044,17 +3305,17 @@
 							"snaktype": "value",
 							"property": "P6656",
 							"datavalue": {
-								"value": "265727",
+								"value": "2893",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$D56F0577-CF87-453E-9651-4F4140313CAC",
+						"id": "Q8058$B691F57C-9B97-4EEB-AF8C-69640A26EF6E",
 						"rank": "normal",
 						"references": [
 							{
-								"hash": "f8e6b392d701657e0fea5527ff2064dfd381c281",
+								"hash": "6db88d507bd59dc87b914d4aee3aa2f27f1d2976",
 								"snaks": {
 									"P248": [
 										{
@@ -4077,7 +3338,7 @@
 											"property": "P813",
 											"datavalue": {
 												"value": {
-													"time": "+2019-05-05T00:00:00Z",
+													"time": "+2019-05-01T00:00:00Z",
 													"timezone": 0,
 													"before": 0,
 													"after": 0,
@@ -4094,20 +3355,88 @@
 											"snaktype": "value",
 											"property": "P854",
 											"datavalue": {
-												"value": "https://biblio.hiu.cas.cz/authorities/265727",
+												"value": "https://biblio.hiu.cas.cz/authorities/2893",
 												"type": "string"
 											},
 											"datatype": "url"
 										}
 									]
 								},
-								"snaks-order": [
-									"P248",
-									"P813",
-									"P854"
-								]
+								"snaks-order": [ "P248", "P813", "P854" ]
 							}
 						]
+					}
+				],
+				"P5905": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P5905",
+							"datavalue": {
+								"value": "4005-4121",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$63CF96FD-62E1-40D6-9DFD-9F139110C42B",
+						"rank": "normal"
+					}
+				],
+				"P3218": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P3218",
+							"datavalue": {
+								"value": "90093",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$385421AA-F9AB-44BA-BE4B-B2CFE80C07FC",
+						"rank": "normal"
+					}
+				],
+				"P1412": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P1412",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 1473289,
+									"id": "Q1473289"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"id": "Q8058$164db099-4964-5f8e-1b4e-fcbecad2f8a8",
+						"rank": "normal"
+					}
+				],
+				"P6886": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P6886",
+							"datavalue": {
+								"value": {
+									"entity-type": "item",
+									"numeric-id": 1473289,
+									"id": "Q1473289"
+								},
+								"type": "wikibase-entityid"
+							},
+							"datatype": "wikibase-item"
+						},
+						"type": "statement",
+						"id": "Q8058$0335290d-4f73-6a4c-9f2d-e1ea1458ee07",
+						"rank": "normal"
 					}
 				],
 				"P5019": [
@@ -4116,13 +3445,29 @@
 							"snaktype": "value",
 							"property": "P5019",
 							"datavalue": {
-								"value": "karl-karl-ix",
+								"value": "ludwig-ludwig-xi",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$C7E97C0F-623E-4F2C-88AD-BB501FC68111",
+						"id": "Q8058$EB3B775D-908D-44A9-8C2A-84FD824D4741",
+						"rank": "normal"
+					}
+				],
+				"P902": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P902",
+							"datavalue": {
+								"value": "029212",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$5C7288F8-D662-4272-B77C-5874900D8427",
 						"rank": "normal"
 					}
 				],
@@ -4132,13 +3477,13 @@
 							"snaktype": "value",
 							"property": "P7704",
 							"datavalue": {
-								"value": "agent/base/147177",
+								"value": "agent/base/147155",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$4510FF0D-5DB6-44A5-A61C-5F1ADB644666",
+						"id": "Q8058$9157EACF-B66B-442D-8231-F6F7F372D320",
 						"rank": "normal",
 						"references": [
 							{
@@ -4163,27 +3508,9 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P813"
-								]
+								"snaks-order": [ "P813" ]
 							}
 						]
-					}
-				],
-				"P2600": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P2600",
-							"datavalue": {
-								"value": "6000000000307280059",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$3cc9c5cd-d44f-4698-95e3-4944b4a2d823",
-						"rank": "normal"
 					}
 				],
 				"P6404": [
@@ -4192,13 +3519,13 @@
 							"snaktype": "value",
 							"property": "P6404",
 							"datavalue": {
-								"value": "carlo-ix-re-di-francia",
+								"value": "luigi-xi",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$75DCFA76-13F9-4E56-9FD5-1FAC846D6293",
+						"id": "Q8058$10935DDB-C6DB-4DCF-BCBE-3F3DC7BA5693",
 						"rank": "normal"
 					}
 				],
@@ -4208,13 +3535,13 @@
 							"snaktype": "value",
 							"property": "P3762",
 							"datavalue": {
-								"value": "429308",
+								"value": "426937",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$66CEE841-92A0-4D0E-9E9D-8699D08F089B",
+						"id": "Q8058$794FEDC7-DB81-4B27-A34C-16762AC7CF63",
 						"rank": "normal"
 					}
 				],
@@ -4224,82 +3551,77 @@
 							"snaktype": "value",
 							"property": "P6058",
 							"datavalue": {
-								"value": "personnage/wd/112827",
+								"value": "personnage/wd/130423",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$73f31c71-4d4b-0b7f-0376-e76cdeca06b1",
+						"id": "Q8058$dbd637b1-446d-b88f-9664-7771682075c7",
 						"rank": "normal"
 					}
 				],
-				"P973": [
+				"P4212": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P973",
+							"property": "P4212",
 							"datavalue": {
-								"value": "http://www.mcnbiografias.com/app-bio/do/show?key=carlos-ix-rey-de-francia",
-								"type": "string"
-							},
-							"datatype": "url"
-						},
-						"type": "statement",
-						"id": "Q134309$bb69138a-6cd4-45b8-b49e-7a547ea5d494",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "72f9c330ac93cfd93851aad8178af5393395889c",
-								"snaks": {
-									"P143": [
-										{
-											"snaktype": "value",
-											"property": "P143",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 28054658,
-													"id": "Q28054658"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									],
-									"P2264": [
-										{
-											"snaktype": "value",
-											"property": "P2264",
-											"datavalue": {
-												"value": "3272",
-												"type": "string"
-											},
-											"datatype": "external-id"
-										}
-									]
-								},
-								"snaks-order": [
-									"P143",
-									"P2264"
-								]
-							}
-						]
-					}
-				],
-				"P7902": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P7902",
-							"datavalue": {
-								"value": "118720880",
+								"value": "pcrtzfdhZpONSv",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$95418510-C04D-43C0-ACAC-0C72987A9E45",
+						"id": "Q8058$6A232B41-4FAD-47CC-A1AD-88065439012A",
+						"rank": "normal"
+					}
+				],
+				"P950": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P950",
+							"datavalue": {
+								"value": "XX1008669",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$9092F8E2-3373-4D8C-BE69-A2191E0A8DC0",
+						"rank": "normal"
+					}
+				],
+				"P3222": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P3222",
+							"datavalue": {
+								"value": "ludvig-xi",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$50380D7C-1294-43C8-9B7D-FF49A515D09E",
+						"rank": "normal"
+					}
+				],
+				"P7982": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P7982",
+							"datavalue": {
+								"value": "37456",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$DAAFF546-5762-40E5-9F19-1336B613B4C7",
 						"rank": "normal"
 					}
 				],
@@ -4309,33 +3631,31 @@
 							"snaktype": "value",
 							"property": "P7859",
 							"datavalue": {
-								"value": "lccn-n85048544",
+								"value": "lccn-n79115386",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$9337161A-2997-4DBF-A3C9-5B8DC8FD93C3",
+						"id": "Q8058$02331BDF-D6C9-45B5-8B89-328ED4463F1F",
 						"rank": "normal",
 						"references": [
 							{
-								"hash": "f139cfaa1afea2010c88f7e9176bcc83cff2df48",
+								"hash": "6d345b5662fa9409643c99e701510094ef0d6cad",
 								"snaks": {
 									"P214": [
 										{
 											"snaktype": "value",
 											"property": "P214",
 											"datavalue": {
-												"value": "88890900",
+												"value": "262252890",
 												"type": "string"
 											},
 											"datatype": "external-id"
 										}
 									]
 								},
-								"snaks-order": [
-									"P214"
-								]
+								"snaks-order": [ "P214" ]
 							}
 						]
 					}
@@ -4346,13 +3666,13 @@
 							"snaktype": "value",
 							"property": "P8172",
 							"datavalue": {
-								"value": "dw.4456",
+								"value": "sw.980569",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$50F701DD-4115-4648-BD59-3ECC7519CABD",
+						"id": "Q8058$58C10BB1-9B6D-4915-846B-D680267AC95F",
 						"rank": "normal",
 						"references": [
 							{
@@ -4374,96 +3694,25 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248"
-								]
+								"snaks-order": [ "P248" ]
 							}
 						]
 					}
 				],
-				"P7763": [
+				"P1580": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P7763",
+							"property": "P1580",
 							"datavalue": {
-								"value": {
-									"entity-type": "item",
-									"numeric-id": 71887839,
-									"id": "Q71887839"
-								},
-								"type": "wikibase-entityid"
+								"value": "a1275263",
+								"type": "string"
 							},
-							"datatype": "wikibase-item"
+							"datatype": "external-id"
 						},
 						"type": "statement",
-						"qualifiers": {
-							"P1001": [
-								{
-									"snaktype": "value",
-									"property": "P1001",
-									"hash": "d05ce56e71c243776229b47008f66a57af660841",
-									"datavalue": {
-										"value": {
-											"entity-type": "item",
-											"numeric-id": 13780930,
-											"id": "Q13780930"
-										},
-										"type": "wikibase-entityid"
-									},
-									"datatype": "wikibase-item"
-								}
-							]
-						},
-						"qualifiers-order": [
-							"P1001"
-						],
-						"id": "Q134309$c8cd94cb-bea0-494a-b99a-9728b6402267",
-						"rank": "normal",
-						"references": [
-							{
-								"hash": "5d2676f4bfffc68879d96f757b8c0f4edf16dc74",
-								"snaks": {
-									"P887": [
-										{
-											"snaktype": "value",
-											"property": "P887",
-											"datavalue": {
-												"value": {
-													"entity-type": "item",
-													"numeric-id": 29940705,
-													"id": "Q29940705"
-												},
-												"type": "wikibase-entityid"
-											},
-											"datatype": "wikibase-item"
-										}
-									],
-									"P813": [
-										{
-											"snaktype": "value",
-											"property": "P813",
-											"datavalue": {
-												"value": {
-													"time": "+2020-05-08T00:00:00Z",
-													"timezone": 0,
-													"before": 0,
-													"after": 0,
-													"precision": 11,
-													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-												},
-												"type": "time"
-											},
-											"datatype": "time"
-										}
-									]
-								},
-								"snaks-order": [
-									"P887",
-									"P813"
-								]
-							}
-						]
+						"id": "Q8058$1993F02E-A903-4730-9F8F-D30866206B5D",
+						"rank": "normal"
 					}
 				],
 				"P1819": [
@@ -4472,93 +3721,45 @@
 							"snaktype": "value",
 							"property": "P1819",
 							"datavalue": {
-								"value": "I00003810",
+								"value": "I00003743",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$4418be74-4c35-7449-eb19-afacc4a0b941",
+						"id": "Q8058$a788412a-4747-26c7-3752-4268707cdef0",
 						"rank": "normal"
 					}
 				],
-				"P1711": [
+				"P8081": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P1711",
+							"property": "P8081",
 							"datavalue": {
-								"value": "22547",
+								"value": "MA95925",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$2916D2D1-6238-4936-A4E3-2281E885C9F3",
+						"id": "Q8058$7E5257D9-A542-46EF-909D-3C5A00012FC0",
 						"rank": "normal"
 					}
 				],
-				"P2799": [
+				"P8349": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P2799",
+							"property": "P8349",
 							"datavalue": {
-								"value": "19481",
+								"value": "35234",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$EA9E2A42-B75E-4DC6-A737-B9C25EB3D87A",
-						"rank": "normal"
-					}
-				],
-				"P5691": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P5691",
-							"datavalue": {
-								"value": "12435",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$489EF8BB-9FE0-4938-AEAA-6553E931D0CA",
-						"rank": "normal"
-					}
-				],
-				"P7982": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P7982",
-							"datavalue": {
-								"value": "30571",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$89C27BA8-786B-498A-8A70-0C6851885095",
-						"rank": "normal"
-					}
-				],
-				"P3388": [
-					{
-						"mainsnak": {
-							"snaktype": "value",
-							"property": "P3388",
-							"datavalue": {
-								"value": "220621",
-								"type": "string"
-							},
-							"datatype": "external-id"
-						},
-						"type": "statement",
-						"id": "Q134309$37BA887A-218C-4F90-9980-15924D5143C8",
+						"id": "Q8058$C57E0B3D-24BE-4BAA-922A-8BCB3AB89270",
 						"rank": "normal"
 					}
 				],
@@ -4568,33 +3769,33 @@
 							"snaktype": "value",
 							"property": "P7711",
 							"datavalue": {
-								"value": "T513-44424",
+								"value": "T513-44396",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$F7A7E532-4F32-4A34-A789-0C8640198C22",
+						"id": "Q8058$CF9F90AC-E7D4-4652-9A4C-5AC13C269996",
 						"rank": "normal"
 					}
 				],
-				"P8179": [
+				"P3280": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P8179",
+							"property": "P3280",
 							"datavalue": {
-								"value": "ncf10363807",
+								"value": "0000065438",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "q134309$dc4da1b5-4631-ca85-bf4a-034ce14d0467",
+						"id": "q8058$654e2372-46c3-d1f3-e7a6-b9588974c05c",
 						"rank": "normal",
 						"references": [
 							{
-								"hash": "7c0194e0703f3c600bff16296fe9228d640f5907",
+								"hash": "9ff6abad45c7173039307e322d1bc4ec6a19d2a1",
 								"snaks": {
 									"P248": [
 										{
@@ -4616,7 +3817,7 @@
 											"snaktype": "value",
 											"property": "P214",
 											"datavalue": {
-												"value": "88890900",
+												"value": "262252890",
 												"type": "string"
 											},
 											"datatype": "external-id"
@@ -4628,7 +3829,7 @@
 											"property": "P813",
 											"datavalue": {
 												"value": {
-													"time": "+2020-05-27T00:00:00Z",
+													"time": "+2020-06-21T00:00:00Z",
 													"timezone": 0,
 													"before": 0,
 													"after": 0,
@@ -4641,32 +3842,28 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248",
-									"P214",
-									"P813"
-								]
+								"snaks-order": [ "P248", "P214", "P813" ]
 							}
 						]
 					}
 				],
-				"P5504": [
+				"P4619": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P5504",
+							"property": "P4619",
 							"datavalue": {
-								"value": "pe41010937",
+								"value": "000186983",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "q134309$4f4134f4-48e5-361f-434f-df16c6eca0da",
+						"id": "q8058$0542f08f-4fe2-0f5c-9c28-acce17a4b7ad",
 						"rank": "normal",
 						"references": [
 							{
-								"hash": "7c0194e0703f3c600bff16296fe9228d640f5907",
+								"hash": "9ff6abad45c7173039307e322d1bc4ec6a19d2a1",
 								"snaks": {
 									"P248": [
 										{
@@ -4688,7 +3885,7 @@
 											"snaktype": "value",
 											"property": "P214",
 											"datavalue": {
-												"value": "88890900",
+												"value": "262252890",
 												"type": "string"
 											},
 											"datatype": "external-id"
@@ -4700,7 +3897,7 @@
 											"property": "P813",
 											"datavalue": {
 												"value": {
-													"time": "+2020-05-27T00:00:00Z",
+													"time": "+2020-06-21T00:00:00Z",
 													"timezone": 0,
 													"before": 0,
 													"after": 0,
@@ -4713,11 +3910,75 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248",
-									"P214",
-									"P813"
-								]
+								"snaks-order": [ "P248", "P214", "P813" ]
+							}
+						]
+					}
+				],
+				"P6394": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P6394",
+							"datavalue": {
+								"value": "a11431751",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "q8058$25a6f0f6-4b52-e488-9f2d-fbd17ae4c975",
+						"rank": "normal",
+						"references": [
+							{
+								"hash": "9ff6abad45c7173039307e322d1bc4ec6a19d2a1",
+								"snaks": {
+									"P248": [
+										{
+											"snaktype": "value",
+											"property": "P248",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 54919,
+													"id": "Q54919"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									],
+									"P214": [
+										{
+											"snaktype": "value",
+											"property": "P214",
+											"datavalue": {
+												"value": "262252890",
+												"type": "string"
+											},
+											"datatype": "external-id"
+										}
+									],
+									"P813": [
+										{
+											"snaktype": "value",
+											"property": "P813",
+											"datavalue": {
+												"value": {
+													"time": "+2020-06-21T00:00:00Z",
+													"timezone": 0,
+													"before": 0,
+													"after": 0,
+													"precision": 11,
+													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+												},
+												"type": "time"
+											},
+											"datatype": "time"
+										}
+									]
+								},
+								"snaks-order": [ "P248", "P214", "P813" ]
 							}
 						]
 					}
@@ -4728,17 +3989,17 @@
 							"snaktype": "value",
 							"property": "P8189",
 							"datavalue": {
-								"value": "987007259760405171",
+								"value": "987007264733805171",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "q134309$27fe6684-4661-0c6a-0430-89aae2aa7f54",
+						"id": "q8058$55a22cd7-4f9c-6ab7-a040-7f003f5549a3",
 						"rank": "normal",
 						"references": [
 							{
-								"hash": "7c0194e0703f3c600bff16296fe9228d640f5907",
+								"hash": "9ff6abad45c7173039307e322d1bc4ec6a19d2a1",
 								"snaks": {
 									"P248": [
 										{
@@ -4760,7 +4021,7 @@
 											"snaktype": "value",
 											"property": "P214",
 											"datavalue": {
-												"value": "88890900",
+												"value": "262252890",
 												"type": "string"
 											},
 											"datatype": "external-id"
@@ -4772,7 +4033,7 @@
 											"property": "P813",
 											"datavalue": {
 												"value": {
-													"time": "+2020-05-27T00:00:00Z",
+													"time": "+2020-06-21T00:00:00Z",
 													"timezone": 0,
 													"before": 0,
 													"after": 0,
@@ -4785,11 +4046,7 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248",
-									"P214",
-									"P813"
-								]
+								"snaks-order": [ "P248", "P214", "P813" ]
 							}
 						]
 					}
@@ -4800,17 +4057,17 @@
 							"snaktype": "value",
 							"property": "P7699",
 							"datavalue": {
-								"value": "LNB:B1DD;=hI",
+								"value": "LNB:LGp;=BZ",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "q134309$69b2605d-40f8-06e9-ba04-07ae54402a25",
+						"id": "q8058$c786bfc6-436c-1962-ed80-76bddc742040",
 						"rank": "normal",
 						"references": [
 							{
-								"hash": "7c0194e0703f3c600bff16296fe9228d640f5907",
+								"hash": "9ff6abad45c7173039307e322d1bc4ec6a19d2a1",
 								"snaks": {
 									"P248": [
 										{
@@ -4832,7 +4089,7 @@
 											"snaktype": "value",
 											"property": "P214",
 											"datavalue": {
-												"value": "88890900",
+												"value": "262252890",
 												"type": "string"
 											},
 											"datatype": "external-id"
@@ -4844,7 +4101,7 @@
 											"property": "P813",
 											"datavalue": {
 												"value": {
-													"time": "+2020-05-27T00:00:00Z",
+													"time": "+2020-06-21T00:00:00Z",
 													"timezone": 0,
 													"before": 0,
 													"after": 0,
@@ -4857,11 +4114,7 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248",
-									"P214",
-									"P813"
-								]
+								"snaks-order": [ "P248", "P214", "P813" ]
 							}
 						]
 					}
@@ -4872,17 +4125,17 @@
 							"snaktype": "value",
 							"property": "P7029",
 							"datavalue": {
-								"value": "77113632",
+								"value": "7721161",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "q134309$41a56cd8-4a9d-a8bb-7629-66704beaa646",
+						"id": "q8058$39505c02-425d-5e72-6faf-7db3413392df",
 						"rank": "normal",
 						"references": [
 							{
-								"hash": "7c0194e0703f3c600bff16296fe9228d640f5907",
+								"hash": "9ff6abad45c7173039307e322d1bc4ec6a19d2a1",
 								"snaks": {
 									"P248": [
 										{
@@ -4904,7 +4157,7 @@
 											"snaktype": "value",
 											"property": "P214",
 											"datavalue": {
-												"value": "88890900",
+												"value": "262252890",
 												"type": "string"
 											},
 											"datatype": "external-id"
@@ -4916,7 +4169,7 @@
 											"property": "P813",
 											"datavalue": {
 												"value": {
-													"time": "+2020-05-27T00:00:00Z",
+													"time": "+2020-06-21T00:00:00Z",
 													"timezone": 0,
 													"before": 0,
 													"after": 0,
@@ -4929,28 +4182,258 @@
 										}
 									]
 								},
-								"snaks-order": [
-									"P248",
-									"P214",
-									"P813"
-								]
+								"snaks-order": [ "P248", "P214", "P813" ]
 							}
 						]
 					}
 				],
-				"P3051": [
+				"P7293": [
 					{
 						"mainsnak": {
 							"snaktype": "value",
-							"property": "P3051",
+							"property": "P7293",
 							"datavalue": {
-								"value": "I4016",
+								"value": "9810586389405606",
 								"type": "string"
 							},
 							"datatype": "external-id"
 						},
 						"type": "statement",
-						"id": "Q134309$12AD55BC-A7A4-4D6A-AE22-6834BABC76F9",
+						"id": "q8058$a3052373-4f05-7559-7148-c68a69fe41cf",
+						"rank": "normal",
+						"references": [
+							{
+								"hash": "9ff6abad45c7173039307e322d1bc4ec6a19d2a1",
+								"snaks": {
+									"P248": [
+										{
+											"snaktype": "value",
+											"property": "P248",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 54919,
+													"id": "Q54919"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									],
+									"P214": [
+										{
+											"snaktype": "value",
+											"property": "P214",
+											"datavalue": {
+												"value": "262252890",
+												"type": "string"
+											},
+											"datatype": "external-id"
+										}
+									],
+									"P813": [
+										{
+											"snaktype": "value",
+											"property": "P813",
+											"datavalue": {
+												"value": {
+													"time": "+2020-06-21T00:00:00Z",
+													"timezone": 0,
+													"before": 0,
+													"after": 0,
+													"precision": 11,
+													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+												},
+												"type": "time"
+											},
+											"datatype": "time"
+										}
+									]
+								},
+								"snaks-order": [ "P248", "P214", "P813" ]
+							}
+						]
+					}
+				],
+				"P3065": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P3065",
+							"datavalue": {
+								"value": "02-A012338080",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "q8058$95753cc3-4c2c-6f42-90c5-99415d98a0c5",
+						"rank": "normal",
+						"references": [
+							{
+								"hash": "9ff6abad45c7173039307e322d1bc4ec6a19d2a1",
+								"snaks": {
+									"P248": [
+										{
+											"snaktype": "value",
+											"property": "P248",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 54919,
+													"id": "Q54919"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									],
+									"P214": [
+										{
+											"snaktype": "value",
+											"property": "P214",
+											"datavalue": {
+												"value": "262252890",
+												"type": "string"
+											},
+											"datatype": "external-id"
+										}
+									],
+									"P813": [
+										{
+											"snaktype": "value",
+											"property": "P813",
+											"datavalue": {
+												"value": {
+													"time": "+2020-06-21T00:00:00Z",
+													"timezone": 0,
+													"before": 0,
+													"after": 0,
+													"precision": 11,
+													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+												},
+												"type": "time"
+											},
+											"datatype": "time"
+										}
+									]
+								},
+								"snaks-order": [ "P248", "P214", "P813" ]
+							}
+						]
+					},
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P3065",
+							"datavalue": {
+								"value": "02-A009991350",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$d02092f7-4c58-d80e-65b2-b496ecc0bd87",
+						"rank": "normal"
+					}
+				],
+				"P7039": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P7039",
+							"datavalue": {
+								"value": "000056995",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "q8058$84fdceac-42aa-f488-6b58-5419599bb6e8",
+						"rank": "normal",
+						"references": [
+							{
+								"hash": "9ff6abad45c7173039307e322d1bc4ec6a19d2a1",
+								"snaks": {
+									"P248": [
+										{
+											"snaktype": "value",
+											"property": "P248",
+											"datavalue": {
+												"value": {
+													"entity-type": "item",
+													"numeric-id": 54919,
+													"id": "Q54919"
+												},
+												"type": "wikibase-entityid"
+											},
+											"datatype": "wikibase-item"
+										}
+									],
+									"P214": [
+										{
+											"snaktype": "value",
+											"property": "P214",
+											"datavalue": {
+												"value": "262252890",
+												"type": "string"
+											},
+											"datatype": "external-id"
+										}
+									],
+									"P813": [
+										{
+											"snaktype": "value",
+											"property": "P813",
+											"datavalue": {
+												"value": {
+													"time": "+2020-06-21T00:00:00Z",
+													"timezone": 0,
+													"before": 0,
+													"after": 0,
+													"precision": 11,
+													"calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+												},
+												"type": "time"
+											},
+											"datatype": "time"
+										}
+									]
+								},
+								"snaks-order": [ "P248", "P214", "P813" ]
+							}
+						]
+					}
+				],
+				"P1207": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P1207",
+							"datavalue": {
+								"value": "n96224523",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$0D84B2E9-86DF-4231-8E40-04430DF8C798",
+						"rank": "normal"
+					}
+				],
+				"P1695": [
+					{
+						"mainsnak": {
+							"snaktype": "value",
+							"property": "P1695",
+							"datavalue": {
+								"value": "A1185005X",
+								"type": "string"
+							},
+							"datatype": "external-id"
+						},
+						"type": "statement",
+						"id": "Q8058$10f058fb-4117-7d87-d59b-24226b4f32db",
 						"rank": "normal"
 					}
 				]
@@ -4958,458 +4441,447 @@
 			"sitelinks": {
 				"anwiki": {
 					"site": "anwiki",
-					"title": "Carlos IX de Francia",
-					"badges": [
-					],
-					"url": "https://an.wikipedia.org/wiki/Carlos_IX_de_Francia"
+					"title": "Lo\u00eds XI de Francia",
+					"badges": [],
+					"url": "https://an.wikipedia.org/wiki/Lo%C3%ADs_XI_de_Francia"
 				},
 				"arwiki": {
 					"site": "arwiki",
-					"title": "\u0634\u0627\u0631\u0644 \u0627\u0644\u062a\u0627\u0633\u0639 \u0645\u0644\u0643 \u0641\u0631\u0646\u0633\u0627",
-					"badges": [
-					],
-					"url": "https://ar.wikipedia.org/wiki/%D8%B4%D8%A7%D8%B1%D9%84_%D8%A7%D9%84%D8%AA%D8%A7%D8%B3%D8%B9_%D9%85%D9%84%D9%83_%D9%81%D8%B1%D9%86%D8%B3%D8%A7"
+					"title": "\u0644\u0648\u064a\u0633 \u0627\u0644\u062d\u0627\u062f\u064a \u0639\u0634\u0631 \u0645\u0644\u0643 \u0641\u0631\u0646\u0633\u0627",
+					"badges": [],
+					"url": "https://ar.wikipedia.org/wiki/%D9%84%D9%88%D9%8A%D8%B3_%D8%A7%D9%84%D8%AD%D8%A7%D8%AF%D9%8A_%D8%B9%D8%B4%D8%B1_%D9%85%D9%84%D9%83_%D9%81%D8%B1%D9%86%D8%B3%D8%A7"
+				},
+				"astwiki": {
+					"site": "astwiki",
+					"title": "Lluis XI de Francia",
+					"badges": [],
+					"url": "https://ast.wikipedia.org/wiki/Lluis_XI_de_Francia"
 				},
 				"azbwiki": {
 					"site": "azbwiki",
-					"title": "\u062f\u0648\u0642\u0642\u0648\u0632\u0648\u0646\u062c\u0648 \u0634\u0627\u0631\u0644",
-					"badges": [
-					],
-					"url": "https://azb.wikipedia.org/wiki/%D8%AF%D9%88%D9%82%D9%82%D9%88%D8%B2%D9%88%D9%86%D8%AC%D9%88_%D8%B4%D8%A7%D8%B1%D9%84"
+					"title": "\u0627\u0648\u0652\u0646\u200c\u0628\u06cc\u0631\u06cc\u0646\u062c\u06cc \u0644\u0648\u06cc\u06cc",
+					"badges": [],
+					"url": "https://azb.wikipedia.org/wiki/%D8%A7%D9%88%D9%92%D9%86%E2%80%8C%D8%A8%DB%8C%D8%B1%DB%8C%D9%86%D8%AC%DB%8C_%D9%84%D9%88%DB%8C%DB%8C"
 				},
-				"azwiki": {
-					"site": "azwiki",
-					"title": "IX Karl",
-					"badges": [
-					],
-					"url": "https://az.wikipedia.org/wiki/IX_Karl"
+				"be_x_oldwiki": {
+					"site": "be_x_oldwiki",
+					"title": "\u041b\u044e\u0434\u043e\u0432\u0456\u043a \u0425\u0406",
+					"badges": [],
+					"url": "https://be-tarask.wikipedia.org/wiki/%D0%9B%D1%8E%D0%B4%D0%BE%D0%B2%D1%96%D0%BA_%D0%A5%D0%86"
 				},
 				"bewiki": {
 					"site": "bewiki",
-					"title": "\u041a\u0430\u0440\u043b IX \u0412\u0430\u043b\u0443\u0430",
-					"badges": [
-					],
-					"url": "https://be.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D0%BB_IX_%D0%92%D0%B0%D0%BB%D1%83%D0%B0"
+					"title": "\u041b\u044e\u0434\u043e\u0432\u0456\u043a XI",
+					"badges": [],
+					"url": "https://be.wikipedia.org/wiki/%D0%9B%D1%8E%D0%B4%D0%BE%D0%B2%D1%96%D0%BA_XI"
 				},
 				"bgwiki": {
 					"site": "bgwiki",
-					"title": "\u0428\u0430\u0440\u043b IX (\u0424\u0440\u0430\u043d\u0446\u0438\u044f)",
-					"badges": [
-					],
-					"url": "https://bg.wikipedia.org/wiki/%D0%A8%D0%B0%D1%80%D0%BB_IX_(%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D1%8F)"
+					"title": "\u041b\u0443\u0438 XI",
+					"badges": [],
+					"url": "https://bg.wikipedia.org/wiki/%D0%9B%D1%83%D0%B8_XI"
 				},
 				"brwiki": {
 					"site": "brwiki",
-					"title": "Charlez IX (Bro-C'hall)",
-					"badges": [
-					],
-					"url": "https://br.wikipedia.org/wiki/Charlez_IX_(Bro-C%27hall)"
+					"title": "Loeiz XI (Bro-C'hall)",
+					"badges": [],
+					"url": "https://br.wikipedia.org/wiki/Loeiz_XI_(Bro-C%27hall)"
 				},
 				"bswiki": {
 					"site": "bswiki",
-					"title": "Karlo IX, kralj Francuske",
-					"badges": [
-					],
-					"url": "https://bs.wikipedia.org/wiki/Karlo_IX,_kralj_Francuske"
+					"title": "Luj XI, kralj Francuske",
+					"badges": [],
+					"url": "https://bs.wikipedia.org/wiki/Luj_XI,_kralj_Francuske"
 				},
 				"cawiki": {
 					"site": "cawiki",
-					"title": "Carles IX de Fran\u00e7a",
-					"badges": [
-					],
-					"url": "https://ca.wikipedia.org/wiki/Carles_IX_de_Fran%C3%A7a"
+					"title": "Llu\u00eds XI de Fran\u00e7a",
+					"badges": [],
+					"url": "https://ca.wikipedia.org/wiki/Llu%C3%ADs_XI_de_Fran%C3%A7a"
+				},
+				"cawikiquote": {
+					"site": "cawikiquote",
+					"title": "Llu\u00eds XI de Fran\u00e7a",
+					"badges": [],
+					"url": "https://ca.wikiquote.org/wiki/Llu%C3%ADs_XI_de_Fran%C3%A7a"
 				},
 				"commonswiki": {
 					"site": "commonswiki",
-					"title": "Charles IX de France",
-					"badges": [
-					],
-					"url": "https://commons.wikimedia.org/wiki/Charles_IX_de_France"
+					"title": "Louis XI de France",
+					"badges": [],
+					"url": "https://commons.wikimedia.org/wiki/Louis_XI_de_France"
 				},
 				"cswiki": {
 					"site": "cswiki",
-					"title": "Karel IX. Francouzsk\u00fd",
-					"badges": [
-					],
-					"url": "https://cs.wikipedia.org/wiki/Karel_IX._Francouzsk%C3%BD"
+					"title": "Ludv\u00edk XI.",
+					"badges": [],
+					"url": "https://cs.wikipedia.org/wiki/Ludv%C3%ADk_XI."
 				},
 				"cywiki": {
 					"site": "cywiki",
-					"title": "Siarl IX, brenin Ffrainc",
-					"badges": [
-					],
-					"url": "https://cy.wikipedia.org/wiki/Siarl_IX,_brenin_Ffrainc"
+					"title": "Louis XI, brenin Ffrainc",
+					"badges": [],
+					"url": "https://cy.wikipedia.org/wiki/Louis_XI,_brenin_Ffrainc"
 				},
 				"dawiki": {
 					"site": "dawiki",
-					"title": "Karl 9. af Frankrig",
-					"badges": [
-					],
-					"url": "https://da.wikipedia.org/wiki/Karl_9._af_Frankrig"
+					"title": "Ludvig 11. af Frankrig",
+					"badges": [],
+					"url": "https://da.wikipedia.org/wiki/Ludvig_11._af_Frankrig"
 				},
 				"dewiki": {
 					"site": "dewiki",
-					"title": "Karl IX. (Frankreich)",
-					"badges": [
-					],
-					"url": "https://de.wikipedia.org/wiki/Karl_IX._(Frankreich)"
+					"title": "Ludwig XI.",
+					"badges": [],
+					"url": "https://de.wikipedia.org/wiki/Ludwig_XI."
 				},
 				"elwiki": {
 					"site": "elwiki",
-					"title": "\u039a\u03ac\u03c1\u03bf\u03bb\u03bf\u03c2 \u0398\u0384 \u03c4\u03b7\u03c2 \u0393\u03b1\u03bb\u03bb\u03af\u03b1\u03c2",
-					"badges": [
-					],
-					"url": "https://el.wikipedia.org/wiki/%CE%9A%CE%AC%CF%81%CE%BF%CE%BB%CE%BF%CF%82_%CE%98%CE%84_%CF%84%CE%B7%CF%82_%CE%93%CE%B1%CE%BB%CE%BB%CE%AF%CE%B1%CF%82"
+					"title": "\u039b\u03bf\u03c5\u03b4\u03bf\u03b2\u03af\u03ba\u03bf\u03c2 \u0399\u0391\u0384 \u03c4\u03b7\u03c2 \u0393\u03b1\u03bb\u03bb\u03af\u03b1\u03c2",
+					"badges": [],
+					"url": "https://el.wikipedia.org/wiki/%CE%9B%CE%BF%CF%85%CE%B4%CE%BF%CE%B2%CE%AF%CE%BA%CE%BF%CF%82_%CE%99%CE%91%CE%84_%CF%84%CE%B7%CF%82_%CE%93%CE%B1%CE%BB%CE%BB%CE%AF%CE%B1%CF%82"
 				},
 				"enwiki": {
 					"site": "enwiki",
-					"title": "Charles IX of France",
-					"badges": [
-					],
-					"url": "https://en.wikipedia.org/wiki/Charles_IX_of_France"
+					"title": "Louis XI of France",
+					"badges": [],
+					"url": "https://en.wikipedia.org/wiki/Louis_XI_of_France"
 				},
 				"eowiki": {
 					"site": "eowiki",
-					"title": "Karlo la 9-a (Francio)",
-					"badges": [
-					],
-					"url": "https://eo.wikipedia.org/wiki/Karlo_la_9-a_(Francio)"
+					"title": "Ludoviko la 11-a (Francio)",
+					"badges": [],
+					"url": "https://eo.wikipedia.org/wiki/Ludoviko_la_11-a_(Francio)"
 				},
 				"eswiki": {
 					"site": "eswiki",
-					"title": "Carlos IX de Francia",
-					"badges": [
-					],
-					"url": "https://es.wikipedia.org/wiki/Carlos_IX_de_Francia"
+					"title": "Luis XI de Francia",
+					"badges": [],
+					"url": "https://es.wikipedia.org/wiki/Luis_XI_de_Francia"
 				},
 				"etwiki": {
 					"site": "etwiki",
-					"title": "Charles IX",
-					"badges": [
-					],
-					"url": "https://et.wikipedia.org/wiki/Charles_IX"
+					"title": "Louis XI",
+					"badges": [],
+					"url": "https://et.wikipedia.org/wiki/Louis_XI"
 				},
 				"euwiki": {
 					"site": "euwiki",
-					"title": "Karlos IX.a Frantziakoa",
-					"badges": [
-					],
-					"url": "https://eu.wikipedia.org/wiki/Karlos_IX.a_Frantziakoa"
+					"title": "Luis XI.a Frantziakoa",
+					"badges": [],
+					"url": "https://eu.wikipedia.org/wiki/Luis_XI.a_Frantziakoa"
 				},
 				"fawiki": {
 					"site": "fawiki",
-					"title": "\u0634\u0627\u0631\u0644 \u0646\u0647\u0645",
-					"badges": [
-					],
-					"url": "https://fa.wikipedia.org/wiki/%D8%B4%D8%A7%D8%B1%D9%84_%D9%86%D9%87%D9%85"
+					"title": "\u0644\u0648\u0626\u06cc \u06cc\u0627\u0632\u062f\u0647\u0645",
+					"badges": [],
+					"url": "https://fa.wikipedia.org/wiki/%D9%84%D9%88%D8%A6%DB%8C_%DB%8C%D8%A7%D8%B2%D8%AF%D9%87%D9%85"
 				},
 				"fiwiki": {
 					"site": "fiwiki",
-					"title": "Kaarle IX (Ranska)",
-					"badges": [
-					],
-					"url": "https://fi.wikipedia.org/wiki/Kaarle_IX_(Ranska)"
+					"title": "Ludvig XI",
+					"badges": [],
+					"url": "https://fi.wikipedia.org/wiki/Ludvig_XI"
 				},
 				"frwiki": {
 					"site": "frwiki",
-					"title": "Charles IX (roi de France)",
-					"badges": [
-					],
-					"url": "https://fr.wikipedia.org/wiki/Charles_IX_(roi_de_France)"
+					"title": "Louis XI",
+					"badges": [],
+					"url": "https://fr.wikipedia.org/wiki/Louis_XI"
 				},
 				"frwikiquote": {
 					"site": "frwikiquote",
-					"title": "Charles IX",
-					"badges": [
-					],
-					"url": "https://fr.wikiquote.org/wiki/Charles_IX"
+					"title": "Louis XI de France",
+					"badges": [],
+					"url": "https://fr.wikiquote.org/wiki/Louis_XI_de_France"
+				},
+				"frwikisource": {
+					"site": "frwikisource",
+					"title": "Auteur:Louis XI",
+					"badges": [],
+					"url": "https://fr.wikisource.org/wiki/Auteur:Louis_XI"
+				},
+				"fywiki": {
+					"site": "fywiki",
+					"title": "Loadewyk XI fan Frankryk",
+					"badges": [],
+					"url": "https://fy.wikipedia.org/wiki/Loadewyk_XI_fan_Frankryk"
+				},
+				"glwiki": {
+					"site": "glwiki",
+					"title": "Lu\u00eds XI de Francia",
+					"badges": [],
+					"url": "https://gl.wikipedia.org/wiki/Lu%C3%ADs_XI_de_Francia"
 				},
 				"hewiki": {
 					"site": "hewiki",
-					"title": "\u05e9\u05d0\u05e8\u05dc \u05d4\u05ea\u05e9\u05d9\u05e2\u05d9, \u05de\u05dc\u05da \u05e6\u05e8\u05e4\u05ea",
-					"badges": [
-					],
-					"url": "https://he.wikipedia.org/wiki/%D7%A9%D7%90%D7%A8%D7%9C_%D7%94%D7%AA%D7%A9%D7%99%D7%A2%D7%99,_%D7%9E%D7%9C%D7%9A_%D7%A6%D7%A8%D7%A4%D7%AA"
+					"title": "\u05dc\u05d5\u05d0\u05d9 \u05d4\u05d0\u05d7\u05d3 \u05e2\u05e9\u05e8, \u05de\u05dc\u05da \u05e6\u05e8\u05e4\u05ea",
+					"badges": [],
+					"url": "https://he.wikipedia.org/wiki/%D7%9C%D7%95%D7%90%D7%99_%D7%94%D7%90%D7%97%D7%93_%D7%A2%D7%A9%D7%A8,_%D7%9E%D7%9C%D7%9A_%D7%A6%D7%A8%D7%A4%D7%AA"
 				},
 				"hrwiki": {
 					"site": "hrwiki",
-					"title": "Karlo IX., kralj Francuske",
-					"badges": [
-					],
-					"url": "https://hr.wikipedia.org/wiki/Karlo_IX.,_kralj_Francuske"
+					"title": "Luj XI., kralj Francuske",
+					"badges": [],
+					"url": "https://hr.wikipedia.org/wiki/Luj_XI.,_kralj_Francuske"
 				},
 				"huwiki": {
 					"site": "huwiki",
-					"title": "IX. K\u00e1roly francia kir\u00e1ly",
-					"badges": [
-					],
-					"url": "https://hu.wikipedia.org/wiki/IX._K%C3%A1roly_francia_kir%C3%A1ly"
-				},
-				"hywiki": {
-					"site": "hywiki",
-					"title": "\u0547\u0561\u057c\u056c IX",
-					"badges": [
-					],
-					"url": "https://hy.wikipedia.org/wiki/%D5%87%D5%A1%D5%BC%D5%AC_IX"
+					"title": "XI. Lajos francia kir\u00e1ly",
+					"badges": [],
+					"url": "https://hu.wikipedia.org/wiki/XI._Lajos_francia_kir%C3%A1ly"
 				},
 				"idwiki": {
 					"site": "idwiki",
-					"title": "Charles IX dari Prancis",
-					"badges": [
-					],
-					"url": "https://id.wikipedia.org/wiki/Charles_IX_dari_Prancis"
+					"title": "Louis XI dari Prancis",
+					"badges": [],
+					"url": "https://id.wikipedia.org/wiki/Louis_XI_dari_Prancis"
 				},
 				"iowiki": {
 					"site": "iowiki",
-					"title": "Charles la 9ma di Francia",
-					"badges": [
-					],
-					"url": "https://io.wikipedia.org/wiki/Charles_la_9ma_di_Francia"
+					"title": "Louis la 11ma di Francia",
+					"badges": [],
+					"url": "https://io.wikipedia.org/wiki/Louis_la_11ma_di_Francia"
 				},
 				"iswiki": {
 					"site": "iswiki",
-					"title": "Karl 9. Frakkakonungur",
-					"badges": [
-					],
-					"url": "https://is.wikipedia.org/wiki/Karl_9._Frakkakonungur"
+					"title": "Lo\u00f0v\u00edk 11. Frakkakonungur",
+					"badges": [],
+					"url": "https://is.wikipedia.org/wiki/Lo%C3%B0v%C3%ADk_11._Frakkakonungur"
 				},
 				"itwiki": {
 					"site": "itwiki",
-					"title": "Carlo IX di Francia",
-					"badges": [
-					],
-					"url": "https://it.wikipedia.org/wiki/Carlo_IX_di_Francia"
+					"title": "Luigi XI di Francia",
+					"badges": [],
+					"url": "https://it.wikipedia.org/wiki/Luigi_XI_di_Francia"
+				},
+				"itwikiquote": {
+					"site": "itwikiquote",
+					"title": "Luigi XI di Francia",
+					"badges": [],
+					"url": "https://it.wikiquote.org/wiki/Luigi_XI_di_Francia"
 				},
 				"jawiki": {
 					"site": "jawiki",
-					"title": "\u30b7\u30e3\u30eb\u30eb9\u4e16 (\u30d5\u30e9\u30f3\u30b9\u738b)",
-					"badges": [
-					],
-					"url": "https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AB9%E4%B8%96_(%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B9%E7%8E%8B)"
+					"title": "\u30eb\u30a411\u4e16 (\u30d5\u30e9\u30f3\u30b9\u738b)",
+					"badges": [],
+					"url": "https://ja.wikipedia.org/wiki/%E3%83%AB%E3%82%A411%E4%B8%96_(%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B9%E7%8E%8B)"
 				},
 				"kawiki": {
 					"site": "kawiki",
-					"title": "\u10e8\u10d0\u10e0\u10da IX (\u10e1\u10d0\u10e4\u10e0\u10d0\u10dc\u10d2\u10d4\u10d7\u10d8)",
-					"badges": [
-					],
-					"url": "https://ka.wikipedia.org/wiki/%E1%83%A8%E1%83%90%E1%83%A0%E1%83%9A_IX_(%E1%83%A1%E1%83%90%E1%83%A4%E1%83%A0%E1%83%90%E1%83%9C%E1%83%92%E1%83%94%E1%83%97%E1%83%98)"
+					"title": "\u10da\u10e3\u10d8 XI",
+					"badges": [],
+					"url": "https://ka.wikipedia.org/wiki/%E1%83%9A%E1%83%A3%E1%83%98_XI"
 				},
 				"kowiki": {
 					"site": "kowiki",
-					"title": "\uc0e4\ub97c 9\uc138",
-					"badges": [
-					],
-					"url": "https://ko.wikipedia.org/wiki/%EC%83%A4%EB%A5%BC_9%EC%84%B8"
+					"title": "\ub8e8\uc774 11\uc138",
+					"badges": [],
+					"url": "https://ko.wikipedia.org/wiki/%EB%A3%A8%EC%9D%B4_11%EC%84%B8"
 				},
 				"lawiki": {
 					"site": "lawiki",
-					"title": "Carolus IX (rex Francorum)",
-					"badges": [
-					],
-					"url": "https://la.wikipedia.org/wiki/Carolus_IX_(rex_Francorum)"
-				},
-				"lbwiki": {
-					"site": "lbwiki",
-					"title": "Charles IX. vu Frankr\u00e4ich",
-					"badges": [
-					],
-					"url": "https://lb.wikipedia.org/wiki/Charles_IX._vu_Frankr%C3%A4ich"
+					"title": "Ludovicus XI",
+					"badges": [],
+					"url": "https://la.wikipedia.org/wiki/Ludovicus_XI"
 				},
 				"ltwiki": {
 					"site": "ltwiki",
-					"title": "Karolis IX Maksimilijonas",
-					"badges": [
-					],
-					"url": "https://lt.wikipedia.org/wiki/Karolis_IX_Maksimilijonas"
+					"title": "Liudvikas XI",
+					"badges": [],
+					"url": "https://lt.wikipedia.org/wiki/Liudvikas_XI"
+				},
+				"lvwiki": {
+					"site": "lvwiki",
+					"title": "Luijs XI",
+					"badges": [],
+					"url": "https://lv.wikipedia.org/wiki/Luijs_XI"
+				},
+				"mgwiki": {
+					"site": "mgwiki",
+					"title": "Louis XI",
+					"badges": [],
+					"url": "https://mg.wikipedia.org/wiki/Louis_XI"
 				},
 				"mkwiki": {
 					"site": "mkwiki",
-					"title": "\u0428\u0430\u0440\u043b IX",
-					"badges": [
-					],
-					"url": "https://mk.wikipedia.org/wiki/%D0%A8%D0%B0%D1%80%D0%BB_IX"
+					"title": "\u041b\u0443\u0458 XI",
+					"badges": [],
+					"url": "https://mk.wikipedia.org/wiki/%D0%9B%D1%83%D1%98_XI"
 				},
 				"mrwiki": {
 					"site": "mrwiki",
-					"title": "\u0928\u0935\u0935\u093e \u0936\u093e\u0930\u094d\u0932, \u092b\u094d\u0930\u093e\u0928\u094d\u0938",
-					"badges": [
-					],
-					"url": "https://mr.wikipedia.org/wiki/%E0%A4%A8%E0%A4%B5%E0%A4%B5%E0%A4%BE_%E0%A4%B6%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%B2,_%E0%A4%AB%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%B8"
-				},
-				"mswiki": {
-					"site": "mswiki",
-					"title": "Charles IX dari Perancis",
-					"badges": [
-					],
-					"url": "https://ms.wikipedia.org/wiki/Charles_IX_dari_Perancis"
+					"title": "\u0905\u0915\u0930\u093e\u0935\u093e \u0932\u0941\u0908, \u092b\u094d\u0930\u093e\u0928\u094d\u0938",
+					"badges": [],
+					"url": "https://mr.wikipedia.org/wiki/%E0%A4%85%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%BE_%E0%A4%B2%E0%A5%81%E0%A4%88,_%E0%A4%AB%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%B8"
 				},
 				"nlwiki": {
 					"site": "nlwiki",
-					"title": "Karel IX van Frankrijk",
-					"badges": [
-					],
-					"url": "https://nl.wikipedia.org/wiki/Karel_IX_van_Frankrijk"
+					"title": "Lodewijk XI van Frankrijk",
+					"badges": [],
+					"url": "https://nl.wikipedia.org/wiki/Lodewijk_XI_van_Frankrijk"
+				},
+				"nnwiki": {
+					"site": "nnwiki",
+					"title": "Ludvig XI av Frankrike",
+					"badges": [],
+					"url": "https://nn.wikipedia.org/wiki/Ludvig_XI_av_Frankrike"
 				},
 				"nowiki": {
 					"site": "nowiki",
-					"title": "Karl IX av Frankrike",
-					"badges": [
-					],
-					"url": "https://no.wikipedia.org/wiki/Karl_IX_av_Frankrike"
+					"title": "Ludvig XI av Frankrike",
+					"badges": [],
+					"url": "https://no.wikipedia.org/wiki/Ludvig_XI_av_Frankrike"
+				},
+				"nrmwiki": {
+					"site": "nrmwiki",
+					"title": "Louis XI de Fraunce",
+					"badges": [],
+					"url": "https://nrm.wikipedia.org/wiki/Louis_XI_de_Fraunce"
 				},
 				"ocwiki": {
 					"site": "ocwiki",
-					"title": "Carles IX de Fran\u00e7a",
-					"badges": [
-					],
-					"url": "https://oc.wikipedia.org/wiki/Carles_IX_de_Fran%C3%A7a"
+					"title": "Lo\u00eds XI de Fran\u00e7a",
+					"badges": [],
+					"url": "https://oc.wikipedia.org/wiki/Lo%C3%ADs_XI_de_Fran%C3%A7a"
 				},
 				"plwiki": {
 					"site": "plwiki",
-					"title": "Karol IX Walezjusz",
-					"badges": [
-					],
-					"url": "https://pl.wikipedia.org/wiki/Karol_IX_Walezjusz"
+					"title": "Ludwik XI",
+					"badges": [],
+					"url": "https://pl.wikipedia.org/wiki/Ludwik_XI"
 				},
 				"plwikiquote": {
 					"site": "plwikiquote",
-					"title": "Karol IX Walezjusz",
-					"badges": [
-					],
-					"url": "https://pl.wikiquote.org/wiki/Karol_IX_Walezjusz"
+					"title": "Ludwik XI Walezjusz",
+					"badges": [],
+					"url": "https://pl.wikiquote.org/wiki/Ludwik_XI_Walezjusz"
 				},
 				"ptwiki": {
 					"site": "ptwiki",
-					"title": "Carlos IX de Fran\u00e7a",
-					"badges": [
-					],
-					"url": "https://pt.wikipedia.org/wiki/Carlos_IX_de_Fran%C3%A7a"
+					"title": "Lu\u00eds XI de Fran\u00e7a",
+					"badges": [],
+					"url": "https://pt.wikipedia.org/wiki/Lu%C3%ADs_XI_de_Fran%C3%A7a"
 				},
 				"rowiki": {
 					"site": "rowiki",
-					"title": "Carol al IX-lea al Fran\u021bei",
-					"badges": [
-					],
-					"url": "https://ro.wikipedia.org/wiki/Carol_al_IX-lea_al_Fran%C8%9Bei"
+					"title": "Ludovic al XI-lea al Fran\u021bei",
+					"badges": [],
+					"url": "https://ro.wikipedia.org/wiki/Ludovic_al_XI-lea_al_Fran%C8%9Bei"
 				},
 				"ruwiki": {
 					"site": "ruwiki",
-					"title": "\u041a\u0430\u0440\u043b IX (\u043a\u043e\u0440\u043e\u043b\u044c \u0424\u0440\u0430\u043d\u0446\u0438\u0438)",
-					"badges": [
-					],
-					"url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D0%BB_IX_(%D0%BA%D0%BE%D1%80%D0%BE%D0%BB%D1%8C_%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D0%B8)"
+					"title": "\u041b\u044e\u0434\u043e\u0432\u0438\u043a XI",
+					"badges": [],
+					"url": "https://ru.wikipedia.org/wiki/%D0%9B%D1%8E%D0%B4%D0%BE%D0%B2%D0%B8%D0%BA_XI"
 				},
 				"scnwiki": {
 					"site": "scnwiki",
-					"title": "Carlu IX di Francia",
-					"badges": [
-					],
-					"url": "https://scn.wikipedia.org/wiki/Carlu_IX_di_Francia"
+					"title": "Luiggi XI",
+					"badges": [],
+					"url": "https://scn.wikipedia.org/wiki/Luiggi_XI"
 				},
 				"scowiki": {
 					"site": "scowiki",
-					"title": "Charles IX o Fraunce",
-					"badges": [
-					],
-					"url": "https://sco.wikipedia.org/wiki/Charles_IX_o_Fraunce"
+					"title": "Louis XI o Fraunce",
+					"badges": [],
+					"url": "https://sco.wikipedia.org/wiki/Louis_XI_o_Fraunce"
 				},
 				"shwiki": {
 					"site": "shwiki",
-					"title": "Charles IX od Francuske",
-					"badges": [
-					],
-					"url": "https://sh.wikipedia.org/wiki/Charles_IX_od_Francuske"
+					"title": "Louis XI od Francuske",
+					"badges": [],
+					"url": "https://sh.wikipedia.org/wiki/Louis_XI_od_Francuske"
 				},
 				"simplewiki": {
 					"site": "simplewiki",
-					"title": "Charles IX of France",
-					"badges": [
-					],
-					"url": "https://simple.wikipedia.org/wiki/Charles_IX_of_France"
+					"title": "Louis XI of France",
+					"badges": [],
+					"url": "https://simple.wikipedia.org/wiki/Louis_XI_of_France"
 				},
 				"skwiki": {
 					"site": "skwiki",
-					"title": "Karol IX. (Franc\u00fazsko)",
-					"badges": [
-					],
-					"url": "https://sk.wikipedia.org/wiki/Karol_IX._(Franc%C3%BAzsko)"
+					"title": "\u013dudov\u00edt XI.",
+					"badges": [],
+					"url": "https://sk.wikipedia.org/wiki/%C4%BDudov%C3%ADt_XI."
 				},
-				"slwiki": {
-					"site": "slwiki",
-					"title": "Karel IX. Francoski",
-					"badges": [
-					],
-					"url": "https://sl.wikipedia.org/wiki/Karel_IX._Francoski"
+				"slwikiquote": {
+					"site": "slwikiquote",
+					"title": "Ludvik XI. Francoski",
+					"badges": [],
+					"url": "https://sl.wikiquote.org/wiki/Ludvik_XI._Francoski"
 				},
 				"srwiki": {
 					"site": "srwiki",
-					"title": "\u0428\u0430\u0440\u043b IX \u0412\u0430\u043b\u043e\u0430",
-					"badges": [
-					],
-					"url": "https://sr.wikipedia.org/wiki/%D0%A8%D0%B0%D1%80%D0%BB_IX_%D0%92%D0%B0%D0%BB%D0%BE%D0%B0"
+					"title": "\u041b\u0443\u0458 XI",
+					"badges": [],
+					"url": "https://sr.wikipedia.org/wiki/%D0%9B%D1%83%D1%98_XI"
 				},
 				"svwiki": {
 					"site": "svwiki",
-					"title": "Karl IX av Frankrike",
-					"badges": [
-					],
-					"url": "https://sv.wikipedia.org/wiki/Karl_IX_av_Frankrike"
+					"title": "Ludvig XI av Frankrike",
+					"badges": [],
+					"url": "https://sv.wikipedia.org/wiki/Ludvig_XI_av_Frankrike"
 				},
 				"thwiki": {
 					"site": "thwiki",
-					"title": "\u0e1e\u0e23\u0e30\u0e40\u0e08\u0e49\u0e32\u0e0a\u0e32\u0e23\u0e4c\u0e25\u0e17\u0e35\u0e48 9 \u0e41\u0e2b\u0e48\u0e07\u0e1d\u0e23\u0e31\u0e48\u0e07\u0e40\u0e28\u0e2a",
-					"badges": [
-					],
-					"url": "https://th.wikipedia.org/wiki/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A5%E0%B8%97%E0%B8%B5%E0%B9%88_9_%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%9D%E0%B8%A3%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%A8%E0%B8%AA"
+					"title": "\u0e1e\u0e23\u0e30\u0e40\u0e08\u0e49\u0e32\u0e2b\u0e25\u0e38\u0e22\u0e2a\u0e4c\u0e17\u0e35\u0e48 11 \u0e41\u0e2b\u0e48\u0e07\u0e1d\u0e23\u0e31\u0e48\u0e07\u0e40\u0e28\u0e2a",
+					"badges": [],
+					"url": "https://th.wikipedia.org/wiki/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B8%E0%B8%A2%E0%B8%AA%E0%B9%8C%E0%B8%97%E0%B8%B5%E0%B9%88_11_%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%9D%E0%B8%A3%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%A8%E0%B8%AA"
+				},
+				"tlwiki": {
+					"site": "tlwiki",
+					"title": "Louis XI ng Pransiya",
+					"badges": [],
+					"url": "https://tl.wikipedia.org/wiki/Louis_XI_ng_Pransiya"
 				},
 				"trwiki": {
 					"site": "trwiki",
-					"title": "IX. Charles",
-					"badges": [
-					],
-					"url": "https://tr.wikipedia.org/wiki/IX._Charles"
+					"title": "XI. Louis",
+					"badges": [],
+					"url": "https://tr.wikipedia.org/wiki/XI._Louis"
 				},
 				"ukwiki": {
 					"site": "ukwiki",
-					"title": "\u041a\u0430\u0440\u043b IX \u0412\u0430\u043b\u0443\u0430",
-					"badges": [
-					],
-					"url": "https://uk.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D0%BB_IX_%D0%92%D0%B0%D0%BB%D1%83%D0%B0"
+					"title": "\u041b\u044e\u0434\u043e\u0432\u0438\u043a XI \u0420\u043e\u0437\u0441\u0443\u0434\u043b\u0438\u0432\u0438\u0439",
+					"badges": [],
+					"url": "https://uk.wikipedia.org/wiki/%D0%9B%D1%8E%D0%B4%D0%BE%D0%B2%D0%B8%D0%BA_XI_%D0%A0%D0%BE%D0%B7%D1%81%D1%83%D0%B4%D0%BB%D0%B8%D0%B2%D0%B8%D0%B9"
+				},
+				"uzwiki": {
+					"site": "uzwiki",
+					"title": "Lyudovik XI",
+					"badges": [],
+					"url": "https://uz.wikipedia.org/wiki/Lyudovik_XI"
 				},
 				"viwiki": {
 					"site": "viwiki",
-					"title": "Charles IX c\u1ee7a Ph\u00e1p",
-					"badges": [
-					],
-					"url": "https://vi.wikipedia.org/wiki/Charles_IX_c%E1%BB%A7a_Ph%C3%A1p"
+					"title": "Louis XI c\u1ee7a Ph\u00e1p",
+					"badges": [],
+					"url": "https://vi.wikipedia.org/wiki/Louis_XI_c%E1%BB%A7a_Ph%C3%A1p"
+				},
+				"wuuwiki": {
+					"site": "wuuwiki",
+					"title": "\u8def\u6613\u5341\u4e00",
+					"badges": [],
+					"url": "https://wuu.wikipedia.org/wiki/%E8%B7%AF%E6%98%93%E5%8D%81%E4%B8%80"
 				},
 				"yowiki": {
 					"site": "yowiki",
-					"title": "Charles 9k il\u1eb9\u0300 Fr\u00e1ns\u00ec",
-					"badges": [
-					],
-					"url": "https://yo.wikipedia.org/wiki/Charles_9k_il%E1%BA%B9%CC%80_Fr%C3%A1ns%C3%AC"
+					"title": "Louis 11k il\u1eb9\u0300 Fr\u00e1ns\u00ec",
+					"badges": [],
+					"url": "https://yo.wikipedia.org/wiki/Louis_11k_il%E1%BA%B9%CC%80_Fr%C3%A1ns%C3%AC"
 				},
 				"zh_min_nanwiki": {
 					"site": "zh_min_nanwiki",
-					"title": "Charles 9-s\u00e8",
-					"badges": [
-					],
-					"url": "https://zh-min-nan.wikipedia.org/wiki/Charles_9-s%C3%A8"
-				},
-				"zh_yuewiki": {
-					"site": "zh_yuewiki",
-					"title": "\u67e5\u7406\u4e5d\u4e16",
-					"badges": [
-					],
-					"url": "https://zh-yue.wikipedia.org/wiki/%E6%9F%A5%E7%90%86%E4%B9%9D%E4%B8%96"
+					"title": "Louis 11-s\u00e8",
+					"badges": [],
+					"url": "https://zh-min-nan.wikipedia.org/wiki/Louis_11-s%C3%A8"
 				},
 				"zhwiki": {
 					"site": "zhwiki",
-					"title": "\u67e5\u7406\u4e5d\u4e16 (\u6cd5\u5170\u897f)",
-					"badges": [
-					],
-					"url": "https://zh.wikipedia.org/wiki/%E6%9F%A5%E7%90%86%E4%B9%9D%E4%B8%96_(%E6%B3%95%E5%85%B0%E8%A5%BF)"
+					"title": "\u8def\u6613\u5341\u4e00",
+					"badges": [],
+					"url": "https://zh.wikipedia.org/wiki/%E8%B7%AF%E6%98%93%E5%8D%81%E4%B8%80"
 				}
 			}
 		}

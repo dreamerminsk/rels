@@ -71,6 +71,7 @@ namespace rels.Model
                          .Set(item => item.DateOfDeath, p.DateOfDeath)
                          .Set(item => item.Father, p.Father)
                          .Set(item => item.Mother, p.Mother)
+                         .Set(item => item.Modified, p.Modified)
                          .UpdateAsync();
                     if (!p.Labels.IsNullOrEmpty())
                     {
@@ -79,7 +80,6 @@ namespace rels.Model
                     if (!p.Descriptions.IsNullOrEmpty())
                     {
                         var count = Descriptions.Insert(p.Descriptions);
-                        //MessageBox.Show(p.Descriptions.Count.ToString() + "\r\n" + count.ToString());
                     }
                     if (!p.Siblings.IsNullOrEmpty())
                     {

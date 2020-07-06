@@ -16,6 +16,7 @@ namespace rels.Model
 	            'Father'    TEXT,
 	            'Mother'    TEXT,
                 'Description'	TEXT,
+                'Modified'		TEXT,
 	         PRIMARY KEY('ID')
             );",
 

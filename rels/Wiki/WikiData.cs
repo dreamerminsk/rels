@@ -1,6 +1,7 @@
 ﻿using LinqToDB.Common;
 using Newtonsoft.Json.Linq;
 using rels.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -30,6 +31,7 @@ namespace rels.Wiki
             var claims = entity.Value["claims"];
             var labels = entity.Value["labels"];
             var descriptions = entity.Value["descriptions"];
+            p.Modified = DateTime.Parse(entity.Value["modified"].ToString());
 
             if (labels == null)
             {

@@ -1,4 +1,5 @@
 ﻿using LinqToDB.Mapping;
+using System;
 using System.Collections.Generic;
 
 namespace rels.Model
@@ -46,5 +47,9 @@ namespace rels.Model
         public List<string> Spouse { get; set; } = new List<string>();
 
         public List<string> Children { get; set; } = new List<string>();
+
+        [Column(Name = "Modified")]
+        public DateTime Modified { get; set; }
+
     }
 }
