@@ -6,8 +6,8 @@ using System;
 using System.Collections.Concurrent;
 using System.Linq;
 using System.Reactive.Linq;
+using System.Reactive.Subjects;
 using System.Threading;
-using System.Windows.Forms;
 
 namespace rels.Workers
 {
@@ -18,6 +18,11 @@ namespace rels.Workers
         private int isRunning = 0;
 
         private DateTime started = DateTime.Now;
+
+        private Subject<string> wikiData = new Subject<string>();
+
+        public IObservable<string> WikiData =>
+            wikiData.AsObservable();
 
         public Updater()
         {
@@ -44,7 +49,8 @@ namespace rels.Workers
                 string title = null;
                 if (!q.TryDequeue(out title)) { ReloadQueue(); return; }
                 if (string.IsNullOrEmpty(title)) { return; }
-                var p = await WikiData.GetPersonAsync(title);
+                wikiData.OnNext(title);
+                var p = await Wiki.WikiData.GetPersonAsync(title);
                 await People.UpdateAsync(p);
                 if (Countries.IsExists(p.Country))
                 {
@@ -52,7 +58,7 @@ namespace rels.Workers
                 }
                 else if (!p.Country.IsNullOrEmpty())
                 {
-                    var c = await WikiData.GetCountryAsync(p.Country);
+                    var c = await Wiki.WikiData.GetCountryAsync(p.Country);
                     await Countries.InsertAsync(c);
                 }
                 if (!await People.IsExistsAsync(p.Father))
@@ -69,6 +75,10 @@ namespace rels.Workers
                         await People.InsertAsync(p.Mother);
                     }
                 }
+            }
+            catch (Exception e)
+            {
+                wikiData.OnError(e);
             }
             finally
             {

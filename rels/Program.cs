@@ -1,4 +1,5 @@
-﻿using System;
+﻿using rels.UI;
+using System;
 using System.Windows.Forms;
 
 namespace rels
@@ -13,7 +14,7 @@ namespace rels
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainView());
         }
     }
 }
