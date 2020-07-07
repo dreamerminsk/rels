@@ -27,7 +27,15 @@ namespace rels.Model
 	          PRIMARY KEY('ID')
             )",
 
-            @"CREATE TABLE IF NOT EXISTS 'Labels' (
+			@"CREATE TABLE IF NOT EXISTS 'Instances' (
+	          'ID'    INTEGER NOT NULL UNIQUE,
+	          'WikiDataID'    TEXT NOT NULL UNIQUE,
+	          'Name'  TEXT NOT NULL,
+	          'RusName'   TEXT,
+	          PRIMARY KEY('ID')
+            )",
+
+			@"CREATE TABLE IF NOT EXISTS 'Labels' (
 	           'ID'    INTEGER NOT NULL UNIQUE,
 	           'WikiDataID'    TEXT NOT NULL,
 	           'Language'  TEXT,
