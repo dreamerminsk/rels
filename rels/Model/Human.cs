@@ -4,8 +4,8 @@ using System.Collections.Generic;
 
 namespace rels.Model
 {
-    [Table(Name = "People")]
-    public class Person
+    [Table(Name = "Humans")]
+    public class Human
     {
 
         [PrimaryKey, Identity]

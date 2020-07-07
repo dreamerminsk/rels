@@ -156,7 +156,7 @@
     <Compile Include="Model\Label.cs" />
     <Compile Include="Model\Labels.cs" />
     <Compile Include="Model\Humans.cs" />
-    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\Human.cs" />
     <Compile Include="Model\rels1.generated.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

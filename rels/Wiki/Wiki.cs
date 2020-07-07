@@ -43,9 +43,9 @@ namespace rels.Wiki
             return infoBox;
         }
 
-        public static async Task<Person> GetPersonAsync(string title)
+        public static async Task<Human> GetPersonAsync(string title)
         {
-            var p = new Person();
+            var p = new Human();
             var page = await web.LoadFromWebAsync("https://en.wikipedia.org/wiki/" + title);
 
             var rows = page.DocumentNode.SelectNodes("//table[@class='infobox vcard']/tbody/tr");

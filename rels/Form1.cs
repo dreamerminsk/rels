@@ -41,7 +41,7 @@ namespace rels
         {
             using (var db = new RelsDB())
             {
-                var ps = db.GetTable<Person>();
+                var ps = db.GetTable<Human>();
 
                 var bs = ps.GroupBy(p => p.DateOfBirth.Substring(0, 3));
                 var births = new Dictionary<string, int>();
@@ -144,7 +144,7 @@ namespace rels
         {
             using (var db = new RelsDB())
             {
-                var ps = db.GetTable<Person>();
+                var ps = db.GetTable<Human>();
                 var bs = ps.GroupBy(p => p.Country);
                 var cs = new Dictionary<string, int>();
                 bs.ForEachAsync(g => cs.Add(Countries.GetByWikiDataId(g.Key)?.Name ?? "UNKNOWN", g.Count()));

@@ -89,7 +89,7 @@ namespace rels.Workers
         {
             using (var db = new RelsDB())
             {
-                var people = db.GetTable<Person>();
+                var people = db.GetTable<Human>();
                 people.Where(p => p.Labels.Count == 0)
                     .OrderBy(x => Guid.NewGuid())
                     .ToList().ForEach(p => q.Enqueue(p.WikiDataID));

@@ -16,9 +16,9 @@ namespace rels.Wiki
 
         static readonly HttpClient client = new HttpClient();
 
-        public static async Task<Person> GetPersonAsync(string wikiDataId)
+        public static async Task<Human> GetPersonAsync(string wikiDataId)
         {
-            var p = new Person();
+            var p = new Human();
             var page = await GetStringAsync(string.Format(DATA_REF, wikiDataId));
             var doc = JObject.Parse(page);
             JObject entities = (JObject)doc["entities"];

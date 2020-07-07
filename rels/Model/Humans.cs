@@ -14,16 +14,16 @@ namespace rels.Model
         {
             using (var db = new RelsDB())
             {
-                var people = db.GetTable<Person>();
+                var people = db.GetTable<Human>();
                 return await people.AnyAsync(p => p.WikiDataID.Equals(wikiDataId));
             }
         }
 
-        public static async Task<Person> GetByWikiDataIDAsync(string wikiDataId)
+        public static async Task<Human> GetByWikiDataIDAsync(string wikiDataId)
         {
             using (var db = new RelsDB())
             {
-                var people = db.GetTable<Person>();
+                var people = db.GetTable<Human>();
                 var person = await people.Where(p => p.WikiDataID.Equals(wikiDataId))?.FirstOrDefaultAsync();
                 if (person != null)
                 {
@@ -40,7 +40,7 @@ namespace rels.Model
             {
                 try
                 {
-                    return await db.InsertAsync(new Person() { ID = WikiDataID.ToInt(wdid), WikiDataID = wdid });
+                    return await db.InsertAsync(new Human() { ID = WikiDataID.ToInt(wdid), WikiDataID = wdid });
                 }
                 catch (Exception e)
                 {
@@ -49,7 +49,7 @@ namespace rels.Model
             }
         }
 
-        public static async Task<int> InsertAsync(Person p)
+        public static async Task<int> InsertAsync(Human p)
         {
             using (var db = new RelsDB())
             {
@@ -57,13 +57,13 @@ namespace rels.Model
             }
         }
 
-        public static async Task<int> UpdateAsync(Person p)
+        public static async Task<int> UpdateAsync(Human p)
         {
             using (var db = new RelsDB())
             {
                 try
                 {
-                    var ps = db.GetTable<Person>();
+                    var ps = db.GetTable<Human>();
                     var res = await ps.Where(item => item.WikiDataID.Equals(p.WikiDataID))
                          .Set(item => item.ImageFile, p.ImageFile)
                          .Set(item => item.Country, p.Country)
