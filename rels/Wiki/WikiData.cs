@@ -33,20 +33,6 @@ namespace rels.Wiki
             var descriptions = entity.Value["descriptions"];
             p.Modified = DateTime.Parse(entity.Value["modified"].ToString());
 
-            p.Labels = labels.Values().Select(t => new Model.Label()
-            {
-                WikiDataID = wikiDataId,
-                Language = t.Value<string>("language"),
-                Value = t.Value<string>("value")
-            }).ToList();
-
-            p.Descriptions = descriptions.Values().Select(t => new Description()
-            {
-                WikiDataID = wikiDataId,
-                Language = t.Value<string>("language"),
-                Value = t.Value<string>("value")
-            }).ToList();
-
             return p;
         }
 

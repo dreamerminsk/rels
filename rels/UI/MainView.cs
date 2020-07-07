@@ -56,7 +56,7 @@ namespace rels.UI
             {
                 node.Nodes.Add(string.Format("d. {0}", p.DateOfDeath.Substring(0, 11)));
             }
-            if (p.Father!=null)
+            if (p.Father != null)
             {
                 node.Nodes.Add(p.Father);
             }
