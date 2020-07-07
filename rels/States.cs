@@ -1,13 +1,64 @@
-﻿using System;
+﻿using HtmlAgilityPack;
+using System;
+using System.Linq;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace rels
 {
     public class States
     {
-        [STAThread]
-        static void Main()
-        {
 
+        private static readonly string STATES_PAGE = "https://en.wikipedia.org/wiki/List_of_sovereign_states";
+
+        static readonly HttpClient client = new HttpClient();
+
+        private static readonly HtmlWeb htmlWeb = new HtmlAgilityPack.HtmlWeb();
+
+        [STAThread]
+        static async Task Main()
+        {
+            var page = await htmlWeb.LoadFromWebAsync(STATES_PAGE);
+            var refs = page.DocumentNode.SelectNodes("//div[@id='mw-content-text']//a[contains(@href, '/wiki/')]");
+            refs.ToList().ForEach(async r => await Process(r));
+        }
+
+        private static async Task Process(HtmlNode node)
+        {
+            Console.WriteLine("-----------------------------------------\r\n");
+            Console.WriteLine(string.Format("{0}\r\n\t{1}", node.InnerText, node.Attributes["href"].Value));
+            var pageRef = string.Format("https://en.wikipedia.org{0}", node.Attributes["href"].Value);
+            if (pageRef.Contains("/wiki/File:")) return;
+            var page = htmlWeb.Load(pageRef);
+            var cats = page.DocumentNode.SelectNodes("//div[@id='mw-normal-catlinks']/ul/li/a");
+            var count = cats.Select(cat => cat.InnerText).Where(cat => cat.ToLower().Contains("countries")).Count();
+            if (count > 0)
+            {
+                Console.WriteLine("TRUE");
+            }
+            else
+            {
+                Console.WriteLine("FALSE");
+            }
+            Thread.Sleep(4);
+        }
+
+        static async Task<string> GetStringAsync(string url)
+        {
+            try
+            {
+                HttpResponseMessage response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                string responseBody = await response.Content.ReadAsStringAsync();
+                return responseBody;
+            }
+            catch (HttpRequestException e)
+            {
+                MessageBox.Show(e.Message, e.GetType().Name);
+                return null;
+            }
         }
     }
 }
