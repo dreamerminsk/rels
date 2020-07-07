@@ -16,6 +16,41 @@ namespace rels.Wiki
 
         static readonly HttpClient client = new HttpClient();
 
+        public static async Task<WikiDataItem> GetItemAsync(string wikiDataId)
+        {
+            var p = new WikiDataItem();
+            var page = await GetStringAsync(string.Format(DATA_REF, wikiDataId));
+            var doc = JObject.Parse(page);
+            JObject entities = (JObject)doc["entities"];
+            JProperty entity = (JProperty)entities.First;
+
+            p.WikiDataID = entity?.Name ?? wikiDataId;
+            p.ID = int.Parse(wikiDataId.Substring(1));
+            if (entity == null) return p;
+
+            var claims = entity.Value["claims"];
+            var labels = entity.Value["labels"];
+            var descriptions = entity.Value["descriptions"];
+            p.Modified = DateTime.Parse(entity.Value["modified"].ToString());
+
+            p.Labels = labels.Values().Select(t => new Model.Label()
+            {
+                WikiDataID = wikiDataId,
+                Language = t.Value<string>("language"),
+                Value = t.Value<string>("value")
+            }).ToList();
+
+            p.Descriptions = descriptions.Values().Select(t => new Description()
+            {
+                WikiDataID = wikiDataId,
+                Language = t.Value<string>("language"),
+                Value = t.Value<string>("value")
+            }).ToList();
+
+            return p;
+        }
+
+
         public static async Task<Human> GetPersonAsync(string wikiDataId)
         {
             var p = new Human();
