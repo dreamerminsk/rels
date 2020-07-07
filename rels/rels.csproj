@@ -155,7 +155,7 @@
     <Compile Include="Model\Init.cs" />
     <Compile Include="Model\Label.cs" />
     <Compile Include="Model\Labels.cs" />
-    <Compile Include="Model\People.cs" />
+    <Compile Include="Model\Humans.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\rels1.generated.cs">
       <AutoGen>True</AutoGen>

@@ -50,7 +50,7 @@ namespace rels.Workers
                 if (string.IsNullOrEmpty(title)) { return; }
                 wikiData.OnNext(title);
                 var p = await Wiki.WikiData.GetPersonAsync(title);
-                await People.UpdateAsync(p);
+                await Humans.UpdateAsync(p);
                 if (Countries.IsExists(p.Country))
                 {
 
@@ -60,18 +60,18 @@ namespace rels.Workers
                     var c = await Wiki.WikiData.GetCountryAsync(p.Country);
                     await Countries.InsertAsync(c);
                 }
-                if (!await People.IsExistsAsync(p.Father))
+                if (!await Humans.IsExistsAsync(p.Father))
                 {
                     if (!p.Father.IsNullOrEmpty())
                     {
-                        await People.InsertAsync(p.Father);
+                        await Humans.InsertAsync(p.Father);
                     }
                 }
-                if (!await People.IsExistsAsync(p.Mother))
+                if (!await Humans.IsExistsAsync(p.Mother))
                 {
                     if (!p.Mother.IsNullOrEmpty())
                     {
-                        await People.InsertAsync(p.Mother);
+                        await Humans.InsertAsync(p.Mother);
                     }
                 }
             }

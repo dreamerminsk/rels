@@ -41,7 +41,7 @@ namespace rels.UI
             if (node == null) return;
             if (!node.Nodes.IsNullOrEmpty()) return;
             if (!node.Text.StartsWith("Q")) return;
-            var p = await People.GetByWikiDataIDAsync(node.Text).ConfigureAwait(true);
+            var p = await Humans.GetByWikiDataIDAsync(node.Text).ConfigureAwait(true);
             treeView1.BeginUpdate();
             if (!p.Labels.IsNullOrEmpty())
             {

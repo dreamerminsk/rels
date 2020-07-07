@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace rels.Model
 {
-    public class People
+    public class Humans
     {
 
         public static async Task<bool> IsExistsAsync(string wikiDataId)
