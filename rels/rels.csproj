@@ -166,6 +166,7 @@
     <Compile Include="Model\WikiDataID.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="States.cs" />
     <Compile Include="UI\ListViewItemComparer.cs" />
     <Compile Include="UI\MainView.cs">
       <SubType>Form</SubType>
