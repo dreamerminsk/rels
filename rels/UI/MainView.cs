@@ -30,7 +30,7 @@ namespace rels.UI
             updater.Start();
         }
 
-        private async void treeView1_BeforeSelect(object sender, TreeViewCancelEventArgs e)
+        private void TreeView1_BeforeSelect(object sender, TreeViewCancelEventArgs e)
         {
 
         }

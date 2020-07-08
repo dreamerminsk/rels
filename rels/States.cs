@@ -15,19 +15,19 @@ namespace rels
 
         static readonly HttpClient client = new HttpClient();
 
-        private static readonly HtmlWeb htmlWeb = new HtmlAgilityPack.HtmlWeb();
+        private static readonly HtmlWeb htmlWeb = new HtmlWeb();
 
         [STAThread]
         static async Task Main()
         {
             var page = await htmlWeb.LoadFromWebAsync(STATES_PAGE);
             var refs = page.DocumentNode.SelectNodes("//div[@id='mw-content-text']//a[contains(@href, '/wiki/')]");
-            refs.ToList().ForEach(async r => await Process(r));
+            refs.ToList().ForEach(r => Process(r));
         }
 
-        private static async Task Process(HtmlNode node)
+        private static void Process(HtmlNode node)
         {
-            Console.WriteLine("-----------------------------------------\r\n");
+            Console.WriteLine("---------------------------\r\n");
             Console.WriteLine(string.Format("{0}\r\n\t{1}", node.InnerText, node.Attributes["href"].Value));
             var pageRef = string.Format("https://en.wikipedia.org{0}", node.Attributes["href"].Value);
             if (pageRef.Contains("/wiki/File:")) return;
