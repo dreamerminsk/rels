@@ -33,6 +33,20 @@ namespace rels.Wiki
             var descriptions = entity.Value["descriptions"];
             p.Modified = DateTime.Parse(entity.Value["modified"].ToString());
 
+            if (labels != null)
+            {
+                p.Labels = labels.Values().ToDictionary(
+                    v => v.Value<string>("language"),
+                    v => v.Value<string>("value"));
+            }
+
+            if (descriptions != null)
+            {
+                p.Descriptions = descriptions.Values().ToDictionary(
+                    v => v.Value<string>("language"),
+                    v => v.Value<string>("value"));
+            }
+
             return p;
         }
 

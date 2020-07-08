@@ -31,17 +31,14 @@ namespace rels
             Console.WriteLine(string.Format("{0}\r\n\t{1}", node.InnerText, node.Attributes["href"].Value));
             var pageRef = string.Format("https://en.wikipedia.org{0}", node.Attributes["href"].Value);
             if (pageRef.Contains("/wiki/File:")) return;
+            if (pageRef.Contains("/wiki/Category:")) return;
+            if (pageRef.Contains("/wiki/Template:")) return;
+            if (pageRef.Contains("/wiki/Template_talk:")) return;
             var page = htmlWeb.Load(pageRef);
             var cats = page.DocumentNode.SelectNodes("//div[@id='mw-normal-catlinks']/ul/li/a");
-            var count = cats.Select(cat => cat.InnerText).Where(cat => cat.ToLower().Contains("countries")).Count();
-            if (count > 0)
-            {
-                Console.WriteLine("TRUE");
-            }
-            else
-            {
-                Console.WriteLine("FALSE");
-            }
+            var wdRef = page.DocumentNode.SelectSingleNode("//li[@id='t-wikibase']/a[@href]");
+            cats?.ToList()?.ForEach(cat => Console.WriteLine("\t" + cat.InnerText));
+            Console.WriteLine(wdRef?.Attributes["href"]?.Value);
             Thread.Sleep(4);
         }
 
