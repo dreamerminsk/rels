@@ -111,7 +111,8 @@
             // treeView1
             // 
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.ImageIndex = 2;
+            this.treeView1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeView1.ImageIndex = 0;
             this.treeView1.ImageList = this.icons;
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
@@ -125,9 +126,13 @@
             // 
             this.icons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("icons.ImageStream")));
             this.icons.TransparentColor = System.Drawing.Color.Transparent;
-            this.icons.Images.SetKeyName(0, "father.png");
-            this.icons.Images.SetKeyName(1, "mother.png");
-            this.icons.Images.SetKeyName(2, "kids.png");
+            this.icons.Images.SetKeyName(0, "default.png");
+            this.icons.Images.SetKeyName(1, "father.png");
+            this.icons.Images.SetKeyName(2, "mother.png");
+            this.icons.Images.SetKeyName(3, "kids.png");
+            this.icons.Images.SetKeyName(4, "birthday.png");
+            this.icons.Images.SetKeyName(5, "706060_dead_512x512.png");
+            this.icons.Images.SetKeyName(6, "Funerals_Insurance_-512.png");
             // 
             // tabPage2
             // 
