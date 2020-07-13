@@ -13,6 +13,7 @@ namespace rels.Workers
 
     public class Updater
     {
+        private static readonly DateTime DEFAULT = DateTime.Parse("0001-01-01 00:00:00");
 
         private int isRunning = 0;
 
@@ -90,7 +91,7 @@ namespace rels.Workers
             using (var db = new RelsDB())
             {
                 var people = db.GetTable<Human>();
-                people.Where(p => p.Labels.Count == 0)
+                people.Where(p => p.Modified.Equals(DEFAULT))
                     .OrderBy(x => Guid.NewGuid())
                     .ToList().ForEach(p => q.Enqueue(p.WikiDataID));
             }

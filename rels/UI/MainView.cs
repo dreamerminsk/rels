@@ -46,23 +46,33 @@ namespace rels.UI
             if (!p.Labels.IsNullOrEmpty())
             {
                 var labelNode = node.Nodes.Add("Labels");
+                labelNode.ImageIndex = 100;
+                labelNode.SelectedImageIndex = 100;
                 p.Labels.ForEach(l => labelNode.Nodes.Add(string.Format("{0}: {1}", l.Language, l.Value)));
             }
             if (!p.DateOfBirth.IsNullOrEmpty())
             {
-                node.Nodes.Add(string.Format("b. {0}", p.DateOfBirth.Substring(0, 11)));
+                var bNode=node.Nodes.Add(string.Format("b. {0}", p.DateOfBirth.Substring(0, 11)));
+                bNode.ImageIndex = 100;
+                bNode.SelectedImageIndex = 100;
             }
             if (!p.DateOfDeath.IsNullOrEmpty())
             {
-                node.Nodes.Add(string.Format("d. {0}", p.DateOfDeath.Substring(0, 11)));
+                var dNode=node.Nodes.Add(string.Format("d. {0}", p.DateOfDeath.Substring(0, 11)));
+                dNode.ImageIndex = 100;
+                dNode.SelectedImageIndex = 100;
             }
             if (p.Father != null)
             {
-                node.Nodes.Add(p.Father);
+                var fNode = node.Nodes.Add(p.Father);
+                fNode.ImageIndex = 0;
+                fNode.SelectedImageIndex = 0;
             }
             if (p.Mother != null)
             {
-                node.Nodes.Add(p.Mother);
+                var mNode = node.Nodes.Add(p.Mother);
+                mNode.ImageIndex = 1;
+                mNode.SelectedImageIndex = 1;
             }
             treeView1.EndUpdate();
             node.ExpandAll();
