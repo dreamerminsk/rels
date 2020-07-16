@@ -61,7 +61,7 @@ namespace rels.UI
                 deathNode.ImageIndex = 6;
                 deathNode.SelectedImageIndex = 6;
             }
-            var parentsNode = node.Nodes.Add("Life");
+            var parentsNode = node.Nodes.Add("Parents");
             if (p.Father != null)
             {
                 var fatherNode = parentsNode.Nodes.Add(p.Father);
