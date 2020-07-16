@@ -43,36 +43,36 @@ namespace rels.UI
             if (!node.Text.StartsWith("Q")) return;
             var p = await Humans.GetByWikiDataIDAsync(node.Text).ConfigureAwait(true);
             treeView1.BeginUpdate();
+            var labelNode = node.Nodes.Add("Labels");
             if (!p.Labels.IsNullOrEmpty())
             {
-                var labelNode = node.Nodes.Add("Labels");
-                //labelNode.ImageIndex = 100;
-                //labelNode.SelectedImageIndex = 100;
                 p.Labels.ForEach(l => labelNode.Nodes.Add(string.Format("{0}: {1}", l.Language, l.Value)));
             }
+            var lifeNode = node.Nodes.Add("Life");
             if (!p.DateOfBirth.IsNullOrEmpty())
             {
-                var bNode=node.Nodes.Add(string.Format("{0}", p.DateOfBirth.Substring(0, 11)));
-                bNode.ImageIndex = 4;
-                bNode.SelectedImageIndex = 4;
+                var birthNode = lifeNode.Nodes.Add(string.Format("{0}", p.DateOfBirth.Substring(0, 11)));
+                birthNode.ImageIndex = 4;
+                birthNode.SelectedImageIndex = 4;
             }
             if (!p.DateOfDeath.IsNullOrEmpty())
             {
-                var dNode=node.Nodes.Add(string.Format("{0}", p.DateOfDeath.Substring(0, 11)));
-                dNode.ImageIndex = 6;
-                dNode.SelectedImageIndex = 6;
+                var deathNode = lifeNode.Nodes.Add(string.Format("{0}", p.DateOfDeath.Substring(0, 11)));
+                deathNode.ImageIndex = 6;
+                deathNode.SelectedImageIndex = 6;
             }
+            var parentsNode = node.Nodes.Add("Life");
             if (p.Father != null)
             {
-                var fNode = node.Nodes.Add(p.Father);
-                fNode.ImageIndex = 1;
-                fNode.SelectedImageIndex = 1;
+                var fatherNode = parentsNode.Nodes.Add(p.Father);
+                fatherNode.ImageIndex = 1;
+                fatherNode.SelectedImageIndex = 1;
             }
             if (p.Mother != null)
             {
-                var mNode = node.Nodes.Add(p.Mother);
-                mNode.ImageIndex = 2;
-                mNode.SelectedImageIndex = 2;
+                var motherNode = parentsNode.Nodes.Add(p.Mother);
+                motherNode.ImageIndex = 2;
+                motherNode.SelectedImageIndex = 2;
             }
             treeView1.EndUpdate();
             node.ExpandAll();
