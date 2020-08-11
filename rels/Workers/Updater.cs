@@ -63,6 +63,8 @@ namespace rels.Workers
                     if (l.Language.Equals("en")) log.OnNext(string.Format("\ten : {0}\r\n", l.Value));
                     if (l.Language.Equals("ru")) log.OnNext(string.Format("\tru : {0}\r\n", l.Value));
                 });
+                if (!p.DateOfBirth.IsNullOrEmpty()) log.OnNext(string.Format("\tbirth : {0}\r\n", p.DateOfBirth));
+                if (!p.DateOfDeath.IsNullOrEmpty()) log.OnNext(string.Format("\tdeath : {0}\r\n", p.DateOfDeath));
                 await Humans.UpdateAsync(p);
                 if (Countries.IsExists(p.Country))
                 {
