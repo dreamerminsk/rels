@@ -41,7 +41,7 @@ namespace rels.Workers
             {
                 if (Interlocked.CompareExchange(ref isRunning, 1, 0) == 1) { return; }
                 var now = DateTime.Now;
-                if (now.Subtract(started).TotalSeconds < 8)
+                if (now.Subtract(started).TotalSeconds < 16)
                 {
                     return;
                 }
