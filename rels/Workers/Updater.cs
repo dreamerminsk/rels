@@ -24,6 +24,12 @@ namespace rels.Workers
         public IObservable<string> WikiData =>
             wikiData.AsObservable();
 
+
+        private Subject<string> log = new Subject<string>();
+
+        public IObservable<string> Log =>
+            log.AsObservable();
+
         public Updater()
         {
         }
@@ -50,6 +56,7 @@ namespace rels.Workers
                 if (!q.TryDequeue(out title)) { ReloadQueue(); return; }
                 if (string.IsNullOrEmpty(title)) { return; }
                 wikiData.OnNext(title);
+                log.OnNext(string.Format("{0} - {1}", started, title));
                 var p = await Wiki.WikiData.GetPersonAsync(title);
                 await Humans.UpdateAsync(p);
                 if (Countries.IsExists(p.Country))
