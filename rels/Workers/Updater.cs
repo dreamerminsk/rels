@@ -56,8 +56,13 @@ namespace rels.Workers
                 if (!q.TryDequeue(out title)) { ReloadQueue(); return; }
                 if (string.IsNullOrEmpty(title)) { return; }
                 wikiData.OnNext(title);
-                log.OnNext(string.Format("{0} - {1}", started, title));
+                log.OnNext(string.Format("{0} - {1}\r\n", started, title));
                 var p = await Wiki.WikiData.GetPersonAsync(title);
+                p.Labels.ForEach(l =>
+                {
+                    if (l.Language.Equals("en")) log.OnNext(string.Format("\ten : {0}\r\n", l.Value));
+                    if (l.Language.Equals("ru")) log.OnNext(string.Format("\tru : {0}\r\n", l.Value));
+                });
                 await Humans.UpdateAsync(p);
                 if (Countries.IsExists(p.Country))
                 {
