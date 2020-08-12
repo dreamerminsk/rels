@@ -68,11 +68,13 @@ namespace rels.Workers
                 await Humans.UpdateAsync(p);
                 if (Countries.IsExists(p.Country))
                 {
-
+                    var c = Countries.GetByWikiDataId(p.Country);
+                    log.OnNext(string.Format("\tcountry : {0} / {1}\r\n", c.Name, c.RusName));
                 }
                 else if (!p.Country.IsNullOrEmpty())
                 {
                     var c = await Wiki.WikiData.GetCountryAsync(p.Country);
+                    log.OnNext(string.Format("\tcountry : {0} / {1}\r\n", c.Name, c.RusName));
                     await Countries.InsertAsync(c);
                 }
                 if (!await Humans.IsExistsAsync(p.Father))
