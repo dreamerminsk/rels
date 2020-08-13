@@ -28,7 +28,9 @@ namespace rels.UI
                 treeView1.EndUpdate();
             });
             updater.Log.ObserveOn(SynchronizationContext.Current).Subscribe(o =>
-            { richTextBox1.AppendText(o); });
+            {
+                richTextBox1.AppendText(o);
+            });
             updater.Start();
         }
 
