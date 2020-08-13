@@ -19,7 +19,7 @@ namespace rels.Wiki
         public static async Task<WikiDataItem> GetItemAsync(string wikiDataId)
         {
             var p = new WikiDataItem();
-            var page = await GetStringAsync(string.Format(DATA_REF, wikiDataId));
+            var page = await Web.GetStringAsync(string.Format(DATA_REF, wikiDataId));
             var doc = JObject.Parse(page);
             JObject entities = (JObject)doc["entities"];
             JProperty entity = (JProperty)entities.First;
@@ -54,7 +54,7 @@ namespace rels.Wiki
         public static async Task<Human> GetPersonAsync(string wikiDataId)
         {
             var p = new Human();
-            var page = await GetStringAsync(string.Format(DATA_REF, wikiDataId));
+            var page = await Web.GetStringAsync(string.Format(DATA_REF, wikiDataId));
             var doc = JObject.Parse(page);
             JObject entities = (JObject)doc["entities"];
             JProperty entity = (JProperty)entities.First;
@@ -151,7 +151,7 @@ namespace rels.Wiki
         {
             var c = new Country();
             if (wikiDataId.IsNullOrEmpty()) return c;
-            var page = await GetStringAsync(string.Format(DATA_REF, wikiDataId));
+            var page = await Web.GetStringAsync(string.Format(DATA_REF, wikiDataId));
             var doc = JObject.Parse(page);
             JProperty entities = (JProperty)doc["entities"].Children().First();
             var claims = entities?.Value?["claims"];
@@ -161,22 +161,6 @@ namespace rels.Wiki
             c.Name = labels["en"]?["value"]?.ToString();
             c.RusName = labels["ru"]?["value"]?.ToString();
             return c;
-        }
-
-        static async Task<string> GetStringAsync(string url)
-        {
-            try
-            {
-                HttpResponseMessage response = await client.GetAsync(url);
-                response.EnsureSuccessStatusCode();
-                string responseBody = await response.Content.ReadAsStringAsync();
-                return responseBody;
-            }
-            catch (HttpRequestException e)
-            {
-                MessageBox.Show(e.Message, e.GetType().Name);
-                return null;
-            }
         }
     }
 }
