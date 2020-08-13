@@ -38,11 +38,15 @@
             this.icons = new System.Windows.Forms.ImageList(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.logTextBox = new System.Windows.Forms.RichTextBox();
+            this.webPage = new System.Windows.Forms.TabPage();
+            this.webTextBox = new System.Windows.Forms.RichTextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.webPage = new System.Windows.Forms.TabPage();
-            this.webTextBox = new System.Windows.Forms.RichTextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -52,8 +56,8 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             this.webPage.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripContainer1
@@ -143,10 +147,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.logTextBox);
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(520, 533);
+            this.tabPage2.Size = new System.Drawing.Size(520, 537);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "log";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -158,9 +162,32 @@
             this.logTextBox.Location = new System.Drawing.Point(3, 3);
             this.logTextBox.Name = "logTextBox";
             this.logTextBox.ReadOnly = true;
-            this.logTextBox.Size = new System.Drawing.Size(514, 527);
+            this.logTextBox.Size = new System.Drawing.Size(514, 531);
             this.logTextBox.TabIndex = 0;
             this.logTextBox.Text = "";
+            // 
+            // webPage
+            // 
+            this.webPage.Controls.Add(this.listView1);
+            this.webPage.Controls.Add(this.webTextBox);
+            this.webPage.Location = new System.Drawing.Point(4, 26);
+            this.webPage.Name = "webPage";
+            this.webPage.Padding = new System.Windows.Forms.Padding(3);
+            this.webPage.Size = new System.Drawing.Size(520, 533);
+            this.webPage.TabIndex = 2;
+            this.webPage.Text = "web";
+            this.webPage.UseVisualStyleBackColor = true;
+            // 
+            // webTextBox
+            // 
+            this.webTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.webTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.webTextBox.Location = new System.Drawing.Point(3, 82);
+            this.webTextBox.Name = "webTextBox";
+            this.webTextBox.ReadOnly = true;
+            this.webTextBox.Size = new System.Drawing.Size(514, 448);
+            this.webTextBox.TabIndex = 0;
+            this.webTextBox.Text = "";
             // 
             // toolStrip1
             // 
@@ -186,27 +213,38 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
             this.toolStripLabel1.Text = "toolStripLabel1";
             // 
-            // webPage
+            // listView1
             // 
-            this.webPage.Controls.Add(this.webTextBox);
-            this.webPage.Location = new System.Drawing.Point(4, 26);
-            this.webPage.Name = "webPage";
-            this.webPage.Padding = new System.Windows.Forms.Padding(3);
-            this.webPage.Size = new System.Drawing.Size(520, 533);
-            this.webPage.TabIndex = 2;
-            this.webPage.Text = "web";
-            this.webPage.UseVisualStyleBackColor = true;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(3, 3);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(514, 79);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // webTextBox
+            // columnHeader1
             // 
-            this.webTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.webTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webTextBox.Location = new System.Drawing.Point(3, 3);
-            this.webTextBox.Name = "webTextBox";
-            this.webTextBox.ReadOnly = true;
-            this.webTextBox.Size = new System.Drawing.Size(514, 527);
-            this.webTextBox.TabIndex = 0;
-            this.webTextBox.Text = "";
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 120;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Requests";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader2.Width = 120;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Bytes";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader3.Width = 120;
             // 
             // MainView
             // 
@@ -230,9 +268,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.webPage.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.webPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -252,5 +290,9 @@
         private System.Windows.Forms.RichTextBox logTextBox;
         private System.Windows.Forms.TabPage webPage;
         private System.Windows.Forms.RichTextBox webTextBox;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

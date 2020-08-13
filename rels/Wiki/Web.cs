@@ -13,19 +13,27 @@ namespace rels.Wiki
     {
         static readonly HttpClient client = new HttpClient();
         private static Subject<string> log = new Subject<string>();
+        private static WebStats stringStats = new WebStats { Name= "GetStringAsync" };
+        private static Subject<WebStats> stats = new Subject<WebStats>();
 
         public static IObservable<string> Log =>
             log.AsObservable();
+
+        public static IObservable<WebStats> Stats =>
+            stats.AsObservable();
 
         public static async Task<string> GetStringAsync(string url)
         {
             try
             {
+                stringStats.Requests += 1;
                 log.OnNext(string.Format("{0} - GetStringAsync - {1}\r\n", DateTime.Now, url));
                 HttpResponseMessage response = await client.GetAsync(url);
                 log.OnNext(string.Format("{0} - {1} - {2}\r\n", DateTime.Now, (int)response.StatusCode, response.ReasonPhrase));
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
+                stringStats.Bytes += responseBody.Length;
+                stats.OnNext(stringStats);
                 return responseBody;
             }
             catch (HttpRequestException e)
@@ -33,6 +41,15 @@ namespace rels.Wiki
                 log.OnNext(string.Format("{0} - {1} - {2}\r\n", DateTime.Now, e.GetType().Name, e.Message));
                 return null;
             }
+        }
+
+        public class WebStats
+        {
+            public string Name { get; set; }
+
+            public int Requests { get; set; } = 0;
+
+            public long Bytes { get; set; } = 0;
         }
     }
 }

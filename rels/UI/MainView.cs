@@ -36,6 +36,15 @@ namespace rels.UI
             {
                 webTextBox.AppendText(o);
             });
+            Web.Stats.ObserveOn(SynchronizationContext.Current).Subscribe(o =>
+            {
+                listView1.BeginUpdate();
+                listView1.Items.Clear();
+                var statItem = listView1.Items.Add(o.Name);
+                statItem.SubItems.Add(o.Requests.ToString());
+                statItem.SubItems.Add(o.Bytes.ToString());
+                listView1.EndUpdate();
+            });
             updater.Start();
         }
 
@@ -85,6 +94,11 @@ namespace rels.UI
             }
             treeView1.EndUpdate();
             node.ExpandAll();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
