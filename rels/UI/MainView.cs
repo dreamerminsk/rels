@@ -1,5 +1,6 @@
 ﻿using LinqToDB.Common;
 using rels.Model;
+using rels.Wiki;
 using rels.Workers;
 using System;
 using System.Reactive.Linq;
@@ -30,6 +31,10 @@ namespace rels.UI
             updater.Log.ObserveOn(SynchronizationContext.Current).Subscribe(o =>
             {
                 logTextBox.AppendText(o);
+            });
+            Web.Log.ObserveOn(SynchronizationContext.Current).Subscribe(o =>
+            {
+                webTextBox.AppendText(o);
             });
             updater.Start();
         }
