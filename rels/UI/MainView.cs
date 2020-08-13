@@ -29,7 +29,7 @@ namespace rels.UI
             });
             updater.Log.ObserveOn(SynchronizationContext.Current).Subscribe(o =>
             {
-                richTextBox1.AppendText(o);
+                logTextBox.AppendText(o);
             });
             updater.Start();
         }
