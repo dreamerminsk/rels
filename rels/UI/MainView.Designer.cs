@@ -41,6 +41,8 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.webPage = new System.Windows.Forms.TabPage();
+            this.webTextBox = new System.Windows.Forms.RichTextBox();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -51,6 +53,7 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.webPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripContainer1
@@ -92,6 +95,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.webPage);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -180,6 +184,28 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
             this.toolStripLabel1.Text = "toolStripLabel1";
             // 
+            // webPage
+            // 
+            this.webPage.Controls.Add(this.webTextBox);
+            this.webPage.Location = new System.Drawing.Point(4, 26);
+            this.webPage.Name = "webPage";
+            this.webPage.Padding = new System.Windows.Forms.Padding(3);
+            this.webPage.Size = new System.Drawing.Size(520, 533);
+            this.webPage.TabIndex = 2;
+            this.webPage.Text = "web";
+            this.webPage.UseVisualStyleBackColor = true;
+            // 
+            // webTextBox
+            // 
+            this.webTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.webTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webTextBox.Location = new System.Drawing.Point(3, 3);
+            this.webTextBox.Name = "webTextBox";
+            this.webTextBox.ReadOnly = true;
+            this.webTextBox.Size = new System.Drawing.Size(514, 527);
+            this.webTextBox.TabIndex = 0;
+            this.webTextBox.Text = "";
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -204,6 +230,7 @@
             this.tabPage2.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.webPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -221,5 +248,7 @@
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.ImageList icons;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TabPage webPage;
+        private System.Windows.Forms.RichTextBox webTextBox;
     }
 }
