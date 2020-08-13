@@ -14,8 +14,6 @@ namespace rels.Wiki
     {
         private static string DATA_REF = "https://www.wikidata.org/wiki/Special:EntityData/{0}.json";
 
-        static readonly HttpClient client = new HttpClient();
-
         public static async Task<WikiDataItem> GetItemAsync(string wikiDataId)
         {
             var p = new WikiDataItem();
