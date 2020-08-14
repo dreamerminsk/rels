@@ -90,6 +90,8 @@ namespace rels.Wiki
                 return p;
             }
 
+
+            p.Country = claims["P31"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["id"]?.ToString();
             p.ImageFile = claims["P18"]?[0]?["mainsnak"]?["datavalue"]?["value"]?.ToString();
             p.Country = claims["P27"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["id"]?.ToString();
             p.DateOfBirth = claims["P569"]?[0]?["mainsnak"]?["datavalue"]?["value"]?["time"]?.ToString();

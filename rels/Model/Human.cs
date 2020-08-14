@@ -14,6 +14,8 @@ namespace rels.Model
         [Column(Name = "WikiDataID")]
         public string WikiDataID { get; set; }
 
+        public string Instance { get; set; }
+
         [Column(Name = "ImageFile")]
         public string ImageFile { get; set; }
 
