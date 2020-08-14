@@ -38,12 +38,12 @@ namespace rels.UI
             });
             Web.Stats.ObserveOn(SynchronizationContext.Current).Subscribe(o =>
             {
-                listView1.BeginUpdate();
-                listView1.Items.Clear();
-                var statItem = listView1.Items.Add(o.Name);
+                webStatsView.BeginUpdate();
+                webStatsView.Items.Clear();
+                var statItem = webStatsView.Items.Add(o.Name);
                 statItem.SubItems.Add(o.Requests.ToString());
                 statItem.SubItems.Add(o.Bytes.ToString());
-                listView1.EndUpdate();
+                webStatsView.EndUpdate();
             });
             updater.Start();
         }

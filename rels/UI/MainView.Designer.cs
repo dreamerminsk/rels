@@ -39,14 +39,14 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.logTextBox = new System.Windows.Forms.RichTextBox();
             this.webPage = new System.Windows.Forms.TabPage();
+            this.webStatsView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.webTextBox = new System.Windows.Forms.RichTextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -168,7 +168,7 @@
             // 
             // webPage
             // 
-            this.webPage.Controls.Add(this.listView1);
+            this.webPage.Controls.Add(this.webStatsView);
             this.webPage.Controls.Add(this.webTextBox);
             this.webPage.Location = new System.Drawing.Point(4, 26);
             this.webPage.Name = "webPage";
@@ -177,6 +177,43 @@
             this.webPage.TabIndex = 2;
             this.webPage.Text = "web";
             this.webPage.UseVisualStyleBackColor = true;
+            // 
+            // webStatsView
+            // 
+            this.webStatsView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.webStatsView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.webStatsView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webStatsView.FullRowSelect = true;
+            this.webStatsView.GridLines = true;
+            this.webStatsView.HideSelection = false;
+            this.webStatsView.Location = new System.Drawing.Point(3, 3);
+            this.webStatsView.Name = "webStatsView";
+            this.webStatsView.ShowItemToolTips = true;
+            this.webStatsView.Size = new System.Drawing.Size(514, 79);
+            this.webStatsView.TabIndex = 1;
+            this.webStatsView.UseCompatibleStateImageBehavior = false;
+            this.webStatsView.View = System.Windows.Forms.View.Details;
+            this.webStatsView.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 120;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Requests";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader2.Width = 120;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Bytes";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader3.Width = 120;
             // 
             // webTextBox
             // 
@@ -212,39 +249,6 @@
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
             this.toolStripLabel1.Text = "toolStripLabel1";
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(514, 79);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 120;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Requests";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader2.Width = 120;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Bytes";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader3.Width = 120;
             // 
             // MainView
             // 
@@ -290,7 +294,7 @@
         private System.Windows.Forms.RichTextBox logTextBox;
         private System.Windows.Forms.TabPage webPage;
         private System.Windows.Forms.RichTextBox webTextBox;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView webStatsView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
