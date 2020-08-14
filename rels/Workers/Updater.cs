@@ -58,6 +58,7 @@ namespace rels.Workers
                 wikiData.OnNext(title);
                 log.OnNext(string.Format("{0} - {1}\r\n", started.ToShortTimeString(), title));
                 var p = await Wiki.WikiData.GetPersonAsync(title);
+                log.OnNext(string.Format("\tinstance : {0}\r\n", p.Instance));
                 p.Labels.ForEach(l =>
                 {
                     if (l.Language.Equals("en")) log.OnNext(string.Format("\ten : {0}\r\n", l.Value));
