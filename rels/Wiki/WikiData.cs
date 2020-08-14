@@ -160,5 +160,22 @@ namespace rels.Wiki
             c.RusName = labels["ru"]?["value"]?.ToString();
             return c;
         }
+
+        public static async Task<Instance> GetInstanceAsync(string wikiDataId)
+        {
+            var i = new Instance();
+            if (wikiDataId.IsNullOrEmpty()) return i;
+            var page = await Web.GetStringAsync(string.Format(DATA_REF, wikiDataId));
+            var doc = JObject.Parse(page);
+            JProperty entities = (JProperty)doc["entities"].Children().First();
+            var claims = entities?.Value?["claims"];
+            var labels = entities?.Value?["labels"];
+            i.ID = int.Parse(entities?.Name?.Substring(1));
+            i.WikiDataID = entities?.Name;
+            i.Name = labels["en"]?["value"]?.ToString();
+            i.RusName = labels["ru"]?["value"]?.ToString();
+            return i;
+        }
+
     }
 }
