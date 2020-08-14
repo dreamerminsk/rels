@@ -56,7 +56,7 @@ namespace rels.Workers
                 if (!q.TryDequeue(out title)) { ReloadQueue(); return; }
                 if (string.IsNullOrEmpty(title)) { return; }
                 wikiData.OnNext(title);
-                log.OnNext(string.Format("{0} - {1}\r\n", started.ToShortTimeString(), title));
+                log.OnNext(string.Format("{0} - {1}\r\n", started.ToLongTimeString(), title));
                 var p = await Wiki.WikiData.GetPersonAsync(title);
                 log.OnNext(string.Format("\tinstance : {0}\r\n", p.Instance));
                 p.Labels.ForEach(l =>

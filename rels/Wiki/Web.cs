@@ -27,7 +27,7 @@ namespace rels.Wiki
             try
             {
                 stringStats.Requests += 1;
-                log.OnNext(string.Format("{0} - GetStringAsync - {1}\r\n", DateTime.Now, url));
+                log.OnNext(string.Format("{0} - GetStringAsync - {1}\r\n", DateTime.Now.ToLongTimeString(), url));
                 HttpResponseMessage response = await client.GetAsync(url);
                 log.OnNext(string.Format("{0} - {1} - {2}\r\n", DateTime.Now, (int)response.StatusCode, response.ReasonPhrase));
                 response.EnsureSuccessStatusCode();
