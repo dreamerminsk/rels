@@ -7,6 +7,11 @@ namespace rels.Model
     public class Countries
     {
 
+        private static MemoryCache _cache = new MemoryCache(new MemoryCacheOptions()
+        {
+            SizeLimit = 1024
+        });
+
         public static bool IsExists(string wikiDataId)
         {
             using (var db = new RelsDB())
