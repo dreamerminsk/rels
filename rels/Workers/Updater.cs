@@ -122,7 +122,7 @@ namespace rels.Workers
             {
                 var people = db.GetTable<Human>();
                 people.Where(p => p.Modified.Equals(DEFAULT))
-                    .OrderBy(x => x.WikiDataID)
+                    .OrderBy(x => x.WikiDataID.Length)
                     .ToList().ForEach(p => q.Enqueue(p.WikiDataID));
             }
         }
