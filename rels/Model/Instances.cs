@@ -1,4 +1,5 @@
 ﻿using LinqToDB;
+using Microsoft.Extensions.Caching.Memory;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -6,6 +7,12 @@ namespace rels.Model
 {
     public class Instances
     {
+
+        private static MemoryCache _cache = new MemoryCache(new MemoryCacheOptions()
+        {
+            SizeLimit = 1024 * 1024
+        });
+
         public static bool IsExists(string wikiDataId)
         {
             using (var db = new RelsDB())
