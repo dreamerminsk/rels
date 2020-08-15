@@ -10,7 +10,7 @@ namespace rels.Model
 
         private static MemoryCache _cache = new MemoryCache(new MemoryCacheOptions()
         {
-            SizeLimit = 1024
+            SizeLimit = 1024 * 1024
         });
 
         public static bool IsExists(string wikiDataId)
