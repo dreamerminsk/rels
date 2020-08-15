@@ -58,7 +58,7 @@ namespace rels.Workers
                 wikiData.OnNext(title);
                 log.OnNext(string.Format("{0} - {1}\r\n", started.ToLongTimeString(), title));
                 var p = await Wiki.WikiData.GetPersonAsync(title);
-                
+
 
                 if (Instances.IsExists(p.Instance))
                 {
@@ -122,7 +122,7 @@ namespace rels.Workers
             {
                 var people = db.GetTable<Human>();
                 people.Where(p => p.Modified.Equals(DEFAULT))
-                    .OrderBy(x => Guid.NewGuid())
+                    .OrderBy(x => x.WikiDataID)
                     .ToList().ForEach(p => q.Enqueue(p.WikiDataID));
             }
         }
