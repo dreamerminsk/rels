@@ -1,5 +1,6 @@
 ﻿using LinqToDB;
 using Microsoft.Extensions.Caching.Memory;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -23,6 +24,23 @@ namespace rels.Model
         }
 
         public static Instance GetByWikiDataId(string wikiDataId)
+        {
+            Instance cacheEntry;
+            if (!_cache.TryGetValue(wikiDataId, out cacheEntry))
+            {
+                cacheEntry = QueryByWikiDataId(wikiDataId);
+
+                var cacheEntryOptions = new MemoryCacheEntryOptions()
+                    .SetSize(cacheEntry.Name.Length + cacheEntry.RusName.Length)
+                    .SetPriority(CacheItemPriority.High)
+                    .SetSlidingExpiration(TimeSpan.FromSeconds(600));
+
+                _cache.Set(wikiDataId, cacheEntry, cacheEntryOptions);
+            }
+            return cacheEntry;
+        }
+
+        public static Instance QueryByWikiDataId(string wikiDataId)
         {
             using (var db = new RelsDB())
             {
