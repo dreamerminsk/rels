@@ -80,17 +80,8 @@ namespace rels.Model
 
         public static async Task<int> InsertAsync2(Country c)
         {
-            using (var db = new RelsDB())
-            {
-                try
-                {
-                    return await db.InsertAsync(c);
-                }
-                catch
-                {
-                    return -1;
-                }
-            }
+            var page = await Web.GetStringAsync(string.Format("{0}{1}", COUNTRIES_ENDPOINT, c.WikiDataID));
+            return -1;
         }
 
     }
