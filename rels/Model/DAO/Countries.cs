@@ -1,5 +1,7 @@
 ﻿using LinqToDB;
 using Microsoft.Extensions.Caching.Memory;
+using Newtonsoft.Json.Linq;
+using rels.Wiki;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,7 +10,7 @@ namespace rels.Model
 {
     public class Countries
     {
-        private const string COUNTRIES_ENDPOINT = "http://172.105.80.145:8000/api/rels/countries";
+        private const string COUNTRIES_ENDPOINT = "http://172.105.80.145:8000/api/rels/countries/";
         private static MemoryCache _cache = new MemoryCache(new MemoryCacheOptions()
         {
             SizeLimit = 1024 * 1024
@@ -29,12 +31,12 @@ namespace rels.Model
             if (!_cache.TryGetValue(wikiDataId, out cacheEntry))
             {
                 cacheEntry = QueryByWikiDataId(wikiDataId);
-                
+
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
                     .SetSize(cacheEntry.Name.Length + cacheEntry.RusName.Length)
                     .SetPriority(CacheItemPriority.High)
                     .SetSlidingExpiration(TimeSpan.FromSeconds(600));
-                
+
                 _cache.Set(wikiDataId, cacheEntry, cacheEntryOptions);
             }
             return cacheEntry;
@@ -64,9 +66,10 @@ namespace rels.Model
             }
         }
 
-        private static Country QueryByWikiDataId2(string wikiDataId)
+        private static async Task<Country> QueryByWikiDataId2Async(string wikiDataId)
         {
-            var u = COUNTRIES_ENDPOINT;
+            var page = await Web.GetStringAsync(string.Format("{0}{1}", COUNTRIES_ENDPOINT, wikiDataId));
+            var doc = JObject.Parse(page);
             return new Country();
         }
 
