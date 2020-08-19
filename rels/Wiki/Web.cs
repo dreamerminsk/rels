@@ -49,10 +49,12 @@ namespace rels.Wiki
         {
             try
             {
+                var stringStats = WebStats.GetHostStats(url);
                 stringStats.Requests += 1;
-                log.OnNext(string.Format("{0} - PostStringAsync - {1}\r\n", DateTime.Now.ToLongTimeString(), url));
+                log.OnNext(string.Format("{0} - PostStringAsync\r\n\t{1}\r\n", DateTime.Now.ToLongTimeString(), url));
                 HttpResponseMessage response = await client.PostAsync(url, new StringContent(content));
-                log.OnNext(string.Format("{0} - {1} - {2}\r\n", DateTime.Now, (int)response.StatusCode, response.ReasonPhrase));
+                log.OnNext(string.Format("{0} - PostStringAsync\r\n\t{1}\r\n\t{2} - {3}\r\n",
+                    DateTime.Now.ToLongTimeString(), url, (int)response.StatusCode, response.ReasonPhrase));
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
                 stringStats.Bytes += ASCIIEncoding.UTF8.GetByteCount(responseBody);
@@ -61,7 +63,8 @@ namespace rels.Wiki
             }
             catch (HttpRequestException e)
             {
-                log.OnNext(string.Format("{0} - {1} - {2}\r\n", DateTime.Now, e.GetType().Name, e.Message));
+                log.OnNext(string.Format("{0} - PostStringAsync\r\n\t{1}\r\n\t{2}\r\n\t{3}\r\n",
+                    DateTime.Now.ToLongTimeString(), url, e.GetType().Name, e.Message));
                 return null;
             }
         }
