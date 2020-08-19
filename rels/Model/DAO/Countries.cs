@@ -8,7 +8,7 @@ namespace rels.Model
 {
     public class Countries
     {
-
+        private const string COUNTRIES_ENDPOINT = "http://172.105.80.145:8000/api/rels/countries";
         private static MemoryCache _cache = new MemoryCache(new MemoryCacheOptions()
         {
             SizeLimit = 1024 * 1024
@@ -66,6 +66,7 @@ namespace rels.Model
 
         private static Country QueryByWikiDataId2(string wikiDataId)
         {
+            var u = COUNTRIES_ENDPOINT;
             return new Country();
         }
 
