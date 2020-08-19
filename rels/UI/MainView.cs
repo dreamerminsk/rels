@@ -3,6 +3,7 @@ using rels.Model;
 using rels.Wiki;
 using rels.Workers;
 using System;
+using System.Linq;
 using System.Reactive.Linq;
 using System.Threading;
 using System.Windows.Forms;
@@ -39,10 +40,22 @@ namespace rels.UI
             Web.Stats.ObserveOn(SynchronizationContext.Current).Subscribe(o =>
             {
                 webStatsView.BeginUpdate();
-                webStatsView.Items.Clear();
-                var statItem = webStatsView.Items.Add(o.Name);
-                statItem.SubItems.Add(o.Requests.ToString());
-                statItem.SubItems.Add(o.Bytes.ToString());
+                var find = webStatsView.Items.Find(o.Name, false);
+                if (find.IsNullOrEmpty())
+                {
+                    var statItem = webStatsView.Items.Add(o.Name);
+                    statItem.SubItems.Add(o.Requests.ToString());
+                    statItem.SubItems.Add(o.Bytes.ToString());
+                }
+                else
+                {
+                    find.ToList().ForEach(lvi =>
+                    {
+                        lvi.SubItems.Clear();
+                        lvi.SubItems.Add(o.Requests.ToString());
+                        lvi.SubItems.Add(o.Bytes.ToString());
+                    });
+                }
                 webStatsView.EndUpdate();
             });
             updater.Start();
