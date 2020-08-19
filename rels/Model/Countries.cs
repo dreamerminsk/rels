@@ -64,5 +64,25 @@ namespace rels.Model
             }
         }
 
+        private static Country QueryByWikiDataId2(string wikiDataId)
+        {
+            
+        }
+
+        public static async Task<int> InsertAsync2(Country c)
+        {
+            using (var db = new RelsDB())
+            {
+                try
+                {
+                    return await db.InsertAsync(c);
+                }
+                catch
+                {
+                    return -1;
+                }
+            }
+        }
+
     }
 }

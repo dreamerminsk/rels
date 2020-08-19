@@ -32,7 +32,7 @@ namespace rels.Wiki
                 log.OnNext(string.Format("{0} - {1} - {2}\r\n", DateTime.Now, (int)response.StatusCode, response.ReasonPhrase));
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
-                stringStats.Bytes += ASCIIEncoding.Unicode.GetByteCount(responseBody);
+                stringStats.Bytes += ASCIIEncoding.UTF8.GetByteCount(responseBody);
                 stats.OnNext(stringStats);
                 return responseBody;
             }
