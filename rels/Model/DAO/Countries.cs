@@ -66,11 +66,16 @@ namespace rels.Model
             }
         }
 
-        private static async Task<Country> QueryByWikiDataId2Async(string wikiDataId)
+        private static async Task<Country> QueryByWikiDataIdAsync(string wikiDataId)
         {
             var page = await Web.GetStringAsync(string.Format("{0}{1}", COUNTRIES_ENDPOINT, wikiDataId));
             var doc = JObject.Parse(page);
-            return new Country();
+            return new Country
+            {
+                WikiDataID = doc["WikiDataID"].ToString(),
+                Name = doc["Name"].ToString(),
+                RusName = doc["RusName"].ToString(),
+            };
         }
 
         public static async Task<int> InsertAsync2(Country c)
