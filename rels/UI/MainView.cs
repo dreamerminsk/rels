@@ -52,6 +52,7 @@ namespace rels.UI
                 else
                 {
                     item.SubItems.Clear();
+                    item.Text = o.Name;
                     item.SubItems.Add(o.Requests.ToString());
                     item.SubItems.Add(o.Bytes.ToString());
                 }
