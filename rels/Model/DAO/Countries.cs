@@ -1,5 +1,6 @@
 ﻿using LinqToDB;
 using Microsoft.Extensions.Caching.Memory;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using rels.Wiki;
 using System;
@@ -25,12 +26,12 @@ namespace rels.Model
             }
         }
 
-        public static Country GetByWikiDataId(string wikiDataId)
+        public static async Task<Country> GetByWikiDataIdAsync(string wikiDataId)
         {
             Country cacheEntry;
             if (!_cache.TryGetValue(wikiDataId, out cacheEntry))
             {
-                cacheEntry = QueryByWikiDataId(wikiDataId);
+                cacheEntry = await QueryByWikiDataIdAsync(wikiDataId);
 
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
                     .SetSize(cacheEntry.Name.Length + cacheEntry.RusName.Length)
@@ -51,7 +52,7 @@ namespace rels.Model
             }
         }
 
-        public static async Task<int> InsertAsync(Country c)
+        public static async Task<int> InsertAsync2(Country c)
         {
             using (var db = new RelsDB())
             {
@@ -74,9 +75,9 @@ namespace rels.Model
                 var doc = JObject.Parse(page);
                 return new Country
                 {
-                    WikiDataID = doc["WikiDataID"].ToString(),
-                    Name = doc["Name"].ToString(),
-                    RusName = doc["RusName"].ToString(),
+                    WikiDataID = doc["WikiDataID"]?.ToString(),
+                    Name = doc["Name"]?.ToString(),
+                    RusName = doc["RusName"]?.ToString(),
                 };
             }
             catch
@@ -89,9 +90,9 @@ namespace rels.Model
 
         }
 
-        public static async Task<int> InsertAsync2(Country c)
+        public static async Task<int> InsertAsync(Country c)
         {
-            var page = await Web.GetStringAsync(string.Format("{0}{1}", COUNTRIES_ENDPOINT, c.WikiDataID));
+            var page = await Web.PostStringAsync(COUNTRIES_ENDPOINT, JsonConvert.SerializeObject(c));
             return -1;
         }
 

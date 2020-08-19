@@ -82,7 +82,7 @@ namespace rels.Workers
                 await Humans.UpdateAsync(p);
                 if (Countries.IsExists(p.Country))
                 {
-                    var c = Countries.GetByWikiDataId(p.Country);
+                    var c = await Countries.GetByWikiDataIdAsync(p.Country);
                     log.OnNext(string.Format("\tcountry : {0} / {1}\r\n", c.Name, c.RusName));
                 }
                 else if (!p.Country.IsNullOrEmpty())

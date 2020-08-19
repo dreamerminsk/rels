@@ -142,14 +142,15 @@ namespace rels
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (var db = new RelsDB())
-            {
-                var ps = db.GetTable<Human>();
-                var bs = ps.GroupBy(p => p.Country);
-                var cs = new Dictionary<string, int>();
-                bs.ForEachAsync(g => cs.Add(Countries.GetByWikiDataId(g.Key)?.Name ?? "UNKNOWN", g.Count()));
-                UpdateCountries(cs);
-            }
+            //using (var db = new RelsDB())
+            //{
+            //var ps = db.GetTable<Human>();
+            //var bs = ps.GroupBy(p => p.Country);
+            //var cs = new Dictionary<string, int>();
+            //var c = await Countries.GetByWikiDataIdAsync(g.Key);
+            //bs.ForEachAsync(g => cs.Add(c?.Name ?? "UNKNOWN", g.Count()));
+            //UpdateCountries(cs);
+            //}
         }
 
         private void UpdateCountries(Dictionary<string, int> countries)
