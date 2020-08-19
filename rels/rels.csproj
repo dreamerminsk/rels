@@ -324,6 +324,7 @@
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
     <Compile Include="Wiki\Web.cs" />
+    <Compile Include="Wiki\WebStats.cs" />
     <Compile Include="Wiki\WikiDataItem.cs" />
     <Compile Include="Workers\Updater.cs" />
     <Compile Include="Wiki\Wiki.cs" />

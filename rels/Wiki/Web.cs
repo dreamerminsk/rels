@@ -11,9 +11,8 @@ namespace rels.Wiki
 {
     public static class Web
     {
-        static readonly HttpClient client = new HttpClient();
+        private static readonly HttpClient client = new HttpClient();
         private static Subject<string> log = new Subject<string>();
-        private static WebStats stringStats = new WebStats { Name= "GetStringAsync" };
         private static Subject<WebStats> stats = new Subject<WebStats>();
 
         public static IObservable<string> Log =>
@@ -62,15 +61,6 @@ namespace rels.Wiki
                 log.OnNext(string.Format("{0} - {1} - {2}\r\n", DateTime.Now, e.GetType().Name, e.Message));
                 return null;
             }
-        }
-
-        public class WebStats
-        {
-            public string Name { get; set; }
-
-            public int Requests { get; set; } = 0;
-
-            public long Bytes { get; set; } = 0;
         }
     }
 }
