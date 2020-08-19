@@ -66,7 +66,7 @@ namespace rels.Model
 
         private static Country QueryByWikiDataId2(string wikiDataId)
         {
-            
+            return new Country();
         }
 
         public static async Task<int> InsertAsync2(Country c)
