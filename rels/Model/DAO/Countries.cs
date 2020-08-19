@@ -11,7 +11,7 @@ namespace rels.Model
 {
     public class Countries
     {
-        private const string COUNTRIES_ENDPOINT = "http://172.105.80.145:8000/api/rels/countries/";
+        private const string COUNTRIES_ENDPOINT = "http://172.105.80.145:8000/api/rels/countries";
         private static MemoryCache _cache = new MemoryCache(new MemoryCacheOptions()
         {
             SizeLimit = 1024 * 1024
@@ -81,7 +81,7 @@ namespace rels.Model
         {
             try
             {
-                var page = await Web.GetStringAsync(string.Format("{0}{1}", COUNTRIES_ENDPOINT, wikiDataId));
+                var page = await Web.GetStringAsync(string.Format("{0}/{1}", COUNTRIES_ENDPOINT, wikiDataId));
                 var doc = JObject.Parse(page);
                 return new Country
                 {
