@@ -43,6 +43,27 @@ namespace rels.Wiki
             }
         }
 
+        public static async Task<string> PostStringAsync(string url, string content)
+        {
+            try
+            {
+                stringStats.Requests += 1;
+                log.OnNext(string.Format("{0} - PostStringAsync - {1}\r\n", DateTime.Now.ToLongTimeString(), url));
+                HttpResponseMessage response = await client.PostAsync(url, new StringContent(content));
+                log.OnNext(string.Format("{0} - {1} - {2}\r\n", DateTime.Now, (int)response.StatusCode, response.ReasonPhrase));
+                response.EnsureSuccessStatusCode();
+                string responseBody = await response.Content.ReadAsStringAsync();
+                stringStats.Bytes += ASCIIEncoding.UTF8.GetByteCount(responseBody);
+                stats.OnNext(stringStats);
+                return responseBody;
+            }
+            catch (HttpRequestException e)
+            {
+                log.OnNext(string.Format("{0} - {1} - {2}\r\n", DateTime.Now, e.GetType().Name, e.Message));
+                return null;
+            }
+        }
+
         public class WebStats
         {
             public string Name { get; set; }
