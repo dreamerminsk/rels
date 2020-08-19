@@ -19,6 +19,7 @@ namespace rels.Model
 
         public static async Task<bool> IsExistsAsync(string wikiDataId)
         {
+            if (wikiDataId == null) return true;
             Country cacheEntry;
             if (!_cache.TryGetValue(wikiDataId, out cacheEntry))
             {
