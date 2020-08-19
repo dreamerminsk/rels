@@ -80,7 +80,7 @@ namespace rels.Workers
                 if (!p.DateOfBirth.IsNullOrEmpty()) log.OnNext(string.Format("\tbirth : {0}\r\n", p.DateOfBirth));
                 if (!p.DateOfDeath.IsNullOrEmpty()) log.OnNext(string.Format("\tdeath : {0}\r\n", p.DateOfDeath));
                 await Humans.UpdateAsync(p);
-                if (Countries.IsExists(p.Country))
+                if (await Countries.IsExistsAsync(p.Country))
                 {
                     var c = await Countries.GetByWikiDataIdAsync(p.Country);
                     log.OnNext(string.Format("\tcountry : {0} / {1}\r\n", c.Name, c.RusName));

@@ -17,12 +17,21 @@ namespace rels.Model
             SizeLimit = 1024 * 1024
         });
 
-        public static bool IsExists(string wikiDataId)
+        public static async Task<bool> IsExistsAsync(string wikiDataId)
         {
-            using (var db = new RelsDB())
+            Country cacheEntry;
+            if (!_cache.TryGetValue(wikiDataId, out cacheEntry))
             {
-                var countries = db.GetTable<Country>();
-                return countries.Any(p => p.WikiDataID.Equals(wikiDataId));
+                cacheEntry = await QueryByWikiDataIdAsync(wikiDataId);
+                if (cacheEntry.Name.StartsWith("en: "))
+                {
+                    return false;
+                }
+                return true;
+            }
+            else
+            {
+                return true;
             }
         }
 
