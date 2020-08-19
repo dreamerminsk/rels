@@ -40,8 +40,10 @@ namespace rels.UI
             Web.Stats.ObserveOn(SynchronizationContext.Current).Subscribe(o =>
             {
                 webStatsView.BeginUpdate();
-                var find = webStatsView.Items.Find(o.Name, false);
-                if (find.IsNullOrEmpty())
+                var item = webStatsView.Items.Cast<ListViewItem>()
+                .Where(x => (x.Text == o.Name))
+                .FirstOrDefault();
+                if (object.Equals(item, default(ListViewItem)))
                 {
                     var statItem = webStatsView.Items.Add(o.Name);
                     statItem.SubItems.Add(o.Requests.ToString());
@@ -49,12 +51,9 @@ namespace rels.UI
                 }
                 else
                 {
-                    find.ToList().ForEach(lvi =>
-                    {
-                        lvi.SubItems.Clear();
-                        lvi.SubItems.Add(o.Requests.ToString());
-                        lvi.SubItems.Add(o.Bytes.ToString());
-                    });
+                    item.SubItems.Clear();
+                    item.SubItems.Add(o.Requests.ToString());
+                    item.SubItems.Add(o.Bytes.ToString());
                 }
                 webStatsView.EndUpdate();
             });
