@@ -47,6 +47,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.webSplitContainer = new System.Windows.Forms.SplitContainer();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -58,6 +59,10 @@
             this.tabPage2.SuspendLayout();
             this.webPage.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webSplitContainer)).BeginInit();
+            this.webSplitContainer.Panel1.SuspendLayout();
+            this.webSplitContainer.Panel2.SuspendLayout();
+            this.webSplitContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripContainer1
@@ -168,8 +173,7 @@
             // 
             // webPage
             // 
-            this.webPage.Controls.Add(this.webStatsView);
-            this.webPage.Controls.Add(this.webTextBox);
+            this.webPage.Controls.Add(this.webSplitContainer);
             this.webPage.Location = new System.Drawing.Point(4, 26);
             this.webPage.Name = "webPage";
             this.webPage.Padding = new System.Windows.Forms.Padding(3);
@@ -189,10 +193,10 @@
             this.webStatsView.FullRowSelect = true;
             this.webStatsView.GridLines = true;
             this.webStatsView.HideSelection = false;
-            this.webStatsView.Location = new System.Drawing.Point(3, 3);
+            this.webStatsView.Location = new System.Drawing.Point(0, 0);
             this.webStatsView.Name = "webStatsView";
             this.webStatsView.ShowItemToolTips = true;
-            this.webStatsView.Size = new System.Drawing.Size(514, 79);
+            this.webStatsView.Size = new System.Drawing.Size(514, 75);
             this.webStatsView.TabIndex = 1;
             this.webStatsView.UseCompatibleStateImageBehavior = false;
             this.webStatsView.View = System.Windows.Forms.View.Details;
@@ -201,7 +205,7 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 120;
+            this.columnHeader1.Width = 140;
             // 
             // columnHeader2
             // 
@@ -218,11 +222,11 @@
             // webTextBox
             // 
             this.webTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.webTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.webTextBox.Location = new System.Drawing.Point(3, 82);
+            this.webTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webTextBox.Location = new System.Drawing.Point(0, 0);
             this.webTextBox.Name = "webTextBox";
             this.webTextBox.ReadOnly = true;
-            this.webTextBox.Size = new System.Drawing.Size(514, 448);
+            this.webTextBox.Size = new System.Drawing.Size(514, 451);
             this.webTextBox.TabIndex = 0;
             this.webTextBox.Text = "";
             // 
@@ -250,6 +254,26 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
             this.toolStripLabel1.Text = "toolStripLabel1";
             // 
+            // webSplitContainer
+            // 
+            this.webSplitContainer.BackColor = System.Drawing.SystemColors.Highlight;
+            this.webSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webSplitContainer.Location = new System.Drawing.Point(3, 3);
+            this.webSplitContainer.Name = "webSplitContainer";
+            this.webSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // webSplitContainer.Panel1
+            // 
+            this.webSplitContainer.Panel1.Controls.Add(this.webStatsView);
+            // 
+            // webSplitContainer.Panel2
+            // 
+            this.webSplitContainer.Panel2.Controls.Add(this.webTextBox);
+            this.webSplitContainer.Size = new System.Drawing.Size(514, 527);
+            this.webSplitContainer.SplitterDistance = 75;
+            this.webSplitContainer.SplitterWidth = 1;
+            this.webSplitContainer.TabIndex = 0;
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -275,6 +299,10 @@
             this.webPage.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.webSplitContainer.Panel1.ResumeLayout(false);
+            this.webSplitContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.webSplitContainer)).EndInit();
+            this.webSplitContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -298,5 +326,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.SplitContainer webSplitContainer;
     }
 }
