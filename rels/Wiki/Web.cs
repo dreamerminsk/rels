@@ -40,7 +40,7 @@ namespace rels.Wiki
             catch (HttpRequestException e)
             {
                 log.OnNext(string.Format("{0} - GetStringAsync\r\n\t{1}\r\n\t{2}\r\n\t{3}\r\n",
-                    DateTime.Now.ToLongTimeString(), url, e.GetType().Name, e.Message));
+                    DateTime.Now.ToLongTimeString(), url, e.GetType().FullName, e.Message));
                 return null;
             }
         }
