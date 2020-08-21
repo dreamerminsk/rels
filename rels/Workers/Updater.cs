@@ -60,9 +60,9 @@ namespace rels.Workers
                 var p = await Wiki.WikiData.GetPersonAsync(title);
 
 
-                if (Instances.IsExists(p.Instance))
+                if (await Instances.IsExistsAsync(p.Instance))
                 {
-                    var i = Instances.GetByWikiDataId(p.Instance);
+                    var i = await Instances.GetByWikiDataIdAsync(p.Instance);
                     log.OnNext(string.Format("\tinstance : {0} / {1}\r\n", i.Name, i.RusName));
                 }
                 else if (!p.Instance.IsNullOrEmpty())
