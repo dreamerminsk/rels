@@ -1,5 +1,8 @@
 ﻿using LinqToDB;
 using Microsoft.Extensions.Caching.Memory;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using rels.Wiki;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,26 +12,38 @@ namespace rels.Model
     public class Instances
     {
 
+        private const string INSTANCES_ENDPOINT = "http://172.105.80.145:8000/api/rels/instances";
+
         private static MemoryCache _cache = new MemoryCache(new MemoryCacheOptions()
         {
             SizeLimit = 1024 * 1024
         });
 
-        public static bool IsExists(string wikiDataId)
+        public static async Task<bool> IsExistsAsync(string wikiDataId)
         {
-            using (var db = new RelsDB())
+            if (wikiDataId == null) return false;
+            Instance cacheEntry;
+            if (!_cache.TryGetValue(wikiDataId, out cacheEntry))
             {
-                var instances = db.GetTable<Instance>();
-                return instances.Any(p => p.WikiDataID.Equals(wikiDataId));
+                cacheEntry = await QueryByWikiDataIdAsync(wikiDataId);
+                if (cacheEntry.Name.StartsWith("en: "))
+                {
+                    return false;
+                }
+                return true;
+            }
+            else
+            {
+                return true;
             }
         }
 
-        public static Instance GetByWikiDataId(string wikiDataId)
+        public static async Task<Instance> GetByWikiDataIdAsync(string wikiDataId)
         {
             Instance cacheEntry;
             if (!_cache.TryGetValue(wikiDataId, out cacheEntry))
             {
-                cacheEntry = QueryByWikiDataId(wikiDataId);
+                cacheEntry = await QueryByWikiDataIdAsync(wikiDataId);
 
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
                     .SetSize(cacheEntry.Name.Length + cacheEntry.RusName.Length)
@@ -40,28 +55,34 @@ namespace rels.Model
             return cacheEntry;
         }
 
-        public static Instance QueryByWikiDataId(string wikiDataId)
+        private static async Task<Instance> QueryByWikiDataIdAsync(string wikiDataId)
         {
-            using (var db = new RelsDB())
+            try
             {
-                var instances = db.GetTable<Instance>();
-                return instances.Where(p => p.WikiDataID.Equals(wikiDataId)).FirstOrDefault();
+                var page = await Web.GetStringAsync(string.Format("{0}/{1}", INSTANCES_ENDPOINT, wikiDataId));
+                var doc = JObject.Parse(page);
+                return new Instance
+                {
+                    WikiDataID = doc["WikiDataID"]?.ToString(),
+                    Name = doc["Name"]?.ToString(),
+                    RusName = doc["RusName"]?.ToString(),
+                };
             }
+            catch
+            {
+                return new Instance
+                {
+                    WikiDataID = wikiDataId,
+                };
+            }
+
         }
 
         public static async Task<int> InsertAsync(Instance c)
         {
-            using (var db = new RelsDB())
-            {
-                try
-                {
-                    return await db.InsertAsync(c);
-                }
-                catch
-                {
-                    return -1;
-                }
-            }
+            var page = await Web.PostStringAsync(INSTANCES_ENDPOINT, JsonConvert.SerializeObject(c));
+            return -1;
         }
+
     }
 }
