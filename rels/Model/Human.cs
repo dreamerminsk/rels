@@ -54,4 +54,39 @@ namespace rels.Model
         public DateTime Modified { get; set; }
 
     }
+
+    public class Human2
+    {
+
+        public int ID { get; set; }
+
+        public string WikiDataID { get; set; }
+
+        public List<string> Instances { get; set; }
+
+        public string ImageFile { get; set; }
+
+        public Dictionary<string, string> Labels { get; set; } = new Dictionary<string, string>();
+
+        public Dictionary<string, string> Descriptions { get; set; } = new Dictionary<string, string>();
+
+        public string Country { get; set; }
+
+        public string DateOfBirth { get; set; }
+
+        public string DateOfDeath { get; set; }
+
+        public string Father { get; set; }
+
+        public string Mother { get; set; }
+
+        public List<string> Siblings { get; set; } = new List<string>();
+
+        public List<string> Spouse { get; set; } = new List<string>();
+
+        public List<string> Children { get; set; } = new List<string>();
+
+        public DateTime Modified { get; set; }
+
+    }
 }
