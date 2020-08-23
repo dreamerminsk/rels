@@ -60,16 +60,16 @@ namespace rels.Workers
                 var p = await Wiki.WikiData.GetPersonAsync(title);
 
 
-                if (await Instances.IsExistsAsync(p.Instance))
+                if (await RestInstances.IsExistsAsync(p.Instance))
                 {
-                    var i = await Instances.GetByWikiDataIdAsync(p.Instance);
+                    var i = await RestInstances.GetByWikiDataIdAsync(p.Instance);
                     log.OnNext(string.Format("\tinstance : {0} / {1}\r\n", i.Name, i.RusName));
                 }
                 else if (!p.Instance.IsNullOrEmpty())
                 {
                     var i = await Wiki.WikiData.GetInstanceAsync(p.Instance);
                     log.OnNext(string.Format("\tinstance : {0} / {1}\r\n", i.Name, i.RusName));
-                    await Instances.InsertAsync(i);
+                    await RestInstances.InsertAsync(i);
                 }
 
                 p.Labels.ForEach(l =>
@@ -79,30 +79,30 @@ namespace rels.Workers
                 });
                 if (!p.DateOfBirth.IsNullOrEmpty()) log.OnNext(string.Format("\tbirth : {0}\r\n", p.DateOfBirth));
                 if (!p.DateOfDeath.IsNullOrEmpty()) log.OnNext(string.Format("\tdeath : {0}\r\n", p.DateOfDeath));
-                await Humans.UpdateAsync(p);
-                if (await Countries.IsExistsAsync(p.Country))
+                await LocalHumans.UpdateAsync(p);
+                if (await RestCountries.IsExistsAsync(p.Country))
                 {
-                    var c = await Countries.GetByWikiDataIdAsync(p.Country);
+                    var c = await RestCountries.GetByWikiDataIdAsync(p.Country);
                     log.OnNext(string.Format("\tcountry : {0} / {1}\r\n", c.Name, c.RusName));
                 }
                 else if (!p.Country.IsNullOrEmpty())
                 {
                     var c = await Wiki.WikiData.GetCountryAsync(p.Country);
                     log.OnNext(string.Format("\tcountry : {0} / {1}\r\n", c.Name, c.RusName));
-                    await Countries.InsertAsync(c);
+                    await RestCountries.InsertAsync(c);
                 }
-                if (!await Humans.IsExistsAsync(p.Father))
+                if (!await LocalHumans.IsExistsAsync(p.Father))
                 {
                     if (!p.Father.IsNullOrEmpty())
                     {
-                        await Humans.InsertAsync(p.Father);
+                        await LocalHumans.InsertAsync(p.Father);
                     }
                 }
-                if (!await Humans.IsExistsAsync(p.Mother))
+                if (!await LocalHumans.IsExistsAsync(p.Mother))
                 {
                     if (!p.Mother.IsNullOrEmpty())
                     {
-                        await Humans.InsertAsync(p.Mother);
+                        await LocalHumans.InsertAsync(p.Mother);
                     }
                 }
             }

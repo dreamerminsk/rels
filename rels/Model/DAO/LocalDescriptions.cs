@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace rels.Model
 {
-    public class Descriptions
+    public class LocalDescriptions
     {
 
         public static int Insert(List<Description> ds)

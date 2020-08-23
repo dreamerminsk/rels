@@ -244,12 +244,12 @@ namespace rels
         {
             if (ancestorsView.SelectedNode == null) return;
             if (ancestorsView.SelectedNode.Nodes.Count > 0) return;
-            var p = await Humans.GetByWikiDataIDAsync((string)ancestorsView.SelectedNode.Tag);
+            var p = await LocalHumans.GetByWikiDataIDAsync((string)ancestorsView.SelectedNode.Tag);
             if (p?.Father != null)
             {
                 var fNode = ancestorsView.SelectedNode.Nodes.Add("f. " + p?.Father);
                 fNode.Tag = p?.Father;
-                var f = await Humans.GetByWikiDataIDAsync(p?.Father);
+                var f = await LocalHumans.GetByWikiDataIDAsync(p?.Father);
                 if (f != null && !f.Labels.IsNullOrEmpty())
                 {
                     fNode.Text = string.Format("f. {0} {1}",
@@ -267,7 +267,7 @@ namespace rels
             {
                 var mNode = ancestorsView.SelectedNode.Nodes.Add("m. " + p?.Mother);
                 mNode.Tag = p?.Mother;
-                var m = await Humans.GetByWikiDataIDAsync(p?.Mother);
+                var m = await LocalHumans.GetByWikiDataIDAsync(p?.Mother);
                 if (m != null && !m.Labels.IsNullOrEmpty())
                 {
                     mNode.Text = string.Format("m. {0} {1}",

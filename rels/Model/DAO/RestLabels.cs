@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace rels.Model
 {
-    public class Labels
+    public class RestLabels
     {
 
         public static List<Label> GetLabels(string wikiDataID)
