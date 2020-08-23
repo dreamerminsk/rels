@@ -53,15 +53,6 @@ namespace rels.Model
             return cacheEntry;
         }
 
-        private static Country QueryByWikiDataId(string wikiDataId)
-        {
-            using (var db = new RelsDB())
-            {
-                var countries = db.GetTable<Country>();
-                return countries.Where(p => p.WikiDataID.Equals(wikiDataId)).FirstOrDefault();
-            }
-        }
-
         public static async Task<int> InsertAsync2(Country c)
         {
             using (var db = new RelsDB())
