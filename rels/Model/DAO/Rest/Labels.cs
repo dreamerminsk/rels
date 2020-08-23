@@ -6,9 +6,9 @@ using System.Linq;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 
-namespace rels.Model
+namespace rels.Model.Rest
 {
-    public class RestLabels
+    public class Labels
     {
 
         public static List<Label> GetLabels(string wikiDataID)

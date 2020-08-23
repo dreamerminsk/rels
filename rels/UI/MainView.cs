@@ -1,5 +1,6 @@
 ﻿using LinqToDB.Common;
 using rels.Model;
+using rels.Model.Local;
 using rels.Wiki;
 using rels.Workers;
 using System;
@@ -72,7 +73,7 @@ namespace rels.UI
             if (node == null) return;
             if (!node.Nodes.IsNullOrEmpty()) return;
             if (!node.Text.StartsWith("Q")) return;
-            var p = await LocalHumans.GetByWikiDataIDAsync(node.Text).ConfigureAwait(true);
+            var p = await Humans.GetByWikiDataIDAsync(node.Text).ConfigureAwait(true);
             treeView1.BeginUpdate();
             var labelNode = node.Nodes.Add("Labels");
             if (!p.Labels.IsNullOrEmpty())

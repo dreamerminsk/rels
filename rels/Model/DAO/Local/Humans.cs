@@ -1,13 +1,14 @@
 ﻿using LinqToDB;
 using LinqToDB.Common;
+using rels.Model.Rest;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace rels.Model
+namespace rels.Model.Local
 {
-    public class LocalHumans
+    public class Humans
     {
 
         public static async Task<bool> IsExistsAsync(string wikiDataId)
@@ -27,8 +28,8 @@ namespace rels.Model
                 var person = await people.Where(p => p.WikiDataID.Equals(wikiDataId))?.FirstOrDefaultAsync();
                 if (person != null)
                 {
-                    person.Labels = RestLabels.GetLabels(person.WikiDataID);
-                    person.Descriptions = LocalDescriptions.GetDescriptions(person.WikiDataID);
+                    person.Labels = Labels.GetLabels(person.WikiDataID);
+                    person.Descriptions = Descriptions.GetDescriptions(person.WikiDataID);
                 }
                 return person;
             }
@@ -75,11 +76,11 @@ namespace rels.Model
                          .UpdateAsync();
                     if (!p.Labels.IsNullOrEmpty())
                     {
-                        p.Labels.ForEach(async l => await RestLabels.InsertAsync(l));
+                        p.Labels.ForEach(async l => await Labels.InsertAsync(l));
                     }
                     if (!p.Descriptions.IsNullOrEmpty())
                     {
-                        var count = LocalDescriptions.Insert(p.Descriptions);
+                        var count = Descriptions.Insert(p.Descriptions);
                     }
                     if (!p.Siblings.IsNullOrEmpty())
                     {
@@ -133,8 +134,8 @@ namespace rels.Model
                 var person = await people.Where(p => p.WikiDataID.Equals(wikiDataId))?.FirstOrDefaultAsync();
                 if (person != null)
                 {
-                    person.Labels = RestLabels.GetLabels(person.WikiDataID);
-                    person.Descriptions = LocalDescriptions.GetDescriptions(person.WikiDataID);
+                    person.Labels = Labels.GetLabels(person.WikiDataID);
+                    person.Descriptions = Descriptions.GetDescriptions(person.WikiDataID);
                 }
                 return person;
             }
@@ -181,11 +182,11 @@ namespace rels.Model
                          .UpdateAsync();
                     if (!p.Labels.IsNullOrEmpty())
                     {
-                        p.Labels.ForEach(async l => await RestLabels.InsertAsync(l));
+                        p.Labels.ForEach(async l => await Labels.InsertAsync(l));
                     }
                     if (!p.Descriptions.IsNullOrEmpty())
                     {
-                        var count = LocalDescriptions.Insert(p.Descriptions);
+                        var count = Descriptions.Insert(p.Descriptions);
                     }
                     if (!p.Siblings.IsNullOrEmpty())
                     {

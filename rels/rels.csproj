@@ -295,16 +295,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\DAO\RestCountries.cs" />
+    <Compile Include="Model\DAO\Rest\Countries.cs" />
     <Compile Include="Model\Country.cs" />
     <Compile Include="Model\Description.cs" />
-    <Compile Include="Model\DAO\LocalDescriptions.cs" />
+    <Compile Include="Model\DAO\Local\Descriptions.cs" />
     <Compile Include="Model\Init.cs" />
     <Compile Include="Model\Instance.cs" />
-    <Compile Include="Model\DAO\RestInstances.cs" />
+    <Compile Include="Model\DAO\Rest\Instances.cs" />
     <Compile Include="Model\Label.cs" />
-    <Compile Include="Model\DAO\RestLabels.cs" />
-    <Compile Include="Model\DAO\LocalHumans.cs" />
+    <Compile Include="Model\DAO\Rest\Labels.cs" />
+    <Compile Include="Model\DAO\Local\Humans.cs" />
     <Compile Include="Model\Human.cs" />
     <Compile Include="Model\rels1.generated.cs">
       <AutoGen>True</AutoGen>

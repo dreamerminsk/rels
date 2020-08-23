@@ -6,9 +6,9 @@ using System.Linq;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 
-namespace rels.Model
+namespace rels.Model.Local
 {
-    public class LocalDescriptions
+    public class Descriptions
     {
 
         public static int Insert(List<Description> ds)

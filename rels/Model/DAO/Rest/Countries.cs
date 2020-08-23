@@ -7,13 +7,11 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace rels.Model
+namespace rels.Model.Rest
 {
-    public class RestInstances
+    public class Countries
     {
-
-        private const string INSTANCES_ENDPOINT = "http://172.105.80.145:8000/api/rels/instances";
-
+        private const string COUNTRIES_ENDPOINT = "http://172.105.80.145:8000/api/rels/countries";
         private static MemoryCache _cache = new MemoryCache(new MemoryCacheOptions()
         {
             SizeLimit = 1024 * 1024
@@ -22,7 +20,7 @@ namespace rels.Model
         public static async Task<bool> IsExistsAsync(string wikiDataId)
         {
             if (wikiDataId == null) return false;
-            Instance cacheEntry;
+            Country cacheEntry;
             if (!_cache.TryGetValue(wikiDataId, out cacheEntry))
             {
                 cacheEntry = await QueryByWikiDataIdAsync(wikiDataId);
@@ -38,9 +36,9 @@ namespace rels.Model
             }
         }
 
-        public static async Task<Instance> GetByWikiDataIdAsync(string wikiDataId)
+        public static async Task<Country> GetByWikiDataIdAsync(string wikiDataId)
         {
-            Instance cacheEntry;
+            Country cacheEntry;
             if (!_cache.TryGetValue(wikiDataId, out cacheEntry))
             {
                 cacheEntry = await QueryByWikiDataIdAsync(wikiDataId);
@@ -55,13 +53,28 @@ namespace rels.Model
             return cacheEntry;
         }
 
-        private static async Task<Instance> QueryByWikiDataIdAsync(string wikiDataId)
+        public static async Task<int> InsertAsync2(Country c)
+        {
+            using (var db = new RelsDB())
+            {
+                try
+                {
+                    return await db.InsertAsync(c);
+                }
+                catch
+                {
+                    return -1;
+                }
+            }
+        }
+
+        private static async Task<Country> QueryByWikiDataIdAsync(string wikiDataId)
         {
             try
             {
-                var page = await Web.GetStringAsync(string.Format("{0}/{1}", INSTANCES_ENDPOINT, wikiDataId));
+                var page = await Web.GetStringAsync(string.Format("{0}/{1}", COUNTRIES_ENDPOINT, wikiDataId));
                 var doc = JObject.Parse(page);
-                return new Instance
+                return new Country
                 {
                     WikiDataID = doc["WikiDataID"]?.ToString(),
                     Name = doc["Name"]?.ToString(),
@@ -70,7 +83,7 @@ namespace rels.Model
             }
             catch
             {
-                return new Instance
+                return new Country
                 {
                     WikiDataID = wikiDataId,
                 };
@@ -78,9 +91,9 @@ namespace rels.Model
 
         }
 
-        public static async Task<int> InsertAsync(Instance c)
+        public static async Task<int> InsertAsync(Country c)
         {
-            var page = await Web.PostStringAsync(INSTANCES_ENDPOINT, JsonConvert.SerializeObject(c));
+            var page = await Web.PostStringAsync(COUNTRIES_ENDPOINT, JsonConvert.SerializeObject(c));
             return -1;
         }
 
