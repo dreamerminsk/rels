@@ -1,4 +1,5 @@
-﻿using System;
+﻿using rels.Wiki;
+using System;
 using System.Windows.Forms;
 
 namespace news
@@ -9,8 +10,9 @@ namespace news
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static async System.Threading.Tasks.Task Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

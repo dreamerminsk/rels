@@ -48,6 +48,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -152,10 +153,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.logTextBox);
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(520, 533);
+            this.tabPage2.Size = new System.Drawing.Size(520, 537);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "log";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -167,17 +168,17 @@
             this.logTextBox.Location = new System.Drawing.Point(3, 3);
             this.logTextBox.Name = "logTextBox";
             this.logTextBox.ReadOnly = true;
-            this.logTextBox.Size = new System.Drawing.Size(514, 527);
+            this.logTextBox.Size = new System.Drawing.Size(514, 531);
             this.logTextBox.TabIndex = 0;
             this.logTextBox.Text = "";
             // 
             // webPage
             // 
             this.webPage.Controls.Add(this.webSplitContainer);
-            this.webPage.Location = new System.Drawing.Point(4, 26);
+            this.webPage.Location = new System.Drawing.Point(4, 22);
             this.webPage.Name = "webPage";
             this.webPage.Padding = new System.Windows.Forms.Padding(3);
-            this.webPage.Size = new System.Drawing.Size(520, 533);
+            this.webPage.Size = new System.Drawing.Size(520, 537);
             this.webPage.TabIndex = 2;
             this.webPage.Text = "web";
             this.webPage.UseVisualStyleBackColor = true;
@@ -197,7 +198,7 @@
             // webSplitContainer.Panel2
             // 
             this.webSplitContainer.Panel2.Controls.Add(this.webTextBox);
-            this.webSplitContainer.Size = new System.Drawing.Size(514, 527);
+            this.webSplitContainer.Size = new System.Drawing.Size(514, 531);
             this.webSplitContainer.SplitterDistance = 75;
             this.webSplitContainer.SplitterWidth = 1;
             this.webSplitContainer.TabIndex = 0;
@@ -246,7 +247,7 @@
             this.webTextBox.Location = new System.Drawing.Point(0, 0);
             this.webTextBox.Name = "webTextBox";
             this.webTextBox.ReadOnly = true;
-            this.webTextBox.Size = new System.Drawing.Size(514, 451);
+            this.webTextBox.Size = new System.Drawing.Size(514, 455);
             this.webTextBox.TabIndex = 0;
             this.webTextBox.Text = "";
             // 
@@ -255,10 +256,11 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripTextBox1,
-            this.toolStripLabel1});
+            this.toolStripLabel1,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(3, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(200, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(254, 25);
             this.toolStrip1.TabIndex = 0;
             // 
             // toolStripTextBox1
@@ -273,6 +275,16 @@
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
             this.toolStripLabel1.Text = "toolStripLabel1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // MainView
             // 
@@ -327,5 +339,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.SplitContainer webSplitContainer;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

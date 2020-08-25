@@ -1,15 +1,41 @@
 ﻿using HtmlAgilityPack;
 using rels.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace rels.Wiki
 {
-    public class Wiki
+    public class WikiClient
     {
 
         private static HtmlWeb web = new HtmlWeb();
+
+        public static async Task KnockoutStageAsync()
+        {
+            string clref = "https://en.wikipedia.org/wiki/2011–12_UEFA_Champions_League_knockout_phase";
+            var page = await web.LoadFromWebAsync(clref);
+            var rows = page.DocumentNode.SelectNodes("//table[@class='fevent']");
+            rows?.ToList().ForEach(row =>
+            {
+                var ht = row.SelectNodes("tbody/tr/th[@itemprop='homeTeam']");
+                ht.ToList().ForEach(h=>
+                {
+                    Console.WriteLine(h?.InnerText);
+                });
+                var at = row.SelectNodes("tbody/tr/th[@itemprop='awayTeam']");
+                at.ToList().ForEach(h =>
+                {
+                    Console.WriteLine(h?.InnerText);
+                });
+                ht = row.SelectNodes("tbody/tr/th[@class='fscore']");
+                ht.ToList().ForEach(h =>
+                {
+                    Console.WriteLine(h?.InnerText);
+                });
+            });
+        }
 
         public static async Task<Dictionary<string, string>> GetInfoBoxAsync(string title)
         {

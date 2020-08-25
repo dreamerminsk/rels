@@ -114,5 +114,10 @@ namespace rels.UI
         {
 
         }
+
+        private async void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            await WikiClient.KnockoutStageAsync();
+        }
     }
 }

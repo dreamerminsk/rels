@@ -1,4 +1,5 @@
 ﻿using rels.UI;
+using rels.Wiki;
 using System;
 using System.Windows.Forms;
 

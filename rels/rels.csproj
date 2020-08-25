@@ -37,7 +37,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>rels.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -327,7 +328,7 @@
     <Compile Include="Wiki\WebStats.cs" />
     <Compile Include="Wiki\WikiDataItem.cs" />
     <Compile Include="Workers\Updater.cs" />
-    <Compile Include="Wiki\Wiki.cs" />
+    <Compile Include="Wiki\WikiClient.cs" />
     <Compile Include="Wiki\WikiData.cs" />
     <Compile Include="Wiki\WikiFlags.cs" />
     <Compile Include="Wiki\WikiMedia.cs" />
