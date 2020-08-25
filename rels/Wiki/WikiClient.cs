@@ -22,7 +22,7 @@ namespace rels.Wiki
                 var ht = row.SelectNodes("tbody/tr/th[@itemprop='homeTeam']");
                 ht.ToList().ForEach(h=>
                 {
-                    Console.WriteLine(h?.InnerText);
+                    Console.WriteLine(h?.InnerText.Trim());
                 });
                 var at = row.SelectNodes("tbody/tr/th[@itemprop='awayTeam']");
                 at.ToList().ForEach(h =>
@@ -32,7 +32,7 @@ namespace rels.Wiki
                 ht = row.SelectNodes("tbody/tr/th[@class='fscore']");
                 ht.ToList().ForEach(h =>
                 {
-                    Console.WriteLine(h?.InnerText);
+                    Console.WriteLine(h?.InnerText.Trim());
                 });
             });
         }
