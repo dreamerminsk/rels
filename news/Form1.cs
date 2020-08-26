@@ -47,5 +47,58 @@ namespace news
             dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
             return dtDateTime;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Enumerable.Range(1, 12).Select(x => 2020 - x).ToList().ForEach(async x =>
+            {
+                string url = string.Format(
+                    "https://en.wikipedia.org/wiki/{0}–{1}_UEFA_Champions_League_knockout_phase",
+                    x, (x + 1).ToString().Substring(2));                
+                var page = await htmlWeb.LoadFromWebAsync(url);
+                var rows = page.DocumentNode.SelectNodes("//h1[@class='firstHeading']");
+                rows?.ToList().ForEach(row => {
+                    richTextBox1.AppendText(string.Format("{0}\r\n", url));
+                    richTextBox1.AppendText(string.Format("{0}\r\n", row.InnerText));
+                });
+            });
+            Enumerable.Range(1, 15).Select(x => 2008 - x).ToList().ForEach(async x =>
+            {
+                string url = string.Format(
+                    "https://en.wikipedia.org/wiki/{0}–{1}_UEFA_Champions_League_knockout_stage\r\n",
+                    x, (x + 1).ToString().Substring(2));                
+                var page = await htmlWeb.LoadFromWebAsync(url);
+                var rows = page.DocumentNode.SelectNodes("//h1[@class='firstHeading']");
+                rows?.ToList().ForEach(row => {
+                    richTextBox1.AppendText(string.Format("{0}\r\n", url));
+                    richTextBox1.AppendText(string.Format("{0}\r\n", row.InnerText));
+                });
+            });
+        }
+
+        public async void KnockoutStageAsync()
+        {
+            string clref = "https://en.wikipedia.org/wiki/2011–12_UEFA_Champions_League_knockout_phase";
+            var page = await htmlWeb.LoadFromWebAsync(clref);
+            var rows = page.DocumentNode.SelectNodes("//table[@class='fevent']");
+            rows?.ToList().ForEach(row =>
+            {
+                var ht = row.SelectNodes("tbody/tr/th[@itemprop='homeTeam']");
+                ht.ToList().ForEach(h =>
+                {
+                    Console.WriteLine(h?.InnerText.Trim());
+                });
+                var at = row.SelectNodes("tbody/tr/th[@itemprop='awayTeam']");
+                at.ToList().ForEach(h =>
+                {
+                    Console.WriteLine(h?.InnerText);
+                });
+                ht = row.SelectNodes("tbody/tr/th[@class='fscore']");
+                ht.ToList().ForEach(h =>
+                {
+                    Console.WriteLine(h?.InnerText.Trim());
+                });
+            });
+        }
     }
 }
