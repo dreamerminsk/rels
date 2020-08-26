@@ -11,7 +11,7 @@ namespace news
     public partial class Form1 : Form
     {
 
-        private TimeLimiter timeConstraint = TimeLimiter.GetFromMaxCountByInterval(1, TimeSpan.FromMinutes(1));
+        private TimeLimiter timeConstraint = TimeLimiter.GetFromMaxCountByInterval(1, TimeSpan.FromSeconds(16));
 
         private HtmlWeb htmlWeb = new HtmlWeb();
 
@@ -73,7 +73,7 @@ namespace news
             {
                 await timeConstraint;
                 string url = string.Format(
-                    "https://en.wikipedia.org/wiki/{0}–{1}_UEFA_Champions_League_knockout_stage\r\n",
+                    "https://en.wikipedia.org/wiki/{0}–{1}_UEFA_Champions_League_knockout_stage",
                     x, (x + 1).ToString().Substring(2));
                 var page = await htmlWeb.LoadFromWebAsync(url);
                 var rows = page.DocumentNode.SelectNodes("//h1[@class='firstHeading']");
