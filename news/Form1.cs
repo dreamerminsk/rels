@@ -88,17 +88,17 @@ namespace news
                 var ht = row.SelectNodes("tbody/tr/th[@itemprop='homeTeam']");
                 ht.ToList().ForEach(h =>
                 {
-                    richTextBox1.AppendText(h?.InnerText.Trim());
+                    richTextBox1.AppendText(string.Format("{0} - ", h?.InnerText.Trim()));
                 });
                 var at = row.SelectNodes("tbody/tr/th[@itemprop='awayTeam']");
                 at.ToList().ForEach(h =>
                 {
-                    richTextBox1.AppendText(h?.InnerText);
+                    richTextBox1.AppendText(string.Format("{0} - ", h?.InnerText));
                 });
                 ht = row.SelectNodes("tbody/tr/th[@class='fscore']");
                 ht.ToList().ForEach(h =>
                 {
-                    richTextBox1.AppendText(h?.InnerText.Trim());
+                    richTextBox1.AppendText(string.Format("{0}\r\n", h?.InnerText.Trim()));
                 });
             });
         }
