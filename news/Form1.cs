@@ -1,13 +1,17 @@
 ﻿using HtmlAgilityPack;
+using RateLimiter;
 using System;
 using System.Linq;
 using System.Web;
 using System.Windows.Forms;
+using ComposableAsync;
 
 namespace news
 {
     public partial class Form1 : Form
     {
+
+        private TimeLimiter timeConstraint = TimeLimiter.GetFromMaxCountByInterval(1, TimeSpan.FromMinutes(1));
 
         private HtmlWeb htmlWeb = new HtmlWeb();
 
@@ -18,6 +22,7 @@ namespace news
 
         private async void Form1_Load(object sender, EventArgs e)
         {
+            await timeConstraint;
             var page = await htmlWeb.LoadFromWebAsync("https://www.tut.by/");
             var newsEntries = page.DocumentNode.SelectNodes("//div[contains(@class, 'news-entry')]");
             newsEntries.ToList().ForEach(newsEntry =>
@@ -52,24 +57,28 @@ namespace news
         {
             Enumerable.Range(1, 12).Select(x => 2020 - x).ToList().ForEach(async x =>
             {
+                await timeConstraint;
                 string url = string.Format(
                     "https://en.wikipedia.org/wiki/{0}–{1}_UEFA_Champions_League_knockout_phase",
-                    x, (x + 1).ToString().Substring(2));                
+                    x, (x + 1).ToString().Substring(2));
                 var page = await htmlWeb.LoadFromWebAsync(url);
                 var rows = page.DocumentNode.SelectNodes("//h1[@class='firstHeading']");
-                rows?.ToList().ForEach(row => {
+                rows?.ToList().ForEach(row =>
+                {
                     richTextBox1.AppendText(string.Format("{0}\r\n", url));
                     richTextBox1.AppendText(string.Format("{0}\r\n", row.InnerText));
                 });
             });
             Enumerable.Range(1, 15).Select(x => 2008 - x).ToList().ForEach(async x =>
             {
+                await timeConstraint;
                 string url = string.Format(
                     "https://en.wikipedia.org/wiki/{0}–{1}_UEFA_Champions_League_knockout_stage\r\n",
-                    x, (x + 1).ToString().Substring(2));                
+                    x, (x + 1).ToString().Substring(2));
                 var page = await htmlWeb.LoadFromWebAsync(url);
                 var rows = page.DocumentNode.SelectNodes("//h1[@class='firstHeading']");
-                rows?.ToList().ForEach(row => {
+                rows?.ToList().ForEach(row =>
+                {
                     richTextBox1.AppendText(string.Format("{0}\r\n", url));
                     richTextBox1.AppendText(string.Format("{0}\r\n", row.InnerText));
                 });
