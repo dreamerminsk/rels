@@ -67,12 +67,12 @@ namespace news
                 var ht = row.SelectNodes("tbody/tr/th[@itemprop='homeTeam']/span/a");
                 ht.ToList().ForEach(h =>
                 {
-                    richTextBox1.AppendText(string.Format("\t{0} - ", h?.Attributes["title"].Value));
+                    richTextBox1.AppendText(string.Format("\t{0}\r\n", h?.Attributes["title"].Value));
                 });
                 var at = row.SelectNodes("tbody/tr/th[@itemprop='awayTeam']/span/a");
                 at.ToList().ForEach(h =>
                 {
-                    richTextBox1.AppendText(string.Format("\t{0} - ", h?.Attributes["title"].Value));
+                    richTextBox1.AppendText(string.Format("\t{0}\r\n", h?.Attributes["title"].Value));
                 });
                 ht = row.SelectNodes("tbody/tr/th[@class='fscore']");
                 ht.ToList().ForEach(h =>
@@ -100,6 +100,7 @@ namespace news
                     number = "0";
                 }
             }
+            numbers.Add(int.Parse(number));
             return numbers;
         }
     }
