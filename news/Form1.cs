@@ -41,7 +41,7 @@ namespace news
                     x, (x + 1).ToString().Substring(2));
                 await ParseMatches(url);
             });
-            Enumerable.Range(1, 17).Select(x => 2008 - x).ToList().ForEach(async x =>
+            Enumerable.Range(1, 16).Select(x => 2008 - x).ToList().ForEach(async x =>
             {
                 await timeConstraint;
                 string url = string.Format(
@@ -63,20 +63,20 @@ namespace news
             var rows = page.DocumentNode.SelectNodes("//table[@class='fevent']");
             rows?.ToList().ForEach(row =>
             {
-                var ht = row.SelectNodes("tbody/tr/th[@itemprop='homeTeam']");
+                var ht = row.SelectNodes("tbody/tr/th[@itemprop='homeTeam']/span/a");
                 ht.ToList().ForEach(h =>
                 {
-                    richTextBox1.AppendText(string.Format("{0} - ", h?.InnerText.Trim()));
+                    richTextBox1.AppendText(string.Format("{0} - ", h?.Attributes["title"].Value));
                 });
-                var at = row.SelectNodes("tbody/tr/th[@itemprop='awayTeam']");
+                var at = row.SelectNodes("tbody/tr/th[@itemprop='awayTeam']/span/a");
                 at.ToList().ForEach(h =>
                 {
-                    richTextBox1.AppendText(string.Format("{0} - ", h?.InnerText));
+                    richTextBox1.AppendText(string.Format("{0} - ", h?.Attributes["title"].Value));
                 });
                 ht = row.SelectNodes("tbody/tr/th[@class='fscore']");
                 ht.ToList().ForEach(h =>
                 {
-                    richTextBox1.AppendText(string.Format("{0}\r\n", h?.InnerText.Trim()));
+                    richTextBox1.AppendText(string.Format("{0}\r\n", HttpUtility.HtmlDecode(h?.InnerText.Trim())));
                 });
             });
         }
