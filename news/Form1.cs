@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Windows.Forms;
 using ComposableAsync;
+using System.Collections.Generic;
 
 namespace news
 {
@@ -79,6 +80,24 @@ namespace news
                     richTextBox1.AppendText(string.Format("{0}\r\n", HttpUtility.HtmlDecode(h?.InnerText.Trim())));
                 });
             });
+        }
+
+        private List<int> ExtractNumbers(string text)
+        {
+            List<int> numbers = new List<int>();
+            string number = "0";
+            foreach (char letter in text)
+            {
+                if (Char.IsDigit(letter))
+                {
+                    number += letter;
+                } else
+                {
+                    numbers.Add(int.Parse(number));
+                    number = "0";
+                }
+            }
+            return numbers;
         }
     }
 }
