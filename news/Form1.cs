@@ -67,17 +67,19 @@ namespace news
                 var ht = row.SelectNodes("tbody/tr/th[@itemprop='homeTeam']/span/a");
                 ht.ToList().ForEach(h =>
                 {
-                    richTextBox1.AppendText(string.Format("{0} - ", h?.Attributes["title"].Value));
+                    richTextBox1.AppendText(string.Format("\t{0} - ", h?.Attributes["title"].Value));
                 });
                 var at = row.SelectNodes("tbody/tr/th[@itemprop='awayTeam']/span/a");
                 at.ToList().ForEach(h =>
                 {
-                    richTextBox1.AppendText(string.Format("{0} - ", h?.Attributes["title"].Value));
+                    richTextBox1.AppendText(string.Format("\t{0} - ", h?.Attributes["title"].Value));
                 });
                 ht = row.SelectNodes("tbody/tr/th[@class='fscore']");
                 ht.ToList().ForEach(h =>
                 {
-                    richTextBox1.AppendText(string.Format("{0}\r\n", HttpUtility.HtmlDecode(h?.InnerText.Trim())));
+                    string scoreText = HttpUtility.HtmlDecode(h?.InnerText.Trim());
+                    var score = ExtractNumbers(scoreText);
+                    richTextBox1.AppendText(string.Format("\t{0} - {1}\r\n", score[0], score[1]));
                 });
             });
         }
@@ -91,7 +93,8 @@ namespace news
                 if (Char.IsDigit(letter))
                 {
                     number += letter;
-                } else
+                }
+                else
                 {
                     numbers.Add(int.Parse(number));
                     number = "0";
