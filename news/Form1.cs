@@ -46,6 +46,7 @@ namespace news
                     x, (x + 1).ToString().Substring(2));
                 var matches = await ParseMatches(url);
                 matches.ForEach(match => UpdateStats(match));
+                ShowStats();
             });
             Enumerable.Range(1, 16).Select(x => 2008 - x).ToList().ForEach(async x =>
             {
@@ -55,8 +56,29 @@ namespace news
                     x, (x + 1).ToString().Substring(2));
                 var matches = await ParseMatches(url);
                 matches.ForEach(match => UpdateStats(match));
+                ShowStats();
             });
         }
+
+        private void ShowStats()
+        {
+            listView1.BeginUpdate();
+            listView1.Items.Clear();
+            foreach (var item in teamStats)
+            {
+                var node=listView1.Items.Add(item.Key);
+                node.SubItems.Add(item.Value.Pld.ToString());
+                node.SubItems.Add(item.Value.W.ToString());
+                node.SubItems.Add(item.Value.D.ToString());
+                node.SubItems.Add(item.Value.L.ToString());
+                node.SubItems.Add(item.Value.GF.ToString());
+                node.SubItems.Add(item.Value.GA.ToString());
+                node.SubItems.Add(item.Value.GD.ToString());
+                node.SubItems.Add(item.Value.Pts.ToString());
+            }
+            listView1.EndUpdate();
+        }
+
         private void UpdateStats(MatchInfo match)
         {
             TeamStats home, away;
