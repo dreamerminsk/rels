@@ -54,7 +54,7 @@ namespace news
                 string url = string.Format(
                     "https://en.wikipedia.org/wiki/{0}–{1}_UEFA_Champions_League_knockout_stage",
                     x, (x + 1).ToString().Substring(2));
-                if (x == 1999) url = "https://en.wikipedia.org/wiki/1999–2000_UEFA_Champions_League_knockout_stage"
+                if (x == 1999) url = "https://en.wikipedia.org/wiki/1999–2000_UEFA_Champions_League_knockout_stage";
                 var matches = await ParseMatches(url);
                 matches?.ForEach(match => UpdateStats(match));
                 ShowStats();
@@ -129,13 +129,13 @@ namespace news
             ht.ToList().ForEach(h =>
             {
                 richTextBox1.AppendText(string.Format("\t{0}\r\n", h?.InnerText.Trim()));
-                match.HomeTeam = h?.Attributes["title"]?.Value;
+                match.HomeTeam = h?.InnerText.Trim();
             });
             var at = matchNode.SelectNodes("tbody/tr/th[@itemprop='awayTeam']/span/a");
             at.ToList().ForEach(h =>
             {
                 richTextBox1.AppendText(string.Format("\t{0}\r\n", h?.InnerText.Trim()));
-                match.AwayTeam = h?.Attributes["title"]?.Value;
+                match.AwayTeam = h?.InnerText.Trim();
             });
             ht = matchNode.SelectNodes("tbody/tr/th[@class='fscore']");
             ht.ToList().ForEach(h =>
