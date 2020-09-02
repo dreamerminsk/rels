@@ -6,6 +6,8 @@ using System.Web;
 using System.Windows.Forms;
 using ComposableAsync;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace news
 {
@@ -50,11 +52,17 @@ namespace news
                 string url = string.Format(
                     "https://en.wikipedia.org/wiki/{0}–{1}_UEFA_Champions_League_knockout_stage",
                     x, (x + 1).ToString().Substring(2));
-                await ParseMatches(url);
+                var matches=await ParseMatches(url);
+                matches.ForEach(match=> UpdateStats(match));
             });
         }
+        private void UpdateStats(MatchInfo match)
+        {
+            TeamStats stats;
+            teamStats.TryGetValue(match.HomeTeam, out stats);
+        }
 
-        private async System.Threading.Tasks.Task ParseMatches(string url)
+        private async Task<List<MatchInfo>> ParseMatches(string url)
         {
             var page = await htmlWeb.LoadFromWebAsync(url);
             var h1s = page.DocumentNode.SelectNodes("//h1[@class='firstHeading']");
@@ -64,26 +72,34 @@ namespace news
                 richTextBox1.AppendText(string.Format("{0}\r\n", h1.InnerText));
             });
             var rows = page.DocumentNode.SelectNodes("//table[@class='fevent']");
-            rows?.ToList().ForEach(row =>
+            return rows?.Select(row => GetMatch(row)).ToList();
+        }
+
+        private MatchInfo GetMatch(HtmlNode matchNode)
+        {
+            MatchInfo match = new MatchInfo();
+            var ht = matchNode.SelectNodes("tbody/tr/th[@itemprop='homeTeam']/span/a");
+            ht.ToList().ForEach(h =>
             {
-                var ht = row.SelectNodes("tbody/tr/th[@itemprop='homeTeam']/span/a");
-                ht.ToList().ForEach(h =>
-                {
-                    richTextBox1.AppendText(string.Format("\t{0}\r\n", h?.Attributes["title"].Value));
-                });
-                var at = row.SelectNodes("tbody/tr/th[@itemprop='awayTeam']/span/a");
-                at.ToList().ForEach(h =>
-                {
-                    richTextBox1.AppendText(string.Format("\t{0}\r\n", h?.Attributes["title"].Value));
-                });
-                ht = row.SelectNodes("tbody/tr/th[@class='fscore']");
-                ht.ToList().ForEach(h =>
-                {
-                    string scoreText = HttpUtility.HtmlDecode(h?.InnerText.Trim());
-                    var score = ExtractNumbers(scoreText);
-                    richTextBox1.AppendText(string.Format("\t{0} - {1}\r\n", score[0], score[1]));
-                });
+                richTextBox1.AppendText(string.Format("\t{0}\r\n", h?.Attributes["title"].Value));
+                match.HomeTeam = h?.Attributes["title"]?.Value;
             });
+            var at = matchNode.SelectNodes("tbody/tr/th[@itemprop='awayTeam']/span/a");
+            at.ToList().ForEach(h =>
+            {
+                richTextBox1.AppendText(string.Format("\t{0}\r\n", h?.Attributes["title"].Value));
+                match.AwayTeam = h?.Attributes["title"]?.Value;
+            });
+            ht = matchNode.SelectNodes("tbody/tr/th[@class='fscore']");
+            ht.ToList().ForEach(h =>
+            {
+                string scoreText = HttpUtility.HtmlDecode(h?.InnerText.Trim());
+                var score = ExtractNumbers(scoreText);
+                richTextBox1.AppendText(string.Format("\t{0} - {1}\r\n", score[0], score[1]));
+                match.HomeScore = score[0];
+                match.AwayScore = score[1];
+            });
+            return match;
         }
 
         private List<int> ExtractNumbers(string text)
@@ -111,19 +127,19 @@ namespace news
     {
         public string HomeTeam { get; set; }
         public string AwayTeam { get; set; }
-        public int HomeScore { get; set; }
-        public int AwayScore { get; set; }
+        public int HomeScore { get; set; } = 0;
+        public int AwayScore { get; set; } = 0;
     }
 
     public class TeamStats
     {
-        public int Pld { get; set; }
-        public int W { get; set; }
-        public int D { get; set; }
-        public int L { get; set; }
-        public int GF { get; set; }
-        public int GA { get; set; }
-        public int GD { get; set; }
-        public int Pts { get; set; }
+        public int Pld { get; set; } = 0;
+        public int W { get; set; } = 0;
+        public int D { get; set; } = 0;
+        public int L { get; set; } = 0;
+        public int GF { get; set; } = 0;
+        public int GA { get; set; } = 0;
+        public int GD { get; set; } = 0;
+        public int Pts { get; set; } = 0;
     }
 }
