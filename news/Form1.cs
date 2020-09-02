@@ -104,4 +104,17 @@ namespace news
             return numbers;
         }
     }
+
+    public class TeamStats
+    {
+        public int Pld { get; set; }
+        public int W { get; set; }
+        public int D { get; set; }
+        public int L { get; set; }
+        public int GF { get; set; }
+        public int GA { get; set; }
+        public int GD { get; set; }
+        public int Pts { get; set; }
+
+    }
 }
