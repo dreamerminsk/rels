@@ -8,6 +8,7 @@ using ComposableAsync;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using news.model;
+using news.utils;
 
 namespace news
 {
@@ -65,9 +66,10 @@ namespace news
         {
             listView1.BeginUpdate();
             listView1.Items.Clear();
+            int i = 1;
             foreach (var item in teamStats.OrderBy(key => -key.Value.Pts))
             {
-                var node = listView1.Items.Add("");
+                var node = listView1.Items.Add(i++.ToString());
                 node.SubItems.Add(item.Key);
                 node.SubItems.Add(item.Value.Pld.ToString());
                 node.SubItems.Add(item.Value.W.ToString());
@@ -141,33 +143,12 @@ namespace news
             ht.ToList().ForEach(h =>
             {
                 string scoreText = HttpUtility.HtmlDecode(h?.InnerText.Trim());
-                var score = ExtractNumbers(scoreText);
+                var score = Numbers.ExtractNumbers(scoreText);
                 richTextBox1.AppendText(string.Format("\t{0} - {1}\r\n", score[0], score[1]));
                 match.HomeScore = score[0];
                 match.AwayScore = score[1];
             });
             return match;
         }
-
-        private List<int> ExtractNumbers(string text)
-        {
-            List<int> numbers = new List<int>();
-            string number = "0";
-            foreach (char letter in text)
-            {
-                if (Char.IsDigit(letter))
-                {
-                    number += letter;
-                }
-                else
-                {
-                    numbers.Add(int.Parse(number));
-                    number = "0";
-                }
-            }
-            numbers.Add(int.Parse(number));
-            return numbers;
-        }
     }
-    
 }
