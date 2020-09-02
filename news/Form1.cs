@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using ComposableAsync;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Text.RegularExpressions;
+using news.model;
 
 namespace news
 {
@@ -169,24 +169,5 @@ namespace news
             return numbers;
         }
     }
-
-    public class MatchInfo
-    {
-        public string HomeTeam { get; set; }
-        public string AwayTeam { get; set; }
-        public int HomeScore { get; set; } = 0;
-        public int AwayScore { get; set; } = 0;
-    }
-
-    public class TeamStats
-    {
-        public int Pld { get; set; } = 0;
-        public int W { get; set; } = 0;
-        public int D { get; set; } = 0;
-        public int L { get; set; } = 0;
-        public int GF { get; set; } = 0;
-        public int GA { get; set; } = 0;
-        public int GD { get; set; } = 0;
-        public int Pts { get; set; } = 0;
-    }
+    
 }
