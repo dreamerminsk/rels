@@ -102,7 +102,9 @@ namespace news
             }
             home.GF += match.HomeScore; home.GA += match.AwayScore; home.GD += match.HomeScore - match.AwayScore;
             away.GF += match.AwayScore; away.GA += match.HomeScore; away.GD += match.AwayScore - match.HomeScore;
+            teamStats.Remove(match.HomeTeam);
             teamStats.Add(match.HomeTeam, home);
+            teamStats.Remove(match.AwayTeam);
             teamStats.Add(match.AwayTeam, away);
         }
 
