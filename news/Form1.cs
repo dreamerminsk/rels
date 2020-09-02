@@ -16,6 +16,8 @@ namespace news
 
         private HtmlWeb htmlWeb = new HtmlWeb();
 
+        private Dictionary<string, TeamStats> teamStats = new Dictionary<string, TeamStats>();
+
         public Form1()
         {
             InitializeComponent();
@@ -105,6 +107,14 @@ namespace news
         }
     }
 
+    public class MatchInfo
+    {
+        public string HomeTeam { get; set; }
+        public string AwayTeam { get; set; }
+        public int HomeScore { get; set; }
+        public int AwayScore { get; set; }
+    }
+
     public class TeamStats
     {
         public int Pld { get; set; }
@@ -115,6 +125,5 @@ namespace news
         public int GA { get; set; }
         public int GD { get; set; }
         public int Pts { get; set; }
-
     }
 }
