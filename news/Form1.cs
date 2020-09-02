@@ -101,6 +101,8 @@ namespace news
             }
             home.GF += match.HomeScore; home.GA += match.AwayScore; home.GD += match.HomeScore - match.AwayScore;
             away.GF += match.AwayScore; away.GA += match.HomeScore; away.GD += match.AwayScore - match.HomeScore;
+            teamStats.Add(match.HomeTeam, home);
+            teamStats.Add(match.AwayTeam, away);
         }
 
         private async Task<List<MatchInfo>> ParseMatches(string url)
