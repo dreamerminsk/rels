@@ -31,7 +31,7 @@ namespace news
 
         public DateTime UnixTimeStampToDateTime(double unixTimeStamp)
         {
-            DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
             dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
             return dtDateTime;
         }
@@ -54,6 +54,7 @@ namespace news
                 string url = string.Format(
                     "https://en.wikipedia.org/wiki/{0}–{1}_UEFA_Champions_League_knockout_stage",
                     x, (x + 1).ToString().Substring(2));
+                if (x == 1999) url = "https://en.wikipedia.org/wiki/1999–2000_UEFA_Champions_League_knockout_stage"
                 var matches = await ParseMatches(url);
                 matches?.ForEach(match => UpdateStats(match));
                 ShowStats();
@@ -127,13 +128,13 @@ namespace news
             var ht = matchNode.SelectNodes("tbody/tr/th[@itemprop='homeTeam']/span/a");
             ht.ToList().ForEach(h =>
             {
-                richTextBox1.AppendText(string.Format("\t{0}\r\n", h?.Attributes["title"].Value));
+                richTextBox1.AppendText(string.Format("\t{0}\r\n", h?.InnerText.Trim()));
                 match.HomeTeam = h?.Attributes["title"]?.Value;
             });
             var at = matchNode.SelectNodes("tbody/tr/th[@itemprop='awayTeam']/span/a");
             at.ToList().ForEach(h =>
             {
-                richTextBox1.AppendText(string.Format("\t{0}\r\n", h?.Attributes["title"].Value));
+                richTextBox1.AppendText(string.Format("\t{0}\r\n", h?.InnerText.Trim()));
                 match.AwayTeam = h?.Attributes["title"]?.Value;
             });
             ht = matchNode.SelectNodes("tbody/tr/th[@class='fscore']");
