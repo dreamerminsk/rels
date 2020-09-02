@@ -66,7 +66,7 @@ namespace news
             listView1.Items.Clear();
             foreach (var item in teamStats)
             {
-                var node=listView1.Items.Add(item.Key);
+                var node = listView1.Items.Add(item.Key);
                 node.SubItems.Add(item.Value.Pld.ToString());
                 node.SubItems.Add(item.Value.W.ToString());
                 node.SubItems.Add(item.Value.D.ToString());
