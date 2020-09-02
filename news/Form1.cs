@@ -45,7 +45,7 @@ namespace news
                     "https://en.wikipedia.org/wiki/{0}–{1}_UEFA_Champions_League_knockout_phase",
                     x, (x + 1).ToString().Substring(2));
                 var matches = await ParseMatches(url);
-                matches.ForEach(match => UpdateStats(match));
+                matches?.ForEach(match => UpdateStats(match));
                 ShowStats();
             });
             Enumerable.Range(1, 16).Select(x => 2008 - x).ToList().ForEach(async x =>
@@ -55,7 +55,7 @@ namespace news
                     "https://en.wikipedia.org/wiki/{0}–{1}_UEFA_Champions_League_knockout_stage",
                     x, (x + 1).ToString().Substring(2));
                 var matches = await ParseMatches(url);
-                matches.ForEach(match => UpdateStats(match));
+                matches?.ForEach(match => UpdateStats(match));
                 ShowStats();
             });
         }
