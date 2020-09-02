@@ -44,7 +44,8 @@ namespace news
                 string url = string.Format(
                     "https://en.wikipedia.org/wiki/{0}–{1}_UEFA_Champions_League_knockout_phase",
                     x, (x + 1).ToString().Substring(2));
-                await ParseMatches(url);
+                var matches = await ParseMatches(url);
+                matches.ForEach(match => UpdateStats(match));
             });
             Enumerable.Range(1, 16).Select(x => 2008 - x).ToList().ForEach(async x =>
             {
@@ -52,14 +53,32 @@ namespace news
                 string url = string.Format(
                     "https://en.wikipedia.org/wiki/{0}–{1}_UEFA_Champions_League_knockout_stage",
                     x, (x + 1).ToString().Substring(2));
-                var matches=await ParseMatches(url);
-                matches.ForEach(match=> UpdateStats(match));
+                var matches = await ParseMatches(url);
+                matches.ForEach(match => UpdateStats(match));
             });
         }
         private void UpdateStats(MatchInfo match)
         {
-            TeamStats stats;
-            teamStats.TryGetValue(match.HomeTeam, out stats);
+            TeamStats home, away;
+            teamStats.TryGetValue(match.HomeTeam, out home);
+            teamStats.TryGetValue(match.HomeTeam, out away);
+            if (home == null) home = new TeamStats();
+            if (away == null) away = new TeamStats();
+            home.Pld += 1; away.Pld += 1;
+            if (match.HomeScore > match.AwayScore)
+            {
+                home.W += 1; home.Pts += 3; away.L += 1;
+            }
+            else if (match.AwayScore > match.HomeScore)
+            {
+                away.W += 1; away.Pts += 3; home.L += 1;
+            }
+            else
+            {
+                home.D += 1; home.Pts += 1; away.D += 1; away.Pts += 1;
+            }
+            home.GF += match.HomeScore; home.GA += match.AwayScore; home.GD += match.HomeScore - match.AwayScore;
+            away.GF += match.AwayScore; away.GA += match.HomeScore; away.GD += match.AwayScore - match.HomeScore;
         }
 
         private async Task<List<MatchInfo>> ParseMatches(string url)
