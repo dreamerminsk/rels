@@ -84,7 +84,7 @@ namespace news
         {
             TeamStats home, away;
             teamStats.TryGetValue(match.HomeTeam, out home);
-            teamStats.TryGetValue(match.HomeTeam, out away);
+            teamStats.TryGetValue(match.AwayTeam, out away);
             if (home == null) home = new TeamStats();
             if (away == null) away = new TeamStats();
             home.Pld += 1; away.Pld += 1;
