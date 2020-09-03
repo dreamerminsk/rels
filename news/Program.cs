@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace news
+namespace fstats
 {
     static class Program
     {

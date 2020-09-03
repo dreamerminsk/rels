@@ -1,4 +1,4 @@
-﻿namespace news
+﻿namespace fstats
 {
     partial class Form1
     {

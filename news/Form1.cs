@@ -7,10 +7,10 @@ using System.Windows.Forms;
 using ComposableAsync;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using news.model;
-using news.utils;
+using fstats.model;
+using fstats.utils;
 
-namespace news
+namespace fstats
 {
     public partial class Form1 : Form
     {

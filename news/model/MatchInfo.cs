@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace news.model
+namespace fstats.model
 {
     public class MatchInfo
     {
