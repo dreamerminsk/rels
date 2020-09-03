@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rels", "rels\rels.csproj", "{EC1A539A-953F-435F-9219-EB7129DCE04E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "news", "news\news.csproj", "{30675AAD-B4D4-4E19-A3F0-986D8F8E3F64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fstats", "news\fstats.csproj", "{30675AAD-B4D4-4E19-A3F0-986D8F8E3F64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
