@@ -151,7 +151,7 @@ namespace fstats
             return match;
         }
 
-        private async void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             Enumerable.Range(1, 50).Select(x => 2020 - x).ToList().ForEach(async x =>
             {
