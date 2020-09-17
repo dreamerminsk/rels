@@ -163,7 +163,7 @@ namespace fstats
                 var flagspan = td.SelectSingleNode("span[@class='flagicon']/a");
                 if (flagspan != null)
                 {
-                    richTextBox1.AppendText(idx++ + "\t" + flagspan.Attributes["title"].Value + "\r\n");
+                    richTextBox1.AppendText(idx++ + "\t" + flagspan.Attributes["title"].Value + "\t");
                     var player = td.SelectSingleNode(
                         "span[@class='flagicon']//following-sibling::a|span[@class='flagicon']//following-sibling::b/a");
                     richTextBox1.AppendText(player?.Attributes["title"].Value + "\r\n");
