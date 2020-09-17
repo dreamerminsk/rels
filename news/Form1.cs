@@ -151,9 +151,16 @@ namespace fstats
             return match;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private async void button2_Click(object sender, EventArgs e)
         {
-
+            await timeConstraint;
+            string url = "https://en.wikipedia.org/wiki/2007_Australian_Open_–_Women%27s_Singles";
+            var page = await htmlWeb.LoadFromWebAsync(url);
+            var tds = page.DocumentNode.SelectNodes("//td");
+            tds.ToList().ForEach(td =>
+            {
+                richTextBox1.AppendText(td.InnerHtml + "/r/n");
+            });
         }
     }
 }
