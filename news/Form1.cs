@@ -159,7 +159,8 @@ namespace fstats
             var tds = page.DocumentNode.SelectNodes("//td");
             tds.ToList().ForEach(td =>
             {
-                richTextBox1.AppendText(td.InnerHtml + "/r/n");
+                var flagspan = td.SelectSingleNode("span[@id='flagicon']");
+                richTextBox1.AppendText(flagspan?.InnerHtml + "/r/n");
             });
         }
     }
