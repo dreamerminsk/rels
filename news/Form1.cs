@@ -162,6 +162,7 @@ namespace fstats
 
         private async Task ProcessEvent(string url)
         {
+            richTextBox1.AppendText("\t" + url + "\r\n");
             await timeConstraint;
             var page = await htmlWeb.LoadFromWebAsync(url);
             var tds = page.DocumentNode.SelectNodes("//td");
