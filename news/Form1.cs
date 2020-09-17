@@ -153,8 +153,16 @@ namespace fstats
 
         private async void button2_Click(object sender, EventArgs e)
         {
+            Enumerable.Range(1, 20).Select(x => 2020 - x).ToList().ForEach(async x =>
+            {
+                await ProcessEvent(string.Format("https://en.wikipedia.org/wiki/{0}_Australian_Open_–_Women%27s_Singles", x));
+            });
+
+        }
+
+        private async Task ProcessEvent(string url)
+        {
             await timeConstraint;
-            string url = "https://en.wikipedia.org/wiki/2007_Australian_Open_–_Women%27s_Singles";
             var page = await htmlWeb.LoadFromWebAsync(url);
             var tds = page.DocumentNode.SelectNodes("//td");
             int idx = 1;
@@ -164,7 +172,6 @@ namespace fstats
                 var flagspan = td.SelectSingleNode("span[@class='flagicon']/a");
                 if (flagspan != null)
                 {
-                    richTextBox1.AppendText(idx++ + "\t" + flagspan.Attributes["title"].Value + "\t");
                     var player = td.SelectSingleNode(
                         "span[@class='flagicon']//following-sibling::a|span[@class='flagicon']//following-sibling::b/a");
                     try
@@ -180,7 +187,7 @@ namespace fstats
             });
             players.Keys.ToList().ForEach(p =>
             {
-                richTextBox1.AppendText(idx++ + "\t" + players[p] + "\t" + p);
+                richTextBox1.AppendText(idx++ + "\t" + players[p] + "\t" + p + "\r\n");
             });
         }
     }
