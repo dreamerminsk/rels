@@ -157,12 +157,13 @@ namespace fstats
             string url = "https://en.wikipedia.org/wiki/2007_Australian_Open_–_Women%27s_Singles";
             var page = await htmlWeb.LoadFromWebAsync(url);
             var tds = page.DocumentNode.SelectNodes("//td");
+            int idx = 1;
             tds.ToList().ForEach(td =>
             {
                 var flagspan = td.SelectSingleNode("span[@class='flagicon']/a");
                 if (flagspan != null)
                 {
-                    richTextBox1.AppendText(flagspan.Attributes["title"].Value + "\r\n");
+                    richTextBox1.AppendText(idx++ + "\t" + flagspan.Attributes["title"].Value + "\r\n");
                 }
             });
         }
