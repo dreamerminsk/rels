@@ -153,7 +153,7 @@ namespace fstats
 
         private async void button2_Click(object sender, EventArgs e)
         {
-            Enumerable.Range(1, 20).Select(x => 2020 - x).ToList().ForEach(async x =>
+            Enumerable.Range(1, 50).Select(x => 2020 - x).ToList().ForEach(async x =>
             {
                 await ProcessEvent(string.Format("https://en.wikipedia.org/wiki/{0}_Australian_Open_–_Women%27s_Singles", x));
             });
