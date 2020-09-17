@@ -164,6 +164,8 @@ namespace fstats
                 if (flagspan != null)
                 {
                     richTextBox1.AppendText(idx++ + "\t" + flagspan.Attributes["title"].Value + "\r\n");
+                    var player = td.SelectSingleNode("span[@class='flagicon']//following-sibling::a");
+                    richTextBox1.AppendText(player?.Attributes["title"].Value + "\r\n");
                 }
             });
         }
