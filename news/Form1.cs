@@ -158,6 +158,7 @@ namespace fstats
             var page = await htmlWeb.LoadFromWebAsync(url);
             var tds = page.DocumentNode.SelectNodes("//td");
             int idx = 1;
+            Dictionary<string, string> players = new Dictionary<string, string>();
             tds.ToList().ForEach(td =>
             {
                 var flagspan = td.SelectSingleNode("span[@class='flagicon']/a");
@@ -166,8 +167,20 @@ namespace fstats
                     richTextBox1.AppendText(idx++ + "\t" + flagspan.Attributes["title"].Value + "\t");
                     var player = td.SelectSingleNode(
                         "span[@class='flagicon']//following-sibling::a|span[@class='flagicon']//following-sibling::b/a");
-                    richTextBox1.AppendText(player?.Attributes["title"].Value + "\r\n");
+                    try
+                    {
+                        players.Add(player?.Attributes["title"].Value, flagspan.Attributes["title"].Value);
+                    }
+                    catch
+                    {
+
+                    }
+
                 }
+            });
+            players.Keys.ToList().ForEach(p =>
+            {
+                richTextBox1.AppendText(idx++ + "\t" + players[p] + "\t" + p);
             });
         }
     }
