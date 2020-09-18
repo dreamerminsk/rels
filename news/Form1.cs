@@ -170,11 +170,11 @@ namespace fstats
             Dictionary<string, string> players = new Dictionary<string, string>();
             tds.ToList().ForEach(td =>
             {
-                var flagspan = td.SelectSingleNode("(*|.)/span[@class='flagicon']/a");
+                var flagspan = td.SelectSingleNode("(span|b|.)/span[@class='flagicon']/a");
                 if (flagspan != null)
                 {
                     var playerNodes = td.SelectNodes("(b|.)/a");
-                    string player;
+                    string player = "";
                     if (playerNodes != null)
                     {
                         playerNodes.ToList().ForEach(playerNode =>
