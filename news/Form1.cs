@@ -173,8 +173,7 @@ namespace fstats
                 var flagspan = td.SelectSingleNode("(*|.)/span[@class='flagicon']/a");
                 if (flagspan != null)
                 {
-                    var playerNode = td.SelectSingleNode(
-                        "span[@class='flagicon']//following-sibling::a|span[@class='flagicon']//following-sibling::b/a");
+                    var playerNode = td.SelectSingleNode("a");
                     string player;
                     if (playerNode != null)
                     {
@@ -182,7 +181,7 @@ namespace fstats
                     }
                     else
                     {
-                        player = "PLAYER FROM " + flagspan.Attributes["title"].Value;
+                        player =  td.InnerHtml;
                     }
                     try
                     {
