@@ -173,15 +173,18 @@ namespace fstats
                 var flagspan = td.SelectSingleNode("(*|.)/span[@class='flagicon']/a");
                 if (flagspan != null)
                 {
-                    var playerNode = td.SelectSingleNode("(b|.)/a");
+                    var playerNodes = td.SelectNodes("(b|.)/a");
                     string player;
-                    if (playerNode != null)
+                    if (playerNodes != null)
                     {
-                        player = playerNode.Attributes["title"]?.Value;
+                        playerNodes.ToList().ForEach(playerNode =>
+                        {
+                            player = playerNode.Attributes["title"]?.Value;
+                        });
                     }
                     else
                     {
-                        player =  td.InnerHtml;
+                        player = td.InnerHtml;
                     }
                     try
                     {
