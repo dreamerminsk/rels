@@ -173,7 +173,7 @@ namespace fstats
                 var flagspan = td.SelectSingleNode("(span|b|.)/span[@class='flagicon']/a");
                 if (flagspan != null)
                 {
-                    var playerNodes = td.SelectNodes("(b|.)/a");
+                    var playerNodes = td.SelectNodes("(span|b|.)/(span|b|.)/a");
                     string player = "";
                     if (playerNodes != null)
                     {
