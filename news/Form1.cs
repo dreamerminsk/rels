@@ -21,6 +21,8 @@ namespace fstats
 
         private Dictionary<string, TeamStats> teamStats = new Dictionary<string, TeamStats>();
 
+        private Dictionary<string, int> playerStats = new Dictionary<string, int>();
+
         public Form1()
         {
             InitializeComponent();
@@ -199,7 +201,15 @@ namespace fstats
             });
             players.Keys.ToList().ForEach(p =>
             {
-                richTextBox1.AppendText(idx++ + "\t" + players[p] + "\t" + p + "\r\n");
+                if (playerStats.ContainsKey(p))
+                {
+                    playerStats[p] += 1;
+                }
+                else
+                {
+                    playerStats[p] = 1;
+                }
+                richTextBox1.AppendText(idx++ + "\t" + players[p] + "\t" + p + "\t" + playerStats[p] + "\r\n");
             });
         }
     }
