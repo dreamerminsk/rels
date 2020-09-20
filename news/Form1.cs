@@ -209,7 +209,7 @@ namespace fstats
                 {
                     playerStats[p] = 1;
                 }
-                richTextBox1.AppendText(idx++ + "\t" + players[p] + "\t" + p + "\t" + playerStats[p] + "\r\n");
+                richTextBox1.AppendText(idx++ + "\t" + players[p] + "\t\t" + p + "\t" + playerStats[p] + "\r\n");
             });
         }
     }
