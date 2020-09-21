@@ -166,7 +166,7 @@ namespace fstats
         {
             await timeConstraint;
             richTextBox1.AppendText("\t" + url + "\r\n");
-            var page = await htmlWeb.LoadFromWebAsync(url);
+            var page = await htmlWeb.LoadFromWebAsync("https://en.wikipedia.org" + url);
             var tds = page.DocumentNode.SelectNodes("//td");
             int idx = 1;
             Dictionary<string, string> players = new Dictionary<string, string>();
