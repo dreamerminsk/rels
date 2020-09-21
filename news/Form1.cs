@@ -216,9 +216,10 @@ namespace fstats
         private async void button3_Click(object sender, EventArgs e)
         {
             var page = await htmlWeb.LoadFromWebAsync("https://en.wikipedia.org/wiki/List_of_Australian_Open_women%27s_singles_champions");
-            var refs = page.DocumentNode.SelectNodes("//li/a");
+            var refs = page.DocumentNode.SelectNodes("//div[@class='navbox'][2]/table/tbody/tr[3]/td[@class='navbox-list navbox-odd']/div/ul/li/a");
             refs.ToList().ForEach(r=> {
-                richTextBox1.AppendText(r?.Attributes["title"]?.Value + "\r\n");
+                richTextBox1.AppendText(HtmlEntity.DeEntitize(r?.Attributes["title"]?.Value) + "\r\n");
+                //richTextBox1.AppendText(r.XPath + "\r\n");
             });
         }
     }
