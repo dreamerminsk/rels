@@ -212,5 +212,10 @@ namespace fstats
                 richTextBox1.AppendText(idx++ + "\t" + players[p] + "\t\t" + p + "\t" + playerStats[p] + "\r\n");
             });
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
