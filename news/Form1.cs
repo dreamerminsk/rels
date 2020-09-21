@@ -218,7 +218,7 @@ namespace fstats
             var page = await htmlWeb.LoadFromWebAsync("https://en.wikipedia.org/wiki/List_of_Australian_Open_women%27s_singles_champions");
             var refs = page.DocumentNode.SelectNodes("//li/a");
             refs.ToList().ForEach(r=> {
-                richTextBox1.AppendText(r.Attributes["title"].Value + "\r\n");
+                richTextBox1.AppendText(r?.Attributes["title"]?.Value + "\r\n");
             });
         }
     }
