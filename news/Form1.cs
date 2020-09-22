@@ -155,7 +155,7 @@ namespace fstats
 
         private async void button2_Click(object sender, EventArgs e)
         {
-            (await GetAustraliaWomenSingles()).ForEach(async x =>
+            (await GetWomenSingles()).ToList().ForEach(async x =>
             {
                 await ProcessEvent(x);
             });
@@ -213,10 +213,23 @@ namespace fstats
             });
         }
 
+        private async Task<IEnumerable<string>> GetWomenSingles()
+        {
+            var results = await Task.WhenAll(GetAustraliaWomenSingles(), GetFranceWomenSingles());
+            return results.SelectMany(result => result);
+        }
+
         private async Task<List<string>> GetAustraliaWomenSingles()
         {
             var page = await htmlWeb.LoadFromWebAsync("https://en.wikipedia.org/wiki/List_of_Australian_Open_women%27s_singles_champions");
             var refs = page.DocumentNode.SelectNodes("//div[@class='navbox'][2]/table/tbody/tr[3]/td[@class='navbox-list navbox-odd']/div/ul/li/a");
+            return refs.Select(r => HtmlEntity.DeEntitize(r?.Attributes["href"]?.Value)).ToList();
+        }
+
+        private async Task<List<string>> GetFranceWomenSingles()
+        {
+            var page = await htmlWeb.LoadFromWebAsync("https://en.wikipedia.org/wiki/List_of_French_Open_women%27s_singles_champions");
+            var refs = page.DocumentNode.SelectNodes("//div[@class='navbox'][1]/table/tbody/tr[3]/td[@class='navbox-list navbox-odd']/div/ul/li/a");
             return refs.Select(r => HtmlEntity.DeEntitize(r?.Attributes["href"]?.Value)).ToList();
         }
 
