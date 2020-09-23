@@ -15,7 +15,7 @@ namespace fstats
     public partial class Form1 : Form
     {
 
-        private TimeLimiter timeConstraint = TimeLimiter.GetFromMaxCountByInterval(1, TimeSpan.FromSeconds(16));
+        private TimeLimiter timeConstraint = TimeLimiter.GetFromMaxCountByInterval(1, TimeSpan.FromSeconds(4));
 
         private HtmlWeb htmlWeb = new HtmlWeb();
 
